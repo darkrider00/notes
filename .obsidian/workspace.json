@@ -35,11 +35,11 @@
             "id": "dca92850bb34e973",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "notes/LINUX/RAID and File Systems.md",
-                "mode": "source",
-                "source": false
+                "file": "notes/LINUX/Basic concept of file systems and their importance in Linux..md",
+                "staged": false,
+                "hash": "304d7a7cd52b0b355cb65952dd25e7a10ee2e857"
               }
             }
           }
@@ -179,8 +179,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f5c650883dc3a433",
+  "active": "dca92850bb34e973",
   "lastOpenFiles": [
+    "installtion and setups/installation of flare VM.md",
+    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
+    "New file.md",
     "notes/privilege esclation techniques.md",
     "notes/LINUX/Logical Volume Management (LVM).md",
     "notes/LINUX/RAID and File Systems.md",
@@ -195,10 +198,7 @@
     "attachments/Pasted image 20240325161626.png",
     "attachments/Pasted image 20240325161558.png",
     "attachments/Pasted image 20240325161531.png",
-    "installtion and setups/installation of flare VM.md",
     "notes",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
-    "New file.md",
     "attachments/Pasted image 20240325154529.png",
     "attachments/Pasted image 20240325154309.png",
     "attachments/Pasted image 20240325153324.png",
