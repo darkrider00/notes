@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "8c85e77a1bdd85ae",
+    "type": "split",
+    "children": [
+      {
+        "id": "0bf67148cf11e22f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7083a51f021cdd57",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "installtion and setups/installation and setup Obsidian with Git and syncing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4d7ba8132d7c13d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/privilege esclation techniques.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0f529d92212c72bd",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "e92ebc082989ba43",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "504e9262b8753ac8",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "d1669d3e1b18348a",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "34d87e8b5df06034",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "d1c69424224e4e46",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "6d9d77f17237d6b9",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "notes/privilege esclation techniques.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "66dedb0811766ce1",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "notes/privilege esclation techniques.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "0dbb9d7bfdb411ea",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "notes/privilege esclation techniques.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4d7ba8132d7c13d4",
+  "lastOpenFiles": [
+    "installtion and setups/installation of flare VM.md",
+    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
+    "New file.md",
+    "installtion and setups/installation and setup Obsidian with Git.md",
+    "attachments/Pasted image 20240325154529.png",
+    "attachments/Pasted image 20240325154309.png",
+    "attachments/Pasted image 20240325153324.png",
+    "attachments",
+    "installtion and setups",
+    "Untitled"
+  ]
+}
