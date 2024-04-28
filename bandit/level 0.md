@@ -1,0 +1,1 @@
+in this the username and password is given as bandit 0 sing that I’ve logged in using SSH
