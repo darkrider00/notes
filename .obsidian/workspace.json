@@ -23,28 +23,12 @@
             "id": "e3b2098ece18fcc7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/LINUX/Basic concept of file systems and their importance in Linux..md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dca92850bb34e973",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/privilege esclation techniques.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,39 +165,46 @@
   },
   "active": "7bb12a26d89f78d9",
   "lastOpenFiles": [
-    "Hackthebox/Keeper (EASY).md",
+    "notes/Assembly lang",
+    "attachments/Pasted image 20240428180553.png",
+    "notes/LINUX/Basic concept of file systems and their importance in Linux..md",
+    "bandit/Level 5.md",
+    "bandit/Level 3.md",
+    "notes/Burpsuite/Installation.md",
+    "notes/Burpsuite/scanning with burpsuite.md",
+    "notes/privilege esclation techniques.md",
+    "New file.md",
+    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "Hackthebox/HTB - Perfection (EASY).md",
+    "Hackthebox/Keeper (EASY).md",
     "Hackthebox/Builder (Medium).md",
     "Hackthebox/Academy (Easy).md",
+    "attachments/Pasted image 20240428180619.png",
+    "attachments/Pasted image 20240428180610.png",
+    "attachments/Pasted image 20240428180602.png",
+    "attachments/Pasted image 20240428180538.png",
+    "attachments/Pasted image 20240428180526.png",
+    "attachments/Pasted image 20240428180412.png",
+    "attachments/Pasted image 20240428180330.png",
+    "notes/Burpsuite",
     "Hackthebox",
     "bandit/Level 1.md",
-    "bandit/Level 5.md",
     "bandit/Level 4.md",
-    "bandit/Level 3.md",
     "bandit/level 2.md",
     "bandit/level 0.md",
     "bandit",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "installtion and setups/installation of flare VM.md",
-    "New file.md",
-    "notes/privilege esclation techniques.md",
     "notes/LINUX/Logical Volume Management (LVM).md",
     "notes/LINUX/RAID and File Systems.md",
     "notes/LINUX/File System Check and Repair.md",
     "notes/LINUX/Mounting and Unmounting File Systems.md",
     "notes/LINUX/Disk Usage Analysis.md",
     "notes/LINUX/Hard and Soft Links.md",
-    "notes/LINUX/Basic concept of file systems and their importance in Linux..md",
     "notes/LINUX/File systems.md",
     "notes/LINUX",
     "attachments/Pasted image 20240325161647.png",
     "attachments/Pasted image 20240325161626.png",
-    "attachments/Pasted image 20240325161558.png",
-    "attachments/Pasted image 20240325161531.png",
     "notes",
-    "attachments/Pasted image 20240325154529.png",
-    "attachments/Pasted image 20240325154309.png",
-    "attachments/Pasted image 20240325153324.png",
     "attachments",
     "installtion and setups/attachments",
     "installtion and setups",
