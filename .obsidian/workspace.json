@@ -94,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/privilege esclation techniques.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/privilege esclation techniques.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "notes/privilege esclation techniques.md"
-              }
+              "state": {}
             }
           },
           {
@@ -163,8 +159,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7bb12a26d89f78d9",
+  "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/privilege esclation techniques.md",
     "notes/Assembly lang",
     "attachments/Pasted image 20240428180553.png",
     "notes/LINUX/Basic concept of file systems and their importance in Linux..md",
@@ -172,7 +169,6 @@
     "bandit/Level 3.md",
     "notes/Burpsuite/Installation.md",
     "notes/Burpsuite/scanning with burpsuite.md",
-    "notes/privilege esclation techniques.md",
     "New file.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "Hackthebox/HTB - Perfection (EASY).md",
