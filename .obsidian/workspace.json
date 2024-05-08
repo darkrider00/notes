@@ -23,8 +23,12 @@
             "id": "e3b2098ece18fcc7",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "notes/Burpsuite/basics.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/Burpsuite/basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "notes/Burpsuite/basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "notes/Burpsuite/basics.md"
+              }
             }
           },
           {
@@ -161,6 +169,11 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240508200145.png",
+    "attachments/Pasted image 20240508195934.png",
+    "notes/Burpsuite/scanning with burpsuite.md",
+    "notes/Burpsuite/basics.md",
+    "New file.md",
     "notes/privilege esclation techniques.md",
     "notes/Assembly lang",
     "attachments/Pasted image 20240428180553.png",
@@ -168,8 +181,6 @@
     "bandit/Level 5.md",
     "bandit/Level 3.md",
     "notes/Burpsuite/Installation.md",
-    "notes/Burpsuite/scanning with burpsuite.md",
-    "New file.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "Hackthebox/HTB - Perfection (EASY).md",
     "Hackthebox/Keeper (EASY).md",
@@ -199,7 +210,6 @@
     "notes/LINUX/File systems.md",
     "notes/LINUX",
     "attachments/Pasted image 20240325161647.png",
-    "attachments/Pasted image 20240325161626.png",
     "notes",
     "attachments",
     "installtion and setups/attachments",
