@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Burpsuite/basics.md",
+                "file": "notes/Malware/Windows Essentials.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Burpsuite/basics.md",
+                "file": "notes/Malware/Windows Essentials.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Burpsuite/basics.md",
+                "file": "notes/Malware/Windows Essentials.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Burpsuite/basics.md"
+                "file": "notes/Malware/Windows Essentials.md"
               }
             }
           },
@@ -155,7 +155,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,14 +170,28 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
-    "attachments/Pasted image 20240508200145.png",
-    "attachments/Pasted image 20240508195934.png",
-    "notes/Burpsuite/scanning with burpsuite.md",
-    "notes/Burpsuite/basics.md",
-    "New file.md",
     "notes/privilege esclation techniques.md",
+    "notes/Malware/Windows Essentials.md",
+    "attachments/MalDev Academy.pdf",
+    "attachments/Pasted image 20240511132554.png",
+    "attachments/Pasted image 20240511132548.png",
+    "attachments/Pasted image 20240511132425.png",
+    "attachments/Pasted image 20240511132154.png",
+    "attachments/Pasted image 20240511132045.png",
+    "attachments/Pasted image 20240511132028.png",
+    "attachments/Pasted image 20240511131015.png",
+    "attachments/Pasted image 20240511130846.png",
+    "attachments/Pasted image 20240511130021.png",
+    "attachments/Pasted image 20240511123230.png",
+    "notes/Malware/required Programming.md",
+    "notes/Malware/Maldev.md",
+    "attachments/maldev_academy.pdf",
+    "notes/Burpsuite/basics.md",
+    "notes/Malware",
+    "notes/Untitled.md",
+    "notes/Burpsuite/scanning with burpsuite.md",
+    "New file.md",
     "notes/Assembly lang",
-    "attachments/Pasted image 20240428180553.png",
     "notes/LINUX/Basic concept of file systems and their importance in Linux..md",
     "bandit/Level 5.md",
     "bandit/Level 3.md",
@@ -186,13 +201,6 @@
     "Hackthebox/Keeper (EASY).md",
     "Hackthebox/Builder (Medium).md",
     "Hackthebox/Academy (Easy).md",
-    "attachments/Pasted image 20240428180619.png",
-    "attachments/Pasted image 20240428180610.png",
-    "attachments/Pasted image 20240428180602.png",
-    "attachments/Pasted image 20240428180538.png",
-    "attachments/Pasted image 20240428180526.png",
-    "attachments/Pasted image 20240428180412.png",
-    "attachments/Pasted image 20240428180330.png",
     "notes/Burpsuite",
     "Hackthebox",
     "bandit/Level 1.md",
@@ -204,16 +212,8 @@
     "notes/LINUX/Logical Volume Management (LVM).md",
     "notes/LINUX/RAID and File Systems.md",
     "notes/LINUX/File System Check and Repair.md",
-    "notes/LINUX/Mounting and Unmounting File Systems.md",
-    "notes/LINUX/Disk Usage Analysis.md",
-    "notes/LINUX/Hard and Soft Links.md",
-    "notes/LINUX/File systems.md",
     "notes/LINUX",
-    "attachments/Pasted image 20240325161647.png",
     "notes",
-    "attachments",
-    "installtion and setups/attachments",
-    "installtion and setups",
-    "~syncthing~New file.md.tmp"
+    "attachments"
   ]
 }
