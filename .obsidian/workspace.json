@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Malware/Windows Essentials.md",
+                "file": "notes/Malware/Detection Mechanisms.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Malware/Windows Essentials.md",
+                "file": "notes/Malware/Detection Mechanisms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Malware/Windows Essentials.md",
+                "file": "notes/Malware/Detection Mechanisms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Malware/Windows Essentials.md"
+                "file": "notes/Malware/Detection Mechanisms.md"
               }
             }
           },
@@ -170,6 +170,8 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/Malware/Windows Essentials.md",
+    "notes/Malware/Detection Mechanisms.md",
     "attachments/Pasted image 20240512182707.png",
     "attachments/Pasted image 20240512180247.png",
     "attachments/Pasted image 20240512180216.png",
@@ -177,13 +179,11 @@
     "attachments/Pasted image 20240512114727.png",
     "attachments/Pasted image 20240512110112.png",
     "notes/privilege esclation techniques.md",
-    "notes/Malware/Windows Essentials.md",
     "attachments/MalDev Academy.pdf",
     "attachments/Pasted image 20240511132554.png",
     "attachments/Pasted image 20240511132548.png",
     "attachments/Pasted image 20240511132425.png",
     "attachments/Pasted image 20240511132154.png",
-    "attachments/Pasted image 20240511132045.png",
     "notes/Malware/required Programming.md",
     "notes/Malware/Maldev.md",
     "attachments/maldev_academy.pdf",
