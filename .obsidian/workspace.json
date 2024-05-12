@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Malware/Detection Mechanisms.md",
+                "file": "notes/DSA with C++/Input and Output.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Malware/Detection Mechanisms.md",
+                "file": "notes/DSA with C++/Input and Output.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Malware/Detection Mechanisms.md",
+                "file": "notes/DSA with C++/Input and Output.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Malware/Detection Mechanisms.md"
+                "file": "notes/DSA with C++/Input and Output.md"
               }
             }
           },
@@ -170,8 +170,11 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
-    "notes/Malware/Windows Essentials.md",
     "notes/Malware/Detection Mechanisms.md",
+    "notes/DSA with C++/Input and Output.md",
+    "notes/DSA with C++",
+    "notes/DSA.md",
+    "notes/Malware/Windows Essentials.md",
     "attachments/Pasted image 20240512182707.png",
     "attachments/Pasted image 20240512180247.png",
     "attachments/Pasted image 20240512180216.png",
@@ -189,7 +192,6 @@
     "attachments/maldev_academy.pdf",
     "notes/Burpsuite/basics.md",
     "notes/Malware",
-    "notes/Untitled.md",
     "notes/Burpsuite/scanning with burpsuite.md",
     "New file.md",
     "notes/Assembly lang",
@@ -212,9 +214,7 @@
     "installtion and setups/installation of flare VM.md",
     "notes/LINUX/Logical Volume Management (LVM).md",
     "notes/LINUX/RAID and File Systems.md",
-    "notes/LINUX/File System Check and Repair.md",
     "notes/LINUX",
-    "notes",
-    "attachments"
+    "notes"
   ]
 }
