@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Malware/Windows Essentials.md",
+                "file": "notes/SOC/BASIC.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Malware/Windows Essentials.md",
+                "file": "notes/SOC/BASIC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Malware/Windows Essentials.md",
+                "file": "notes/SOC/BASIC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Malware/Windows Essentials.md"
+                "file": "notes/SOC/BASIC.md"
               }
             }
           },
@@ -170,6 +170,10 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/Malware/Windows Essentials.md",
+    "notes/SOC/BASIC.md",
+    "notes/SOC",
+    "notes/Untitled.md",
     "notes/Malware/required Programming.md",
     "notes/Malware/Detection Mechanisms.md",
     "notes/DSA with C++/Input and Output.md",
@@ -177,7 +181,6 @@
     "attachments/Pasted image 20240513094909.png",
     "notes/DSA with C++",
     "notes/DSA.md",
-    "notes/Malware/Windows Essentials.md",
     "attachments/Pasted image 20240512182707.png",
     "attachments/Pasted image 20240512180247.png",
     "attachments/Pasted image 20240512180216.png",
@@ -212,8 +215,6 @@
     "bandit/level 0.md",
     "bandit",
     "installtion and setups/installation of flare VM.md",
-    "notes/LINUX/Logical Volume Management (LVM).md",
-    "notes/LINUX",
-    "notes"
+    "notes/LINUX"
   ]
 }
