@@ -20,3 +20,8 @@ bufferReader is used to buffer input stream
 Readline()- read complete lines (returns a String)
 Integer.parseInt()- convert into int
 
+
+//program to accept string as input and return the size of data type represented by given string
+```java
+
+```
