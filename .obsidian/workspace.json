@@ -170,6 +170,11 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240513190328.png",
+    "attachments/Pasted image 20240513190106.png",
+    "attachments/Pasted image 20240513185319.png",
+    "attachments/Pasted image 20240513184910.png",
+    "attachments/Pasted image 20240513184849.png",
     "notes/Malware/Windows Essentials.md",
     "notes/SOC/BASIC.md",
     "notes/SOC",
@@ -185,12 +190,8 @@
     "attachments/Pasted image 20240512180247.png",
     "attachments/Pasted image 20240512180216.png",
     "attachments/Pasted image 20240512131125.png",
-    "attachments/Pasted image 20240512114727.png",
-    "attachments/Pasted image 20240512110112.png",
     "notes/privilege esclation techniques.md",
     "attachments/MalDev Academy.pdf",
-    "attachments/Pasted image 20240511132554.png",
-    "attachments/Pasted image 20240511132548.png",
     "notes/Malware/Maldev.md",
     "attachments/maldev_academy.pdf",
     "notes/Burpsuite/basics.md",
@@ -214,7 +215,6 @@
     "bandit/level 2.md",
     "bandit/level 0.md",
     "bandit",
-    "installtion and setups/installation of flare VM.md",
     "notes/LINUX"
   ]
 }

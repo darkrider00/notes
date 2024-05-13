@@ -55,3 +55,59 @@ are examples of exploiting
 https://attack.mitre.org/techniques/T1547/001/
 refer to above website installing a webshell requires stable bacdoor
 
+
+### command and control (C&C or C2)
+- The protocols HTTP on port 80 and HTTPS on port 443 - this type of beaconing blends the malicious traffic with the legitimate traffic and can help the attacker evade firewalls.    
+    
+- DNS (Domain Name Server). The infected machine makes constant DNS requests to the DNS server that belongs to an attacker, this type of C2 communication is also known as DNS Tunneling.
+
+## Threat modeling
+- Identifying what systems and applications need to be secured and what function they serve in the environment. For example, is the system critical to normal operations, and is a system holding sensitive information like payment info or addresses?
+- Assessing what vulnerabilities and weaknesses these systems and applications may have and how they could be potentially exploited
+- Creating a plan of action to secure these systems and applications from the vulnerabilities highlighted
+- Putting in policies to prevent these vulnerabilities from occurring again where possible (for example, implementing a software development life cycle (SDLC) for an application or training employees on phishing awareness).
+
+
+## Uified Kill Chain
+![[Pasted image 20240513184849.png]]
+
+below are the phases
+![[Pasted image 20240513184910.png]]
+
+**Refer**
+https://attack.mitre.org/tactics
+
+![[Pasted image 20240513185319.png]]
+After all the hunting for access and assets, the adversary will be seeking to gather all the valuable data of interest. This, in turn, compromises the confidentiality of the data and would lead to the next attack stage – Exfiltration. The main target sources include drives, browsers, audio, video and email.
+
+### Diamond Model
+The Diamond Model can help you identify the elements of an intrusion. At the end of this room, you will create a Diamond Model for events such as a breach, intrusion, attack, or incident. You will also be able to analyze an Advanced Persistent Threat (APT).
+- Adversory
+- Victim
+- Capability
+- Infrastructure
+- Event meta features
+- Social-poltical component
+- Tech component
+reference - https://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf
+
+### TTP
+- The Tactic is the adversary's goal or objective.
+- The Technique is how the adversary achieves the goal or objective.
+- The Procedure is how the technique is executed.
+
+APT's - https://www.mandiant.com/resources/insights/apt-groups
+
+ATT&CK matrix
+![[Pasted image 20240513190106.png]]
+
+refer - https://attack.mitre.org/
+
+https://mitre-attack.github.io/attack-navigator//#layerURL=https%3A%2F%2Fattack.mitre.org%2Fgroups%2FG0008%2FG0008-enterprise-layer.json
+
+above link is TT&CK® Navigator for Carbanak.
+![[Pasted image 20240513190328.png]]
+
+we can use the ATT&CK Matrix to map a threat group to their tactics and techniques
+
+### cyber analystics 
