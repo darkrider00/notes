@@ -110,4 +110,31 @@ above link is TT&CK® Navigator for Carbanak.
 
 we can use the ATT&CK Matrix to map a threat group to their tactics and techniques
 
-### cyber analystics 
+cyber analystics Repository - https://car.mitre.org/
+"_MITRE Engage is a framework for planning and discussing adversary engagement operations that empowers you to engage your adversaries and achieve your cybersecurity goals._"
+https://engage.mitre.org/
+https://engage.mitre.org/starter-kit/
+ Engage website provides a [starter kit](https://engage.mitre.org/starter-kit/) to get you 'started' with the Adversary Engagement Approach. The starter kit is a collection of whitepapers and PDFs explaining various checklists, methodologies, and processes to get you started.
+
+
+https://d3fend.mitre.org/
+D3FEND stands for Detection, Denial, and Disruption Framework Empowering Network Defense. 
+
+At the time of this writing, there are 408 artifacts in the D3FEND matrix.
+![[Pasted image 20240513190818.png]]
+
+CTID
+
+MITRE formed an organization named The [Center of Threat-Informed Defense](https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/) (CTID). This organization consists of various companies and vendors from around the globe.
+
+Some of the companies and vendors who are participants of CTID:
+
+- AttackIQ (founder)
+- Verizon
+- Microsoft (founder)
+- Red Canary (founder)
+- Splunk
+Adversary Emulation Library & ATT&CK® Emulations Plans
+
+The [Adversary Emulation Library](https://medium.com/mitre-engenuity/introducing-the-all-new-adversary-emulation-plan-library-234b1d543f6b) is a public library making adversary emulation plans a free resource for blue/red teamers. The library and the emulations are a contribution from CTID. There are several [ATT&CK® Emulation Plans](https://github.com/center-for-threat-informed-defense/adversary_emulation_library) currently available: [APT3](https://attack.mitre.org/resources/adversary-emulation-plans/), [APT29](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/apt29), and [FIN6](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/fin6). The emulation plans are a step-by-step guide on how to mimic the specific threat group. If any of the C-Suite were to ask, "how would we fare if APT29 hits us?" This can easily be answered by referring to the results of the execution of the emulation plan.
+
