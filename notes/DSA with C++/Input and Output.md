@@ -3,7 +3,7 @@
 
 ## skeleton
 
-```
+```cpp
 #include<iostream>
 
 int main() {
@@ -37,3 +37,10 @@ Striver!";
     return 0;
 }
 ```
+\\n or endl is used to break and print next statement in new line
+\n -will move the cursor to next line of the output 
+
+## statements
+- most common type of instruction in c++ program 
+- smallest independest unit of computation in c++
+- 
