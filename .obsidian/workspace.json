@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/DSA with C++/Input and Output.md",
+                "file": "notes/Malware/Windows Essentials.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 358.5
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/DSA with C++/Input and Output.md",
+                "file": "notes/Malware/Windows Essentials.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/DSA with C++/Input and Output.md",
+                "file": "notes/Malware/Windows Essentials.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/DSA with C++/Input and Output.md"
+                "file": "notes/Malware/Windows Essentials.md"
               }
             }
           },
@@ -168,12 +168,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7bb12a26d89f78d9",
+  "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
-    "attachments/Pasted image 20240513100007.png",
-    "attachments/Pasted image 20240513094909.png",
+    "notes/Malware/required Programming.md",
     "notes/Malware/Detection Mechanisms.md",
     "notes/DSA with C++/Input and Output.md",
+    "attachments/Pasted image 20240513100007.png",
+    "attachments/Pasted image 20240513094909.png",
     "notes/DSA with C++",
     "notes/DSA.md",
     "notes/Malware/Windows Essentials.md",
@@ -187,8 +188,6 @@
     "attachments/MalDev Academy.pdf",
     "attachments/Pasted image 20240511132554.png",
     "attachments/Pasted image 20240511132548.png",
-    "attachments/Pasted image 20240511132425.png",
-    "notes/Malware/required Programming.md",
     "notes/Malware/Maldev.md",
     "attachments/maldev_academy.pdf",
     "notes/Burpsuite/basics.md",
