@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/DSA with JAVA/Input and Output.md",
+                "file": "notes/DSA with C++/Input and Output.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/DSA with JAVA/Input and Output.md",
+                "file": "notes/DSA with C++/Input and Output.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/DSA with JAVA/Input and Output.md",
+                "file": "notes/DSA with C++/Input and Output.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/DSA with JAVA/Input and Output.md"
+                "file": "notes/DSA with C++/Input and Output.md"
               }
             }
           },
@@ -168,13 +168,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e3b2098ece18fcc7",
+  "active": "7bb12a26d89f78d9",
   "lastOpenFiles": [
     "attachments/Pasted image 20240513100007.png",
     "attachments/Pasted image 20240513094909.png",
     "notes/Malware/Detection Mechanisms.md",
-    "notes/DSA with JAVA/Input and Output.md",
-    "notes/DSA with JAVA",
+    "notes/DSA with C++/Input and Output.md",
+    "notes/DSA with C++",
     "notes/DSA.md",
     "notes/Malware/Windows Essentials.md",
     "attachments/Pasted image 20240512182707.png",
