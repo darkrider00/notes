@@ -30,3 +30,7 @@ BufferedReader bf = new BufferedReader(in);
 ```
 
 ![[Pasted image 20240514164739.png]]
+
+![[Pasted image 20240514172019.png]]
+
+
