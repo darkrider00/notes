@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/SOC/BASIC.md",
+                "file": "notes/DSA with java/Input and Output.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/SOC/BASIC.md",
+                "file": "notes/DSA with java/Input and Output.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/SOC/BASIC.md",
+                "file": "notes/DSA with java/Input and Output.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/SOC/BASIC.md"
+                "file": "notes/DSA with java/Input and Output.md"
               }
             }
           },
@@ -170,6 +170,8 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240514164739.png",
+    "notes/SOC/BASIC.md",
     "attachments/Pasted image 20240513190818.png",
     "attachments/Pasted image 20240513190328.png",
     "attachments/Pasted image 20240513190106.png",
@@ -177,19 +179,17 @@
     "attachments/Pasted image 20240513184910.png",
     "attachments/Pasted image 20240513184849.png",
     "notes/Malware/Windows Essentials.md",
-    "notes/SOC/BASIC.md",
     "notes/SOC",
     "notes/Untitled.md",
     "notes/Malware/required Programming.md",
     "notes/Malware/Detection Mechanisms.md",
-    "notes/DSA with C++/Input and Output.md",
+    "notes/DSA with java/Input and Output.md",
     "attachments/Pasted image 20240513100007.png",
     "attachments/Pasted image 20240513094909.png",
-    "notes/DSA with C++",
+    "notes/DSA with java",
     "notes/DSA.md",
     "attachments/Pasted image 20240512182707.png",
     "attachments/Pasted image 20240512180247.png",
-    "attachments/Pasted image 20240512180216.png",
     "notes/privilege esclation techniques.md",
     "attachments/MalDev Academy.pdf",
     "notes/Malware/Maldev.md",
