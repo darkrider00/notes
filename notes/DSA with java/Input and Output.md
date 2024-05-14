@@ -33,4 +33,103 @@ BufferedReader bf = new BufferedReader(in);
 
 ![[Pasted image 20240514172019.png]]
 
+```java
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class basic {
+static int solveMeFirst(int a, int b) {
+return a+b;
+ }
+public static void main(String[] args) {
+Scanner in = new Scanner(System.in);
+int a;
+a = in.nextInt();
+int b;
+b = in.nextInt();
+int sum;
+sum = solveMeFirst(a, b);
+System.out.println(sum);
+}
+}
+```
+
+![[Pasted image 20240514175157.png]]
+
+```java
+   import java.io.*;
+
+    import java.util.*;
+
+  
+
+    class Result {
+
+        public static int simpleArraySum(List<Integer> ar) {
+
+            int count =0;
+
+            for (int i=0;i<ar.size();i++){
+
+                count +=ar.get(i);
+
+            }
+
+            return count;
+
+        }
+
+  
+
+    }
+
+    public class basic {
+
+        public static void main(String[] args) throws IOException {
+
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("E:\\DSA\\basics\\output.txt"));
+
+            int arCount = Integer.parseInt(bufferedReader.readLine().trim());
+
+            String[] arTemp = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+  
+
+            List<Integer> ar = new ArrayList<>();
+
+  
+
+            for (int i = 0; i < arCount; i++) {
+
+                int arItem = Integer.parseInt(arTemp[i]);
+
+                ar.add(arItem);
+
+            }
+
+  
+
+            int result = Result.simpleArraySum(ar);
+
+  
+
+            bufferedWriter.write(String.valueOf(result));
+
+            bufferedWriter.newLine();
+
+  
+
+            bufferedReader.close();
+
+            bufferedWriter.close();
+
+        }
+
+    }
+```
 
