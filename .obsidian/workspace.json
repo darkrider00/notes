@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/DSA with java/Input and Output.md",
+                "file": "notes/Portswigger/Server side Vuln/Path traversal.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/DSA with java/Input and Output.md",
+                "file": "notes/Portswigger/Server side Vuln/Path traversal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/DSA with java/Input and Output.md",
+                "file": "notes/Portswigger/Server side Vuln/Path traversal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/DSA with java/Input and Output.md"
+                "file": "notes/Portswigger/Server side Vuln/Path traversal.md"
               }
             }
           },
@@ -170,6 +170,10 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/Portswigger/Server side Vuln",
+    "notes/DSA with java/Input and Output.md",
+    "notes/Portswigger/Server side Vuln/Path traversal.md",
+    "notes/Portswigger",
     "attachments/Pasted image 20240514183946.png",
     "attachments/Pasted image 20240514182759.png",
     "attachments/Pasted image 20240514175157.png",
@@ -181,13 +185,11 @@
     "attachments/Pasted image 20240513190106.png",
     "attachments/Pasted image 20240513185319.png",
     "attachments/Pasted image 20240513184910.png",
-    "attachments/Pasted image 20240513184849.png",
     "notes/Malware/Windows Essentials.md",
     "notes/SOC",
     "notes/Untitled.md",
     "notes/Malware/required Programming.md",
     "notes/Malware/Detection Mechanisms.md",
-    "notes/DSA with java/Input and Output.md",
     "notes/DSA with java",
     "notes/DSA.md",
     "notes/privilege esclation techniques.md",
@@ -213,8 +215,6 @@
     "bandit/Level 1.md",
     "bandit/Level 4.md",
     "bandit/level 2.md",
-    "bandit/level 0.md",
-    "bandit",
-    "notes/LINUX"
+    "bandit"
   ]
 }
