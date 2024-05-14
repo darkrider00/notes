@@ -140,3 +140,6 @@ The [Adversary Emulation Library](https://medium.com/mitre-engenuity/introducin
 
 ### Cyber threat intelligence
 
+Classifications:
+**Strategic Intel:** - high level intel
+
