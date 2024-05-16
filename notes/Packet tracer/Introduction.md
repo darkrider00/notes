@@ -77,3 +77,48 @@ For intermediate devices such as routers and switches, there are two ways to acc
 ## logical mode and physical mode
 ![[Pasted image 20240516084236.png]]
 in physical mode we can right click on specific device and we can click on inspect front for the front view
+example:
+![[Pasted image 20240516084352.png]]
+
+![[Pasted image 20240516084452.png]]
+
+we can hover over the port we want to connect after clicking on inpsect front and hover over the port we want to connect and connect to the end devices we want 
+
+## Cisco Packet Tracer File Types
+
+Packet Tracer has the ability to create four different types of files. These file types are used for different purposes and include: .pka, .pkt, .pksz, and .pkz.
+
+### PKA file
+
+- The .pka file type is a Packet Tracer Activity file and is the file type you will experience most often. Think of the “a” in .pka as meaning “activity.”
+-  This file type contains two networks: an initial network and an answer network
+- The Packet Tracer Activity instructions window provides the procedures required to complete the activity, assignment, or assessment.
+### PKT file
+- The .pkt file type is created when a simulated network is built in Packet Tracer and saved. The .pkt file can also have graphic background images embedded within it. However, .pkt files have no instructions window or activity scoring.
+### PKSZ file
+- The .pksz file type is specific to Packet Tracer Tutored Activities (PTTA). These files bundle a .pka file, media assets, and a scripting file for the hinting system. These activities provide support, in the form of contextualized hints, for students who are working on completing the activity.
+
+### PKZ file 
+-  This file type was previously used to embed images and other files in a Packet Tracer file. However, images are now embedded directly within a regular .pkt or .pka file by default. Therefore, consider .pkz as a deprecated file type.
+
+![[Pasted image 20240516085345.png]]
+
+## Setting ip address in end devices
+![[Pasted image 20240516085707.png]]
+
+if we go to pc and config tab and click on fast eth0 then we can see ip config we can use dhcp or we can assign the ip address statically
+![[Pasted image 20240516085811.png]]
+above is a DHCP example
+or another way is you can click on pc and go to desktop anc click on cmd prompt to see the ip address
+![[Pasted image 20240516085909.png]]
+
+since we haven't set any ip address everything will be default 0.0.0.0
+![[Pasted image 20240516085951.png]]
+
+![[Pasted image 20240516090210.png]]
+
+Create and configure a simple network 
+
+Part 1: Build a Simple Network
+Part 2: Configure the End Devices and Verify Connectivity
+
