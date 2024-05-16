@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/privilege esclation techniques.md",
+                "file": "notes/misc/privilege esclation techniques.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Portswigger/Server side Vuln/Path traversal.md",
+                "file": "notes/Packet tracer/Introduction.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Portswigger/Server side Vuln/Path traversal.md",
+                "file": "notes/Packet tracer/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Portswigger/Server side Vuln/Path traversal.md",
+                "file": "notes/Packet tracer/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Portswigger/Server side Vuln/Path traversal.md"
+                "file": "notes/Packet tracer/Introduction.md"
               }
             }
           },
@@ -170,29 +170,33 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240516082025.png",
+    "attachments/Pasted image 20240516081730.png",
+    "attachments/Pasted image 20240516081606.png",
+    "attachments/Pasted image 20240516081400.png",
+    "attachments/Pasted image 20240516081139.png",
+    "attachments/Pasted image 20240516080934.png",
+    "attachments/Pasted image 20240516080448.png",
+    "notes/misc/privilege esclation techniques.md",
+    "notes/Packet tracer/Introduction.md",
+    "notes/Portswigger/Server side Vuln/Path traversal.md",
+    "notes/misc",
+    "notes/Packet tracer",
+    "notes/Untitled.md",
     "notes/Portswigger/Server side Vuln",
     "notes/DSA with java/Input and Output.md",
-    "notes/Portswigger/Server side Vuln/Path traversal.md",
     "notes/Portswigger",
     "attachments/Pasted image 20240514183946.png",
     "attachments/Pasted image 20240514182759.png",
     "attachments/Pasted image 20240514175157.png",
     "attachments/Pasted image 20240514172019.png",
-    "attachments/Pasted image 20240514164739.png",
     "notes/SOC/BASIC.md",
-    "attachments/Pasted image 20240513190818.png",
-    "attachments/Pasted image 20240513190328.png",
-    "attachments/Pasted image 20240513190106.png",
-    "attachments/Pasted image 20240513185319.png",
-    "attachments/Pasted image 20240513184910.png",
     "notes/Malware/Windows Essentials.md",
     "notes/SOC",
-    "notes/Untitled.md",
     "notes/Malware/required Programming.md",
     "notes/Malware/Detection Mechanisms.md",
     "notes/DSA with java",
     "notes/DSA.md",
-    "notes/privilege esclation techniques.md",
     "attachments/MalDev Academy.pdf",
     "notes/Malware/Maldev.md",
     "attachments/maldev_academy.pdf",
@@ -210,11 +214,7 @@
     "Hackthebox/Keeper (EASY).md",
     "Hackthebox/Builder (Medium).md",
     "Hackthebox/Academy (Easy).md",
-    "notes/Burpsuite",
-    "Hackthebox",
     "bandit/Level 1.md",
-    "bandit/Level 4.md",
-    "bandit/level 2.md",
-    "bandit"
+    "bandit/Level 4.md"
   ]
 }
