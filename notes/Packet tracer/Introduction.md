@@ -122,3 +122,13 @@ Create and configure a simple network
 Part 1: Build a Simple Network
 Part 2: Configure the End Devices and Verify Connectivity
 
+![[Pasted image 20240516091848.png]]
+
+![[Pasted image 20240516091937.png]]
+
+![[Pasted image 20240516092048.png]]
+
+- you can add campus layout and or city maps to configure the networking devices
+you can customize icons too
+![[Pasted image 20240516092207.png]]
+
