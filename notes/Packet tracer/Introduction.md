@@ -117,10 +117,10 @@ since we haven't set any ip address everything will be default 0.0.0.0
 
 ![[Pasted image 20240516090210.png]]
 
-Create and configure a simple network 
+### **Create and configure a simple network** 
 
-Part 1: Build a Simple Network
-Part 2: Configure the End Devices and Verify Connectivity
+**Part 1: Build a Simple Network**
+**Part 2: Configure the End Devices and Verify Connectivity**
 
 ![[Pasted image 20240516091848.png]]
 
@@ -131,4 +131,38 @@ Part 2: Configure the End Devices and Verify Connectivity
 - you can add campus layout and or city maps to configure the networking devices
 you can customize icons too
 ![[Pasted image 20240516092207.png]]
+
+
+### connect to the console of a device for the purpose of updating the configuration
+
+Part 1: Connect to the Device Using a Console Connection
+
+Part 2: Copy Configuration Information to the Device
+
+Part 3: Save the Updated Configuration to the Device
+
+to access the terminal go to desktop and click on terminal leave the settings default and and click on okay it will open something like this 
+- if you want to view all the available commands then u can type ? and click enter 
+
+![[Pasted image 20240517071755.png]]
+
+- to access the root mode we have to type enable and click enter
+![[Pasted image 20240517072402.png]]
+
+- as we can see we can see more commands in root mode then in user mode 
+- to view the running config on the switch we have to type show running config command
+![[Pasted image 20240517072724.png]]
+
+since we haven't setup anything that is the default config 
+
+- to enter configuration mode we have to use the command configure terminal
+ ![[Pasted image 20240517073136.png]]
+- as we can see we enterd config mode and 
+	- we set host name using hostname command
+	- line con 0 is typically defining the network cable typically rj-45 something 
+	- password is set suing password command
+	- login specifies it requires to login everytime 
+	- end is using to end the configuration 
+now if we exit again and login it will ask for login 
+![[Pasted image 20240517073528.png]]
 
