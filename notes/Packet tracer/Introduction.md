@@ -166,3 +166,14 @@ since we haven't setup anything that is the default config
 now if we exit again and login it will ask for login 
 ![[Pasted image 20240517073528.png]]
 
+![[Pasted image 20240517073955.png]]
+
+- copy running-config startup-config is used to set running config as startup config 
+- reload is used to reload config and startup from starting
+- it will again ask password to login and the configuration we changed is saved as startup config
+![[Pasted image 20240517074936.png]]
+
+- there is simulation mode in the packet tracer which allows user to see the flow of packets through entire network and the play button is used to send packet and forward and backward buttons are used to speed up or go back and repeat the process
+![[Pasted image 20240517075224.png]]
+- we have a option called edit filters packets and we have 3 options namely IPv4 IPv6 Misc types and we can select different options to send different packets from each mode
+- we can experiment with delaying packets and send only specific number of packets with PDU
