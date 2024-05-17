@@ -177,3 +177,13 @@ now if we exit again and login it will ask for login
 ![[Pasted image 20240517075224.png]]
 - we have a option called edit filters packets and we have 3 options namely IPv4 IPv6 Misc types and we can select different options to send different packets from each mode
 - we can experiment with delaying packets and send only specific number of packets with PDU
+![[Pasted image 20240517080001.png]]
+
+- here after simulations if we view the previous event details we can see that there are different packets sent and received over the transmission if we click on each 1st ICMP packet the above info is displayed
+- the OSI model overview is displayed which layers are used at that specific time of transmission
+- and the description of what happened at that time of transmission is displays in the bottom section
+- we have outbound PDU details section in which we can see other header details in PDU format the type sequence number and data all those things
+![[Pasted image 20240517080458.png]]
+
+PDU -protocol data unit 
+after simulation we can click on delete which is present below simulation mode option to delete 
