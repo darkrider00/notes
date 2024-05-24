@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/privilege esclation techniques.md",
+                "file": "notes/DSA with java/Input and Output.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "notes/privilege esclation techniques.md",
+            "file": "notes/DSA with java/Input and Output.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "notes/privilege esclation techniques.md",
+            "file": "notes/DSA with java/Input and Output.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -127,7 +127,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "notes/privilege esclation techniques.md"
+            "file": "notes/DSA with java/Input and Output.md"
           }
         }
       }
@@ -146,6 +146,7 @@
   },
   "active": "4d7ba8132d7c13d4",
   "lastOpenFiles": [
+    "notes/privilege esclation techniques.md",
     "installtion and setups/installation of flare VM.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "New file.md",
