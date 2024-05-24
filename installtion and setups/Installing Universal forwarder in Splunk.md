@@ -51,5 +51,20 @@ I'm going to send the logs from this machine.
     - In the **Deployment Server** pane, enter a host name or IP address and management port for the deployment server that you want the universal forwarder to connect to and select **Next**.
         
     - In the **Receiving Indexer** pane, enter a host name or IP address and the receiving port for the receiving indexer that you want the universal forwarder to send data to and select **Next**.
-The above will be the case only if 
+The above will be the case only if server is at one location and indexer at one location
 
+![[Pasted image 20240524120840.png]]
+
+if you login the Splunk in the quick links section you can see add data and click on forward option to setup for setting up receiving  port got to forwarding and receiving option in settings and you will see this
+
+![[Pasted image 20240524121306.png]]
+and click on configure receiving and if the default port is set it's okay other click on add new to setup port and the same thing you need to give while installing Splunk forwarder in the below window and logs will be forwarded to that particular port 
+
+![[Pasted image 20240524121111.png]]
+
+i've given my host ip and and default port and click on next and install and it will be installed 
+
+![[Pasted image 20240524121748.png]]
+
+
+![[Pasted image 20240524121451.png]]
