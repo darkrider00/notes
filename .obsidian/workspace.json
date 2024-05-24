@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/Installing Splunk.md",
+                "file": "installtion and setups/Installing Universal forwarder in Splunk.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Installing Splunk.md",
+                "file": "installtion and setups/Installing Universal forwarder in Splunk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Installing Splunk.md",
+                "file": "installtion and setups/Installing Universal forwarder in Splunk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Installing Splunk.md"
+                "file": "installtion and setups/Installing Universal forwarder in Splunk.md"
               }
             }
           },
@@ -170,19 +170,20 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240524113944.png",
+    "attachments/Pasted image 20240524113649.png",
+    "attachments/Pasted image 20240524113214.png",
+    "attachments/Pasted image 20240524112851.png",
+    "attachments/Pasted image 20240524112726.png",
+    "installtion and setups/Installing Splunk.md",
+    "installtion and setups/Installing Universal forwarder in Splunk.md",
+    "attachments/Pasted image 20240524112416.png",
     "attachments/Pasted image 20240524111917.png",
     "attachments/Pasted image 20240524104749.png",
     "attachments/Pasted image 20240524104652.png",
     "notes/Packet tracer/Introduction.md",
-    "installtion and setups/Installing Splunk.md",
     "attachments/Pasted image 20240517080458.png",
     "attachments/Pasted image 20240517080001.png",
-    "attachments/Pasted image 20240517075224.png",
-    "attachments/Pasted image 20240517074936.png",
-    "attachments/Pasted image 20240517073955.png",
-    "attachments/Pasted image 20240517073528.png",
-    "attachments/Pasted image 20240517073136.png",
-    "attachments/Pasted image 20240517072724.png",
     "notes/misc/privilege esclation techniques.md",
     "notes/Portswigger/Server side Vuln/Path traversal.md",
     "notes/misc",
@@ -214,7 +215,6 @@
     "Hackthebox/HTB - Perfection (EASY).md",
     "Hackthebox/Keeper (EASY).md",
     "Hackthebox/Builder (Medium).md",
-    "Hackthebox/Academy (Easy).md",
-    "bandit/Level 1.md"
+    "Hackthebox/Academy (Easy).md"
   ]
 }

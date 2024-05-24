@@ -15,3 +15,6 @@
 ![[Pasted image 20240524111917.png]]
 
 if you see this Splunk has successfully installed on your computer 
+you will be asked to login to the Splunk and you can see the Splunk interface
+
+![[Pasted image 20240524112416.png]]
