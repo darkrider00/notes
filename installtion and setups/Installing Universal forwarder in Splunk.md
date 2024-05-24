@@ -68,3 +68,9 @@ i've given my host ip and and default port and click on next and install and it 
 
 
 ![[Pasted image 20240524121451.png]]
+
+![[Pasted image 20240524123237.png]]
+
+the universal forwarder is installed successfully on our local machine 
+
+for more information refer : https://docs.splunk.com/Documentation/Forwarder/9.2.1/Forwarder/InstallaWindowsuniversalforwarderfromaninstaller
