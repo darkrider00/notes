@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/Installing Universal forwarder in Splunk.md",
+                "file": "installtion and setups/Installing Splunk.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Installing Universal forwarder in Splunk.md",
+                "file": "installtion and setups/Installing Splunk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Installing Universal forwarder in Splunk.md",
+                "file": "installtion and setups/Installing Splunk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Installing Universal forwarder in Splunk.md"
+                "file": "installtion and setups/Installing Splunk.md"
               }
             }
           },
@@ -170,9 +170,9 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "installtion and setups/Installing Universal forwarder in Splunk.md",
     "installtion and setups/Installing Splunk.md",
     "attachments/Pasted image 20240524123547.png",
-    "installtion and setups/Installing Universal forwarder in Splunk.md",
     "attachments/Pasted image 20240524123237.png",
     "attachments/Pasted image 20240524121748.png",
     "attachments/Pasted image 20240524121451.png",
