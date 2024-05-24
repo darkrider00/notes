@@ -5,9 +5,13 @@
 ![[Pasted image 20240524104652.png]]
 
 
-5. download Splunk enterprise (we will get 2 months of unlimited log data later it we will get only 5mb per day something like that.)
-6. after download click on msi file on windows or dmg on mac or deb/tgz or Linux it will start download
+4. download Splunk enterprise (we will get 2 months of unlimited log data later it we will get only 5mb per day something like that.)
+5. after download click on msi file on windows or dmg on mac or deb/tgz or Linux it will start download
 
 ![[Pasted image 20240524104749.png]]
 
-8. it will ask 2 option weather to set Splunk local machine or domain account you have to select domain account if you are hosting Splunk on server or you  download 
+6. it will ask 2 option weather to set Splunk local machine or domain account you have to select domain account if you are hosting Splunk on server or you can download Splunk on local machine  and use universal forwarder to forward the logs to your machine
+
+![[Pasted image 20240524111917.png]]
+
+if you see this Splunk has successfully installed on your computer 
