@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Packet tracer/Introduction.md",
+                "file": "installtion and setups/Installing Splunk.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Packet tracer/Introduction.md",
+                "file": "installtion and setups/Installing Splunk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Packet tracer/Introduction.md",
+                "file": "installtion and setups/Installing Splunk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Packet tracer/Introduction.md"
+                "file": "installtion and setups/Installing Splunk.md"
               }
             }
           },
@@ -170,6 +170,10 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240524104749.png",
+    "attachments/Pasted image 20240524104652.png",
+    "notes/Packet tracer/Introduction.md",
+    "installtion and setups/Installing Splunk.md",
     "attachments/Pasted image 20240517080458.png",
     "attachments/Pasted image 20240517080001.png",
     "attachments/Pasted image 20240517075224.png",
@@ -179,10 +183,7 @@
     "attachments/Pasted image 20240517073136.png",
     "attachments/Pasted image 20240517072724.png",
     "attachments/Pasted image 20240517072402.png",
-    "attachments/Pasted image 20240517071755.png",
-    "attachments/Pasted image 20240516092207.png",
     "notes/misc/privilege esclation techniques.md",
-    "notes/Packet tracer/Introduction.md",
     "notes/Portswigger/Server side Vuln/Path traversal.md",
     "notes/misc",
     "notes/Packet tracer",
@@ -214,7 +215,6 @@
     "Hackthebox/Keeper (EASY).md",
     "Hackthebox/Builder (Medium).md",
     "Hackthebox/Academy (Easy).md",
-    "bandit/Level 1.md",
-    "bandit/Level 4.md"
+    "bandit/Level 1.md"
   ]
 }
