@@ -51,3 +51,37 @@ we got attack detected that's why they gave us a hint about WAF in the hint sect
 ![[Pasted image 20240527121136.png]]
 
 as we can see hack vector extension has been installed and loaded we can see it in the repeater section
+- to use the hackvector select the payload you've already written and right click on it and select extensions and select encode using hex entities and then send the request.
+
+![[Pasted image 20240527121548.png]]
+
+![[Pasted image 20240527121619.png]]
+
+as you can see hex entities tags are added to the payload we've selected 
+
+and Boom !
+
+![[Pasted image 20240527122135.png]]
+
+we dind't get any attack detected in the response tab 
+we successfully bypassed the WAF with this extension 
+- now let's add another null to the statement to see if there are 2 columns 
+![[Pasted image 20240527122405.png]]
+we got 0 units that means only one column is present in the table 
+
+let's build  a payload now to retrieve the username and password table 
+
+`1 UNION SELECT username || '~' || password FROM users`
+
+- let's breakdown this payload we've built union select is used to select and we are selecting username 
+-  **`||`**: This is the string concatenation operator in SQL (specifically in databases like SQLite and PostgreSQL). It concatenates two or more strings.
+- **`'~'`**: This is a tilde character being used as a delimiter (to separate username and password)
+- and passwords from table users
+
+![[Pasted image 20240527122849.png]]
+
+in this lab we are looking for admin account so let's login with these details 
+
+
+
+we got our username and passwords 
