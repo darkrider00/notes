@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+                "file": "notes/Portswigger/LABS/SQL/SQL injection with filter bypass via XML encoding.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+                "file": "notes/Portswigger/LABS/SQL/SQL injection with filter bypass via XML encoding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+                "file": "notes/Portswigger/LABS/SQL/SQL injection with filter bypass via XML encoding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md"
+                "file": "notes/Portswigger/LABS/SQL/SQL injection with filter bypass via XML encoding.md"
               }
             }
           },
@@ -170,9 +170,15 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
-    "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
-    "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+    "notes/Portswigger/SQL injection/UNION attacks.md",
+    "notes/Portswigger/LABS/SQL",
+    "notes/Portswigger/LABS",
+    "notes/Portswigger/SQL injection/SQL injection.md",
+    "notes/Portswigger/SQL injection/Blind SQL.md",
+    "notes/Portswigger/SQL injection/SQL CHEAT sheet.md",
     "notes/Portswigger/obfuscation and obfuscation attacks.md",
+    "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
+    "notes/Portswigger/LABS/SQL/SQL injection with filter bypass via XML encoding.md",
     "notes/Portswigger/Server side Vuln/Path traversal.md",
     "attachments/Pasted image 20240527124037.png",
     "attachments/Pasted image 20240527123937.png",
@@ -207,15 +213,8 @@
     "notes/DSA.md",
     "attachments/MalDev Academy.pdf",
     "notes/Malware/Maldev.md",
-    "attachments/maldev_academy.pdf",
     "notes/Burpsuite/basics.md",
-    "notes/Malware",
     "notes/Burpsuite/scanning with burpsuite.md",
-    "New file.md",
-    "notes/LINUX/Basic concept of file systems and their importance in Linux..md",
-    "bandit/Level 5.md",
-    "bandit/Level 3.md",
-    "notes/Burpsuite/Installation.md",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.md"
+    "New file.md"
   ]
 }
