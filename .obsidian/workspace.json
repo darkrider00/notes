@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Portswigger/LABS/SQL/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
+                "file": "notes/Burpsuite/installing burp suite pro.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Portswigger/LABS/SQL/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
+                "file": "notes/Burpsuite/installing burp suite pro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Portswigger/LABS/SQL/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
+                "file": "notes/Burpsuite/installing burp suite pro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Portswigger/LABS/SQL/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md"
+                "file": "notes/Burpsuite/installing burp suite pro.md"
               }
             }
           },
@@ -168,20 +168,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e3b2098ece18fcc7",
+  "active": "7bb12a26d89f78d9",
   "lastOpenFiles": [
-    "attachments/Pasted image 20240527135238.png",
-    "attachments/Pasted image 20240527134748.png",
-    "attachments/Pasted image 20240527134312.png",
-    "notes/Portswigger/SQL injection/Examining the database in SQL injection attacks.md",
+    "attachments/7.png",
+    "attachments/6.png",
+    "attachments/5.png",
+    "attachments/4.png",
+    "attachments/3.png",
+    "attachments/2.png",
+    "attachments/1.png",
     "notes/Portswigger/LABS/SQL/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
+    "notes/Burpsuite/installing burp suite pro.md",
+    "attachments/Pasted image 20240527140304.png",
+    "attachments/Pasted image 20240527135906.png",
+    "attachments/Pasted image 20240527135645.png",
+    "attachments/Pasted image 20240527135238.png",
+    "notes/Portswigger/SQL injection/Examining the database in SQL injection attacks.md",
     "notes/Portswigger/LABS/SQL/SQL injection with filter bypass via XML encoding.md",
     "notes/Portswigger/obfuscation and obfuscation attacks.md",
     "notes/Portswigger/SQL injection/Prevention.md",
-    "attachments/Pasted image 20240527133755.png",
-    "attachments/Pasted image 20240527133740.png",
     "notes/Portswigger/SQL injection/SQL injection.md",
-    "attachments/Pasted image 20240527133451.png",
     "notes/Portswigger/SQL injection/UNION attacks.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
@@ -189,11 +195,6 @@
     "notes/Portswigger/SQL injection/SQL CHEAT sheet.md",
     "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
     "notes/Portswigger/Server side Vuln/Path traversal.md",
-    "attachments/Pasted image 20240527124037.png",
-    "attachments/Pasted image 20240527123937.png",
-    "attachments/Pasted image 20240527123358.png",
-    "attachments/Pasted image 20240527122849.png",
-    "attachments/Pasted image 20240527122405.png",
     "notes/Burpsuite/Hackvector extension.md",
     "notes/Packet tracer/All About Packet Tracer.md",
     "Untitled.canvas",
@@ -215,7 +216,6 @@
     "notes/Malware/Detection Mechanisms.md",
     "notes/DSA with java",
     "notes/DSA.md",
-    "attachments/MalDev Academy.pdf",
-    "notes/Malware/Maldev.md"
+    "attachments/MalDev Academy.pdf"
   ]
 }
