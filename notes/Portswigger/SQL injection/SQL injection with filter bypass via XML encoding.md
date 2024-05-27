@@ -9,6 +9,10 @@ Let's take a look at the hint
 `A web application firewall (WAF) will block requests that contain obvious signs of a SQL injection attack. You'll need to find a way to obfuscate your malicious query to bypass this filter. We recommend using the [Hackvertor](https://portswigger.net/bappstore/65033cbd2c344fbabe57ac060b5dd100) extension to do this.`
 
 the website :
+![[Pasted image 20240527103159.png]]
+I've turned on the burp proxy now let's navigate through the website.
+
+
 
 
 
