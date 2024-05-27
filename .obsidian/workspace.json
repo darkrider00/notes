@@ -170,6 +170,13 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240527121136.png",
+    "notes/Burpsuite/Hackvector extension.md",
+    "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+    "attachments/Pasted image 20240527120459.png",
+    "attachments/Pasted image 20240527115659.png",
+    "attachments/Pasted image 20240527115343.png",
+    "attachments/Pasted image 20240527115321.png",
     "attachments/Pasted image 20240527114334.png",
     "attachments/Pasted image 20240527114215.png",
     "attachments/Pasted image 20240527114009.png",
@@ -179,16 +186,10 @@
     "notes/Portswigger/Server side Vuln/Path traversal.md",
     "Untitled.canvas",
     "2024-05-27.md",
-    "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
     "attachments/Pasted image 20240527101209.png",
     "installtion and setups/Installing Universal forwarder in Splunk.md",
     "notes/Portswigger/SQL injection",
     "installtion and setups/Installing Splunk.md",
-    "attachments/Pasted image 20240524123547.png",
-    "attachments/Pasted image 20240524123237.png",
-    "attachments/Pasted image 20240524121748.png",
-    "attachments/Pasted image 20240524121451.png",
-    "attachments/Pasted image 20240524121306.png",
     "notes/misc/privilege esclation techniques.md",
     "notes/misc",
     "notes/Packet tracer",
@@ -215,7 +216,6 @@
     "bandit/Level 3.md",
     "notes/Burpsuite/Installation.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
-    "Hackthebox/HTB - Perfection (EASY).md",
-    "Hackthebox/Keeper (EASY).md"
+    "Hackthebox/HTB - Perfection (EASY).md"
   ]
 }
