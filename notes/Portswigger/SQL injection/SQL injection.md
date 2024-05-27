@@ -59,5 +59,38 @@ An attacker can submit the input:
 
 This causes the application to return all usernames and passwords along with the names and descriptions of products.
 
+## Second-order SQL injection
+
+- Second-order SQL injection occurs when the application takes user input from an HTTP request and stores it for future use
+- usually done by placing the input into a database, but no vulnerability occurs at the point where the data is stored. Later, when handling a different HTTP request, the application retrieves the stored data and incorporates it into a SQL query in an unsafe way.
+![[Pasted image 20240527133451.png]]
+
+- occurs in situations where developers are aware of SQL injection vulnerabilities, and so safely handle the initial placement of the input into the database.
+- When the data is later processed, it is deemed to be safe, since it was previously placed into the database safely. At this point, the data is handled in an unsafe way, because the developer wrongly deems it to be trusted.
+
+## Examining the database
+
+Some core features of the SQL language are implemented in the same way across popular database platforms, and so many ways of detecting and exploiting SQL injection vulnerabilities work identically on different types of database.
+
+However, there are also many differences between common databases. These mean that some techniques for detecting and exploiting SQL injection work differently on different platforms. For example:
+
+- Syntax for string concatenation.
+- Comments.
+- Batched (or stacked) queries.
+- Platform-specific APIs.
+- Error messages.
+
+to know more refer to [[SQL CHEAT sheet]]
+
+After you identify a SQL injection vulnerability, it's often useful to obtain information about the database. This information can help you to exploit the vulnerability.
+
+You can query the version details for the database. Different methods work for different database types. This means that if you find a particular method that works, you can infer the database type. For example, on Oracle you can execute:
+
+`SELECT * FROM v$version`
+
+You can also identify what database tables exist, and the columns they contain. For example, on most databases you can execute the following query to list the tables:
+
+`SELECT * FROM information_schema.tables`
+
 
 

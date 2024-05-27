@@ -1,5 +1,10 @@
 ![[Pasted image 20240527101209.png]]
 
+if you don't know about sql injection and union attacks refer to : [[SQL injection]] and [[UNION attacks]]
+for SQL cheatsheet refer [[SQL CHEAT sheet]]
+
+getting back to the lab 
+
 The above image is lab description
 from the above description 
 -  we know that there is a database that contains username and password 
@@ -38,6 +43,8 @@ in this when we input the product id we are getting number of units present
  let's add `UNION SELECT NULL` to product id to determine number of columns.
 
 ![[Pasted image 20240527115659.png]]
+
+refer to [[UNION attacks]]
 
 we got attack detected that's why they gave us a hint about WAF in the hint section
 
