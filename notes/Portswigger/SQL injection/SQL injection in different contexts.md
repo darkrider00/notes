@@ -9,3 +9,5 @@ These different formats may provide different ways for you to obfuscate attacks 
 ```
 
 This will be decoded server-side before being passed to the SQL interpreter.
+
+refer [[obfuscation and obfuscation attacks]]

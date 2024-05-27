@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
+                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
+                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
+                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection in different contexts.md"
+                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md"
               }
             }
           },
@@ -170,8 +170,9 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
-    "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
     "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
+    "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+    "notes/Portswigger/obfuscation and obfuscation attacks.md",
     "notes/Portswigger/Server side Vuln/Path traversal.md",
     "attachments/Pasted image 20240527124037.png",
     "attachments/Pasted image 20240527123937.png",
@@ -215,7 +216,6 @@
     "bandit/Level 5.md",
     "bandit/Level 3.md",
     "notes/Burpsuite/Installation.md",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
-    "Hackthebox/HTB - Perfection (EASY).md"
+    "installtion and setups/installation and setup Obsidian with Git and syncing.md"
   ]
 }
