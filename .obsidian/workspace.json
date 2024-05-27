@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/Installing Universal forwarder in Splunk.md",
+                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Installing Universal forwarder in Splunk.md",
+                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Installing Universal forwarder in Splunk.md",
+                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Installing Universal forwarder in Splunk.md"
+                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md"
               }
             }
           },
@@ -170,8 +170,15 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
-    "installtion and setups/Installing Splunk.md",
+    "notes/Packet tracer/All About Packet Tracer.md",
+    "notes/Portswigger/Server side Vuln/Path traversal.md",
+    "Untitled.canvas",
+    "2024-05-27.md",
+    "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+    "attachments/Pasted image 20240527101209.png",
     "installtion and setups/Installing Universal forwarder in Splunk.md",
+    "notes/Portswigger/SQL injection",
+    "installtion and setups/Installing Splunk.md",
     "attachments/Pasted image 20240524123547.png",
     "attachments/Pasted image 20240524123237.png",
     "attachments/Pasted image 20240524121748.png",
@@ -181,10 +188,7 @@
     "attachments/Pasted image 20240524120840.png",
     "attachments/Pasted image 20240524120503.png",
     "attachments/Pasted image 20240524115447.png",
-    "attachments/Pasted image 20240524114917.png",
-    "notes/Packet tracer/Introduction.md",
     "notes/misc/privilege esclation techniques.md",
-    "notes/Portswigger/Server side Vuln/Path traversal.md",
     "notes/misc",
     "notes/Packet tracer",
     "notes/Untitled.md",
@@ -205,15 +209,12 @@
     "notes/Malware",
     "notes/Burpsuite/scanning with burpsuite.md",
     "New file.md",
-    "notes/Assembly lang",
     "notes/LINUX/Basic concept of file systems and their importance in Linux..md",
     "bandit/Level 5.md",
     "bandit/Level 3.md",
     "notes/Burpsuite/Installation.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "Hackthebox/HTB - Perfection (EASY).md",
-    "Hackthebox/Keeper (EASY).md",
-    "Hackthebox/Builder (Medium).md",
-    "Hackthebox/Academy (Easy).md"
+    "Hackthebox/Keeper (EASY).md"
   ]
 }
