@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+                "file": "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+                "file": "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+                "file": "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md"
+                "file": "notes/Portswigger/SQL injection/SQL injection in different contexts.md"
               }
             }
           },
@@ -170,6 +170,12 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
+    "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
+    "notes/Portswigger/Server side Vuln/Path traversal.md",
+    "attachments/Pasted image 20240527124037.png",
+    "attachments/Pasted image 20240527123937.png",
+    "attachments/Pasted image 20240527123358.png",
     "attachments/Pasted image 20240527122849.png",
     "attachments/Pasted image 20240527122405.png",
     "attachments/Pasted image 20240527122135.png",
@@ -177,14 +183,8 @@
     "attachments/Pasted image 20240527121548.png",
     "attachments/Pasted image 20240527121136.png",
     "notes/Burpsuite/Hackvector extension.md",
-    "notes/Portswigger/SQL injection/SQL injection with filter bypass via XML encoding.md",
     "attachments/Pasted image 20240527120459.png",
-    "attachments/Pasted image 20240527115659.png",
-    "attachments/Pasted image 20240527115343.png",
-    "attachments/Pasted image 20240527115321.png",
-    "attachments/Pasted image 20240527114334.png",
     "notes/Packet tracer/All About Packet Tracer.md",
-    "notes/Portswigger/Server side Vuln/Path traversal.md",
     "Untitled.canvas",
     "2024-05-27.md",
     "installtion and setups/Installing Universal forwarder in Splunk.md",

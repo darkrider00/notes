@@ -66,6 +66,13 @@ and Boom !
 we dind't get any attack detected in the response tab 
 we successfully bypassed the WAF with this extension 
 - now let's add another null to the statement to see if there are 2 columns 
+- we can add ORDER by 2 or ORDER by 3 to determine the colums 
+
+![[Pasted image 20240527123937.png]]
+
+![[Pasted image 20240527124037.png]]
+
+
 ![[Pasted image 20240527122405.png]]
 we got 0 units that means only one column is present in the table 
 
@@ -80,8 +87,12 @@ let's build  a payload now to retrieve the username and password table
 
 ![[Pasted image 20240527122849.png]]
 
+we got our username and passwords 
+
 in this lab we are looking for admin account so let's login with these details 
 
+![[Pasted image 20240527123358.png]]
 
+we are logged in and we solved the lab 
 
-we got our username and passwords 
+for more detailed walkthrough : https://youtu.be/2iqMm0gMyHk
