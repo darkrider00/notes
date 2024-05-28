@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Portswigger/SQL injection/UNION attacks.md",
+                "file": "notes/DSA with java/Problem Solving module in Hacker Rank.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Portswigger/SQL injection/UNION attacks.md",
+                "file": "notes/DSA with java/Problem Solving module in Hacker Rank.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Portswigger/SQL injection/UNION attacks.md",
+                "file": "notes/DSA with java/Problem Solving module in Hacker Rank.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Portswigger/SQL injection/UNION attacks.md"
+                "file": "notes/DSA with java/Problem Solving module in Hacker Rank.md"
               }
             }
           },
@@ -170,6 +170,7 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/Portswigger/SQL injection/UNION attacks.md",
     "notes/Portswigger/SQL injection/SQL injection.md",
     "notes/Burpsuite/installing burp suite pro.md",
     "attachments/7.png",
@@ -187,7 +188,6 @@
     "notes/Portswigger/LABS/SQL/SQL injection with filter bypass via XML encoding.md",
     "notes/Portswigger/obfuscation and obfuscation attacks.md",
     "notes/Portswigger/SQL injection/Prevention.md",
-    "notes/Portswigger/SQL injection/UNION attacks.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
     "notes/Portswigger/SQL injection/Blind SQL.md",
@@ -206,7 +206,7 @@
     "notes/Packet tracer",
     "notes/Untitled.md",
     "notes/Portswigger/Server side Vuln",
-    "notes/DSA with java/Input and Output.md",
+    "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/Portswigger",
     "notes/SOC/BASIC.md",
     "notes/Malware/Windows Essentials.md",
