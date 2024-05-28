@@ -23,8 +23,12 @@
             "id": "e3b2098ece18fcc7",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "notes/Portswigger/SQL injection/UNION attacks.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/Portswigger/SQL injection/UNION attacks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "notes/Portswigger/SQL injection/UNION attacks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "notes/Portswigger/SQL injection/UNION attacks.md"
+              }
             }
           },
           {
@@ -162,6 +170,7 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/Portswigger/SQL injection/SQL injection.md",
     "notes/Burpsuite/installing burp suite pro.md",
     "attachments/7.png",
     "attachments/6.png",
@@ -178,7 +187,6 @@
     "notes/Portswigger/LABS/SQL/SQL injection with filter bypass via XML encoding.md",
     "notes/Portswigger/obfuscation and obfuscation attacks.md",
     "notes/Portswigger/SQL injection/Prevention.md",
-    "notes/Portswigger/SQL injection/SQL injection.md",
     "notes/Portswigger/SQL injection/UNION attacks.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
