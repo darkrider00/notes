@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/DSA with java/Problem Solving module in Hacker Rank.md",
+                "file": "notes/Burpsuite/installing burp suite pro.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/DSA with java/Problem Solving module in Hacker Rank.md",
+                "file": "notes/Burpsuite/installing burp suite pro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/DSA with java/Problem Solving module in Hacker Rank.md",
+                "file": "notes/Burpsuite/installing burp suite pro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/DSA with java/Problem Solving module in Hacker Rank.md"
+                "file": "notes/Burpsuite/installing burp suite pro.md"
               }
             }
           },
@@ -170,6 +170,8 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/Burpsuite/basics.md",
+    "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/Portswigger/SQL injection/UNION attacks.md",
     "notes/Portswigger/SQL injection/SQL injection.md",
     "notes/Burpsuite/installing burp suite pro.md",
@@ -206,7 +208,6 @@
     "notes/Packet tracer",
     "notes/Untitled.md",
     "notes/Portswigger/Server side Vuln",
-    "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/Portswigger",
     "notes/SOC/BASIC.md",
     "notes/Malware/Windows Essentials.md",
