@@ -28,10 +28,6 @@ b = TP(ttl=[1,2,,(5,9)])
 c=TCP(dport=[80,443])
 [p for p in in a/c]
 
-
-for more commands refer :
-https://scapy.readthedocs.io/en/latest/usage.html
-
 send(IP(dst="1.2.3.4")/ICMP())
 .
 Sent 1 packets.
@@ -64,3 +60,6 @@ u can mention the interval for increase the success rate of transmission or u ca
 ![[Pasted image 20240611153533.png]]
 
 we can mention the target and mention the ports to see what ports are opened in the target 
+
+for more commands refer :
+https://scapy.readthedocs.io/en/latest/usage.html
