@@ -57,3 +57,10 @@ sr() is used to know the answers to the packets we sent
 ans, ans =  _
 ans.sumamry()
 
+![[WhatsApp Image 2024-06-11 at 15.24.18_4b0c0038.jpg]]
+
+u can mention the interval for increase the success rate of transmission or u can mention retry to try and send unanswered packets again 
+
+![[Pasted image 20240611153533.png]]
+
+we can mention the target and mention the ports to see what ports are opened in the target 
