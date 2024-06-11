@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Burpsuite/installing burp suite pro.md",
+                "file": "notes/misc/Scapy.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Burpsuite/installing burp suite pro.md",
+                "file": "notes/misc/Scapy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Burpsuite/installing burp suite pro.md",
+                "file": "notes/misc/Scapy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Burpsuite/installing burp suite pro.md"
+                "file": "notes/misc/Scapy.md"
               }
             }
           },
@@ -170,11 +170,13 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240611143959.png",
+    "notes/Burpsuite/installing burp suite pro.md",
+    "notes/misc/Scapy.md",
     "notes/Burpsuite/basics.md",
     "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/Portswigger/SQL injection/UNION attacks.md",
     "notes/Portswigger/SQL injection/SQL injection.md",
-    "notes/Burpsuite/installing burp suite pro.md",
     "attachments/7.png",
     "attachments/6.png",
     "attachments/5.png",
@@ -213,9 +215,7 @@
     "notes/Malware/Windows Essentials.md",
     "notes/SOC",
     "notes/Malware/required Programming.md",
-    "notes/Malware/Detection Mechanisms.md",
     "notes/DSA with java",
-    "notes/DSA.md",
     "attachments/MalDev Academy.pdf"
   ]
 }
