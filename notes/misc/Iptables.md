@@ -53,5 +53,16 @@ a new chain state is added to the iptables list
 blocking specific ip or website syntax:
 
 `iptables -A INPUT -s www.gitam.edu -j DROP`
+for blocking -D
 
+![[Pasted image 20240612155118.png]]
+
+![[Pasted image 20240612155143.png]]
+
+as we can see we can't access gitam.edu website x
+
+you can mention port range to or range of ip address you want to block
+- we can limit the number of concurrent connections per ip address
+- we can block mac address
+- we can keep a log og dropped network packets on IPtables 
 
