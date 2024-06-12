@@ -26,6 +26,32 @@ This is how a rule is defined in Linux using iptables
 - the ICMP packets we are dropping are now getting accepted via new rule
 - always first rule will be triggered first 
 - if we want we can specify the location in the command 
-`iptables -I INP`
+
+
+![[Pasted image 20240612152648.png]]
+
+`iptables -I INPUT 2 -p tcp--d port110 -j ACCEPT`
+this command inserts a rule to accept incoming TCP traffic on port 110 directly before existing rule at 2
+-d is used to delete
+
+-F is used to flush 
+
+### default chain policy
+
+- iptables [-t table] -P chain target [options]
+
+example: `iptables -t filter -P INPUT DROP`
+
+-n is used to create new chain 
+`iptables -t filtewr -N state`
+- custom chain (-X)
+- 1st rule is triggered in input chain only instead of custom chain
+![[Pasted image 20240612153257.png]]
+
+a new chain state is added to the iptables list
+
+blocking specific ip or website syntax:
+
+`iptables -A INPUT -s www.gitam.edu -j DROP`
 
 
