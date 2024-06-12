@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/misc/Iptables.md",
+                "file": "notes/misc/Snort.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/misc/Iptables.md",
+                "file": "notes/misc/Snort.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/misc/Iptables.md",
+                "file": "notes/misc/Snort.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/misc/Iptables.md"
+                "file": "notes/misc/Snort.md"
               }
             }
           },
@@ -170,6 +170,8 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/misc/Iptables.md",
+    "notes/misc/Snort.md",
     "attachments/Pasted image 20240612160625.png",
     "attachments/Pasted image 20240612155143.png",
     "attachments/Pasted image 20240612155118.png",
@@ -180,11 +182,9 @@
     "attachments/Pasted image 20240612150354.png",
     "attachments/Pasted image 20240612150209.png",
     "notes/misc/Scapy.md",
-    "notes/misc/Iptables.md",
     "Untitled.canvas",
     "notes/misc/privilege esclation techniques.md",
     "attachments/Pasted image 20240611153533.png",
-    "attachments/WhatsApp Image 2024-06-11 at 15.24.18_4b0c0038.jpg",
     "notes/Burpsuite/installing burp suite pro.md",
     "notes/Burpsuite/basics.md",
     "notes/DSA with java/Problem Solving module in Hacker Rank.md",

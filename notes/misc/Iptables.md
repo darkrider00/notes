@@ -68,3 +68,10 @@ you can mention port range to or range of ip address you want to block
 
 ![[Pasted image 20240612160625.png]]
 
+saving the iptable rules
+`iptables-save>~/iptables.rules`
+
+#### service iptables stop
+#### service iptables start
+#### service iptables restart
+
