@@ -64,5 +64,7 @@ as we can see we can't access gitam.edu website x
 you can mention port range to or range of ip address you want to block
 - we can limit the number of concurrent connections per ip address
 - we can block mac address
-- we can keep a log og dropped network packets on IPtables 
+- we can keep a log og dropped network packets on IPtables
+
+![[Pasted image 20240612160625.png]]
 
