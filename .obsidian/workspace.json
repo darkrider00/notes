@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/misc/Snort.md",
+                "file": "notes/Forensics.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/misc/Snort.md",
+                "file": "notes/Forensics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/misc/Snort.md",
+                "file": "notes/Forensics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/misc/Snort.md"
+                "file": "notes/Forensics.md"
               }
             }
           },
@@ -170,7 +170,9 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240618155905.png",
     "notes/misc/Snort.md",
+    "notes/Forensics.md",
     "notes/misc/Iptables.md",
     "attachments/Pasted image 20240612160625.png",
     "attachments/Pasted image 20240612155143.png",
@@ -209,11 +211,9 @@
     "installtion and setups/Installing Splunk.md",
     "notes/misc",
     "notes/Packet tracer",
-    "notes/Untitled.md",
     "notes/Portswigger/Server side Vuln",
     "notes/Portswigger",
     "notes/SOC/BASIC.md",
-    "notes/Malware/Windows Essentials.md",
     "notes/SOC",
     "notes/DSA with java",
     "attachments/MalDev Academy.pdf"
