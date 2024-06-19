@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Forensics.md",
+                "file": "notes/SYS internals windows.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Forensics.md",
+                "file": "notes/SYS internals windows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Forensics.md",
+                "file": "notes/SYS internals windows.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Forensics.md"
+                "file": "notes/SYS internals windows.md"
               }
             }
           },
@@ -170,11 +170,12 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/Forensics.md",
+    "notes/SYS internals windows.md",
     "attachments/Pasted image 20240618162918.png",
     "attachments/Pasted image 20240618161135.png",
     "attachments/Pasted image 20240618155905.png",
     "notes/misc/Snort.md",
-    "notes/Forensics.md",
     "notes/misc/Iptables.md",
     "attachments/Pasted image 20240612160625.png",
     "attachments/Pasted image 20240612155143.png",
@@ -183,7 +184,6 @@
     "attachments/Pasted image 20240612152648.png",
     "attachments/Pasted image 20240612151802.png",
     "attachments/Pasted image 20240612151242.png",
-    "attachments/Pasted image 20240612150354.png",
     "notes/misc/Scapy.md",
     "Untitled.canvas",
     "notes/misc/privilege esclation techniques.md",
