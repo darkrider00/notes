@@ -41,10 +41,27 @@ Wireshark uses a library called tcp dump used to sniff packets
 `tcpdump -ni any
 every connection is based on 4 things
 source ip source port dest ip dest port
-
-
-
-#### metaplsoit 
+#### Metasploit 
 modules in
 Auxiliary- network scanning (vulnerability assessment)
-exploit -using this you can take the contrl of the system
+exploit -using this you can take the control of the system
+once machine is exploited you need to put payload in that machine
+3 types of payload 
+- single (stand-alone)
+- staged (go there and get executed (connect back to attacker machine))
+- stager (the more payloads send to the the stage payload is stager payload) (bigger payload than stager)
+payload - malicious code -(we encode it)
+encoder module is used for this (obfuscation)
+Nops adds lot's of 0's to payload for buffer overflow
+
+![[Pasted image 20240619124114.png]]
+
+![[Pasted image 20240619124237.png]]
+
+the above is the list of smb payloads
+to access the the metaplsoit framework we need a console
+- msfconsole is popularly used
+
+ps aux is used to get pID
+
+netstat -tulp is used to get the proces sit's runnig
