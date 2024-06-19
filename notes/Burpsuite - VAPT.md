@@ -31,4 +31,20 @@ DLL are 2 types - 1 types are system32 DLL used by windows system process
 - Raw DLL
 
 meterpreter in Metasploit  is a payload works on deflective DLL injection 
+- find vuln
+- build payload
+- push payload
+- exploit system
 
+### networking tool
+Wireshark uses a library called tcp dump used to sniff packets
+`tcpdump -ni any
+every connection is based on 4 things
+source ip source port dest ip dest port
+
+
+
+#### metaplsoit 
+modules in
+Auxiliary- network scanning (vulnerability assessment)
+exploit -using this you can take the contrl of the system
