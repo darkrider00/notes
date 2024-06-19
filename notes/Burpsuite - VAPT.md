@@ -63,5 +63,3 @@ to access the the metaplsoit framework we need a console
 - msfconsole is popularly used
 
 ps aux is used to get pID
-
-netstat -tulp is used to get the proces sit's runnig
