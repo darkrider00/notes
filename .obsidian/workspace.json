@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Burpsuite - VAPT.md",
+                "file": "notes/Burpsuite/Burpsuite - VAPT.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Burpsuite - VAPT.md",
+                "file": "notes/Burpsuite/Burpsuite - VAPT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Burpsuite - VAPT.md",
+                "file": "notes/Burpsuite/Burpsuite - VAPT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Burpsuite - VAPT.md"
+                "file": "notes/Burpsuite/Burpsuite - VAPT.md"
               }
             }
           },
@@ -169,12 +168,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e3b2098ece18fcc7",
+  "active": "7bb12a26d89f78d9",
   "lastOpenFiles": [
     "attachments/Pasted image 20240619124237.png",
     "attachments/Pasted image 20240619124114.png",
     "notes/Forensics.md",
-    "notes/Burpsuite - VAPT.md",
+    "notes/Burpsuite/Burpsuite - VAPT.md",
     "attachments/Pasted image 20240618162918.png",
     "attachments/Pasted image 20240618161135.png",
     "attachments/Pasted image 20240618155905.png",
