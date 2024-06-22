@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/misc/privilege esclation techniques.md",
+                "file": "notes/Burpsuite/Burpsuite - VAPT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/misc/privilege esclation techniques.md",
+                "file": "notes/Burpsuite/Burpsuite - VAPT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/misc/privilege esclation techniques.md"
+                "file": "notes/Burpsuite/Burpsuite - VAPT.md"
               }
             }
           },
@@ -168,8 +168,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7bb12a26d89f78d9",
+  "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "notes/misc/privilege esclation techniques.md",
     "attachments/Pasted image 20240619124237.png",
     "attachments/Pasted image 20240619124114.png",
     "notes/Forensics.md",
@@ -184,10 +185,8 @@
     "attachments/Pasted image 20240612155118.png",
     "attachments/Pasted image 20240612153257.png",
     "attachments/Pasted image 20240612152648.png",
-    "attachments/Pasted image 20240612151802.png",
     "notes/misc/Scapy.md",
     "Untitled.canvas",
-    "notes/misc/privilege esclation techniques.md",
     "notes/Burpsuite/installing burp suite pro.md",
     "notes/Burpsuite/basics.md",
     "notes/DSA with java/Problem Solving module in Hacker Rank.md",
