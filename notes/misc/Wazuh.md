@@ -122,3 +122,5 @@ after configuring files we got both up and runnign
 ### new task generate telemetry and ingest into wazuh
 
 security 4688
+
+mimikatz
