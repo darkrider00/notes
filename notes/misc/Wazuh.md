@@ -103,3 +103,22 @@ sudo apt-get install -y thehive
 
 Default Credentials on port 9000
 credentials are 'admin@thehive.local' with a password of 'secret'
+
+
+after configuring files we got both up and runnign
+
+![[16 wazuh  installed.png]]
+
+![[17- wazuh dashboard.png]]
+
+![[18- thehive dashboard.png]]
+
+![[19 wazuh passwords.png]]
+
+![[20 wazuh service started in windows vm.png]]
+
+![[21 windows machine has checkin into wazuh successfully.png]]
+
+### new task generate telemetry and ingest into wazuh
+
+security 4688
