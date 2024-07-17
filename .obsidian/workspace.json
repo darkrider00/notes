@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/misc/Wazuh.md",
+                "file": "New file.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/misc/Wazuh.md",
+                "file": "New file.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/misc/Wazuh.md",
+                "file": "New file.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/misc/Wazuh.md"
+                "file": "New file.md"
               }
             }
           },
@@ -170,6 +170,8 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "notes/misc/Wazuh.md",
     "attachments/21 windows machine has checkin into wazuh successfully.png",
     "attachments/20 wazuh service started in windows vm.png",
     "attachments/19 wazuh passwords.png",
@@ -180,15 +182,12 @@
     "attachments/14 - doing update and upgrade.png",
     "attachments/13- ssh login.png",
     "attachments/12 - droplet added.png",
-    "attachments/11 adding droplets to firewall -2.png",
     "notes/Burpsuite/Burpsuite - VAPT.md",
-    "notes/misc/Wazuh.md",
     "notes/misc/privilege esclation techniques.md",
     "notes/Forensics.md",
     "notes/misc/Snort.md",
     "notes/misc/Iptables.md",
     "notes/misc/Scapy.md",
-    "Untitled.canvas",
     "notes/Burpsuite/installing burp suite pro.md",
     "notes/Burpsuite/basics.md",
     "notes/DSA with java/Problem Solving module in Hacker Rank.md",
