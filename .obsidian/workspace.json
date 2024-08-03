@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "New file.md",
+                "file": "notes/CTI/CTI.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "New file.md",
+                "file": "notes/CTI/CTI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "New file.md",
+                "file": "notes/CTI/CTI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "New file.md"
+                "file": "notes/CTI/CTI.md"
               }
             }
           },
@@ -170,6 +170,9 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "New file.md",
+    "notes/CTI/CTI.md",
+    "notes/CTI",
     "Untitled.canvas",
     "notes/misc/Wazuh.md",
     "attachments/21 windows machine has checkin into wazuh successfully.png",
@@ -207,14 +210,12 @@
     "notes/Burpsuite/Hackvector extension.md",
     "notes/Packet tracer/All About Packet Tracer.md",
     "2024-05-27.md",
-    "installtion and setups/Installing Universal forwarder in Splunk.md",
     "notes/Portswigger/SQL injection",
     "notes/misc",
     "notes/Packet tracer",
     "notes/Portswigger/Server side Vuln",
     "notes/Portswigger",
     "notes/SOC",
-    "notes/DSA with java",
-    "attachments/MalDev Academy.pdf"
+    "notes/DSA with java"
   ]
 }
