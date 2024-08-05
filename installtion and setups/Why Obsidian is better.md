@@ -9,3 +9,8 @@ today we are going to discuss about obsidian with obsidian
 ---
 this is the second slide
 
+![[Pasted image 20240805191350.png]]
+--
+this is the third slide
+--
+

@@ -33,6 +33,20 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "39265ebe985a0ba3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b041e50dea979184",
+            "type": "leaf",
+            "state": {
+              "type": "reveal-preview-view",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,6 +185,7 @@
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240805191350.png",
     "slide-styles-dometrain.md",
     "installtion and setups/Why Obsidian is better.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
@@ -210,7 +225,6 @@
     "notes/Portswigger/SQL injection/Blind SQL.md",
     "notes/Portswigger/SQL injection/SQL CHEAT sheet.md",
     "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
-    "notes/Portswigger/Server side Vuln/Path traversal.md",
     "notes/Portswigger/SQL injection",
     "notes/misc",
     "notes/Packet tracer",
