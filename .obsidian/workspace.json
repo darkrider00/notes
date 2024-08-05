@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Burpsuite/Installation.md",
+                "file": "notes/CTI/CTI.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/Burpsuite/Installation.md",
+                "file": "notes/CTI/CTI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/Burpsuite/Installation.md",
+                "file": "notes/CTI/CTI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/Burpsuite/Installation.md"
+                "file": "notes/CTI/CTI.md"
               }
             }
           },
@@ -158,8 +158,8 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "notes/Burpsuite/installing burp suite pro.md",
     "notes/Burpsuite/Installation.md",
+    "notes/Burpsuite/installing burp suite pro.md",
     "notes/Burpsuite/basics.md",
     "notes/Burpsuite/Burpsuite - VAPT.md",
     "installtion and setups/Why Obsidian is better.md",
