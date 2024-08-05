@@ -6,3 +6,6 @@ defaultTemplate:
 
 today we are going to discuss about obsidian with obsidian
 
+---
+this is the second slide
+
