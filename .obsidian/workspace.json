@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "installtion and setups/Why Obsidian is better.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "installtion and setups/Why Obsidian is better.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "installtion and setups/Why Obsidian is better.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/CTI/CTI.md"
+                "file": "installtion and setups/Why Obsidian is better.md"
               }
             }
           },
@@ -165,13 +165,17 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
   "active": "e3b2098ece18fcc7",
   "lastOpenFiles": [
-    "New file.md",
+    "slide-styles-dometrain.md",
+    "installtion and setups/Why Obsidian is better.md",
+    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "notes/CTI/CTI.md",
+    "New file.md",
     "notes/CTI",
     "Untitled.canvas",
     "notes/misc/Wazuh.md",
@@ -207,9 +211,6 @@
     "notes/Portswigger/SQL injection/SQL CHEAT sheet.md",
     "notes/Portswigger/SQL injection/SQL injection in different contexts.md",
     "notes/Portswigger/Server side Vuln/Path traversal.md",
-    "notes/Burpsuite/Hackvector extension.md",
-    "notes/Packet tracer/All About Packet Tracer.md",
-    "2024-05-27.md",
     "notes/Portswigger/SQL injection",
     "notes/misc",
     "notes/Packet tracer",
