@@ -16,7 +16,7 @@ copy the license key and now clcik run to open burpsuite pro
 
 it will ask for a license 
 
-paste the license key and clcik on manual activation
+paste the license key and click on manual activation
 
 click on copy request and paste the request in loader file and you will get a response you can copy that paste in response field and your burpusite license is successfully activated 
 

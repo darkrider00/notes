@@ -13,37 +13,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/misc/privilege esclation techniques.md",
+                "file": "notes/Burpsuite/Installation.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "e3b2098ece18fcc7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "installtion and setups/Why Obsidian is better.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "39265ebe985a0ba3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b041e50dea979184",
-            "type": "leaf",
-            "state": {
-              "type": "reveal-preview-view",
-              "state": {}
             }
           }
         ]
@@ -112,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Why Obsidian is better.md",
+                "file": "notes/Burpsuite/Installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Why Obsidian is better.md",
+                "file": "notes/Burpsuite/Installation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Why Obsidian is better.md"
+                "file": "notes/Burpsuite/Installation.md"
               }
             }
           },
@@ -183,16 +156,22 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "e3b2098ece18fcc7",
+  "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "notes/Burpsuite/installing burp suite pro.md",
+    "notes/Burpsuite/Installation.md",
+    "notes/Burpsuite/basics.md",
+    "notes/Burpsuite/Burpsuite - VAPT.md",
+    "installtion and setups/Why Obsidian is better.md",
+    "notes/misc/privilege esclation techniques.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
     "attachments/Pasted image 20240805191350.png",
     "slide-styles-dometrain.md",
-    "installtion and setups/Why Obsidian is better.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "notes/CTI/CTI.md",
     "New file.md",
     "notes/CTI",
-    "Untitled.canvas",
     "notes/misc/Wazuh.md",
     "attachments/21 windows machine has checkin into wazuh successfully.png",
     "attachments/20 wazuh service started in windows vm.png",
@@ -203,15 +182,10 @@
     "attachments/15 - installing wazuh.png",
     "attachments/14 - doing update and upgrade.png",
     "attachments/13- ssh login.png",
-    "attachments/12 - droplet added.png",
-    "notes/Burpsuite/Burpsuite - VAPT.md",
-    "notes/misc/privilege esclation techniques.md",
     "notes/Forensics.md",
     "notes/misc/Snort.md",
     "notes/misc/Iptables.md",
     "notes/misc/Scapy.md",
-    "notes/Burpsuite/installing burp suite pro.md",
-    "notes/Burpsuite/basics.md",
     "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/Portswigger/SQL injection/UNION attacks.md",
     "notes/Portswigger/SQL injection/SQL injection.md",
