@@ -13,10 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "installtion and setups/Why Obsidian is better.md",
                 "mode": "source",
                 "source": false
               }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6c335f05d4d623bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8473e1801ef85786",
+            "type": "leaf",
+            "state": {
+              "type": "reveal-preview-view",
+              "state": {}
             }
           }
         ]
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "installtion and setups/Why Obsidian is better.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "installtion and setups/Why Obsidian is better.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/CTI/CTI.md"
+                "file": "installtion and setups/Why Obsidian is better.md"
               }
             }
           },
@@ -158,19 +172,20 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "notes/Burpsuite/Hackvector extension.md",
+    "notes/Burpsuite/Burpsuite - VAPT.md",
+    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
+    "notes/CTI/CTI.md",
     "attachments/Pasted image 20240805213939.png",
     "notes/Burpsuite/Installation.md",
     "notes/Burpsuite/installing burp suite pro.md",
     "notes/Burpsuite/basics.md",
-    "notes/Burpsuite/Burpsuite - VAPT.md",
     "installtion and setups/Why Obsidian is better.md",
     "notes/misc/privilege esclation techniques.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "attachments/Pasted image 20240805191350.png",
     "slide-styles-dometrain.md",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
-    "notes/CTI/CTI.md",
     "New file.md",
     "notes/CTI",
     "notes/misc/Wazuh.md",
@@ -182,7 +197,6 @@
     "attachments/16 wazuh  installed.png",
     "attachments/15 - installing wazuh.png",
     "attachments/14 - doing update and upgrade.png",
-    "attachments/13- ssh login.png",
     "notes/Forensics.md",
     "notes/misc/Snort.md",
     "notes/misc/Iptables.md",

@@ -19,3 +19,6 @@ this is the third slide
 this is a background slide <!-- element class="fragment highlight-red" -->
 
 ---
+this is a session
+--
+
