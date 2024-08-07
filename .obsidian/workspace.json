@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/installation and setup Obsidian with Git and syncing.md",
+                "file": "notes/CTI/Threat intel tools.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/installation and setup Obsidian with Git and syncing.md",
+                "file": "notes/CTI/Threat intel tools.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/installation and setup Obsidian with Git and syncing.md",
+                "file": "notes/CTI/Threat intel tools.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/installation and setup Obsidian with Git and syncing.md"
+                "file": "notes/CTI/Threat intel tools.md"
               }
             }
           },
@@ -158,10 +158,14 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "attachments/5ba68bbdd6e7e9ef2bbe2a0dc13106bc 1.gif",
+    "attachments/5ba68bbdd6e7e9ef2bbe2a0dc13106bc.gif",
+    "attachments/db3fb7276dd4c303a5ef7aa04a2ad8a0.gif",
+    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
+    "notes/CTI/Threat intel tools.md",
     "installtion and setups/Why Obsidian is better.md",
     "notes/Burpsuite/Hackvector extension.md",
     "notes/Burpsuite/Burpsuite - VAPT.md",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "notes/CTI/CTI.md",
     "attachments/Pasted image 20240805213939.png",
     "notes/Burpsuite/Installation.md",
@@ -181,8 +185,6 @@
     "attachments/18- thehive dashboard.png",
     "attachments/17- wazuh dashboard.png",
     "attachments/16 wazuh  installed.png",
-    "attachments/15 - installing wazuh.png",
-    "attachments/14 - doing update and upgrade.png",
     "notes/Forensics.md",
     "notes/misc/Snort.md",
     "notes/misc/Iptables.md",
@@ -197,8 +199,6 @@
     "notes/Portswigger/SQL injection/Prevention.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
-    "notes/Portswigger/SQL injection/Blind SQL.md",
-    "notes/Portswigger/SQL injection/SQL CHEAT sheet.md",
     "notes/Portswigger/SQL injection",
     "notes/misc",
     "notes/Packet tracer",
