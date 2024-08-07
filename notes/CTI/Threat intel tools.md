@@ -141,3 +141,101 @@ URL scan results provide ample information, with the following key areas being e
 - **Indicators:** Lists all IPs, domains and hashes associated with the site. These indicators do not imply malicious activity related to the site.!
 
 ![[5ba68bbdd6e7e9ef2bbe2a0dc13106bc 1.gif]]
+
+abuse.ch is dedicated to gathering and disseminating information about cyber threats to assist organizations in protecting their networks and systems. The organization collaborates with security researchers, law enforcement agencies, and industry partners to provide timely and accurate threat intelligence.
+
+### Main Projects
+
+1. **URLhaus:**
+    
+    - **Purpose:** To collect and share information about malicious URLs that distribute malware.
+    - **How It Works:** Security researchers and organizations can submit URLs to URLhaus. The platform verifies and catalogs these URLs, providing data on the type of malware being distributed, the hosting infrastructure, and other relevant details.
+    - **Usage:** Users can search the URLhaus database for specific URLs or download feeds of malicious URLs to integrate into their security systems for blocking and monitoring purposes.
+2. **ThreatFox:**
+    
+    - **Purpose:** To provide a platform for sharing indicators of compromise (IOCs) related to malware.
+    - **How It Works:** Users can submit IOCs such as IP addresses, domain names, file hashes, and URLs associated with malware. ThreatFox aggregates this data and makes it available to the security community.
+    - **Usage:** Security teams can use ThreatFox to enhance their threat detection and response capabilities by incorporating the shared IOCs into their security tools.
+3. **Feodo Tracker:**
+    
+    - **Purpose:** To track and mitigate Feodo (also known as Cridex or Bugat) botnet activity.
+    - **How It Works:** Feodo Tracker monitors command and control (C&C) servers used by the Feodo botnet. It provides a list of active C&C servers, including their IP addresses, domains, and associated malware families.
+    - **Usage:** Organizations can use the information from Feodo Tracker to block communication with these C&C servers and prevent botnet infections.
+4. **MalwareBazaar:**
+    
+    - **Purpose:** To facilitate the sharing of malware samples among the security community.
+    - **How It Works:** Users can upload malware samples to MalwareBazaar. The platform analyzes and catalogs these samples, providing metadata such as file hashes, malware family, and associated IOCs.
+    - **Usage:** Researchers and analysts can download samples for analysis, enhancing their understanding of malware behavior and improving detection techniques.
+
+### How abuse.ch Works
+
+1. **Data Collection:**
+    
+    - abuse.ch relies on contributions from security researchers, organizations, and automated systems to collect data on malicious activities. This includes submissions of URLs, IP addresses, domain names, and malware samples.
+2. **Verification and Analysis:**
+    
+    - Submitted data undergoes verification and analysis to ensure its accuracy and relevance. For example, URLs submitted to URLhaus are checked to confirm they are actively distributing malware.
+3. **Database Management:**
+    
+    - Verified data is stored in databases and made accessible to the security community. abuse.ch maintains various databases for different types of threats, such as malicious URLs, botnet C&C servers, and malware samples.
+4. **Information Sharing:**
+    
+    - abuse.ch provides multiple ways for users to access and utilize the collected data. This includes searchable databases, downloadable feeds, APIs, and integration with other security tools.
+
+It was developed to identify and track malware and botnets through several operational platforms developed under the project. These platforms are:
+
+- **Malware Bazaar:**  A resource for sharing malware samples.
+- **Feodo Tracker:**  A resource used to track botnet command and control (C2) infrastructure linked with Emotet, Dridex and TrickBot.
+- **SSL Blacklist:**  A resource for collecting and providing a blocklist for malicious SSL certificates and JA3/JA3s fingerprints.
+- **URL Haus:**  A resource for sharing malware distribution sites.
+- **Threat Fox:**  A resource for sharing indicators of compromise (IOCs).
+- 
+### Use Cases
+
+1. **Threat Intelligence:**
+    
+    - Organizations use abuse.ch’s data to enhance their threat intelligence capabilities. By incorporating information about malicious URLs, IOCs, and malware samples, they can improve their detection and prevention measures.
+2. **Incident Response:**
+    
+    - During security incidents, incident response teams can leverage abuse.ch’s data to identify and mitigate threats. For example, they can use URLhaus to find malicious URLs involved in a phishing campaign.
+3. **Research and Analysis:**
+    
+    - Security researchers use abuse.ch’s resources to study malware behavior, track botnet activities, and develop new detection techniques. MalwareBazaar, in particular, is valuable for accessing a wide range of malware samples.
+4. **Network Protection:**
+    
+    - Network administrators and security teams use data from abuse.ch to block malicious traffic and prevent infections. For instance, they can use Feodo Tracker to block communication with botnet C&C servers.
+## [MalwareBazaar](https://bazaar.abuse.ch/)
+
+As the name suggests, this project is an all in one malware collection and analysis database. The project supports the following features:
+
+- **Malware Samples Upload:** Security analysts can upload their malware samples for analysis and build the intelligence database. This can be done through the browser or an API.
+- **Malware Hunting:** Hunting for malware samples is possible through setting up alerts to match various elements such as tags, signatures, YARA rules, ClamAV signatures and vendor detection.
+
+![[55890b3448b3ecf9a55705cd1bd20b08.gif]]
+
+## [FeodoTracker](https://feodotracker.abuse.ch/)
+
+With this project, Abuse.ch is targeting to share intelligence on botnet Command & Control (C&C) servers associated with Dridex, Emotes (aka Heodo), TrickBot, QakBot and BazarLoader/BazarBackdoor. This is achieved by providing a database of the C&C servers that security analysts can search through and investigate any suspicious IP addresses they have come across. Additionally, they provide various IP and IOC blocklists and mitigation information to be used to prevent botnet infections.
+
+![[22e34a463f65fbf7e621a54e347543be.gif]]
+## [SSL Blacklist](https://sslbl.abuse.ch/)
+
+Abuse.ch developed this tool to identify and detect malicious SSL connections. From these connections, SSL certificates used by botnet C2 servers would be identified and updated on a denylist that is provided for use. The denylist is also used to identify JA3 fingerprints that would help detect and block malware botnet C2 communications on the TCP layer.
+
+You can browse through the SSL certificates and JA3 fingerprints lists or download them to add to your deny list or threat hunting rulesets.
+
+![[78bb7ba13a89c203b3ed331df18e2c4d.gif]]
+
+## [URLhaus](https://urlhaus.abuse.ch/)
+
+As the name points out, this tool focuses on sharing malicious URLs used for malware distribution. As an analyst, you can search through the database for domains, URLs, hashes and filetypes that are suspected to be malicious and validate your investigations.
+
+The tool also provides feeds associated with country, AS number and Top Level Domain that an analyst can generate based on specific search needs.
+
+![[f388122492011e9506410912afd749d1 1.gif]]
+## [ThreatFox](https://threatfox.abuse.ch/)
+
+With ThreatFox,  security analysts can search for, share and export indicators of compromise associated with malware. IOCs can be exported in various formats such as MISP events, Suricata IDS Ruleset, Domain Host files, DNS Response Policy Zone, JSON files and CSV files.
+
+![[e0fffff3133f4641f85190228990bdfb 1.gif]]
+
