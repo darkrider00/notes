@@ -12,16 +12,19 @@ $ git config --global user.email johndoe@example.com
 1. Install the [Obsidian Git 1.4k](https://github.com/denolehov/obsidian-git/wiki/Installation) community plugin
 2. Create a folder to store the repository. (e.g. `remote-blog/`). Set scopes to repo & expiration to no expiration
 3. Run the command (CMD/Ctrl + P): `Clone an existing remote repo`
+or open git bash in the same folder you want to take notes and execute the commands
 
 ```
 git remote add origin https://github.com/darkrider00/test.git
 git branch -M main
-gid qadd.
+gid add .
 git commit -m "intial commit"
 git push -u origin main
 ```
 
 now add the initialized git folder in obsidian vault and enable the setting to push for every 2 min so in that way you don't have to commit and push the files every time
+
+or you can push every time before you close obsidian
 
 TO sync 
 we can use syncthing and download it in both android and pc 
