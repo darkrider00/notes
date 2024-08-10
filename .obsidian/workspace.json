@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/Installing VMs on hyper v.md",
+                "file": "installtion and setups/Install kali linux using iso file.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Installing VMs on hyper v.md",
+                "file": "installtion and setups/Install kali linux using iso file.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Installing VMs on hyper v.md",
+                "file": "installtion and setups/Install kali linux using iso file.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Installing VMs on hyper v.md"
+                "file": "installtion and setups/Install kali linux using iso file.md"
               }
             }
           },
@@ -158,19 +158,20 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240810123735.png",
+    "attachments/Pasted image 20240810123626.png",
+    "attachments/Pasted image 20240810123528.png",
+    "attachments/Pasted image 20240810123504.png",
+    "attachments/Pasted image 20240810123422.png",
+    "attachments/Pasted image 20240810123142.png",
+    "installtion and setups/Installing VMs on hyper v.md",
+    "installtion and setups/Install kali linux using iso file.md",
+    "attachments/Pasted image 20240810123027.png",
+    "attachments/Pasted image 20240810122851.png",
+    "attachments/Pasted image 20240810122756.png",
     "attachments/Pasted image 20240810121532.png",
     "attachments/Pasted image 20240810121350.png",
-    "attachments/Pasted image 20240810121303.png",
-    "attachments/Pasted image 20240810121129.png",
-    "attachments/Pasted image 20240810121042.png",
-    "attachments/Pasted image 20240810120845.png",
-    "attachments/Pasted image 20240810120813.png",
-    "attachments/Pasted image 20240810120722.png",
-    "attachments/Pasted image 20240810120425.png",
-    "attachments/Pasted image 20240810120052.png",
-    "attachments/Pasted image 20240810115953.png",
     "notes/CTI/Threat intel tools.md",
-    "installtion and setups/Installing VMs on hyper v.md",
     "installtion and setups/Why Obsidian is better.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.sync-conflict-20240807-192003-6WDQWCE.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
@@ -196,7 +197,6 @@
     "notes/Portswigger/SQL injection/SQL injection.md",
     "notes/Portswigger/LABS/SQL/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
     "notes/Portswigger/SQL injection/Examining the database in SQL injection attacks.md",
-    "notes/Portswigger/LABS/SQL/SQL injection with filter bypass via XML encoding.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
     "notes/Portswigger/SQL injection",

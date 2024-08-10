@@ -46,7 +46,19 @@ next is we need to specify the storage more than 20 gb will be enough for this o
 
 ![[Pasted image 20240810121532.png]]
 
-install the image file you've downloaded 
+install the image file you've downloaded and select the file and click on next 
+![[Pasted image 20240810122756.png]]
+
+verify all the details and click on finish after couple of minutes your vitual machien will be created
+
+![[Pasted image 20240810122851.png]]
+
+your new virtual machine is created now power on the machine , click on connect and it will start your virtual machine
+
+![[Pasted image 20240810123027.png]]
+
+click on start to start the virtual machine
+
 
 
 
