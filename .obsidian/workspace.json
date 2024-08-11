@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/Install kali linux using iso file.md",
+                "file": "installtion and setups/Installing VMs on hyper v.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Install kali linux using iso file.md",
+                "file": "installtion and setups/Installing VMs on hyper v.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Install kali linux using iso file.md",
+                "file": "installtion and setups/Installing VMs on hyper v.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Install kali linux using iso file.md"
+                "file": "installtion and setups/Installing VMs on hyper v.md"
               }
             }
           },
@@ -152,12 +152,17 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "installtion and setups/Installing Universal forwarder in Splunk.md",
+    "installtion and setups/Installing Splunk.md",
+    "installtion and setups/installation of flare VM.md",
+    "installtion and setups/installation and setup Obsidian with Git and syncing.sync-conflict-20240807-192003-6WDQWCE.md",
+    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
+    "installtion and setups/Install kali linux using iso file.md",
     "attachments/Pasted image 20240810125447.png",
     "attachments/Pasted image 20240810125419.png",
     "attachments/Pasted image 20240810125343.png",
@@ -168,13 +173,9 @@
     "attachments/Pasted image 20240810124216.png",
     "attachments/Pasted image 20240810124106.png",
     "attachments/Pasted image 20240810124047.png",
-    "attachments/Pasted image 20240810124012.png",
     "installtion and setups/Installing VMs on hyper v.md",
-    "installtion and setups/Install kali linux using iso file.md",
     "notes/CTI/Threat intel tools.md",
     "installtion and setups/Why Obsidian is better.md",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.sync-conflict-20240807-192003-6WDQWCE.md",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "notes/Burpsuite/Hackvector extension.md",
     "notes/Burpsuite/Burpsuite - VAPT.md",
     "notes/CTI/CTI.md",
@@ -195,8 +196,6 @@
     "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/Portswigger/SQL injection/UNION attacks.md",
     "notes/Portswigger/SQL injection/SQL injection.md",
-    "notes/Portswigger/LABS/SQL/SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
-    "notes/Portswigger/SQL injection/Examining the database in SQL injection attacks.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
     "notes/Portswigger/SQL injection",
