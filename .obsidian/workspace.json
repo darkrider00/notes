@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/CTI/CTI.md"
+                "file": "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md"
               }
             }
           },
@@ -162,11 +162,14 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "notes/CTI/CTI.md",
+    "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md",
     "installtion and setups/Installing VMs on hyper v.md",
     "installtion and setups/Installing Universal forwarder in Splunk.md",
     "installtion and setups/Installing Splunk.md",
@@ -188,7 +191,6 @@
     "installtion and setups/Why Obsidian is better.md",
     "notes/Burpsuite/Hackvector extension.md",
     "notes/Burpsuite/Burpsuite - VAPT.md",
-    "notes/CTI/CTI.md",
     "notes/Burpsuite/Installation.md",
     "notes/Burpsuite/installing burp suite pro.md",
     "notes/Burpsuite/basics.md",
@@ -205,7 +207,6 @@
     "notes/misc/Scapy.md",
     "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/Portswigger/SQL injection/UNION attacks.md",
-    "notes/Portswigger/SQL injection/SQL injection.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
     "notes/Portswigger/SQL injection",
