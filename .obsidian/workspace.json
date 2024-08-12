@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md",
+                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md",
+                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md",
+                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md"
+                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md"
               }
             }
           },
@@ -169,7 +169,7 @@
   "active": "ae21732285f92867",
   "lastOpenFiles": [
     "notes/CTI/CTI.md",
-    "installtion and setups/How to upgrade your windows 11 home to windows 11 pro or enterprise.md",
+    "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
     "installtion and setups/Installing VMs on hyper v.md",
     "installtion and setups/Installing Universal forwarder in Splunk.md",
     "installtion and setups/Installing Splunk.md",
