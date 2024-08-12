@@ -13,9 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/Installing VMs on hyper v.md",
+                "file": "notes/CTI/CTI.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "c9e3c89a5c03806a",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
               }
             }
           }
@@ -85,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Installing VMs on hyper v.md",
+                "file": "notes/CTI/CTI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Installing VMs on hyper v.md",
+                "file": "notes/CTI/CTI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Installing VMs on hyper v.md"
+                "file": "notes/CTI/CTI.md"
               }
             }
           },
@@ -157,6 +167,7 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "installtion and setups/Installing VMs on hyper v.md",
     "installtion and setups/Installing Universal forwarder in Splunk.md",
     "installtion and setups/Installing Splunk.md",
     "installtion and setups/installation of flare VM.md",
@@ -173,7 +184,6 @@
     "attachments/Pasted image 20240810124216.png",
     "attachments/Pasted image 20240810124106.png",
     "attachments/Pasted image 20240810124047.png",
-    "installtion and setups/Installing VMs on hyper v.md",
     "notes/CTI/Threat intel tools.md",
     "installtion and setups/Why Obsidian is better.md",
     "notes/Burpsuite/Hackvector extension.md",
