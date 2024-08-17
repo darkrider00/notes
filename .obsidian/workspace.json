@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/Enable RDP on your kali Linux.md",
+                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Enable RDP on your kali Linux.md",
+                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Enable RDP on your kali Linux.md",
+                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Enable RDP on your kali Linux.md"
+                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md"
               }
             }
           },
@@ -168,11 +168,11 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "installtion and setups/Installing VMs on hyper v.md",
+    "installtion and setups/Enable RDP on your kali Linux.md",
     "attachments/Pasted image 20240817125526.png",
     "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
-    "installtion and setups/Enable RDP on your kali Linux.md",
     "notes/CTI/CTI.md",
-    "installtion and setups/Installing VMs on hyper v.md",
     "installtion and setups/Installing Universal forwarder in Splunk.md",
     "installtion and setups/Installing Splunk.md",
     "installtion and setups/installation of flare VM.md",
@@ -188,7 +188,6 @@
     "attachments/Pasted image 20240810124234.png",
     "attachments/Pasted image 20240810124216.png",
     "attachments/Pasted image 20240810124106.png",
-    "attachments/Pasted image 20240810124047.png",
     "notes/CTI/Threat intel tools.md",
     "installtion and setups/Why Obsidian is better.md",
     "notes/Burpsuite/Hackvector extension.md",
