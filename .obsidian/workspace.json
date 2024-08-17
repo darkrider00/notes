@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
+                "file": "concepts.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
+                "file": "concepts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
+                "file": "concepts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md"
+                "file": "concepts.md"
               }
             }
           },
@@ -168,10 +168,21 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240817174733.png",
+    "attachments/Pasted image 20240817174457.png",
+    "attachments/Pasted image 20240817174422.png",
+    "attachments/Pasted image 20240817174220.png",
+    "attachments/Pasted image 20240817174214.png",
+    "attachments/Pasted image 20240817174145.png",
+    "attachments/Pasted image 20240817174131.png",
+    "attachments/Pasted image 20240817174054.png",
+    "attachments/Pasted image 20240817173736.png",
+    "attachments/Pasted image 20240817173538.png",
+    "attachments/Pasted image 20240817173446.png",
+    "notes/Python",
+    "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
     "installtion and setups/Installing VMs on hyper v.md",
     "installtion and setups/Enable RDP on your kali Linux.md",
-    "attachments/Pasted image 20240817125526.png",
-    "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
     "notes/CTI/CTI.md",
     "installtion and setups/Installing Universal forwarder in Splunk.md",
     "installtion and setups/Installing Splunk.md",
@@ -179,15 +190,6 @@
     "installtion and setups/installation and setup Obsidian with Git and syncing.sync-conflict-20240807-192003-6WDQWCE.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "installtion and setups/Install kali linux using iso file.md",
-    "attachments/Pasted image 20240810125447.png",
-    "attachments/Pasted image 20240810125419.png",
-    "attachments/Pasted image 20240810125343.png",
-    "attachments/Pasted image 20240810124646.png",
-    "attachments/Pasted image 20240810124404.png",
-    "attachments/Pasted image 20240810124325.png",
-    "attachments/Pasted image 20240810124234.png",
-    "attachments/Pasted image 20240810124216.png",
-    "attachments/Pasted image 20240810124106.png",
     "notes/CTI/Threat intel tools.md",
     "installtion and setups/Why Obsidian is better.md",
     "notes/Burpsuite/Hackvector extension.md",
@@ -199,7 +201,7 @@
     "Untitled 1.canvas",
     "Untitled.canvas",
     "slide-styles-dometrain.md",
-    "New file.md",
+    "concepts.md",
     "notes/CTI",
     "notes/misc/Wazuh.md",
     "notes/Forensics.md",
@@ -213,7 +215,6 @@
     "notes/Packet tracer",
     "notes/Portswigger/Server side Vuln",
     "notes/Portswigger",
-    "notes/SOC",
-    "notes/DSA with java"
+    "notes/SOC"
   ]
 }
