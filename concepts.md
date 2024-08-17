@@ -363,3 +363,134 @@ losses = 0
 ties = 0
 ```
 
+First, we import the random and sys module so that our program can call the random.randint() and sys.exit() functions. We also set up three variables to keep track of how many wins, losses, and ties the player has had.
+
+```python
+while True: # The main game loop.  
+    print('%s Wins, %s Losses, %s Ties' % (wins, losses, ties))  
+    while True: # The player input loop.  
+        print('Enter your move: (r)ock (p)aper (s)cissors or (q)uit')  
+        playerMove = input()  
+        if playerMove == 'q':  
+            sys.exit() # Quit the program.  
+        if playerMove == 'r' or playerMove == 'p' or playerMove == 's':  
+            break # Break out of the player input loop.  
+        print('Type one of r, p, s, or q.')
+```
+This program uses a while loop inside of another while loop. The first loop is the main game loop, and a single game of rock, paper, scissors is played on each iteration through this loop. The second loop asks for input from the player, and keeps looping until the player has entered an r, p, s, or q for their move. The r, p, and s correspond to rock, paper, and scissors, respectively, while the q means the player intends to quit. In that case, sys.exit() is called and the program exits. If the player has entered r, p, or s, the execution breaks out of the loop. Otherwise, the program reminds the player to enter r, p, s, or q and goes back to the start of the loop.
+
+```
+    # Display what the player chose:  
+    if playerMove == 'r':  
+        print('ROCK versus...')  
+    elif playerMove == 'p':  
+        print('PAPER versus...')  
+    elif playerMove == 's':  
+        print('SCISSORS versus...')
+
+The player’s move is displayed on the screen.
+
+    # Display what the computer chose:  
+    randomNumber = random.randint(1, 3)  
+    if randomNumber == 1:  
+        computerMove = 'r'  
+        print('ROCK')  
+    elif randomNumber == 2:  
+        computerMove = 'p'  
+        print('PAPER')  
+    elif randomNumber == 3:  
+        computerMove = 's'  
+        print('SCISSORS')
+```
+
+Next, the computer’s move is randomly selected. Since random.randint() can only return a random number, the 1, 2, or 3 integer value it returns is stored in a variable named randomNumber. The program stores a 'r', 'p', or 's' string in computerMove based on the integer in randomNumber, as well as displays the computer’s move.
+
+ # Display and record the win/loss/tie:  
+    if playerMove == computerMove:  
+        print('It is a tie!')  
+        ties = ties + 1  
+    elif playerMove == 'r' and computerMove == 's':  
+        print('You win!')  
+        wins = wins + 1  
+    elif playerMove == 'p' and computerMove == 'r':  
+        print('You win!')  
+        wins = wins + 1  
+    elif playerMove == 's' and computerMove == 'p':  
+        print('You win!')  
+        wins = wins + 1  
+    elif playerMove == 'r' and computerMove == 'p':  
+        print('You lose!')  
+        losses = losses + 1  
+    elif playerMove == 'p' and computerMove == 's':  
+        print('You lose!')  
+        losses = losses + 1  
+    elif playerMove == 's' and computerMove == 'r':  
+        print('You lose!')  
+        losses = losses + 1
+
+### functions 
+
+One special thing to note about parameters is that the value stored in a parameter is forgotten when the function returns.
+
+When an expression is used with a return statement, the return value is what this expression evaluates to. For example, the following program defines a function that returns a different string depending on what number it is passed as an argument.
+
+```python
+➊ import random  
+  
+➋ def getAnswer(answerNumber):  
+    ➌ if answerNumber == 1:  
+           return 'It is certain'  
+       elif answerNumber == 2:  
+           return 'It is decidedly so'  
+       elif answerNumber == 3:  
+           return 'Yes'  
+       elif answerNumber == 4:  
+           return 'Reply hazy try again'  
+       elif answerNumber == 5:  
+           return 'Ask again later'  
+       elif answerNumber == 6:  
+           return 'Concentrate and ask again'  
+       elif answerNumber == 7:  
+           return 'My reply is no'  
+       elif answerNumber == 8:  
+           return 'Outlook not so good'  
+       elif answerNumber == 9:  
+           return 'Very doubtful'  
+  
+➍ r = random.randint(1, 9)  
+➎ fortune = getAnswer(r)  
+➏ print(fortune)
+```
+
+The getAnswer() function is called with r as the argument ➎. The program execution moves to the top of the getAnswer() function ➌, and the value r is stored in a parameter named answerNumber. Then, depending on the value in answerNumber, the function returns one of many possible string values.
+
+In Python, there is a value called None, which represents the absence of a value. The None value is the only value of the NoneType data type.
+
+This value-without-a-value can be helpful when you need to store something that won’t be confused for a real value in a variable. One place where None is used is as the return value of print().
+
+The print() function displays text on the screen, but it doesn’t need to return anything in the same way len() or input() does. But since all function calls need to evaluate to a return value, print() returns None. To see this in action, enter the following into the interactive shell:
+
+```
+>>> spam = print('Hello!')  
+Hello!  
+>>> None == spam  
+True
+
+```
+
+Most arguments are identified by their position in the function call. 
+
+For example, random.randint(1, 10) is different from random.randint(10, 1). 
+The function call random.randint(1, 10) will return a random integer between 1 and 10 because the first argument is the low end of the range and the second argument is the high end (while random.randint(10, 1) causes an error).
+
+_eyword arguments_ are identified by the keyword put before them in the function call. Keyword arguments are often used for _optional parameters_. For example, the print() function has the optional parameters end and sep to specify what should be printed at the end of its arguments and between its arguments (separating them), respectively.
+
+```
+print('Hello', end='')  
+print('World')
+
+the output would look like this:
+
+HelloWorld
+```
+
