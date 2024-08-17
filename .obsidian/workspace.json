@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
+                "file": "installtion and setups/Enable RDP on your kali Linux.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
+                "file": "installtion and setups/Enable RDP on your kali Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
+                "file": "installtion and setups/Enable RDP on your kali Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md"
+                "file": "installtion and setups/Enable RDP on your kali Linux.md"
               }
             }
           },
@@ -168,8 +168,10 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "notes/CTI/CTI.md",
+    "attachments/Pasted image 20240817125526.png",
     "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
+    "installtion and setups/Enable RDP on your kali Linux.md",
+    "notes/CTI/CTI.md",
     "installtion and setups/Installing VMs on hyper v.md",
     "installtion and setups/Installing Universal forwarder in Splunk.md",
     "installtion and setups/Installing Splunk.md",
@@ -205,8 +207,6 @@
     "notes/misc/Snort.md",
     "notes/misc/Iptables.md",
     "notes/misc/Scapy.md",
-    "notes/DSA with java/Problem Solving module in Hacker Rank.md",
-    "notes/Portswigger/SQL injection/UNION attacks.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
     "notes/Portswigger/SQL injection",
