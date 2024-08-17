@@ -113,3 +113,65 @@ while spam < 5:
 ```
 ![[Pasted image 20240817174733.png]]
 
+#### **_break Statements_**
+
+```python
+➊ while True:  
+       print('Please type your name.')  
+    ➋ name = input()  
+    ➌ if name == 'your name':  
+        ➍ break  
+➎ print('Thank you!')
+```
+
+![[Pasted image 20240817175404.png]]
+
+#### **_continue Statements_**
+
+```
+  while True:  
+      print('Who are you?')  
+      name = input()  
+    ➊ if name != 'Joe':  
+        ➋ continue  
+       print('Hello, Joe. What is the password? (It is a fish.)')  
+    ➌ password = input()  
+       if password == 'swordfish':  
+        ➍ break  
+➎ print('Access granted.')
+
+```
+![[Pasted image 20240817175440.png]]
+
+
+**“TRUTHY” AND “FALSEY” VALUES**
+
+Conditions will consider some values in other data types equivalent to True and False. When used in conditions, 0, 0.0, and '' (the empty string) are considered False, while all other values are considered True. For example, look at the following program:
+
+```
+name = ''  
+➊ while not name:  
+    print('Enter your name:')  
+    name = input()  
+print('How many guests will you have?')  
+numOfGuests = int(input())  
+➋ if numOfGuests:  
+    ➌ print('Be sure to have enough room for all your guests.')  
+print('Done')
+```
+
+You can view the execution of this program at _[https://autbor.com/howmanyguests/](https://autbor.com/howmanyguests/)_. If the user enters a blank string for name, then the while statement’s condition will be True ➊, and the program continues to ask for a name. If the value for numOfGuests is not 0 ➋, then the condition is considered to be True, and the program will print a reminder for the user ➌.
+
+You could have entered not name != '' instead of not name, and numOfGuests != 0 instead of numOfGuests, but using the truthy and falsey values can make your code easier to read.
+
+#### **_for Loops and the range() Function_**
+
+- The for keyword
+- A variable name
+- The in keyword
+- A call to the range() method with up to three integers passed to it
+- A colon
+- Starting on the next line, an indented block of code (called the for clause)
+
+![[Pasted image 20240817175525.png]]
+
