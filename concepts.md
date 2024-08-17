@@ -175,3 +175,191 @@ You could have entered not name != '' instead of not name, and numOfGuests !
 
 ![[Pasted image 20240817175525.png]]
 
+### **Importing Modules**
+
+All Python programs can call a basic set of functions called _built-in functions_, including the print(), input(), and len() functions you’ve seen before. Python also comes with a set of modules called the _standard library_. Each module is a Python program that contains a related group of functions that can be embedded in your programs. For example, the math module has mathematics-related functions, the random module has random number-related functions, and so on.
+
+Before you can use the functions in a module, you must import the module with an import statement. In code, an import statement consists of the following:
+
+- The import keyword
+- The name of the module
+- Optionally, more module names, as long as they are separated by commas
+
+### **Ending a Program Early with the sys.exit() Function**
+
+```python
+import sys  
+  
+while True:  
+    print('Type exit to exit.')  
+    response = input()  
+    if response == 'exit':  
+        sys.exit()  
+    print('You typed ' + response + '.')
+```
+### **A Short Program: Guess the Number**
+
+```python
+# This is a guess the number game.  
+import random  
+secretNumber = random.randint(1, 20)  
+print('I am thinking of a number between 1 and 20.')  
+  
+# Ask the player to guess 6 times.  
+for guessesTaken in range(1, 7):  
+    print('Take a guess.')  
+    guess = int(input())  
+  
+    if guess < secretNumber:  
+        print('Your guess is too low.')  
+    elif guess > secretNumber:  
+        print('Your guess is too high.')  
+    else:  
+        break    # This condition is the correct guess!  
+  
+if guess == secretNumber:  
+    print('Good job! You guessed my number in ' + str(guessesTaken) + '  
+guesses!')  
+else:  
+    print('Nope. The number I was thinking of was ' + str(secretNumber))
+```
+# This is a guess the number game.  
+import random  
+secretNumber = random.randint(1, 20)
+
+First, a comment at the top of the code explains what the program does. Then, the program imports the random module so that it can use the random.randint() function to generate a number for the user to guess. The return value, a random integer between 1 and 20, is stored in the variable secretNumber.
+
+print('I am thinking of a number between 1 and 20.')  
+  
+# Ask the player to guess 6 times.  
+for guessesTaken in range(1, 7):  
+    print('Take a guess.')  
+    guess = int(input())
+
+The program tells the player that it has come up with a secret number and will give the player six chances to guess it. The code that lets the player enter a guess and checks that guess is in a for loop that will loop at most six times. The first thing that happens in the loop is that the player types in a guess. Since input() returns a string, its return value is passed straight into int(), which translates the string into an integer value. This gets stored in a variable named guess.
+
+    if guess < secretNumber:  
+        print('Your guess is too low.')  
+    elif guess > secretNumber:  
+        print('Your guess is too high.')
+
+These few lines of code check to see whether the guess is less than or greater than the secret number. In either case, a hint is printed to the screen.
+
+    else:  
+        break    # This condition is the correct guess!
+
+If the guess is neither higher nor lower than the secret number, then it must be equal to the secret number—in which case, you want the program execution to break out of the for loop.
+
+if guess == secretNumber:  
+    print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')  
+else:  
+    print('Nope. The number I was thinking of was ' + str(secretNumber))
+
+
+### **A Short Program: Rock, Paper, Scissors**
+
+Let’s use the programming concepts we’ve learned so far to create a simple rock, paper, scissors game. The output will look like this:
+Type the following source code into the file editor, and save the file as _rpsGame.py_:
+
+import random, sys  
+  
+print('ROCK, PAPER, SCISSORS')  
+  
+### **A Short Program: Rock, Paper, Scissors**
+
+Let’s use the programming concepts we’ve learned so far to create a simple rock, paper, scissors game. The output will look like this:
+
+ROCK, PAPER, SCISSORS  
+0 Wins, 0 Losses, 0 Ties  
+Enter your move: (r)ock (p)aper (s)cissors or (q)uit  
+p  
+PAPER versus...  
+PAPER  
+It is a tie!  
+0 Wins, 1 Losses, 1 Ties  
+Enter your move: (r)ock (p)aper (s)cissors or (q)uit  
+s  
+SCISSORS versus...  
+PAPER  
+You win!  
+1 Wins, 1 Losses, 1 Ties  
+Enter your move: (r)ock (p)aper (s)cissors or (q)uit  
+q
+
+Type the following source code into the file editor, and save the file as _rpsGame.py_:
+
+```python
+import random, sys  
+  
+print('ROCK, PAPER, SCISSORS')  
+
+wins = 0  
+losses = 0  
+ties = 0  
+  
+while True: # The main game loop.  
+    print('%s Wins, %s Losses, %s Ties' % (wins, losses, ties))  
+    while True: # The player input loop.  
+        print('Enter your move: (r)ock (p)aper (s)cissors or (q)uit')  
+        playerMove = input()  
+        if playerMove == 'q':  
+            sys.exit() # Quit the program.  
+        if playerMove == 'r' or playerMove == 'p' or playerMove == 's':  
+            break # Break out of the player input loop.  
+        print('Type one of r, p, s, or q.')  
+  
+    # Display what the player chose:  
+    if playerMove == 'r':  
+        print('ROCK versus...')  
+    elif playerMove == 'p':  
+        print('PAPER versus...')  
+    elif playerMove == 's':  
+        print('SCISSORS versus...')  
+  
+    # Display what the computer chose:  
+    randomNumber = random.randint(1, 3)  
+    if randomNumber == 1:  
+        computerMove = 'r'  
+        print('ROCK')  
+    elif randomNumber == 2:  
+        computerMove = 'p'  
+        print('PAPER')  
+    elif randomNumber == 3:  
+        computerMove = 's'  
+        print('SCISSORS')  
+  
+    # Display and record the win/loss/tie:  
+    if playerMove == computerMove:  
+        print('It is a tie!')  
+        ties = ties + 1  
+    elif playerMove == 'r' and computerMove == 's':  
+        print('You win!')  
+        wins = wins + 1  
+    elif playerMove == 'p' and computerMove == 'r':  
+        print('You win!')  
+        wins = wins + 1  
+    elif playerMove == 's' and computerMove == 'p':  
+        print('You win!')  
+        wins = wins + 1  
+    elif playerMove == 'r' and computerMove == 'p':  
+        print('You lose!')  
+        losses = losses + 1  
+    elif playerMove == 'p' and computerMove == 's':  
+        print('You lose!')  
+        losses = losses + 1  
+    elif playerMove == 's' and computerMove == 'r':  
+        print('You lose!')  
+        losses = losses + 1
+```
+
+```python
+import random, sys  
+  
+print('ROCK, PAPER, SCISSORS')  
+  
+# These variables keep track of the number of wins, losses, and ties.  
+wins = 0  
+losses = 0  
+ties = 0
+```
+
