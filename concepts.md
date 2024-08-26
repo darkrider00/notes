@@ -494,3 +494,78 @@ the output would look like this:
 HelloWorld
 ```
 
+print('Hello', end='')  
+print('World')
+
+the output would look like this:
+
+HelloWorld
+
+print('cats', 'dogs', 'mice')  
+cats dogs mice
+
+But you could replace the default separating string by passing the sep keyword argument a different string. Enter the following into the interactive shell:
+
+```
+>>> print('cats', 'dogs', 'mice', sep=',')  
+cats,dogs,mice
+```
+
+
+### The Conversation Analogy:
+
+1. **Alice:** You start a conversation about Alice. This is like calling a function in a program. Alice's story is now at the "top of the stack."
+    
+2. **Bob:** While talking about Alice, you remember a story about Bob, which you start telling. This is like calling another function from within the first function. Bob's story is now at the top of the stack, and Alice's story is temporarily paused.
+    
+3. **Carol:** To explain something about Bob, you need to first tell a story about Carol. You start talking about Carol, putting her story at the top of the stack, and Bob's story is paused.
+    
+4. **Returning:** Once you finish Carol's story, you go back to Bob's story, picking up where you left off. This is like the function for Carol finishing execution and returning control to the function for Bob.
+    
+5. **David:** Then you remember your brother David and start talking about him, placing his story at the top of the stack. After finishing David's story, you return to Alice's story, which was the original topic.
+    
+
+### The Call Stack:
+
+- **Stack-Like Structure:** In programming, when a function is called, it is added to the call stack. If that function calls another function, the new function is added on top of the stack, pausing the first one. This process continues, stacking new function calls on top of one another.
+    
+- **LIFO (Last In, First Out):** The call stack operates on a "Last In, First Out" basis. The most recent function call (like the most recent story) must finish before the program can return to the previous one.
+    
+- **Returning Control:** When a function finishes execution, it is "popped" off the stack, and control is returned to the function below it (like returning to a previous story in your conversation).
+    
+
+
+![[Pasted image 20240817191957.png]]
+### Example in Code:
+
+python
+
+Copy code
+
+```
+def alice():
+    print("Talking about Alice")
+    bob()
+    print("Back to Alice")
+
+def bob():
+    print("Talking about Bob")
+    carol()
+    print("Back to Bob")
+
+def carol():
+    print("Talking about Carol")
+
+alice()
+
+```
+
+In this code:
+
+- The program starts with `alice()`.
+- `alice()` calls `bob()`, pausing its execution.
+- `bob()` calls `carol()`, pausing its execution.
+- After `carol()` finishes, `bob()` resumes and finishes, then `alice()` resumes and finishes.
+
+This sequence mimics the flow of the conversation described, where each new topic adds to the stack, and each finished topic is removed, eventually returning to the original conversation.
+
