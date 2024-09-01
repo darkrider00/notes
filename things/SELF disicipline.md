@@ -18,4 +18,6 @@ the three dimensions namely self-control, work and aim were praised by the ancie
 
 no matter how much we try to resist the world will always have plenty of things to offer, that will persuade and grab our attention 
 
-
+  industriousness : a Stoic virtue
+  act of being active and disciplined
+- lack of love for oneself - laziness
