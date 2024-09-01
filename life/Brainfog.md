@@ -35,4 +35,15 @@ sleep
 often associated with where u r , dehydration , high caffeine intake 
 
 
+# remedies
+- yoga tai chi or
+- exercise (cardiovascular specifically leg exercise)
+leg muscles contains blood vessels inside when we walk the blood muscles will contract and push the blood upward towards the brain 
+engaging skeleton muscles and doing cardio vascular muscles
+- diet 
+-supplements with luteolin and flavonoids can be +ve effect on brain fog
+(green vegetables)
+- sleep (we need to sleep properly)
+- lots and lots of fluids (increase your liquid intake)
 
+brain fog is not a psychologic condition it's a physical or neural condition

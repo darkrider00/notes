@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "life/Brainfog.md",
+                "file": "life/SELF disicipline.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "life/Brainfog.md",
+                "file": "life/SELF disicipline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "life/Brainfog.md",
+                "file": "life/SELF disicipline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "life/Brainfog.md"
+                "file": "life/SELF disicipline.md"
               }
             }
           },
@@ -168,8 +168,9 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "concepts.md",
     "life/Brainfog.md",
+    "life/SELF disicipline.md",
+    "concepts.md",
     "life",
     "attachments/Pasted image 20240817191957.png",
     "attachments/Pasted image 20240817175525.png",
@@ -208,7 +209,6 @@
     "notes/Forensics.md",
     "notes/misc/Snort.md",
     "notes/misc/Iptables.md",
-    "notes/misc/Scapy.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
     "notes/Portswigger/SQL injection",
