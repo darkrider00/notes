@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts.md",
+                "file": "life/Brainfog.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "concepts.md",
+                "file": "life/Brainfog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "concepts.md",
+                "file": "life/Brainfog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "concepts.md"
+                "file": "life/Brainfog.md"
               }
             }
           },
@@ -168,6 +168,9 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "concepts.md",
+    "life/Brainfog.md",
+    "life",
     "attachments/Pasted image 20240817191957.png",
     "attachments/Pasted image 20240817175525.png",
     "attachments/Pasted image 20240817175440.png",
@@ -178,7 +181,6 @@
     "attachments/Pasted image 20240817174220.png",
     "attachments/Pasted image 20240817174214.png",
     "attachments/Pasted image 20240817174145.png",
-    "attachments/Pasted image 20240817174131.png",
     "notes/Python",
     "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
     "installtion and setups/Installing VMs on hyper v.md",
@@ -201,7 +203,6 @@
     "Untitled 1.canvas",
     "Untitled.canvas",
     "slide-styles-dometrain.md",
-    "concepts.md",
     "notes/CTI",
     "notes/misc/Wazuh.md",
     "notes/Forensics.md",
@@ -214,7 +215,6 @@
     "notes/misc",
     "notes/Packet tracer",
     "notes/Portswigger/Server side Vuln",
-    "notes/Portswigger",
-    "notes/SOC"
+    "notes/Portswigger"
   ]
 }
