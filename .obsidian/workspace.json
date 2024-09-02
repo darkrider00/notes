@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "things/SELF disicipline.md",
+                "file": "things/Brainfog.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "things/SELF disicipline.md",
+                "file": "things/Brainfog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "things/SELF disicipline.md",
+                "file": "things/Brainfog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "things/SELF disicipline.md"
+                "file": "things/Brainfog.md"
               }
             }
           },
@@ -166,10 +166,10 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "7bb12a26d89f78d9",
+  "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "things/Brainfog.md",
     "things/SELF disicipline.md",
+    "things/Brainfog.md",
     "concepts.md",
     "things",
     "attachments/Pasted image 20240817191957.png",
