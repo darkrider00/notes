@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "things/Brainfog.md",
+                "file": "notes/Burpsuite/Installation.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "things/Brainfog.md",
+                "file": "notes/Burpsuite/Installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "things/Brainfog.md",
+                "file": "notes/Burpsuite/Installation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "things/Brainfog.md"
+                "file": "notes/Burpsuite/Installation.md"
               }
             }
           },
@@ -168,8 +168,12 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "things/SELF disicipline.md",
+    "notes/Burpsuite/Burpsuite - VAPT.md",
+    "notes/CTI/Threat intel tools.md",
+    "notes/CTI/CTI.md",
+    "notes/Burpsuite/basics.md",
     "things/Brainfog.md",
+    "things/SELF disicipline.md",
     "concepts.md",
     "things",
     "attachments/Pasted image 20240817191957.png",
@@ -186,20 +190,16 @@
     "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
     "installtion and setups/Installing VMs on hyper v.md",
     "installtion and setups/Enable RDP on your kali Linux.md",
-    "notes/CTI/CTI.md",
     "installtion and setups/Installing Universal forwarder in Splunk.md",
     "installtion and setups/Installing Splunk.md",
     "installtion and setups/installation of flare VM.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.sync-conflict-20240807-192003-6WDQWCE.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "installtion and setups/Install kali linux using iso file.md",
-    "notes/CTI/Threat intel tools.md",
     "installtion and setups/Why Obsidian is better.md",
     "notes/Burpsuite/Hackvector extension.md",
-    "notes/Burpsuite/Burpsuite - VAPT.md",
     "notes/Burpsuite/Installation.md",
     "notes/Burpsuite/installing burp suite pro.md",
-    "notes/Burpsuite/basics.md",
     "notes/misc/privilege esclation techniques.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
