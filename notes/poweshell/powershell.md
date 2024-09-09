@@ -88,3 +88,33 @@ https://learn.microsoft.com/en-us/previous-versions/system-center/virtual-machin
 
 ![[Pasted image 20240909205404.png]]
 
+### running the basic commands
+
+- to check if we r running 64 bit or 32 bit powershell the command is 
+		`[environment]::Is64BitProcess`
+
+![[Pasted image 20240909205937.png]]
+
+above is powershell with admin privileges
+
+![[Pasted image 20240909210003.png]]
+
+
+we can use tab to autocomplete for commands in powershell
+
+above is PowerShell (X86)
+
+- setting execution policy to unrestircted 
+
+![[Pasted image 20240909210554.png]]
+
+
+![[Pasted image 20240909210640.png]]
+
+
+- script to open calclulator 
+
+![[Pasted image 20240909211627.png]]
+
+as soon as i executed the command without opening PowerShell windows calculator opened 
+
