@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC installation.md",
+                "file": "things/Brainfog.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOC installation.md",
+                "file": "things/Brainfog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOC installation.md",
+                "file": "things/Brainfog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOC installation.md"
+                "file": "things/Brainfog.md"
               }
             }
           },
@@ -181,9 +181,9 @@
   },
   "active": "922bfab98c3f01b1",
   "lastOpenFiles": [
+    "SOC installation.md",
     "attachments/Pasted image 20240906091847.png",
     "notes/Burpsuite/Installation.md",
-    "SOC installation.md",
     "notes/Burpsuite/Burpsuite - VAPT.md",
     "notes/CTI/Threat intel tools.md",
     "notes/CTI/CTI.md",
@@ -201,7 +201,6 @@
     "attachments/Pasted image 20240817174422.png",
     "attachments/Pasted image 20240817174220.png",
     "attachments/Pasted image 20240817174214.png",
-    "attachments/Pasted image 20240817174145.png",
     "notes/Python",
     "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
     "installtion and setups/Installing VMs on hyper v.md",
