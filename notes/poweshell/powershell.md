@@ -154,3 +154,6 @@ let's execute it
 
 ![[Pasted image 20240910181345.png]]
 
+To list the path of a program or application
+
+![[Pasted image 20240910191621.png]]
