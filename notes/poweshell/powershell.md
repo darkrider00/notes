@@ -118,3 +118,10 @@ above is PowerShell (X86)
 
 as soon as i executed the command without opening PowerShell windows calculator opened 
 
+instead or -ExecutionPolicy we can use -ep
+
+- command to get all windows security logs
+![[Pasted image 20240909212231.png]]
+
+command : `powershell.exe -ep Unrestricted -Command "& { GET-EventLog -LogName security`
+
