@@ -142,4 +142,15 @@ command : `powershell.exe -ep Unrestricted -Command "& { GET-EventLog -LogName s
 - we can sort it by the process name using the above command
 ![[Pasted image 20240910180604.png]]
 
-as we can see 
+as we can see we get only process id names , apart from process name we can specify other parameters that we want to display then the command would be 
+
+`Get-Process | Sort-Object -Unique |Select-Object ProcessName , Handles`
+
+![[Pasted image 20240910181000.png]]
+
+- we can redirect the results of our pipeline to a file using a standard operator the command would be 
+`Get-Process | Sort-Object -Unique |Select-Object ProcessName > unique_process.txt`
+let's execute it 
+
+![[Pasted image 20240910181345.png]]
+
