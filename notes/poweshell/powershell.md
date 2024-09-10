@@ -160,3 +160,6 @@ To list the path of a program or application
 
 ![[Pasted image 20240910193053.png]]
 
+![[Pasted image 20240910210944.png]]
+
+
