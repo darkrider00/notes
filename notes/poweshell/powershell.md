@@ -125,3 +125,21 @@ instead or -ExecutionPolicy we can use -ep
 
 command : `powershell.exe -ep Unrestricted -Command "& { GET-EventLog -LogName security`
 
+
+### cmdlets
+
+- cmdlets are light weight PowerShell scripts that perform a single function 
+- most cmdlets by default will return a limited set of information or columns
+- command : `Get-Children | Format-list *`
+- names whether in list format or default column format are important , as we can use those to filter the output  of cmdlet objects for specific properties
+- usually cmdlets outputs are referred to objects
+- objects can be further processed using what is known as pipelining (similar to how we can chain commands together)
+- example : `Get-Process | Sort-Object -Unique| select-Object ProcessName`
+
+![[Pasted image 20240910180348.png]]
+
+- as we can see if we jsut type Get-Process command we get more colums 
+- we can sort it by the process name using the above command
+![[Pasted image 20240910180604.png]]
+
+as we can see 
