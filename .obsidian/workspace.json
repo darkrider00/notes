@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/poweshell/powershell.md",
+                "file": "HTB_CPTS/Academy/HTB Academy.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/poweshell/powershell.md",
+                "file": "HTB_CPTS/Academy/HTB Academy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/poweshell/powershell.md",
+                "file": "HTB_CPTS/Academy/HTB Academy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/poweshell/powershell.md"
+                "file": "HTB_CPTS/Academy/HTB Academy.md"
               }
             }
           },
@@ -181,6 +181,15 @@
   },
   "active": "922bfab98c3f01b1",
   "lastOpenFiles": [
+    "HTB_CPTS/HTB.md",
+    "HTB_CPTS/Academy/04. Exploitation/21d. Active Directory BloodHound/Active Directory BloodHound.md",
+    "HTB_CPTS/Academy/HTB Academy.md",
+    "HTB_CPTS/Academy/02. Information Gathering/Info Gathering.md",
+    "HTB_CPTS/Academy/08. Proof-of-Concept/34c. Stack-Based Buffer Overflows on Windows x86/Stack-Based Buffer Overflows on Windows x86.md",
+    "HTB_CPTS/Academy/08. Proof-of-Concept/Proof-of-Concept.md",
+    "HTB_CPTS/Academy/01. Pre-Engagement/01. Learning Process/Learning Process.md",
+    "HTB_CPTS/Academy/00. Intro to Academy/Intro to Academy.md",
+    "notes/poweshell/powershell.md",
     "attachments/Pasted image 20240910210944.png",
     "attachments/Pasted image 20240910193053.png",
     "attachments/Pasted image 20240910191621.png",
@@ -191,9 +200,7 @@
     "attachments/Pasted image 20240909212231.png",
     "attachments/Pasted image 20240909211627.png",
     "attachments/Pasted image 20240909210640.png",
-    "attachments/Pasted image 20240909210554.png",
     "things/Brainfog.md",
-    "notes/poweshell/powershell.md",
     "notes/poweshell",
     "SOC installation.md",
     "notes/Burpsuite/Installation.md",
@@ -213,16 +220,9 @@
     "installtion and setups/installation of flare VM.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.sync-conflict-20240807-192003-6WDQWCE.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.md",
-    "installtion and setups/Install kali linux using iso file.md",
-    "installtion and setups/Why Obsidian is better.md",
-    "notes/Burpsuite/Hackvector extension.md",
-    "notes/Burpsuite/installing burp suite pro.md",
-    "notes/misc/privilege esclation techniques.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "slide-styles-dometrain.md",
     "notes/CTI",
-    "notes/misc/Wazuh.md",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
     "notes/Portswigger/SQL injection",
