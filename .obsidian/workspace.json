@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/Daily Note Template.md",
+                "file": "things/notes/07-11-24.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Note Template"
+              "title": "07-11-24"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/Daily Note Template.md",
+                "file": "things/notes/07-11-24.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +130,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Daily Note Template"
+              "title": "Backlinks for 07-11-24"
             }
           },
           {
@@ -139,12 +139,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/Daily Note Template.md",
+                "file": "things/notes/07-11-24.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Daily Note Template"
+              "title": "Outgoing links from 07-11-24"
             }
           },
           {
@@ -166,10 +166,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "templates/Daily Note Template.md"
+                "file": "things/notes/07-11-24.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Daily Note Template"
+              "title": "Outline of 07-11-24"
             }
           },
           {
@@ -204,8 +204,9 @@
   },
   "active": "922bfab98c3f01b1",
   "lastOpenFiles": [
-    "HTB_CPTS/Academy/HTB Academy.md",
     "templates/Daily Note Template.md",
+    "things/notes/07-11-24.md",
+    "HTB_CPTS/Academy/HTB Academy.md",
     "templates",
     "things/notes",
     "HTB_CPTS/HTB.md",
@@ -244,7 +245,6 @@
     "installtion and setups/Installing Universal forwarder in Splunk.md",
     "installtion and setups/Installing Splunk.md",
     "installtion and setups/installation of flare VM.md",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.sync-conflict-20240807-192003-6WDQWCE.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "notes/CTI",
