@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB_CPTS/Academy/HTB Academy.md",
+                "file": "templates/Daily Note Template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTB Academy"
+              "title": "Daily Note Template"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB_CPTS/Academy/HTB Academy.md",
+                "file": "templates/Daily Note Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +130,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for HTB Academy"
+              "title": "Backlinks for Daily Note Template"
             }
           },
           {
@@ -139,12 +139,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB_CPTS/Academy/HTB Academy.md",
+                "file": "templates/Daily Note Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from HTB Academy"
+              "title": "Outgoing links from Daily Note Template"
             }
           },
           {
@@ -166,10 +166,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB_CPTS/Academy/HTB Academy.md"
+                "file": "templates/Daily Note Template.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of HTB Academy"
+              "title": "Outline of Daily Note Template"
             }
           },
           {
@@ -202,13 +202,14 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "7bb12a26d89f78d9",
+  "active": "922bfab98c3f01b1",
   "lastOpenFiles": [
+    "HTB_CPTS/Academy/HTB Academy.md",
+    "templates/Daily Note Template.md",
     "templates",
     "things/notes",
     "HTB_CPTS/HTB.md",
     "HTB_CPTS/Academy/04. Exploitation/21d. Active Directory BloodHound/Active Directory BloodHound.md",
-    "HTB_CPTS/Academy/HTB Academy.md",
     "HTB_CPTS/Academy/02. Information Gathering/Info Gathering.md",
     "HTB_CPTS/Academy/08. Proof-of-Concept/34c. Stack-Based Buffer Overflows on Windows x86/Stack-Based Buffer Overflows on Windows x86.md",
     "HTB_CPTS/Academy/08. Proof-of-Concept/Proof-of-Concept.md",
@@ -250,7 +251,6 @@
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
     "notes/Portswigger/SQL injection",
-    "notes/misc",
-    "notes/Packet tracer"
+    "notes/misc"
   ]
 }
