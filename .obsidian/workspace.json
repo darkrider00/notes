@@ -16,7 +16,9 @@
                 "file": "notes/Burpsuite/Installation.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Installation"
             }
           },
           {
@@ -28,7 +30,9 @@
                 "file": "HTB_CPTS/Academy/HTB Academy.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "HTB Academy"
             }
           },
           {
@@ -38,7 +42,9 @@
               "type": "release-notes",
               "state": {
                 "currentVersion": "1.6.7"
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.6.7"
             }
           }
         ],
@@ -62,7 +68,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -77,7 +85,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -85,7 +95,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -116,7 +128,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for HTB Academy"
             }
           },
           {
@@ -128,7 +142,9 @@
                 "file": "HTB_CPTS/Academy/HTB Academy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from HTB Academy"
             }
           },
           {
@@ -139,7 +155,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -149,7 +167,9 @@
               "type": "outline",
               "state": {
                 "file": "HTB_CPTS/Academy/HTB Academy.md"
-              }
+              },
+              "icon": "lucide-list",
+              "title": "Outline of HTB Academy"
             }
           },
           {
@@ -157,7 +177,9 @@
             "type": "leaf",
             "state": {
               "type": "git-history-view",
-              "state": {}
+              "state": {},
+              "icon": "history",
+              "title": "History"
             }
           }
         ],
@@ -176,11 +198,14 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-kanban:Create new board": false
     }
   },
-  "active": "922bfab98c3f01b1",
+  "active": "7bb12a26d89f78d9",
   "lastOpenFiles": [
+    "templates",
+    "things/notes",
     "HTB_CPTS/HTB.md",
     "HTB_CPTS/Academy/04. Exploitation/21d. Active Directory BloodHound/Active Directory BloodHound.md",
     "HTB_CPTS/Academy/HTB Academy.md",
@@ -219,7 +244,6 @@
     "installtion and setups/Installing Splunk.md",
     "installtion and setups/installation of flare VM.md",
     "installtion and setups/installation and setup Obsidian with Git and syncing.sync-conflict-20240807-192003-6WDQWCE.md",
-    "installtion and setups/installation and setup Obsidian with Git and syncing.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "notes/CTI",
@@ -227,7 +251,6 @@
     "notes/Portswigger/LABS",
     "notes/Portswigger/SQL injection",
     "notes/misc",
-    "notes/Packet tracer",
-    "notes/Portswigger/Server side Vuln"
+    "notes/Packet tracer"
   ]
 }
