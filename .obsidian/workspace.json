@@ -27,12 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "things/notes/07-11-24.md",
+                "file": "things/daily things/07-11-24.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "07-11-24"
+            }
+          },
+          {
+            "id": "2dcee0bcb39c1d82",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "templates/Weekly Review.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Weekly Review"
             }
           },
           {
@@ -48,7 +62,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -202,13 +216,18 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "922bfab98c3f01b1",
+  "active": "2dcee0bcb39c1d82",
   "lastOpenFiles": [
+    "templates/Exercises.md",
+    "templates/Weekly Review.md",
+    "templates/Cybersecurity tracker.md",
+    "things/daily things/08-11-24.md",
+    "things/cybersecurity tracker",
     "templates/Daily Note Template.md",
-    "things/notes/07-11-24.md",
+    "things/daily things/07-11-24.md",
     "HTB_CPTS/Academy/HTB Academy.md",
     "templates",
-    "things/notes",
+    "things/daily things",
     "HTB_CPTS/HTB.md",
     "HTB_CPTS/Academy/04. Exploitation/21d. Active Directory BloodHound/Active Directory BloodHound.md",
     "HTB_CPTS/Academy/02. Information Gathering/Info Gathering.md",
@@ -241,16 +260,11 @@
     "notes/Python",
     "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
     "installtion and setups/Installing VMs on hyper v.md",
-    "installtion and setups/Enable RDP on your kali Linux.md",
-    "installtion and setups/Installing Universal forwarder in Splunk.md",
-    "installtion and setups/Installing Splunk.md",
-    "installtion and setups/installation of flare VM.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "notes/CTI",
     "notes/Portswigger/LABS/SQL",
     "notes/Portswigger/LABS",
-    "notes/Portswigger/SQL injection",
-    "notes/misc"
+    "notes/Portswigger/SQL injection"
   ]
 }
