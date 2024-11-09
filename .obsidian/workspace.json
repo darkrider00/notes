@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/Weekly Review.md",
+                "file": "things/daily things/09-11-24.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Weekly Review"
+              "title": "09-11-24"
             }
           },
           {
@@ -218,8 +218,9 @@
   },
   "active": "2dcee0bcb39c1d82",
   "lastOpenFiles": [
-    "templates/Exercises.md",
     "templates/Weekly Review.md",
+    "things/daily things/09-11-24.md",
+    "templates/Exercises.md",
     "templates/Cybersecurity tracker.md",
     "things/daily things/08-11-24.md",
     "things/cybersecurity tracker",
@@ -259,7 +260,6 @@
     "things",
     "notes/Python",
     "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
-    "installtion and setups/Installing VMs on hyper v.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "notes/CTI",
