@@ -118,7 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 258.5
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -213,19 +213,20 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
-      "obsidian-kanban:Create new board": false
+      "obsidian-kanban:Create new board": false,
+      "periodic-notes:Open today": false
     }
   },
   "active": "2dcee0bcb39c1d82",
   "lastOpenFiles": [
-    "templates/Weekly Review.md",
+    "templates/Daily Note Template.md",
     "things/daily things/09-11-24.md",
+    "things/daily things/07-11-24.md",
+    "templates/Weekly Review.md",
+    "things/daily things/08-11-24.md",
     "templates/Exercises.md",
     "templates/Cybersecurity tracker.md",
-    "things/daily things/08-11-24.md",
     "things/cybersecurity tracker",
-    "templates/Daily Note Template.md",
-    "things/daily things/07-11-24.md",
     "HTB_CPTS/Academy/HTB Academy.md",
     "templates",
     "things/daily things",

@@ -1,77 +1,42 @@
-# 🗓 Daily Note - {{date}}
+# 🗓 Daily Note - {{date:DD-MM-YYYY}}
 
-## 🌅 Morning Review
-- **Today’s Focus**: _Write your primary goal for the day (e.g., focus on cybersecurity practice, prepare for campus drive interview)_
-- **Top 3 Priorities**:
-    1. [ ] 
-    2. [ ] 
-    3. [ ] 
+## 🌅 Morning Focus
+- **Main Focus**: _What’s the key task for the day? (e.g., cybersecurity, campus prep)_
 
-## 📝 Task List (Eisenhower Matrix)
+## 📝 Top 3 Tasks
+1. [ ] Task 1
+2. [ ] Task 2
+3. [ ] Task 3
 
-### 🔴 Urgent & Important (Critical)
-- [ ] Task 1 
-- [ ] Task 2 
+## 📝 Quick Tasks (Optional)
+- [ ] Task 1
+- [ ] Task 2
 
-### 🟡 Important but Not Urgent (Long-Term Progress)
-- [ ] Task 1 
-- [ ] Task 2 
+---
 
-### 🔵 Urgent but Not Important (Quick Tasks)
-- [ ] Task 1 
-- [ ] Task 2 
+### ⏰ Time Block (Optional)
+| Time        | Task              |
+| ----------- | ----------------- |
+| 7:00 - 8:00 | Task 1            |
+| 8:00 - 9:00 | Task 2            |
 
-### ⚪ Neither Urgent nor Important (Discretionary)
-- [ ] Task 1 
-- [ ] Task 2 
+---
 
-## ⏰ Time Block Schedule
-| Time        | Task                                | Notes                      |
-|-------------|-------------------------------------|----------------------------|
-| 9:00 - 10:30| [ ] Focused Work: Coding Practice   |                            |
-| 11:00 - 12:00| [ ] Cybersecurity Learning         |                            |
-| 2:00 - 3:30 | [ ] Study/Networking Practice       |                            |
-| 4:00 - 5:00 | [ ] Skill Building                 |                            |
+## 📊 Daily Habits
+| Habit          | Status  |
+| -------------- | ------- |
+| 🕖 Wake-up Time |         |
+| 🧘 Meditation  |         |
+| 🏋️ Exercise    |         |
 
-### ⏲ Pomodoro Tracker
-- **Pomodoros Completed**: 🍅🍅🍅 (mark each completed pomodoro with an emoji or count)
+---
 
-## 📊 Habit Tracker
-| Habit              | Status Today |
-|--------------------|--------------|
-| 🕖 Wake-up Time    |              |
-| 📖 Coding Practice |              |
-| 🧘 Meditation      |              |
-| 🏋️ Exercise       |              |
-| 📚 Study Goal      |              |
+## 📈 Evening Reflection
+- **What went well today?**: _Small wins or completed tasks_
+- **What can be improved?**: _Any blockers, distractions_
 
-## 🧠 Learning & Highlights
-- **Key Learnings**: _Summarize main takeaways from today’s studies (e.g., OWASP concepts, coding patterns)_
-- **New Insights**: _Write any insights or connections you made_
-- **Challenges Faced**: _Note any difficulties or blockers_
+---
 
-## 📈 Evening Review
-- **What Went Well**: _Reflect on accomplishments, wins, or completed tasks_
-- **Areas for Improvement**: _Note any distractions or issues_
-- **Tomorrow’s Goal**: _Set a focus for the next day_
-
-## 🎯 Daily Gratitude
-- **Today I am grateful for**:
-    - 1. 
-    - 2. 
-    - 3.
-### 💡 Future Ideas
-- **Projects or Skills to Explore**:
-    - Idea 1
-    - Idea 2
-
-### 📚 Learning Wish List
-- **Topics I’d Like to Learn**:
-    - Topic 1
-    - Topic 2
-
-### 📝 Personal Notes
-- **General Thoughts or Reminders**:
-    - Note 1
-    - Note 2
+## 📝 Personal Notes
+- **Notes or ideas for tomorrow**: 
 
