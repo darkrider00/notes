@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "things/daily things/09-11-24.md",
+                "file": "things/daily things/10-11-24.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "09-11-24"
+              "title": "10-11-24"
             }
           },
           {
@@ -219,8 +219,9 @@
   },
   "active": "2dcee0bcb39c1d82",
   "lastOpenFiles": [
-    "templates/Daily Note Template.md",
     "things/daily things/09-11-24.md",
+    "things/daily things/10-11-24.md",
+    "templates/Daily Note Template.md",
     "things/daily things/07-11-24.md",
     "templates/Weekly Review.md",
     "things/daily things/08-11-24.md",
@@ -260,7 +261,6 @@
     "concepts.md",
     "things",
     "notes/Python",
-    "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "notes/CTI",
