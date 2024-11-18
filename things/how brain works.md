@@ -28,3 +28,15 @@ plasticity in adult nervous system is  gated meaning it is controlled by neuromo
 - when something very bad happens there is the release of two sets of neuromodulators in the brain
    1. Epinephrine - makes us feel alert and agitated associated with bad circumstances
    2. acetylcholine -  even more intense and focus spotlight to one region of experience 
+no neuroplasticity occurs during the time we r trying to learn or during the terrible event it happens diff phase of of sleep and non sleep deep rest 
+
+we can take the resolutions and goals at the start of year but hat happens at may June , these depends on how much attention and focus  one can continually bring to learn so much so  agitation and strain are actually required for this process
+
+20 min of deep rest after learning something intense accelerated neuroplasticity 
+
+if people hears a bell or ring in that deep rest the learning is faster (pavalian cue) , remainder to the sleeping brain.
+
+DPO duration path analysis is impossible during sleep  we r only relation to whets happening to us 
+
+ultradian rhythms - happens through out the day 
+ - 90 min rhythm all the time  sleep goes under these cycles cycle 1, cycle 2, cycle 3, cycle 4 after we wake up these continue but in the first cycle if u try to focus it will be hard to focus but as u go into deeper into the 90 min u can notice the focus difference 
