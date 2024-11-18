@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "things/how brain works.md",
+                "file": "things/Protocol for studying & learning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "how brain works"
+              "title": "Protocol for studying & learning"
             }
           },
           {
@@ -190,8 +190,9 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "things/daily things/07-11-24.md",
     "things/how brain works.md",
+    "things/Protocol for studying & learning.md",
+    "things/daily things/07-11-24.md",
     "things/daily things/12-11-24.md",
     "notes/Burpsuite/Installation.md",
     "things/daily things/13-11-24.md",
@@ -229,7 +230,6 @@
     "attachments/Pasted image 20240909211627.png",
     "things/Brainfog.md",
     "notes/poweshell",
-    "SOC installation.md",
     "things",
     "notes/Python",
     "Untitled 1.canvas",
