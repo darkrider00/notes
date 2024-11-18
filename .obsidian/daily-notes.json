@@ -1,6 +1,6 @@
 {
   "folder": "things/daily things",
   "format": "DD-MM-YY",
-  "autorun": true,
+  "autorun": false,
   "template": "templates/Daily Note Template"
 }
