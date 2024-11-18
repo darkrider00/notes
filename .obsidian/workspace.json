@@ -213,8 +213,7 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
-      "obsidian-kanban:Create new board": false,
-      "periodic-notes:Open today": false
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "2dcee0bcb39c1d82",
