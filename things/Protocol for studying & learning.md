@@ -19,6 +19,7 @@ first night effect - information consolidated in a day will go into while sleep
 - - study alone 
 - breaking 3-4 hrs reading into slots
 - teaching peers (watch one do one  teach one)
+- 
 
 
 
