@@ -30,19 +30,51 @@ hybrid cloud
 - mostly this and multi are same
 - applications run in diff env  
 Multi cloud
-- mostl companies follow this
+- mostly companies follow this
 - combing both physical and diff organization 
 
 
-Due to thos 
+Due to those 
 we have - scalable 
 flexible 
-AGILE -devlop and deploy fast 
+AGILE -develop and deploy fast 
 strategic value 
 secure -due to depth of mech 
 cost effective - only pay for what they use 
 
--save costs, faster sec, reduction of management load , focusing on new capabilities 
+- save costs, faster sec, reduction of management load , focusing on new capabilities (digitalization is made easy)
+
+### Challenges
+
+- best at understanding and using data 
+- best tech infra 
+- creating a hybrid workplace 
+- know their data, systems is secure 
+- prioritize sustainability 
+
+Five capabilities
+- Data - for AI and analyzing (data driven org)
+- open infra - choose to modernize , bring services to physical locations
+	 1. open standard - particular specifications and guidelines eg: http protocol to send specific info 
+	 2. open source - publicly accessible 
+- collaborations-  workspaces , communication and collaboration Eg: google apps
+- Trust - helps org protect what's imp using security protocols and mechanisms
+- Sustainable Technology 
+
+![[Pasted image 20241123160327.png]]
+
+Google cloud framework base 
+- short term tactical
+- mid term strategic 
+- long term transformational obj 
+
+cloud maturity assessment helps to establish where an organization is currently regarding the cloud adoption recognized by google cloud
+
+after cloud maturity has been assessed and actions have been recommended it's easy to scope and structure a cloud adaption program using the framework
 
 
+Review of section :
+
+- digital infra is important for technology evolution and cost effectiveness
+- 2 or more types are used by single organization 
 
