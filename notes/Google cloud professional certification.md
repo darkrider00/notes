@@ -78,3 +78,6 @@ Review of section :
 - digital infra is important for technology evolution and cost effectiveness
 - 2 or more types are used by single organization 
 
+
+
+
