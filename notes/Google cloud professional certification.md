@@ -32,6 +32,7 @@ hybrid cloud
 Multi cloud
 - mostly companies follow this
 - combing both physical and diff organization 
+- at least 2 cloud providers like google cloud Ans amazon web services etc. (takes key strengths of different cloud providers)
 
 
 Due to those 
@@ -77,6 +78,13 @@ Review of section :
 
 - digital infra is important for technology evolution and cost effectiveness
 - 2 or more types are used by single organization 
+
+
+Total cost of ownership 
+on premises -  higher than cloud (power, cooling maintenance, support services)
+switching from capital expenditure to operating expenses 
+capital - buy once and benefit several years
+
 
 
 
