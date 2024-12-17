@@ -25,3 +25,24 @@ cold exposure - increase metabolism 10 min of complete cold exposure burns  28-3
 
 Reverse dieting -refer to above 
 cardio - burns calories 
+-causes energy compensation which results in burning more calories in cario less calories in neat
+-having weights daily 
+
+avoid dieting low calorie foods
+-increase activities (taking stairs parking further away , increasing NEAT activities)
+
+
+### fundamentals 
+
+![[Pasted image 20241217214914.png]]
+if u can do 2 more reps in the last set u can increase weight from next week 
+training to failure - compound exercises
+sets - isolation exercises
+
+![[Pasted image 20241217215353.png]]
+
+![[Pasted image 20241217215619.png]]
+
+total work = sets * reps * load
+major factor  = sets (tough sets (training to failure or until 3-4 reps left))
+min amount of vol to get gains is at low volume u can get gains at some point u need more volume to get more gains at some point u overtrain results to loss of gain 
