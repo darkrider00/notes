@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/DSA with java/Problems.md",
+                "file": "things/GYM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Problems"
+              "title": "GYM"
             }
           },
           {
@@ -218,8 +218,9 @@
   },
   "active": "d5be930fd8607e01",
   "lastOpenFiles": [
-    "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/DSA with java/Problems.md",
+    "things/GYM.md",
+    "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/Malware/Detection Mechanisms.md",
     "things/Boost Attention & Memory with Science-Based Tools.md",
     "things/SELF disicipline.md",
@@ -248,7 +249,6 @@
     "templates",
     "things/daily things",
     "HTB_CPTS/HTB.md",
-    "HTB_CPTS/Academy/04. Exploitation/21d. Active Directory BloodHound/Active Directory BloodHound.md",
     "attachments/Pasted image 20240910210944.png",
     "attachments/Pasted image 20240910193053.png",
     "attachments/Pasted image 20240910191621.png",
