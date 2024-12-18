@@ -46,3 +46,13 @@ sets - isolation exercises
 total work = sets * reps * load
 major factor  = sets (tough sets (training to failure or until 3-4 reps left))
 min amount of vol to get gains is at low volume u can get gains at some point u need more volume to get more gains at some point u overtrain results to loss of gain 
+
+bigger muscle groups  - chest back quads ....
+small groups - triceps , biceps, .... (get worked when u do big muscle groups)
+
+Are you getting stronger ? yes okay no - add more work or weights
+
+![[Pasted image 20241217220533.png]]
+
+muscle protein synthesis ///
+
