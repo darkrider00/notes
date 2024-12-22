@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "things/rin-guide.md",
+                "file": "things/Games.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "rin-guide"
+              "title": "Games"
             }
           },
           {
@@ -218,6 +218,7 @@
   },
   "active": "d5be930fd8607e01",
   "lastOpenFiles": [
+    "things/rin-guide.md",
     "attachments/Pasted image 20241222155315.png",
     "attachments/Pasted image 20241222155306.png",
     "attachments/Pasted image 20241222155259.png",
@@ -245,7 +246,6 @@
     "things/daily things/13-11-24.md",
     "things/daily things/18-11-24.md",
     "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
-    "attachments/Pasted image 20241111105008.png",
     "things/daily things/11-11-24.md",
     "things/daily things/10-11-24.md",
     "things/daily things/09-11-24.md",
