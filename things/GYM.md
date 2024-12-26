@@ -57,3 +57,9 @@ Are you getting stronger ? yes okay no - add more work or weights
 muscle protein synthesis ///
 
 ![[Pasted image 20241219142043.png]]
+
+
+![[Pasted image 20241226160534.png]]
+
+![[Pasted image 20241226161002.png]]
+
