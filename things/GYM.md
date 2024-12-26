@@ -63,3 +63,7 @@ muscle protein synthesis ///
 
 ![[Pasted image 20241226161002.png]]
 
+![[Pasted image 20241226165124.png]]
+
+general 2:0:2:0 first 2 is eccentic 2nd num o is bottom range of motion next 2 is concentric next o is top 
+
