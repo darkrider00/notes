@@ -20,3 +20,11 @@ going to the website and inspecting it will give us the flag `picoCTF{pr3tty_c0d
 
 
 ### Intro to Burp - Picoctf
+
+![[Pasted image 20250105160747.png]]
+
+
+![[Pasted image 20250105160653.png]]
+
+by removing the line containing otp we got the flag 
+`picoCTF{#0TP_Bypvss_SuCc3$S_2e80f1fd}`
