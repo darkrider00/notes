@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/CTI/CTI.md",
+                "file": "CTFS/Web.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CTI"
+              "title": "Web"
             }
           },
           {
@@ -218,6 +218,12 @@
   },
   "active": "d5be930fd8607e01",
   "lastOpenFiles": [
+    "attachments/Pasted image 20250105143751.png",
+    "attachments/Pasted image 20250105143526.png",
+    "attachments/Pasted image 20250105143445.png",
+    "notes/CTI/CTI.md",
+    "CTFS/Web.md",
+    "CTFS",
     "things/GYM.md",
     "attachments/Pasted image 20241226165124.png",
     "attachments/Pasted image 20241226161002.png",
@@ -229,8 +235,6 @@
     "attachments/Pasted image 20241222155259.png",
     "attachments/Pasted image 20241222155251.png",
     "attachments/Pasted image 20241219142043.png",
-    "attachments/Pasted image 20241217220533.png",
-    "attachments/Pasted image 20241217215619.png",
     "notes/DSA with java/Problems.md",
     "notes/DSA with java/Problem Solving module in Hacker Rank.md",
     "notes/Malware/Detection Mechanisms.md",
@@ -251,8 +255,6 @@
     "things/daily things/09-11-24.md",
     "templates/Daily Note Template.md",
     "templates/Weekly Review.md",
-    "things/daily things/08-11-24.md",
-    "templates/Exercises.md",
     "things/cybersecurity tracker",
     "templates",
     "things/daily things",
@@ -263,7 +265,6 @@
     "Untitled.canvas",
     "notes/CTI",
     "notes/Portswigger/LABS/SQL",
-    "notes/Portswigger/LABS",
-    "notes/Portswigger/SQL injection"
+    "notes/Portswigger/LABS"
   ]
 }
