@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFS/Web.md",
+                "file": "CTFS/Crypto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web"
+              "title": "Crypto"
             }
           },
           {
@@ -218,6 +218,11 @@
   },
   "active": "d5be930fd8607e01",
   "lastOpenFiles": [
+    "attachments/Pasted image 20250105165055.png",
+    "attachments/Pasted image 20250105165038.png",
+    "CTFS/Web.md",
+    "CTFS/Crypto.md",
+    "attachments/Pasted image 20250105163524.png",
     "attachments/Pasted image 20250105163237.png",
     "attachments/Pasted image 20250105162249.png",
     "attachments/Pasted image 20250105162110.png",
@@ -226,13 +231,9 @@
     "attachments/Pasted image 20250105160653.png",
     "attachments/Pasted image 20250105143751.png",
     "attachments/Pasted image 20250105143526.png",
-    "attachments/Pasted image 20250105143445.png",
     "notes/CTI/CTI.md",
-    "CTFS/Web.md",
     "CTFS",
     "things/GYM.md",
-    "attachments/Pasted image 20241226165124.png",
-    "attachments/Pasted image 20241226161002.png",
     "things/Games.md",
     "things/rin-guide.md",
     "notes/DSA with java/Problems.md",
@@ -254,7 +255,6 @@
     "things/daily things/10-11-24.md",
     "things/daily things/09-11-24.md",
     "templates/Daily Note Template.md",
-    "templates/Weekly Review.md",
     "things/cybersecurity tracker",
     "templates",
     "things/daily things",

@@ -63,14 +63,16 @@ ran that js code and got the output
 ![[Pasted image 20250105163237.png]]
 
 after entering some random credentials in network secure.js is loaded i opened and found the flag 
-``
+`picoCTF{j5_15_7r4n5p4r3n7_05df90c8}`
 
 
+### Inspect HTML -picoctf
 
+![[Pasted image 20250105163524.png]]
 
+i went into source code and found the flag 
 
-
-
+`<!--picoCTF{1n5p3t0r_0f_h7ml_fd5d57bd}-->`
 
 
 
