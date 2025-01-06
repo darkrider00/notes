@@ -75,5 +75,12 @@ i went into source code and found the flag
 `<!--picoCTF{1n5p3t0r_0f_h7ml_fd5d57bd}-->`
 
 
+### Includes
 
+![[Pasted image 20250106150933.png]]
 
+opend style.css file found half flag 
+![[Pasted image 20250106151008.png]]
+
+![[Pasted image 20250106151030.png]]
+opend script.js file found another half of the file 

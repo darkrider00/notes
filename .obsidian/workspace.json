@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFS/Crypto.md",
+                "file": "CTFS/Web.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Crypto"
+              "title": "Web"
             }
           },
           {
@@ -218,6 +218,10 @@
   },
   "active": "d5be930fd8607e01",
   "lastOpenFiles": [
+    "attachments/Pasted image 20250106151030.png",
+    "attachments/Pasted image 20250106151008.png",
+    "attachments/Pasted image 20250106150933.png",
+    "CTFS/Crypto.md",
     "attachments/Pasted image 20250105172424.png",
     "attachments/Pasted image 20250105170340.png",
     "attachments/Pasted image 20250105170312.png",
@@ -226,11 +230,7 @@
     "attachments/Pasted image 20250105170116.png",
     "attachments/Pasted image 20250105165417.png",
     "attachments/Pasted image 20250105165339.png",
-    "attachments/Pasted image 20250105165055.png",
-    "attachments/Pasted image 20250105165038.png",
     "CTFS/Web.md",
-    "CTFS/Crypto.md",
-    "attachments/Pasted image 20250105163524.png",
     "notes/CTI/CTI.md",
     "CTFS",
     "things/GYM.md",
