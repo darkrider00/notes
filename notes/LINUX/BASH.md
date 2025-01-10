@@ -30,3 +30,11 @@ A script is a pre-written series of commands which bash can execute without need
 
 Scripts are generally saved in files and subsequently used to automate a wide range of tasks.
 
+```bash
+perplex@pop-os:~$ echo $BASH_VERSION
+5.1.16(1)-release
+perplex@pop-os:~$ 
+```
+
+![[Pasted image 20250110203747.png]]
+
