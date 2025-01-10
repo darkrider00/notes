@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/OWASP/COMMAND INJECTION.md",
+                "file": "notes/LINUX/BASH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "COMMAND INJECTION"
+              "title": "BASH"
             }
           },
           {
@@ -218,9 +218,16 @@
   },
   "active": "d5be930fd8607e01",
   "lastOpenFiles": [
+    "notes/LINUX/Mounting and Unmounting File Systems.md",
+    "notes/LINUX/BASH.md",
+    "notes/LINUX/BASH.md",
+    "notes/LINUX/bash",
+    "notes/LINUX/RAID and File Systems.md",
+    "notes/LINUX/Logical Volume Management (LVM).md",
+    "notes/LINUX/Basic concept of file systems and their importance in Linux..md",
+    "notes/OWASP/COMMAND INJECTION.md",
     "attachments/Pasted image 20250110200221.png",
     "CTFS/Web.md",
-    "notes/OWASP/COMMAND INJECTION.md",
     "notes/OWASP",
     "attachments/Pasted image 20250106151030.png",
     "attachments/Pasted image 20250106151008.png",
@@ -232,7 +239,6 @@
     "attachments/Pasted image 20250105170306.png",
     "attachments/Pasted image 20250105170128.png",
     "attachments/Pasted image 20250105170116.png",
-    "attachments/Pasted image 20250105165417.png",
     "notes/CTI/CTI.md",
     "CTFS",
     "things/GYM.md",
@@ -251,11 +257,6 @@
     "things/daily things/12-11-24.md",
     "notes/Burpsuite/Installation.md",
     "things/daily things/13-11-24.md",
-    "things/daily things/18-11-24.md",
-    "installtion and setups/Upgrade your windows 11 home to windows 11 pro or enterprise.md",
-    "things/daily things/11-11-24.md",
-    "things/daily things/10-11-24.md",
-    "things/daily things/09-11-24.md",
     "things/cybersecurity tracker",
     "templates",
     "things/daily things",
@@ -264,7 +265,6 @@
     "notes/Python",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "notes/CTI",
-    "notes/Portswigger/LABS/SQL"
+    "notes/CTI"
   ]
 }
