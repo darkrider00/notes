@@ -38,3 +38,28 @@ perplex@pop-os:~$
 
 ![[Pasted image 20250110203747.png]]
 
+In a terminal, many terminal-based programs can run simultaneously, forming a chain through which your input and their output flows.
+
+![[Pasted image 20250110210531.png]]
+
+a program is a set of pre-written instructions that can be executed by your system's kernel. 
+
+A program gives instructions to the kernel directly. The kernel is technically also a program, but one that runs constantly and communicates with your hardware instead.
+
+A program generally lives on your disk, waiting to be started. When you "run" or "execute" a program, your kernel loads its pre-written instructions (its code) by creating a process for your program to work in.
+
+if a chocolate cake recipe is a program, then your process of baking a chocolate cake with it is the program's process. A process relays the instructions in your program to the kernel
+
+ process also has a few hooks to the outside world via something called file descriptors.
+
+These are essentially plugs we use to connect processes to files, devices or other processes. Most chocolate cake recipes won't, but some might have, for instance, a table for looking up the amounts of ingredients based on the desired number of servings.
+
+ These recipes take input and their output will differ depending on the input given. File descriptors are identified by numbers, though the first three also have standard names:
+ 
+
+
+
+
+
+
+
