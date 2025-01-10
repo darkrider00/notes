@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFS/Web.md",
+                "file": "notes/OWASP/COMMAND INJECTION.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web"
+              "title": "COMMAND INJECTION"
             }
           },
           {
@@ -218,6 +218,9 @@
   },
   "active": "d5be930fd8607e01",
   "lastOpenFiles": [
+    "CTFS/Web.md",
+    "notes/OWASP/COMMAND INJECTION.md",
+    "notes/OWASP",
     "attachments/Pasted image 20250106151030.png",
     "attachments/Pasted image 20250106151008.png",
     "attachments/Pasted image 20250106150933.png",
@@ -229,8 +232,6 @@
     "attachments/Pasted image 20250105170128.png",
     "attachments/Pasted image 20250105170116.png",
     "attachments/Pasted image 20250105165417.png",
-    "attachments/Pasted image 20250105165339.png",
-    "CTFS/Web.md",
     "notes/CTI/CTI.md",
     "CTFS",
     "things/GYM.md",
@@ -264,7 +265,6 @@
     "Untitled 1.canvas",
     "Untitled.canvas",
     "notes/CTI",
-    "notes/Portswigger/LABS/SQL",
-    "notes/Portswigger/LABS"
+    "notes/Portswigger/LABS/SQL"
   ]
 }
