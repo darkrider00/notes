@@ -60,9 +60,19 @@
               "icon": "lucide-file",
               "title": "Release Notes 1.6.7"
             }
+          },
+          {
+            "id": "1292677d72a0a667",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -216,10 +226,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "d5be930fd8607e01",
+  "active": "1292677d72a0a667",
   "lastOpenFiles": [
-    "Untitled.md",
     "notes/LINUX/BASH.md",
+    "Untitled.md",
     "attachments/Pasted image 20250110210531.png",
     "attachments/Pasted image 20250110203747.png",
     "notes/LINUX/Mounting and Unmounting File Systems.md",
