@@ -233,3 +233,38 @@ $ cat greeting.txt   #And now we're back in bash!_
 Hello!     #The "cat" program shows the contents of the file._
 $
 ```
+
+![[Pasted image 20250111200153.png]]
+
+Logically, bash cannot execute a command until it has enough information to do its job. The first line of the `if` command in the example above (we'll cover what these commands do in more detail later on) doesn't contain enough information for bash to know what to do if the test succeeds or if it fails. As a result, bash shows a special prompt: `>`. This prompt essentially means: the command you gave me is not yet at an end. We keep on providing extra lines for the command, until we reach the `fi` construct. When we end that line, bash knows that you're done providing conditional result cases. It immediately begins running all the code in the entire block, from `if` to `fi`.
+
+We will soon see the different kinds of commands defined in bash's grammar, but the `if` command we just saw is called a Compound Command, because it compounds a bunch of basic commands into a larger logical block.
+
+
+we're passing our commands to an interactive bash session. As we explained before, bash can also run in non-interactive mode where it reads commands from a file or stream rather than asking you for them.
+
+This second bash process will execute all the commands it finds in the file `hello.txt`, non-interactively. When it's done (there are no commands left in the file), the non-interactive bash process ends and the interactive bash process is ready with your bash hello.txt command; it shows a new prompt asking you for the next command to run.
+
+[#](https://guide.bash.academy/commands/?=How_do_I_give_bash_a_command?#p1.2.0_8)It's only a small step from a file with a list of commands in it to a veritable bash script. Open your `hello.txt` file again using your favourite text editor and add a hashbang to the top of it, as the first line of the script: #!/usr/bin/env bash
+
+```bash
+#!/usr/bin/env bash
+$ bash hello.txt_
+Your name? Maarten Billemont
+Hello, Maarten Billemont._
+$
+```
+
+
+```
+**`/usr/bin/env`, which isn't really a program that understands the bash language. It's a program that can find and start other programs. In our case, we use an argument to tell it to find the `bash` program and use that for interpreting the language in our script. Why do we use this "inbetween" program called `env`? It has everything to do with what comes before the name: the path. We know with relative certainty that the `env` program lives in the `/usr/bin` path. Given the large variety of operating systems and configurations, however, we don't have any good certainty about where the `bash` program is installed. Which is why we use the `env` program to find it for us. That was a little complicated! But now, what's the difference between our file before and after adding the hashbang?**
+```
+
+[#](https://guide.bash.academy/commands/?=How_do_I_give_bash_a_command?#p1.2.0_10)Most systems require you to mark a file as executable before the kernel is willing to allow you to run it as a program. Once we do that, we can start the `hello.txt` program like we would any other program. The kernel will look inside the file, find the hashbang, use that to track down the bash interpreter, and finally use the bash interpreter to start running the instructions in the file. You have your first real bash program!
+
+```bash
+
+$ chmod +x hello.txt_
+$ ./hello.txt
+
+```
