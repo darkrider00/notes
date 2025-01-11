@@ -56,10 +56,20 @@ These are essentially plugs we use to connect processes to files, devices or oth
 
  These recipes take input and their output will differ depending on the input given. File descriptors are identified by numbers, though the first three also have standard names:
  
+standard input
+
+**File descriptor 0** is also called standard input. This is where most processes receive their input from. By default, processes in your terminal will have their standard input "connected" to your keyboard. More specifically, to the input your terminal program receives.
+
+standard output
+
+**File descriptor 1** is also called standard output. This is where most processes send their output to. By default, processes in your terminal will have their standard output "connected" to your display. More specifically, your terminal program will display this output in its window.
 
 
+standard error
 
+**File descriptor 2** is also called standard error. This is where most processes send their error and informational messages to. By default, processes in your terminal will have their standard error "connected" to your display, just like standard output. It's important to understand that standard error is just another plug, just like standard output, which leads to your terminal's display. It isn't dedicated to errors, in fact bash uses it for most of its informational messages _as well as your prompt_!
 
+A process isn't limited to just these three file descriptors, it can create new ones with their own number and connect them to other files, devices or processes as it sees fit.
 
-
+f a program needs its output to go to another program's input, as opposed to your display, it will instruct the kernel to connect its standard output to the other program's standard input. Now all the information it sends to its standard output file descriptor will flow into the other program's standard input file descriptor. These flows of information between files, devices and processes are called streams.
 
