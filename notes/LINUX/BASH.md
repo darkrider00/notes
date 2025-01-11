@@ -1,3 +1,5 @@
+## 1.Inception
+
 program on our computer designed to be easy for you to talk to 
 
 every program on computer has ability to do vast range of devices 
@@ -202,5 +204,32 @@ Copy code
 t is important to understand that **file descriptors are process specific**: to speak of "standard output" only makes sense when referring to a specific process. In the example above, you'll notice that the first process' standard input is not the same as the second process' standard input. You'll also notice that the first process' FD 1 (standard output) is connected to the second process' FD 0 (standard input). File descriptors do not describe the streams that connect processes, they only describe the process' plugs where these streams can be connected to.
 
 
-### commands and arguments 
+## 2.commands and arguments 
+bash waits for instructions from you and then executes them to the best of its abilities
 
+- Synchronous command execution : Bash generally takes one command from you at a time, executes the command, and when completed returns to you for the next command.
+- while bash is busy with a command that you give it, you cannot interact with bash directly
+-  While you're interacting with the file editor, bash takes a back-seat and waits for the file editor to end (which generally means you quit it)
+- the file editor program stops running, the command ends and bash resumes operation by asking you for the next thing to do
+- while your editor is running, you are no longer at the bash prompt. As soon as your editor exits, your bash prompt re-appears
+
+![[Pasted image 20250111195153.png]]
+
+```bash
+perplex@pop-os:~$ cat hello.txt 
+Hello santhosh!
+:)
+```
+
+```bash
+ $ ex    #bash command to run the "ex" program._
+: i      #command to "insert" some text.
+Hello!
+.        # A line with just a dot tells ex to stop inserting text._
+: w greeting.txt  #command to "write" the text to a file._
+"greeting.txt" [New] 1L, 7C written
+: q      #command to "quit" the program._
+$ cat greeting.txt   #And now we're back in bash!_
+Hello!     #The "cat" program shows the contents of the file._
+$
+```
