@@ -73,3 +73,34 @@ A process isn't limited to just these three file descriptors, it can create new 
 
 f a program needs its output to go to another program's input, as opposed to your display, it will instruct the kernel to connect its standard output to the other program's standard input. Now all the information it sends to its standard output file descriptor will flow into the other program's standard input file descriptor. These flows of information between files, devices and processes are called streams.
 
+
+Stream - information flowing through links b/w files, devices  process in running system  can transport any kind of bytes and receiving end only consume their bytes in order they were sent 
+
+If I have a program that outputs names connected to another program, the second program can only see the second name after first reading the first name from the stream.
+
+Reading a name from the stream consumes those bytes from the stream and the stream advances. The stream cannot be rewound and the name cannot be re-read.
+
+### **How Do Programs Use Streams?**
+
+Imagine you have two programs:
+
+1. **Program A** generates a list of names.
+2. **Program B** processes these names.
+
+You can connect **Program A's output** directly to **Program B's input** using streams. So instead of showing the names on the screen, Program A sends them into Program B.
+
+- **Example**: `ls | grep "file"`
+    - `ls`: Lists all files in a directory.
+    - `grep "file"`: Searches for names containing "file."
+    - The output of `ls` flows into `grep` as a stream, and `grep` processes it
+
+### **Important Points About Streams**
+
+1. **Order Matters**: Streams flow in a sequence. If Program A sends names, Program B will see:
+    - First name → then second → then third → and so on.
+2. **No Going Back**: Once a name is read from the stream, it's gone unless you save it somewhere. The stream can't "rewind."
+    - Like reading a paper tape: you can't re-read what's already been pulled through.
+
+![[Pasted image 20250111162937.png]]In the above example, two bash processes are linked via a stream. The first bash process reads its input from the keyboard. It sends output on both standard output and standard error. Output on standard error is connected to the terminal display, while output on standard output is connected to the second process. Notice how the first process' `FD 1` connects to the second process' `FD 0`. The second process therefore consumes the first process' standard output when it reads from its standard input. The second process' standard output in turn is connected to the terminal's display.
+
+[#](https://guide.bash.academy/inception/?=So_what_exactly_is_a_program_and_how_does_it_connect_to_other_programs?#p2.3.0_8)To try out this dynamic, you can run the following code in a terminal, where `(` and `)` symbols create two sub-shells and the `|` symbol connects the former's `FD 1` to the latter's `FD 0`:
