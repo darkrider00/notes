@@ -104,3 +104,103 @@ You can connect **Program A's output** directly to **Program B's input** using s
 ![[Pasted image 20250111162937.png]]In the above example, two bash processes are linked via a stream. The first bash process reads its input from the keyboard. It sends output on both standard output and standard error. Output on standard error is connected to the terminal display, while output on standard output is connected to the second process. Notice how the first process' `FD 1` connects to the second process' `FD 0`. The second process therefore consumes the first process' standard output when it reads from its standard input. The second process' standard output in turn is connected to the terminal's display.
 
 [#](https://guide.bash.academy/inception/?=So_what_exactly_is_a_program_and_how_does_it_connect_to_other_programs?#p2.3.0_8)To try out this dynamic, you can run the following code in a terminal, where `(` and `)` symbols create two sub-shells and the `|` symbol connects the former's `FD 1` to the latter's `FD 0`:
+
+```bash
+ echo "Your name?" >&2; read name; echo "$name" ) | ( while read name; do echo "Hello, $name"; done )
+```
+
+File descriptors (FDs) are integral components of an operating system, especially in Unix-like systems. They represent references to files, devices, or communication channels (like sockets or pipes) that a program interacts with. Think of them as "handles" or pointers for the OS to know which file or stream a process is working on.
+
+### Key Points About File Descriptors
+
+1. **What Are File Descriptors?**
+    
+    - A file descriptor is simply an integer that uniquely identifies an open file or resource for a running process.
+    - When a process opens a file, the operating system assigns a file descriptor to track the file.
+2. **Standard File Descriptors** Every process has three standard file descriptors by default:
+    
+    - **Standard Input (stdin)**: FD 0
+        - Used to read input, typically from the keyboard.
+        - Example: `read` in Bash reads from stdin.
+    - **Standard Output (stdout)**: FD 1
+        - Used to write output, typically to the terminal/screen.
+        - Example: `echo "Hello"` writes to stdout.
+    - **Standard Error (stderr)**: FD 2
+        - Used to write error messages, typically to the terminal.
+        - Example: `echo "Error!" >&2` writes to stderr.
+3. **File Descriptor Numbers**
+    
+    - When a process opens additional files, it gets higher numbers (starting from 3).
+    - These numbers are unique to the process but are reused after a file is closed.
+4. **File Descriptors Can Represent**
+    
+    - Regular files (e.g., `.txt`, `.log`)
+    - Devices (e.g., `/dev/null`, `/dev/sda`)
+    - Pipes or sockets (used for inter-process communication)
+    - Other resources like terminals or network connections.
+5. **Redirection with File Descriptors** File descriptors can be redirected, allowing input/output to go to files, devices, or other programs. Examples:
+    
+    - Redirect stdout to a file: `command > file.txt`
+    - Append stdout to a file: `command >> file.txt`
+    - Redirect stderr to a file: `command 2> errors.txt`
+    - Redirect both stdout and stderr to the same file: `command > file.txt 2>&1`
+6. **Advanced Usage**
+    
+    - Duplication: Use the same file descriptor for multiple purposes. Example: `command 3>&1` duplicates FD 1 (stdout) into FD 3.
+    - Closing FDs: `command >&-` closes an FD, ensuring no output/input flows through it.
+    - Piping: Pass the output of one command as input to another. Example: `ls | grep "file"`
+
+### Why Are File Descriptors Useful?
+
+- **Efficiency**: Instead of managing strings or filenames, the OS tracks resources using integers.
+- **Flexibility**: Redirection and piping let you combine processes and manage streams easily.
+- **Control**: Allows processes to work with multiple files, sockets, or devices simultaneously.
+
+### Example: Redirecting Input/Output
+
+Suppose we have a file `input.txt` with some text:
+
+bash
+
+Copy code
+
+`echo "Hello World" > input.txt`
+
+#### Read from File:
+
+bash
+
+Copy code
+
+`cat < input.txt # Redirects stdin from input.txt to the cat command.`
+
+#### Write Output to File:
+
+bash
+
+Copy code
+
+`echo "Logging" > output.txt # Redirects stdout to the file output.txt`
+
+#### Redirect Both Stdout and Stderr:
+
+bash
+
+Copy code
+
+`ls non_existent_file > out.txt 2> err.txt # stdout goes to out.txt, stderr goes to err.txt`
+
+#### Combine Both:
+
+bash
+
+Copy code
+
+`ls non_existent_file > combined.txt 2>&1 # Both stdout and stderr go to combined.txt`
+
+
+t is important to understand that **file descriptors are process specific**: to speak of "standard output" only makes sense when referring to a specific process. In the example above, you'll notice that the first process' standard input is not the same as the second process' standard input. You'll also notice that the first process' FD 1 (standard output) is connected to the second process' FD 0 (standard input). File descriptors do not describe the streams that connect processes, they only describe the process' plugs where these streams can be connected to.
+
+
+### commands and arguments 
+
