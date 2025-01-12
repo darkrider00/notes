@@ -651,3 +651,7 @@ bash script new :)
 perplex@pop-os:~/Documents$ 
 ```
 
+### Command arguments and quoting literals
+
+**The gross part of all bugs in bash shell scripts are the direct result of their authors not properly understanding command arguments.**
+
