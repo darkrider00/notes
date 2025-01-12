@@ -625,3 +625,29 @@ If you want to know the actual path of the `ls` program, bypassing the alias, yo
     `type -a ls`
 
 
+perplex@pop-os:~/Documents$ chmod +x myscript
+perplex@pop-os:~/Documents$ PATH=$PATH:.
+perplex@pop-os:~/Documents$ my
+myscript              mysqld_qslower-bpfcc  
+perplex@pop-os:~/Documents$ myscript
+my bash script
+perplex@pop-os:~/Documents$ 
+
+
+```bash
+perplex@pop-os:~/Documents$ ex
+E1187: Failed to source defaults.vim 
+perplex@pop-os:~/Documents$ chmod +x script 
+perplex@pop-os:~/Documents$ PATH=$PATH:.
+perplex@pop-os:~/Documents$ script
+Script started, output log file is 'typescript'.
+perplex@pop-os:~/Documents$ type script
+
+perplex@pop-os:~/Documents$ mv script myscript
+perplex@pop-os:~/Documents$ chmod +x myscript 
+perplex@pop-os:~/Documents$ PATH=$path:.
+perplex@pop-os:~/Documents$ myscript 
+bash script new :)
+perplex@pop-os:~/Documents$ 
+```
+
