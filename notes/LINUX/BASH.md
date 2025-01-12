@@ -448,10 +448,74 @@ we can use the `|&` symbol inbetween the commands to indicate that we want not
 - special syntax can do lot of diff things but behave as single command in command list 
 - block in programming -single big command
 
- **if** list [ **;**|**<newline>** ] **then** list [ **;**|**<newline>** ] **fi**
-{ list ; }
+```
+ if list [  ; | <newline> ]  then  list [  ; | <newline> ]  fi
+      { list ; }
+
+```
 
 ```bash
 if ! rm hello.txt; then echo "Couldn't delete hello.txt." >&2; exit 1; fi
 
+rm hello.txt || { echo "Couldn't delete hello.txt." >&2; exit 1; }
 ```
+
+above commans both perform same operation 1st - compound command 2nd - compound command in command list 
+
+The compound command in the second example begins at `{` and continues until the next `}`, as a result everything inside the braces is considered a single command
+
+If we were to forget the braces, we would get a command list of _three_ commands: the `rm` command followed by the `echo` command, followed by the `exit` command.
+- If the `rm` succeeds, `||` will skip the command after it, which, if we leave out the braces,
+- would be only the `echo` command. The braces combine the `echo` and `exit` commands into a single compound command, allowing `||` to skip both of them when `rm` succeeds.
+
+like an or operator if one succeeds other one won't execute if one fails other executes
+
+#### Coprocesses
+- allows to easily run a command asynchronously (without making bash wait for it to end (in the background))
+- set up new file descriptor plugs connects directly to new commands input and output.
+
+Syntax:
+```
+    coproc [ name ] command [ redirection ... ]
+```
+
+```bash
+coproc auth { tail -n1 -f /var/log/auth.log; }
+read latestAuth <&"${auth[0]}"
+echo "Latest authentication attempt: $latestAuth"
+```
+
+- starts an asynchronous `tail` command.
+- While it runs in the background, the rest of the script continues
+- First the script reads a line of output from the coprocess called `auth` (which is the first line of the `tail` command output)
+- we write a message showing the latest authentication attempt we read from the coprocess
+- script can continue and each time it reads from the coprocess pipe, it will get the next line from the `tail` command.
+### **Simple Analogy**
+- Think of the coprocess as a **live reporter** constantly keeping an eye on `/var/log/auth.log` and giving updates whenever you ask.
+- The script is free to do other things but can **interrupt the reporter** anytime to get the latest update.
+
+### Functions
+
+- When you declare a function in bash, you're essentially creating a temporary new command which you can invoke later in the script.
+
+syntax:
+```
+    name **()** compound-command [ redirection ]
+```
+
+
+```bash
+exists() { [[ -x $(type -P "$1" 2>/dev/null) ]]; }
+exists gpg || echo "Please install GPG." <&2
+```
+
+- You begin by specifying a `name` for your function. This is the name of your new command, you'll be able to run it later on by writing a simple command with that name.
+- After the command name go the `()` parentheses.
+- Some languages use these parentheses to declare the arguments the function accepts: **bash does not**.
+- parentheses should always be empty.
+- To change the file descriptors of the script for the duration of running the function, you can optionally specify the function's custom file redirections.
+
+```
+Bash commands tell bash to perform a certain unit of work. These units of work cannot be subdivided: bash needs to know the whole command to be able to execute it. There are different kinds of commands for different types of operations. Some commands group other commands into blocks or test their result. Many command types are syntax sugar: their effect can be achieved differently, but they exist to make the job easier.
+```
+
