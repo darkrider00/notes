@@ -617,11 +617,6 @@ This means:
 If you want to know the actual path of the `ls` program, bypassing the alias, you can:
 
 1. **Use the `type` command with the `-a` option**:
-    
-    bash
-    
-    Copy code
-    
     `type -a ls`
 
 
@@ -747,11 +742,6 @@ When you run a program or command in Bash (e.g., `ls`), here’s what happens:
 ### **Example**
 
 - Open a terminal and type:
-    
-    bash
-    
-    Copy code
-    
     `echo "Hello, World!"`
     
     - Bash starts the `echo` command.
@@ -823,3 +813,95 @@ Streams (used by file descriptors) use internal **buffers** to optimize data wri
 - Data is stored in the buffer until it’s full or flushed.
 - Both `FD 1` and `FD 2` have separate buffers.
 - When their buffers are flushed to the same file, the content can overlap in unpredictable ways.
+
+  
+To solve this problem, you need to send both your output and error bytes on the same stream. And to do that, you're going to need to know how to duplicate file descriptors:
+
+![[Pasted image 20250112161324.png]]
+
+- act of copying one file descriptor's stream connection to another file descriptor.
+-  both file descriptors are connected to the same stream. We use the `>&` operator
+- You will use this operator fairly frequently, and in most cases it'll be to copy FD 1 to FD 2 as is done above. You can translate the syntax `2>&1` as Make FD `2` write(`>`) to where FD(`&`) `1` is currently writing.
+- redirections are evaluated from left to right, conveniently the same way as we read them.
+
+```bash
+ls -l a b 2>&1 >myfiles.ls
+```
+
+```
+FD 1 (stdout) → Writes to `myfiles.ls` 
+FD 2 (stderr) → Redirected to FD 1 (stdout)``
+```
+
+- **Result**: Both outputs share the same stream, ensuring ordered and predictable writes.
+
+```bash
+ls -l a b >myfiles.ls 2>&1
+```
+We now first change FD 1's target to stream to `myfiles.ls`. Then, we make FD 2 target the same stream FD 1 is currently using
+
+Both file descriptors are now targeting `myfiles.ls` and any output written by `ls` on either FD 1 or FD 2 will end up in the file.
+
+### file redirection
+syntax:
+```
+    [x]>file, [x]<file
+```
+
+- x> file - opens a file and connects to file descriptor x for writing
+- any output written to FD x goes to specified file
+- x< file - opens file and connects to file descriptor `x` for reading
+- if x is not specified it defaults to FD 0(std input)
+- this allows process to read input from file instead of terminal or keyboard
+### **Examples in Your Code**
+
+#### **1. `echo Hello >~/world`**
+
+- This redirects **standard output (FD 1)** to the file `~/world`.
+- The `>` operator implicitly means `1>`, so it's the same as:
+
+    `echo Hello 1>~/world`
+    
+- What happens:
+    - A new file `~/world` is created (or overwritten if it already exists).
+    - The text `Hello` is written into the file.
+
+#### **`rm file 2>/dev/null`**
+
+- This redirects **standard error (FD 2)** to `/dev/null`, a special file that discards all data written to it.
+What happens:
+- The `rm` command tries to delete a file named `file`.
+- If `file` doesn't exist, `rm` generates an error message on **stderr**.
+- The `2>/dev/null` part ensures this error message is discarded instead of being displayed in the terminal.
+
+#### **`read line <file`**
+
+- This redirects **standard input (FD 0)** to the file named `file`.
+- What happens:
+    - The `read` command normally reads from the keyboard (standard input).
+    - The `<file` part makes `read` take input from the file instead of the keyboard.
+    - The first line of `file` is read and stored in the variable `line`.
+
+- **File Descriptors and Defaults**:
+    
+    - `>` or `<` without a specified `x` will default to:
+        - **FD 1** for `>` (writing).
+        - **FD 0** for `<` (reading).
+- **Overwriting and Appending**:
+    
+    - `>` overwrites the file.
+    - `>>` appends to the file (without overwriting).
+- **Connecting Streams**:
+    
+    - `[x]>file` opens a file for writing and connects it to `FD x`.
+    - `[x]<file` opens a file for reading and connects it to `FD x`.
+
+### File descriptor copying
+```
+    [x]**>&**y, [x]**<&**y
+```
+
+```bash
+ping 127.0.0.1 >results 2>&1
+exec 3>&1 >mylog; echo moo; exec 1>&3 3>&-
+```
