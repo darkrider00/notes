@@ -655,3 +655,171 @@ perplex@pop-os:~/Documents$
 
 **The gross part of all bugs in bash shell scripts are the direct result of their authors not properly understanding command arguments.**
 
+To the bash shell, blank space is syntax just like anything else. It means: break the previous apart from the next thing. Bash calls this: word splitting.
+
+There are two ways in bash to make characters literal: quoting and escaping. Quoting is the practice of wrapping " or ' characters around the text that we want to make literal. Escaping is the practice of placing a single \ character in front of the character that we want to make literal.
+
+```bash
+way 1:
+mplayer ==05\ Between\ Angels\ and\ Insects.ogg== ==07\ Wake\ Up.ogg==
+
+way 2:
+ls -l ==hello.txt==
+-rw-r--r--  1 lhunath  staff  131 29 Apr 17:07 hello.txt
+$ ls -l =='hello.txt'==
+-rw-r--r--  1 lhunath  staff  131 29 Apr 17:07 hello.txt
+$ ls -l =='05 Between Angels and Insects.ogg'== =='07 Wake Up.ogg'==
+```
+
+  
+You should use =="double quotes"== for any argument that contains expansions (such as `$variable` or `$(command)` expansions) and =='single quotes'== for any other arguments.
+ - Single quotes make sure that everything in the quotes remains literal, while double quotes still allow some bash syntax such as expansions:
+
+```bash
+echo =="Good morning, $USER."==_Double quotes allow bash to expand `$USER`_
+echo =='You have won SECOND PRIZE in a beauty contest.'== \_Single quotes prevent even the `$`-syntax_
+     =='Collect $10'==_from triggering expansion._
+```
+
+
+```bash
+$ ls -l ==05== ==Between== ==Angels== ==and== ==Insects.ogg==
+ls: 05: No such file or directory
+ls: Angels: No such file or directory
+ls: Between: No such file or directory
+ls: Insects.ogg: No such file or directory
+ls: and: No such file or directory
+```
+
+#### dangers:
+```bash
+$ read -p 'Which user would you like to remove from your system? ' username
+Which user would you like to remove from your system?  lhunath
+$ rm -vr /home/$username
+removed '/home/lhunath/somefile'
+removed directory: '/home/lhunath'
+removed '/home/bob/bobsfiles'
+removed directory: '/home/bob'
+removed '/home/victor/victorsfiles'
+removed directory: '/home/victor'
+removed directory: '/home'
+rm: cannot remove 'lhunath': No such file or directory
+```
+
+What happened here, is that on input, because you accidentally put a `space` character before the name of the user to delete, the `rm` command expanded into `rm -vr ==/home/== ==lhunath==`, which resulted in a situation that is likely to upset both Victor and Bob:
+```bash
+$ rm -vr "/home/$username"
+rm: cannot remove '/home/ lhunath': No such file or directory
+```
+
+
+### Managing a command's input and output using redirection
+syntax:
+```
+    [ var=value ... ] name [ arg ... ] ==[ redirection ... ]==
+```
+
+**How Bash Sets Up File Descriptors**
+When you open a terminal, the **terminal program** sets up file descriptors for the Bash shell:
+
+- The **terminal** connects:
+    - Your keyboard input to **Standard Input (FD 0)** of Bash.
+    - The terminal window (your screen) to **Standard Output (FD 1)** and **Standard Error (FD 2)**.
+
+This means:
+- **What you type** into the terminal goes to Bash.
+- **What Bash outputs (or errors)** appears in your terminal window.
+### **What Happens When Bash Starts a New Program?**
+
+When you run a program or command in Bash (e.g., `ls`), here’s what happens:
+
+1. **Bash Creates File Descriptors for the New Program**:
+    
+    - The program inherits the file descriptors of Bash. So:
+        - The program’s Standard Input is connected to the terminal (FD 0).
+        - The program’s Standard Output and Standard Error are connected to the terminal (FD 1 and FD 2).
+2. **Result**:
+    
+    - The program behaves like Bash:
+        - Your keyboard input goes to the program (e.g., if it needs input).
+        - The program’s output or error messages appear in your terminal.
+
+### **Example**
+
+- Open a terminal and type:
+    
+    bash
+    
+    Copy code
+    
+    `echo "Hello, World!"`
+    
+    - Bash starts the `echo` command.
+    - Bash connects the terminal (keyboard/screen) to the `echo` command’s file descriptors:
+        - Standard Input (FD 0) is ignored (not needed for `echo`).
+        - Standard Output (FD 1) prints `Hello, World!` to the terminal.
+
+- **File descriptors create "streams"** that connect programs, files, and devices.
+- Bash **inherits** these streams from the terminal and **passes them to programs it starts**.
+- This inheritance allows commands to:
+    - Read from your keyboard.
+    - Write to your screen.
+    - Display errors on your screen separately.
+
+![[Pasted image 20250112160541.png]]
+
+- When `bash` starts an `ls` process, it first looks at its own file descriptors. It then creates file descriptors for the `ls` process, connected to the same streams as its own: FD 1 and FD 2 leading to the `Display`,
+- FD 0 coming from the `Keyboard`. As a result, `ls`' error message (emitted on FD 2) and its regular output (emitted on FD 1) both end up on your terminal display.
+
+```
+If we want to gain control over where our commands connect to, we need to employ redirection: it is the practice of changing the source or destination of a file descriptor. One thing we could do with redirection is write `ls`' result to a file instead of to the terminal display:
+```
+
+![[Pasted image 20250112160700.png]]
+Redirecting standard output is done using the `>` operator.
+arrow sending output from the command to the file. This is by far the most common and useful form of redirection.
+
+Another common thing redirection is used for is hiding error messages. You'll notice that our redirected `ls` command is still displaying an error message. Usually this is a good thing. Sometimes, though, we might find that error messages produced by some commands in our scripts are unimportant to the user and should be hidden. To do this, we can use file redirection again, in a similar fashion as redirecting standard output caused `ls`' result to disappear:
+
+![[Pasted image 20250112160818.png]]
+
+if we wanted to save all the output that would normally appear on the terminal to our `myfiles.ls` file; both the results and error messages?
+
+![[Pasted image 20250112161001.png]]
+
+### **What Happened in the Command?**
+
+The command you used was:
+
+bash
+
+Copy code
+
+`ls -l a b >myfiles.ls 2>myfiles.ls`
+
+This is **intended** to redirect:
+
+- **Standard Output (FD 1)** to `myfiles.ls` (`>myfiles.ls`).
+- **Standard Error (FD 2)** to `myfiles.ls` (`2>myfiles.ls`).
+
+However, both `FD 1` and `FD 2` are **independently** writing to the same file.
+
+This creates an issue because **each file descriptor has its own stream** to the file. These streams aren't synchronized.
+
+### **The Problem: Unsynchronized Writes**
+
+Here’s what happens internally:
+
+1. When a program like `ls` outputs data to **both streams** (stdout and stderr):
+    - **FD 1** writes its data to `myfiles.ls`.
+    - **FD 2** writes its data to `myfiles.ls`.
+2. These writes occur **independently**, and since they are asynchronous, their outputs might:
+    - Overlap.
+    - Be written in unpredictable orders.
+    - Cause "garbled" or interleaved output in `myfiles.ls`.
+
+Streams (used by file descriptors) use internal **buffers** to optimize data writes:
+
+- Data is stored in the buffer until it’s full or flushed.
+- Both `FD 1` and `FD 2` have separate buffers.
+- When their buffers are flushed to the same file, the content can overlap in unpredictable ways.
