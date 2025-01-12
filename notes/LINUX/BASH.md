@@ -1043,3 +1043,42 @@ echo >&2 "   Success if the program exists in the user's PATH and is executable.
 By default, new commands inherit the shell's current file descriptors. We can use redirections to change where a command's input comes from and where its output should go to. File redirection (e.g. `2>errors.log`) allows us to stream file descriptors to files. We can copy file descriptors (e.g. `2>&1`) to make them share a stream. There are also many other more advanced redirection operators.
 ```
 
+### Questions 
+#### REDIR.4. Send only the last command's standard error messages to a file called `errors.log`. Then show the contents of `errors.log` on the terminal
+
+```bash
+perplex@pop-os:~/Documents$ cat myscript super.tlkd 2>errors.log && cat errors.log
+echo "bash script new :)"
+perplex@pop-os:~/Documents$ cat errors.log 
+cat: super.tlkd: No such file or directory
+perplex@pop-os:~/Documents$ 
+```
+
+#### REDIR.5. Append the last command's standard output and error messages to the file called `errors.log`. Then show the contents of `errors.log` on the terminal again.
+
+```bash
+perplex@pop-os:~/Documents$ cat myscript  supet.kja>new.log 2>&1 && new.log
+perplex@pop-os:~/Documents$ cat new.log 
+echo "bash script new :)"
+cat: supet.kja: No such file or directory
+perplex@pop-os:~/Documents$ 
+```
+
+#### REDIR.6. Use a here-string to show the string Hello world. on the terminal.
+
+```bash
+perplex@pop-os:~/Documents$ cat <<<'santhosh'
+santhosh
+perplex@pop-os:~/Documents$ 
+
+```
+
+#### REDIR.7. Fix this command so that the message is properly saved into the `log` file and such that FD 3 is properly closed afterwards: exec 3>&2 2>log; echo 'Hello!'; exec 2>&3
+
+```bash
+perplex@pop-os:~/Documents$ exec 3>&1 >log; echo 'santhosh'; exec 1>&3 3>&-
+perplex@pop-os:~/Documents$ cat log
+santhosh
+perplex@pop-os:~/Documents$ 
+```
+
