@@ -905,3 +905,141 @@ What happens:
 ping 127.0.0.1 >results 2>&1
 exec 3>&1 >mylog; echo moo; exec 1>&3 3>&-
 ```
+1. **`>results`**: Redirects **standard output (FD 1)** of the `ping` command to the file `results`.
+2. **`2>&1`**: Redirects **standard error (FD 2)** to **standard output (FD 1)**.
+    - Now both **stdout** and **stderr** go to the same file (`results`).
+
+**What’s happening?**
+- Normally, `ping` outputs regular messages to **stdout** and error messages to **stderr**.
+- With `2>&1`, you combine both streams, so everything (both errors and results) goes into `results`.
+
+2nd example:
+- #### **`exec 3>&1`**
+- Creates **file descriptor 3** and copies the current **standard output (FD 1)** to it.
+- Now, FD 3 is a duplicate of FD 1.
+- FD 3 will act as a "backup" of the original standard output.
+- #### **`>mylog`**
+- Redirects **standard output (FD 1)** to the file `mylog`.
+- Now, anything that writes to FD 1 will go to `mylog`
+- #### **`echo moo`**
+- Writes `"moo"` to **standard output (FD 1)**.
+- Since FD 1 is redirected to `mylog`, `"moo"` is written to the `mylog` file
+- #### **`exec 1>&3`**
+- Restores the original **standard output (FD 1)** by copying FD 3 back to FD 1.
+- Now, anything written to FD 1 will once again go to the terminal.
+- #### **`3>&-`**
+- Closes FD 3.
+- This removes the "backup" of the original standard output.
+
+```
+- exec changes file descriptors for the current shell session.
+
+- File descriptor copying (`[x]>&y`)** allows you to duplicate streams.
+
+- Using temporary file descriptors (like FD 3) is useful for saving and restoring streams during advanced redirections.
+```
+
+### Appending file redirection
+
+syntax:
+```
+    [x]**>>**file
+```
+Make FD x append to the end of file.
+- A stream to file is opened for writing in append mode and is connected to file descriptor x
+- The regular file redirection operator `>` empties the file's contents when it opens the file so that only your bytes will be in the file. In append mode (`>>`), the file's existing contents is left and your stream's bytes are added to the end of it.
+
+### Redirecting standard output and standard error
+syntax:
+```
+    &>file
+```
+
+```bash
+ping 127.0.0.1 &>results
+```
+-   Make both FD 1 (standard output) and FD 2 (standard error) write to file.
+- This is a convenience operator which does the same thing as `>file 2>&1` but is more concise. Again, you can append rather than truncate by doubling the arrow: `&>>file`
+
+### Here Documents
+syntax:
+```
+<<[-]delimiter
+        here-document
+    delimiter
+```
+
+```bash
+cat <<.
+We choose `.` as the end delimiter
+Hello world.
+Since I started learning bash, you suddenly seem so much bigger than you were before.
+.
+```
+- Make FD 0 (standard input) read from the string between the delimiters.
+- Here documents are a great way to feed large blocks of text to a command's input. They begin on the line after your delimiter and end when bash encounters a line with _just_ your delimiter on it.
+- delimiter cannot be indented, because then it is no longer _just_ your delimiter on that line.
+- You can prefix your initial delimiter declaration with a `-`, this will tell bash to ignore any tabs you put in front of your heredoc. That way, you can indent the heredoc without the indenting showing in your input string.
+-  you need to put quotes around your `'delimiter'`'s initial declaration.
+
+### Here Strings
+syntax:
+```
+    <<<string
+```
+
+```bash
+cat <<<"Hello world.
+Since I started learning bash, you suddenly seem so much bigger than you were before."==
+```
+
+Make FD 0 (standard input) read from the string.
+
+Here strings are very similar to here documents but more concise. They are generally preferred over here documents.
+
+### Moving file descriptors
+syntax: 
+```
+    [x]>&y-, [x]<&y-
+```
+
+```bash
+exec 3>&1- >mylog; echo moo; exec >&3-
+```
+
+Replace FD x with FD y.
+
+The file descriptor at y is copied to x and y is closed. Effectively, it replaces x with y. It is a convenience operator for `[x]>&y y>&-`. Again, you will rarely use this operator.
+
+### Reading and writing with a file descriptor
+
+syntax:
+```
+    [x]<>file
+```
+
+```bash
+exec ==5<>/dev/tcp/ifconfig.me/80==
+echo "GET /ip HTTP/1.1
+Host: ifconfig.me
+" >&5
+cat <&5
+```
+
+- The file descriptor at x is opened with a stream to the file that can be used for writing as well as reading bytes
+- you'll use two file descriptors for this. One of the rare cases where this is useful is when setting up a stream with a read/write device such as a network socket.
+
+few lines of HTTP to the `ifconfig.me` host at port `80` (the standard HTTP port) and subsequently reads the bytes coming back from the network, both using the same file descriptor `5` set up for this by `exec`.
+
+```bash
+echo >&2 "Usage: exists name"
+echo >&2 "   Check to see if the program 'name' is installed."
+echo >&2
+echo >&2 "RETURN"
+echo >&2 "   Success if the program exists in the user's PATH and is executable.  Failure otherwise."
+```
+
+```
+By default, new commands inherit the shell's current file descriptors. We can use redirections to change where a command's input comes from and where its output should go to. File redirection (e.g. `2>errors.log`) allows us to stream file descriptors to files. We can copy file descriptors (e.g. `2>&1`) to make them share a stream. There are also many other more advanced redirection operators.
+```
+
