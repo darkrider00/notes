@@ -519,3 +519,109 @@ exists gpg || echo "Please install GPG." <&2
 Bash commands tell bash to perform a certain unit of work. These units of work cannot be subdivided: bash needs to know the whole command to be able to execute it. There are different kinds of commands for different types of operations. Some commands group other commands into blocks or test their result. Many command types are syntax sugar: their effect can be achieved differently, but they exist to make the job easier.
 ```
 
+### ## Command names and running programs
+
+```
+    [ var**=**value ... ] ==name== [ arg ... ] [ redirection ... ]
+```
+
+We're first going to focus on the command's name. The name tells bash what the job is that you want this command to perform. To figure out what you want your command to do, bash performs a _search_ to find out what to execute. In order, bash uses the `name` to try and find a:
+
+![[Pasted image 20250112102558.png]]
+
+- if bash finds no way to execute a command by the name you gave it, your command will result in an error and bash will show an error message:
+
+```bash
+$ buy beer
+bash: buy: command not found
+```
+
+Aliases are only rarely useful, only work in interactive sessions and are almost completely superseded by functions. You should avoid using them in almost all cases.
+
+#### The `PATH` to a program
+
+reference : https://refspecs.linuxfoundation.org/fhs.shtml
+
+- On a standard UNIX system, there are [a few standardized locations](http://refspecs.linuxfoundation.org/fhs.shtml) for programs to go
+-  Some programs will be installed in `/bin`, others in `/usr/bin`, yet others in `/sbin` and so on
+- To the rescue comes the `PATH` environment variable. Your `PATH` variable contains a set of directories that should be searched for programs.
+
+```
+$ ping 127.0.0.1
+
+    **PATH=**/bin**:**/sbin**:**/usr/bin**:**/usr/sbin
+           │     │
+           │     ╰──▶ ==/sbin==/ping ?  **found!**
+           ╰──▶ ==/bin==/ping ?  not found.
+```
+
+you're trying to start the `ping` program which is installed at `/sbin/ping`.
+ -  If your `PATH` is set to `/bin:/sbin:/usr/bin:/usr/sbin` then bash will first try to start `/bin/ping`
+ - which doesn't exist. Failing that, it will try `/sbin/ping`. It finds the `ping` program
+ - records its location in case you need `ping` again in the future and goes ahead and runs the program for you.
+```bash
+$ type ping
+ping is /sbin/ping
+$ type -a echo
+echo is a shell builtin
+echo is /bin/echo
+```
+
+if you run the echo command in bash, even before bash tries a `PATH` search, it will notice there's a built-in by that name and use it.
+- `type` is a great way to visualize this lookup process.
+
+Sometimes you'll need to run a program that isn't installed in any of the `PATH` directories. In that case, you'll have to manually specify the path to where bash can find the program, rather than just its name
+
+```bash
+$ /sbin/ping -c 1 127.0.0.1
+PING 127.0.0.1 (127.0.0.1): 56 data bytes
+64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.075 ms
+
+--- 127.0.0.1 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.075/0.075/0.075/0.000 ms
+$ ./hello.txt_  #Remember our hello.txt script?_
+Your name?
+```
+
+```
+[#](https://guide.bash.academy/commands/?=The_PATH_to_a_program#a3.2.0_1)Bash only performs a `PATH` search on command names that do not contain a / character. Command names with a slash are always considered direct pathnames to the program to execute.
+```
+
+You can add more directories to your `PATH`. A common practice is to have a `/usr/local/bin` and a `~/bin` (where `~` represents your user's home directory). Remember that `PATH` is an environment variable: you can update it like this
+
+```bash
+$ PATH=~/bin:/usr/local/bin:/bin:/usr/bin
+$
+```
+
+This will change the variable in your current bash shell. As soon as you close the shell, the change will be lost, though. We'll go more in-depth on how environment variables work and how you should configure them in a later section.
+
+To find out where `bash` will locate the `ls` program when you execute it, you can use the `type` command. In your case, the output of `type ls` shows:
+
+bash
+
+Copy code
+
+``ls is aliased to `ls --color=auto'``
+
+This means:
+
+1. `ls` is **aliased** to `ls --color=auto`, which ensures colored output for better readability in the terminal.
+2. An **alias** is essentially a shortcut for a command.
+
+---
+
+### To Find the Actual Location of `ls`
+
+If you want to know the actual path of the `ls` program, bypassing the alias, you can:
+
+1. **Use the `type` command with the `-a` option**:
+    
+    bash
+    
+    Copy code
+    
+    `type -a ls`
+
+
