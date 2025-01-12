@@ -1082,3 +1082,37 @@ santhosh
 perplex@pop-os:~/Documents$ 
 ```
 
+## 3.Variables and Expansions
+
+#### Pathname expansion
+
+```bash
+$ cd ~/Downloads
+$ rm -v *
+removed '05 Between Angels and Insects.ogg'
+removed '07 Wake Up.ogg'
+$ ls
+$
+```
+
+We've replaced them with a pattern that tells bash to _expand the pathnames for us_. Expansion is the practice of replacing a part of our command code with a situationally specific piece of code.
+
+we want to replace `*` with the pathname of every single file in our downloads directory. Replacing patterns with pathnames is therefore known as pathname expansion.
+
+It so happens, that the pattern `*` matches the name of every single file in the current directory
+
+Once bash replaces our `*` with `'05 Between Angels and Insects.ogg' '07 Wake Up.ogg'`, bash proceeds to invoke the `rm` command with the full set of arguments: `-v '05 Between Angels and Insects.ogg' '07 Wake Up.ogg'`. As a result, our downloads directory is emptied as intended. Brilliant.
+
+the `rm` command will never even see our pathname expansion pattern.
+- pattern is evaluated and expanded by bash well before `rm` is even started.
+- As far as `rm` knows, it simply receives a `-v` argument followed by the exact and full name of every single file in the directory. Expansion is always performed by _bash_ itself, and always _before_ actually running the command!
+-  To perform a pathname expansion, we simply write a syntactical glob pattern in the place where we want to expand pathnames.
+-  A glob is the name of the type of pattern supported by the bash shell. Here are the various basic glob patterns supported by the bash shell:
+
+| Glob              | Meaning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `*`               | A star or asterix matches any kind of text, even no text at all.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `?`               | A question mark matches any one single character.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `[ characters ]`  | A set of characters within rectangular braces matches a single character, only if it's in the given set.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `[[:classname:]]` | When there is a set of colons directly inside the rectangular braces, you can specify the name of a class of characters instead of having to enumerate each character yourself.  <br>Bash knows about various kinds of character classes. For example, if you use the `[[:alnum:]]` pattern, bash will match it against a character only if it is alphanumeric. Supported character classes include:  <br>alnum, alpha, ascii, blank, cntrl, digit, graph, lower, print, punct, space, upper, word, xdigit |
+
