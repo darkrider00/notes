@@ -67,12 +67,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TCS hackquest/code pool.md",
+                "file": "TCS hackquest/Stranger things.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "code pool"
+              "title": "Stranger things"
             }
           }
         ],
@@ -232,11 +232,15 @@
   },
   "active": "1292677d72a0a667",
   "lastOpenFiles": [
+    "attachments/Pasted image 20250125103730.png",
+    "attachments/Pasted image 20250125103646.png",
+    "attachments/Pasted image 20250125103621.png",
+    "TCS hackquest/code pool.md",
+    "TCS hackquest/Stranger things.md",
     "attachments/Pasted image 20250125102402.png",
     "attachments/Pasted image 20250125102346.png",
     "attachments/Pasted image 20250125102330.png",
     "4_week_workout_plan.md",
-    "TCS hackquest/code pool.md",
     "TCS hackquest",
     "Untitled",
     "notes/LINUX/BASH.md",
@@ -245,9 +249,6 @@
     "attachments/Pasted image 20250112161324.png",
     "attachments/Pasted image 20250112161001.png",
     "attachments/Pasted image 20250112160818.png",
-    "attachments/Pasted image 20250112160700.png",
-    "attachments/Pasted image 20250112160541.png",
-    "attachments/Pasted image 20250112102558.png",
     "Untitled.md",
     "notes/LINUX/Mounting and Unmounting File Systems.md",
     "notes/LINUX/bash",
@@ -272,7 +273,6 @@
     "things/Using Science to Optimize sleep, Learning & Metabolism.md",
     "things/how brain works.md",
     "notes/Google cloud professional certification.md",
-    "things/daily things/07-11-24.md",
     "things/cybersecurity tracker",
     "templates",
     "things/daily things",
