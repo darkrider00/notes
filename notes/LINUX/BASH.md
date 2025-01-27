@@ -1163,3 +1163,10 @@ hello.txt
 ```
 
 ### Tilde Expansion
+ a tilde (`~`) in a pathname with the path to the current user's home directory:
+
+```bash
+$ echo 'I live in: ' ~ #Note that expansions must not be quoted or they will become **literal**!
+
+I live in: /Users/lhunath
+```
