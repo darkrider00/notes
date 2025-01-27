@@ -1136,6 +1136,8 @@ By default, support for them is disabled, but we can easily enable it in our cur
 shopt -s extglob
 ```
 
+Shopt is ==a built-in command in the Bash shell that controls the shell session's options==
+
 | xtended Glob                   | Meaning                                                                                                                   |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
 | `+(pattern[ \| pattern ... ])` | Matches when any of the patterns in the list appears, once or many times over. Reads: at least one of ....                |
