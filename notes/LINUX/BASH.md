@@ -1170,3 +1170,38 @@ $ echo 'I live in: ' ~ #Note that expansions must not be quoted or they will bec
 
 I live in: /Users/lhunath
 ```
+```bash 
+echo "The file <hello.txt> contains: $(cat hello.txt)"
+The file <hello.txt> contains: ==Hello world.==
+```
+
+using $ () we can use commands in b/w brackets
+
+- syntax is a combination of the value-expansion prefix `$` followed by the subshell to expand: `(...)`.
+- subshell - small bash process that is used to run a command while main bash shell wait for result
+
+***  
+Never leave a value expansion unquoted. If you do, bash will tear the value apart using word-splitting, delete all whitespace from it and perform hidden pathname expansion on all the words in it!
+***
+
+### shell variables
+
+- bash parameter that has a name , 
+- u can store and use it later as normal variable in programming 
+![[Pasted image 20250128100655.png]]
+
+name = something  (bad syntax)
+
+we can combine the variables with expansion
+
+```bash
+$ contents="$(cat hello.txt)"
+```
+
+$ - expansion wheever u see in bash
+
+
+```
+Parameter expansions (and all other value expansions) should **always** be double-quoted.
+```
+
