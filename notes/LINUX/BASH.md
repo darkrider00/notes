@@ -1205,3 +1205,65 @@ $ - expansion wheever u see in bash
 Parameter expansions (and all other value expansions) should **always** be double-quoted.
 ```
 
+```bash
+$ name=Britta time=23.73 #We want to expand `time` and add an `s` for seconds_
+
+$ echo "$name's current record is $times." #but bash mistakes the name for `times` which holds nothing_
+Britta's current record is .
+
+$ echo "$name's current record is ${time}s." #Braces explicitly tell bash where the name ends_
+Britta's current record is 23.73s.
+
+```
+
+| url='https://guide.bash.academy/variables.html'                                                                                                                                    |                              |                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Operator                                                                                                                                                                           | Example                      | Result                                                                                                      |
+| `**${**parameter**#**pattern**}**`                                                                                                                                                 | "${url#==*/==}"              | ==https:/==/guide.bash.academy/variables.html<br>    ↓<br>/guide.bash.academy/variables.html                |
+| Remove the _shortest_ string that matches the pattern if it's at the start of the value.                                                                                           |                              |                                                                                                             |
+| `**${**parameter**##**pattern**}**`                                                                                                                                                | "${url##==*/==}"             | ==https://guide.bash.academy/==variables.html<br>    ↓<br>variables.html                                    |
+| Remove the _longest_ string that matches the pattern if it's at the start of the value.                                                                                            |                              |                                                                                                             |
+| `**${**parameter**%**pattern**}**`                                                                                                                                                 | "${url%==/*==}"              | https://guide.bash.academy==/variables.html==<br>    ↓<br>https://guide.bash.academy                        |
+| Remove the _shortest_ string that matches the pattern if it's at the end of the value.                                                                                             |                              |                                                                                                             |
+| `**${**parameter**%%**pattern**}**`                                                                                                                                                | "${url%%==/*==}"             | https:==//guide.bash.academy/variables.html==<br>    ↓<br>https:                                            |
+| Remove the _longest_ string that matches the pattern if it's at the end of the value.                                                                                              |                              |                                                                                                             |
+| `**${**parameter**/**pattern**/**replacement**}**`                                                                                                                                 | "${url/==.==/==-==}"         | https://guide==.==bash.academy/variables.html<br>    ↓<br>https://guide-bash.academy/variables.html         |
+| Replace _the first_ string that matches the pattern with the replacement.                                                                                                          |                              |                                                                                                             |
+| `**${**parameter**//**pattern**/**replacement**}**`                                                                                                                                | "${url//==.==/==-==}"        | https://guide==.==bash==.==academy/variables==.==html<br>    ↓<br>https://guide-bash-academy/variables-html |
+| Replace _each_ string that matches the pattern with the replacement.                                                                                                               |                              |                                                                                                             |
+| `**${**parameter**/#**pattern**/**replacement**}**`                                                                                                                                | "${url/#==*:==/==http:==}"   | ==https:==//guide.bash.academy/variables.html<br>    ↓<br>http://guide.bash.academy/variables.html          |
+| Replace the string that matches the pattern at the _beginning_ of the value with the replacement.                                                                                  |                              |                                                                                                             |
+| `**${**parameter**/%**pattern**/**replacement**}**`                                                                                                                                | "${url/%==.html==/==.jpg==}" | https://guide.bash.academy/variables==.html==<br>    ↓<br>https://guide.bash.academy/variables.jpg          |
+| Replace the string that matches the pattern at the _end_ of the value with the replacement.                                                                                        |                              |                                                                                                             |
+| `**${#**parameter**}**`                                                                                                                                                            | "${#url}"                    | https://guide.bash.academy/variables.html<br>    ↓<br>40                                                    |
+| Expand the length of the value (in bytes).                                                                                                                                         |                              |                                                                                                             |
+| `**${**parameter**:**start[**:**length]**}**`                                                                                                                                      | "${url:==8==}"               | https://==guide.bash.academy/variables.html==<br>    ↓<br>guide.bash.academy/variables.html                 |
+| Expand a part of the value, starting at start, length bytes long. You can even count start from the end rather than the beginning by using a (space followed by a) negative value. |                              |                                                                                                             |
+| `**${**parameter[**^**\|**^^**\|**,**\|**,,**][pattern]**}**`                                                                                                                      | "${url^^==[ht]==}"           | ==htt==p://guide.bas==h==.academy/variables.==ht==ml<br>    ↓<br>HTTps://guide.basH.academy/variables.HTml  |
+| Expand the transformed value, either upper-casing or lower-casing the first or all characters that match the pattern. You can omit the pattern to match any character.             |                              |                                                                                                             |
+
+#### EXPAN.1. Assign hello to the variable greeting.
+
+#### EXPAN.2. Show the contents of the variable greeting.
+
+![[Pasted image 20250128101958.png]]
+
+
+#### EXPAN.3. Assign the string  world to the end of the variable's current contents.
+
+![[Pasted image 20250128102344.png]]
+
+#### EXPAN.4. Show the last word in the variable greeting.
+
+![[Pasted image 20250128102553.png]]
+
+#### EXPAN.5. Show the contents of the variable greeting with the first character upper-cased and a period (`.`) at the end.
+
+
+#### EXPAN.6. Replace the first space character in the variable's contents with  big .
+
+
+#### EXPAN.6. Replace the first space character in the variable's contents with  big .
+
+
+#### EXPAN.8. Show the contents of the variable greeting with the middle word fully upper-cased.
