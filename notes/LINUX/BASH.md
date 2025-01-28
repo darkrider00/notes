@@ -1259,7 +1259,32 @@ Britta's current record is 23.73s.
 
 #### EXPAN.5. Show the contents of the variable greeting with the first character upper-cased and a period (`.`) at the end.
 
+### Difference Between `^`, `^^`, `,`, and `,,`:
 
+| Syntax            | Function                                                                      | Example Output              |
+| ----------------- | ----------------------------------------------------------------------------- | --------------------------- |
+| `${var^}`         | Capitalizes the **first character** of the string.                            | `hello -> Hello`            |
+| `${var^^}`        | Capitalizes **all characters** in the string.                                 | `hello -> HELLO`            |
+| `${var,}`         | Lowercases the **first character** of the string.                             | `HELLO -> hELLO`            |
+| `${var,,}`        | Lowercases **all characters** in the string.                                  | `HELLO -> hello`            |
+| `${var^pattern}`  | Capitalizes the **first occurrence** of any character that matches `pattern`. | `heLlo` with `[e] -> hELlo` |
+| `${var^^pattern}` | Capitalizes **all occurrences** of any character that matches `pattern`.      | `hello` with `[o] -> hellO` |
+| `${var,pattern}`  | Lowercases the **first occurrence** of any character that matches `pattern`.  | `Hello` with `[H] -> hello` |
+| `${var,,pattern}` | Lowercases **all occurrences** of any character that matches `pattern`.       | `HeLLo` with `[L] -> Hello` |
+### Key Concepts:
+
+1. **Parameter Expansion with Case Modifiers**:
+    
+    - `${var^}`: Capitalizes the **first character** of the string in `var`.
+    - `${var^^}`: Capitalizes **all occurrences** of matching characters in the string.
+    - `${var,}`: Lowercases the **first character** of the string in `var`.
+    - `${var,,}`: Lowercases **all occurrences** of matching characters in the string.
+2. **Bracket Matching with Patterns**:
+    
+    - You can specify a pattern or characters in brackets (`[ ]`) to apply case modification selectively.
+    - If you don't specify a pattern, the default behavior applies to all characters (for `^^` and `,,`) or just the first character (for `^` and `,`).
+
+![[Pasted image 20250128104340.png]]
 #### EXPAN.6. Replace the first space character in the variable's contents with  big .
 
 
