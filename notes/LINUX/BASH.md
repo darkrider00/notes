@@ -1470,5 +1470,12 @@ Using double quotes prevents Bash from interpreting `!`.
 ![[Pasted image 20250129151425.png]]
 #### EXPAN.6. Replace the first space character in the variable's contents with  big .
 
+![[Pasted image 20250129151627.png]]
 
+#### EXPAN.7. Redirect the contents of the variable greeting into a file whose name is the value of the variable with the spaces replaced by underscores (`_`) and a `.txt` at the end.
+
+![[Pasted image 20250129152137.png]]
 #### EXPAN.8. Show the contents of the variable greeting with the middle word fully upper-cased.
+
+![[Pasted image 20250129152815.png]]
+
