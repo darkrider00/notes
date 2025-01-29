@@ -1285,7 +1285,7 @@ Britta's current record is 23.73s.
     - If you don't specify a pattern, the default behavior applies to all characters (for `^^` and `,,`) or just the first character (for `^` and `,`).
 
 ![[Pasted image 20250128104340.png]]
-#### EXPAN.6. Replace the first space character in the variable's contents with  big .
+#### EXPAN.6. Replace the first space characther in the variable's contents with  big .
 
 
 #### EXPAN.6. Replace the first space character in the variable's contents with  big .
