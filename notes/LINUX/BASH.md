@@ -1479,3 +1479,39 @@ Using double quotes prevents Bash from interpreting `!`.
 
 ![[Pasted image 20250129152815.png]]
 
+The environment is something every process has, while the shell space is only available to bash processes.
+
+```
+    ╭─── bash ─────────────────────────╮
+    │             ╭──────────────────╮ │
+    │ ENVIRONMENT │ SHELL            │ │
+    │             │ shell_var1=value │ │
+    │             │ shell_var2=value │ │
+    │             ╰──────────────────╯ │
+    │ ENV_VAR1=value                   │
+    │ ENV_VAR2=value                   │
+    ╰──────────────────────────────────╯
+
+```
+
+- when u run a new process from shell bash will run this program in a new process when it does , new process do not have shell variables .
+- when new process is created  env is populated by making copy of env of creating process
+
+```
+    ╭─── bash ───────────────────────╮
+    │             ╭────────────────╮ │
+    │ ENVIRONMENT │ SHELL          │ │
+    │             │ greeting=hello │ │
+    │             ╰────────────────╯ │
+    │ HOME=/home/lhunath             │
+    │ PATH=/bin:/usr/bin             │
+    ╰─┬──────────────────────────────╯
+      ╎  ╭─── ls ─────────────────────────╮
+      └╌╌┥                                │
+         │ ENVIRONMENT                    │
+         │                                │
+         │ HOME=/home/lhunath             │
+         │ PATH=/bin:/usr/bin             │
+         ╰────────────────────────────────╯
+```
+
