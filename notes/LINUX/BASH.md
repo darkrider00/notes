@@ -1622,3 +1622,145 @@ $ NAME=John
               ╰─ bash
 ```
 
+- When a user logs into a Unix-like system (e.g., Linux or macOS), the **login program** is responsible for authenticating the user and starting their session.
+- - The login program determines the user’s **login shell** by checking the system’s configuration files. Specifically, it looks at the `/etc/passwd` file, which contains information about user accounts, including their default shell.
+- - n the `/etc/passwd` file, each user has an entry that specifies their default shell. For example:
+    
+    Copy
+    
+    username:x:1001:1001:User Name,,,:/home/username:/bin/bash
+    
+    - Here, `/bin/bash` is the user’s login shell.
+        
+- The login program reads this information and prepares to start the specified shell.
+- - The login program runs the shell (in this case, `bash`) and prefixes its name with a **dash (`-`)**, resulting in `-bash`.
+    
+- The dash indicates to the shell that it should behave as a **login shell**. This is a standard convention in Unix-like systems.
+
+- A login shell initializes the user’s environment by reading specific configuration files:
+    
+    - **`/etc/profile`**: System-wide configuration for all users.
+        
+    - **`~/.bash_profile`**, **`~/.bash_login`**, or **`~/.profile`**: User-specific configuration files.
+        
+- These files set up environment variables, paths, aliases, and other settings needed for the user’s session.
+- - After logging in, the user can use a **terminal multiplexer** (e.g., `tmux` or `screen`) to create multiple "screens" or windows within a single terminal session.
+    
+- This allows the user to:
+    
+    - Run multiple programs concurrently (e.g., a text editor, a compiler, and a system monitor).
+        
+    - Switch between these programs easily without opening multiple terminal windows.
+
+### **Process Tree**
+
+- The **process tree** represents the hierarchy of processes running on the system.
+    
+- In this scenario:
+    
+    - The `login` program is the parent process.
+        
+    - It starts the `bash` shell as a child process, with the name `-bash` to indicate it’s a login shell.
+        
+    - If the user starts a terminal multiplexer (e.g., `tmux`), it becomes a child process of `-bash`.
+        
+    - Each "screen" or window in the multiplexer runs its own shell or program, creating a tree of processes.
+
+https://asciinema.org/a/13948/iframe
+
+```
+
+  login
+      │ TERM=dumb
+      │ USER=lhunath
+      │ HOME=/home/lhunath
+      │ PATH=/usr/bin:/bin
+      │
+      ╰─ -bash
+         │ TERM=dumb
+         │ USER=lhunath
+         │ HOME=/home/lhunath
+         │ ~~PATH=/usr/bin:/bin~~
+         │ PWD=/home/lhunath
+         │ SHLVL=1
+         │                                                                                 ╭──────────────╮     ╭────────────────────────╮╭──────────────────╮
+         ┝┥ login shell? ┝─yes─┥ source ~/.bash_profile ┝┥ source ~/.bashrc │
+         │╰──────────────╯     ╰────────────────────────╯╰──────────────────╯
+         │ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/libexec
+         │ EDITOR=vim
+         │ LANG=en_CA.UTF-8
+         │ LESS=-i -M -R -W -S
+         │ GREP_COLOR=31
+         │
+         ╰─ screen
+              │ ~~TERM=dumb~~
+              │ TERM=screen-bce
+              │ USER=lhunath
+              │ HOME=/home/lhunath
+              │ PATH=/usr/bin:/bin
+              │ PWD=/home/lhunath
+              │ SHLVL=1
+              │ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/libexec
+              │ EDITOR=vim
+              │ LANG=en_CA.UTF-8
+              │ LESS=-i -M -R -W -S
+              │ GREP_COLOR=31
+              │ WINDOW=0
+              │
+              ╰─ weechat
+              │
+              ╰─ bash
+              │    │╭──────────────╮
+              │    ╰┥ login shell? ┝
+              │     ╰──────┰───────╯
+              │            no
+              │     ╭──────┸───────╮     ╭──────────────────╮
+              │     │ interactive? ┝─yes─┥ source ~/.bashrc │
+              │     ╰──────────────╯     ╰──────────────────╯
+              ╰─ bash
+                   │╭──────────────╮
+                   ╰┥ login shell? ┝
+                    ╰──────┰───────╯
+                           no
+                    ╭──────┸───────╮     ╭──────────────────╮
+                    │ interactive? ┝─yes─┥ source ~/.bashrc │
+                    ╰──────────────╯     ╰──────────────────╯
+```
+
+```bash
+#!/usr/bin/env bash
+echo "The Name Script"
+echo "usage: names 'My Full Name'"; echo
+
+first=${1%% *} last=${1##* } middle=${1#$first} middle=${middle%$last}
+echo "Your first name is: $first"
+echo "Your last name is: $last"
+echo "Your middle names are: $middle"
+
+```
+
+f you save this script in a file called `names` and run it according to the usage description, by passing a single argument to it, you'll see the script analyse your name and inform you which part of your name constitute the first, last and middle names. We're using the variables first, last and middle to store these pieces of information for later, when we expand the variables in the `echo` statements. Notice how the computation of the middle name requires both the knowledge of the full name (available from the first positional parameter) and the first name (which was previously computed and stored in the variable first).
+
+```
+ chmod +x names
+$ ./names 'Maarten Billemont'
+The Name Script
+usage: names 'My Full Name'
+
+Your first name is: Maarten
+Your last name is: Billemont
+Your middle names are:
+$ ./names 'James Tiberius "Jim" Kirk'
+The Name Script
+usage: names 'My Full Name'
+
+Your first name is: James
+Your last name is: Kirk
+Your middle names are:  Tiberius "Jim"
+
+```
+
+ positional parameters are read-only parameters. On reflection, it likely makes sense to you that one cannot change the arguments to your script from within your script. As such, this is a syntax error:
+
+$ 1='New First Argument'
+-bash: 1=New First Argument: command not found
