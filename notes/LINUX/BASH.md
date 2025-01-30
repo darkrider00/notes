@@ -1515,3 +1515,110 @@ The environment is something every process has, while the shell space is only av
          ╰────────────────────────────────╯
 ```
 
+When you create a custom environment variable in the shell, any child processes you create afterwards will inherit this variable as a result of it being copied from your shell into the child's environment. However, since the environment is specific to each process, changing or creating new variables in the child will in no way affect the parent:
+
+
+```
+    ╭─── bash ───────────────────────╮
+    │             ╭────────────────╮ │
+    │ ENVIRONMENT │ SHELL          │ │
+    │             │ greeting=hello │ │
+    │             ╰────────────────╯ │
+    │ HOME=/home/lhunath             │
+    │ PATH=/bin:/usr/bin             │
+    │ NAME===Bob==                       │
+    ╰─┬──────────────────────────────╯
+      ╎  ╭─── bash ───────────────────────╮
+      └╌╌┥             ╭────────────────╮ │
+         │ ENVIRONMENT │ SHELL          │ │
+         │             ╰────────────────╯ │
+         │ HOME=/home/lhunath             │
+         │ PATH=/bin:/usr/bin             │
+         │ NAME===Bob==                       │
+         ╰────────────────────────────────╯
+
+$ NAME=John
+
+    ╭─── bash ───────────────────────╮
+    │             ╭────────────────╮ │
+    │ ENVIRONMENT │ SHELL          │ │
+    │             │ greeting=hello │ │
+    │             ╰────────────────╯ │
+    │ HOME=/home/lhunath             │
+    │ PATH=/bin:/usr/bin             │
+    │ NAME===Bob==                       │
+    ╰─┬──────────────────────────────╯
+      ╎  ╭─── bash ───────────────────────╮
+      └╌╌┥             ╭────────────────╮ │
+         │ ENVIRONMENT │ SHELL          │ │
+         │             ╰────────────────╯ │
+         │ HOME=/home/lhunath             │
+         │ PATH=/bin:/usr/bin             │
+         │ NAME===John==                      │
+         ╰────────────────────────────────╯
+
+```
+
+```
+    ╭─── bash ───────────────────────╮
+    │             ╭────────────────╮ │
+    │ ENVIRONMENT │ SHELL          │ │
+    │             │ greeting=hello │ │
+    │             ╰────────────────╯ │
+    │ HOME=/home/lhunath             │
+    │ PATH=/bin:/usr/bin             │
+    │ LANG=en_CA                     │
+    │ PAGER=less                     │
+    │ LESS=-i -R                     │
+    ╰─┬──────────────────────────────╯
+      ╎  ╭─── rm ─────────────────────────╮_`rm` uses just LANG if present to determine_
+      ├╌╌┥                                │_the language of its error messages._
+      ╎  │ ENVIRONMENT                    │
+      ╎  │                                │
+      ╎  │ HOME=/home/lhunath             │
+      ╎  │ PATH=/bin:/usr/bin             │
+      ╎  │ ==LANG=en_CA==                     │
+      ╎  │ PAGER=less                     │
+      ╎  │ LESS=-i -R                     │
+      ╎  ╰────────────────────────────────╯
+      ╎  ╭─── man ────────────────────────╮_In addition to LANG, `man` uses PAGER to determine_
+      └╌╌┥                                │_what program to use for paginating long manuals._
+         │ ENVIRONMENT                    │
+         │                                │
+         │ HOME=/home/lhunath             │
+         │ PATH=/bin:/usr/bin             │
+         │ ==LANG=en_CA==                     │
+         │ ==PAGER=less==                     │
+         │ LESS=-i -R                     │
+         ╰─┬──────────────────────────────╯
+           ╎  ╭─── less ───────────────────────╮_`less` makes use of the LESS variable to supply_
+           └╌╌┥                                │_an initial configuration for itself._
+              │ ENVIRONMENT                    │
+              │                                │
+              │ HOME=/home/lhunath             │
+              │ PATH=/bin:/usr/bin             │
+              │ ==LANG=en_CA==                     │
+              │ PAGER=less                     │
+              │ ==LESS=-i -R==                     │
+              ╰────────────────────────────────╯
+
+```
+
+`~/.bash_profile` file, bash will try to read from `~/.profile` instead, if it exists
+
+[#](https://guide.bash.academy/expansions/?=Shell_Initialization#p3.2.0_2)At the very end of your `~/.bash_profile`, you should have the command `source ~/.bashrc`. That's because when `.bash_profile` exists, bash behaves a little curious in that it stops looking for its standard shell initialization file `~/.bashrc`. The `source` command remedies this oddity.
+
+```
+    login_The `login` program signs the user in_
+      │
+      ╰─ **-bash**  _The `login` command starts the user's login shell_
+         │
+         ╰─ screen   _The user runs the `screen` program from his login shell_
+              │
+              ╰─ weechat    The `screen` program creates multiple windows_
+              │         _and allows the user to switch between them._
+              ╰─ bash   _The first runs an IRC client, two others run a_
+              │         _non-login bash shell._
+              ╰─ bash
+```
+
