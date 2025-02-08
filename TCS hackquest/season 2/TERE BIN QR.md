@@ -1,0 +1,1 @@
+converted binary to qr and extracted string
