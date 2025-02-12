@@ -88,4 +88,22 @@ capital - buy once and benefit several years
 
 
 
+AI and ML in cloud 
+
+- used for prediction 
+- requires more complex models for making accurate predictions
+
+quality is assed on 
+- completeness - all req data is present or not 
+- uniqueness - should be unique (no duplicates)
+- timeliness - up to date  and timely and relavent
+- validity - conforms set of predefined standards (type and format)
+- accuracy - correctness of the data 
+- consistency - uniform and doesn't contain any contradictory information 
+
+anything model can't see it doesn't exist
+
+![[Pasted image 20250212114703.png]]
+
+explainable AI - google tool
 
