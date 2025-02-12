@@ -107,3 +107,47 @@ anything model can't see it doesn't exist
 
 explainable AI - google tool
 
+building ML models
+- BigQuery ML - Use SQL queries to create and execute machine learning models in BIg Query
+     - model trained access using SQL familiar to data analysts , less tools requires
+     - integrates with vertex AI
+     - deployed to end points for online prediction
+
+- Pre trained APIs - leverage model that have already built and trained by google 
+     - less customization 
+     - suitable when u don't have data
+     - analyzing images videos 
+     - analyzes in google public cloud
+     - vision API , Natural language API (discover syntax text and diff categories, cloud translation API , speech to text API vice versa ,video intelligence API)
+
+- Auto ML - no code solution to build ML models on vertex AI
+    - vertex Ai and unified AI 
+    - used vertex AI and Auto Ml to build end to end models
+    - Auto ML choose best models suitable for model
+    - saves time 
+    - AutoML vision API , Auto ML NLP API
+
+- Custom training -  code your own ML environment have control over ML
+
+![[Pasted image 20250212120133.png]]
+
+- tools for image processing and all
+
+TensorFlow - open platform for ML
+- tensor processing unit 
+- implented across google cloud products
+
+AI solutions aimed to solve specific business needs
+- contact center AI
+     - provides model for handling customer care 
+     - saved in database and exported to further analysis
+- Discovery AI
+     - to select optimal products for the search , relevance and likely to make sale
+- Document AI 
+- Cloud Talent Solution
+
+AI can take 3 to 36 months to to build 
+- pre trained API dont need training is done
+- expertise required while selecting model 
+- effort required to build AI solutions
+
