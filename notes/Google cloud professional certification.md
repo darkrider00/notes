@@ -151,3 +151,6 @@ AI can take 3 to 36 months to to build
 - expertise required while selecting model 
 - effort required to build AI solutions
 
+Infrastructure and Application modernization using google cloud
+
+- 
