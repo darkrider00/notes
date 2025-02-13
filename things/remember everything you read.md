@@ -1,0 +1,3 @@
+- kim peek - movie rainman
+- PACER
+     - P - procedural - how something should be executed
