@@ -38,4 +38,13 @@ if we don't have time to map we need to slow down or stop
 Evidence - evidence 
 info that makes conceptual info more concrete 
 - store and rehearse
-- as soon as we find some related info we can go ahead and put that in it 
+- as soon as we find some related info we can go ahead and put that in 2nd brain system or flashcards 
+
+Reference -
+all the nitty dritty, specific information that don't really change your conceptual understanding 
+
+- very specific detail bits of information 
+- that are not important 
+- that doesn't come under PACE
+- Store and Rehearse 
+- might use flashcards and space repetition for handling this info
