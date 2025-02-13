@@ -19,5 +19,12 @@ for short term period
 
 long term strategies 
 permanent 
+- Focus - muscle 
+- put it under some load 
+- not so easy not so difficult
+- target- target behavior, sensation, slow deep breaths meditation brink back attention after distracting
+- time- exposure time for getting back focus is a repetition do more repetitions
+- intensity- should be simple and challenging
+
 
 step 3 optimizing short term strategies
