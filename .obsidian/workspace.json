@@ -81,12 +81,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional certification.md",
+                "file": "notes/LINUX/BASH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Google cloud professional certification"
+              "title": "BASH"
             }
           }
         ],
@@ -247,6 +247,7 @@
   },
   "active": "7250845392ff402b",
   "lastOpenFiles": [
+    "notes/Google cloud professional certification.md",
     "attachments/Pasted image 20250212120133.png",
     "attachments/Pasted image 20250212120121.png",
     "attachments/Pasted image 20250212114703.png",
@@ -263,7 +264,6 @@
     "attachments/Pasted image 20250129152815.png",
     "attachments/Pasted image 20250129152137.png",
     "attachments/Pasted image 20250129151627.png",
-    "attachments/Pasted image 20250129151425.png",
     "TCS hackquest/season 1/Stranger things.md",
     "TCS hackquest/season 1/The Mask.md",
     "TCS hackquest/season 1/Delights.md",
