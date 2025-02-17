@@ -81,12 +81,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4_week_workout_plan.md",
+                "file": "notes/LINUX/BASH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4_week_workout_plan"
+              "title": "BASH"
             }
           }
         ],
@@ -247,6 +247,7 @@
   },
   "active": "7250845392ff402b",
   "lastOpenFiles": [
+    "4_week_workout_plan.md",
     "things/remember everything you read.md",
     "things/ATTENTION SPAN.md",
     "attachments/Pasted image 20250213145847.png",
@@ -266,7 +267,6 @@
     "attachments/Pasted image 20250208113031.png",
     "TCS hackquest/season 2/shady.md",
     "TCS hackquest/season 2",
-    "4_week_workout_plan.md",
     "TCS hackquest/season 1/Stranger things.md",
     "TCS hackquest/season 1/The Mask.md",
     "TCS hackquest/season 1/Delights.md",

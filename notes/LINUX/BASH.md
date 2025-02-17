@@ -1764,3 +1764,13 @@ Your middle names are:  Tiberius "Jim"
 
 $ 1='New First Argument'
 -bash: 1=New First Argument: command not found
+
+To modify the current set of positional parameters, use the `set` command and specify the new positional parameters as arguments after the `--` argument:
+
+```bash
+ set -- 'New First Argument' Second Third 'Fourth Argument'
+$ echo "1: $1, 2: $2, 4: $4"
+1: New First Argument, 2: Second, 4: Fourth Argument
+
+```
+
