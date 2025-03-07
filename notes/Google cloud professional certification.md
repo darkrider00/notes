@@ -153,3 +153,27 @@ AI can take 3 to 36 months to to build
 
 
 
+computing - computing power 
+- virtualization allows mutliple resources to run on same hardware 
+
+![[Pasted image 20250307211925.png]]
+
+containerization 
+- only virtualize operating systems 
+- faster , less memory 
+
+kubernetes
+- open source cluster management system that provides automated container orchestration
+- application reliability
+- fast and more agile
+
+serverless computing 
+- automatically provisioned behind the scenes
+- function as a service
+- you write code and cloud provider does everything else
+
+google cloud uses Open APIs
+
+![[Pasted image 20250307212631.png]]
+
+Anthos - modify existing appli
