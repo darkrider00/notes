@@ -193,4 +193,6 @@ google kubernetes engine
 
 cloud run
 - allow users to build application with their choice of tools languages and dependencies and deploy them
-- 
+
+![[Pasted image 20250308110321.png]]
+
