@@ -221,4 +221,23 @@ Operational security layer
 - Software development practices
 
 
+cloud.google.com/products/calculator 
+
+ rate quota and Allocation Quota
+
+![[Pasted image 20250308193125.png]]
+
+4 levels 
+level 1 - resources 
+- vms cloud storgae buckets bgi query 
+level 2 - Projects 
+- resources are organised into projects
+- managing APIs 
+- using google cloud services  like 
+level 3 - folders
+- projects are organised into folders and sub folders
+level 4 - organisation node
+- encompassess all the projects in the organisation
+
+policies are inherited downroad 
 
