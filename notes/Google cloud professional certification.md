@@ -176,4 +176,21 @@ google cloud uses Open APIs
 
 ![[Pasted image 20250307212631.png]]
 
-Anthos - modify existing appli
+Anthos - modify existing application and run it on anywhere 
+
+![[Pasted image 20250307212856.png]]
+
+
+compute engine - scalable high performance network engines
+Vmware engine - fully managed vm engine on google cloud
+Bare metal - enables specalized workloads to cloud 
+
+container
+google kubernetes engine
+- group of compute engines to perform a structure 
+
+![[Pasted image 20250307213115.png]]
+
+cloud run
+- allow users to build application with their choice of tools languages and dependencies and deploy them
+- 
