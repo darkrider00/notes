@@ -200,3 +200,25 @@ Apeege -API
 ![[Pasted image 20250308111808.png]]
 
 
+ 
+![[Pasted image 20250308191340.png]]
+
+service infra security - service deployment layer
+- encrypted of inter service communication 
+
+User identity layer 
+- user identity 
+- encryption at rest 
+
+internet communication layer
+- Google Front End ("GFE")
+- Denial of service 
+
+Operational security layer
+- Intrusion detection
+- reducing insider risk 
+- employee Universal second factor
+- Software development practices
+
+
+
