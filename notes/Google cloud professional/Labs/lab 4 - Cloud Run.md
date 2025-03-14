@@ -414,93 +414,11 @@ END YOUR LAB
 above is our unique url containerised application 
 
 
+### Next steps / learn more
+
 For more information on building a stateless HTTP container suitable for Cloud Run from code source and pushing it to Artifact Registry, view:
 
 - [Developing Cloud Run services](https://cloud.google.com/run/docs/developing)
 - [Building Containers](https://cloud.google.com/run/docs/building/containers)
-
-Copyright 2022 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.
-
-[navigate_beforePrevious](https://partner.cloudskillsboost.google/paths/79/course_sessions/22278958/video/521860)
-
-[Nextnavigate_next](https://partner.cloudskillsboost.google/paths/79/course_sessions/22278958/quizzes/521862)
-
-![](https://cdn.qwiklabs.com/assets/labs/start_lab-f45aca49782d4033c3ff688160387ac98c66941d.png)
-
-# Before you begin
-
-1. Labs create a Google Cloud project and resources for a fixed time
-2. Labs have a time limit and no pause feature. If you end the lab, you'll have to restart from the beginning.
-3. On the top left of your screen, click **Start lab** to begin
-
-Skip
-
-Finish
-
-task_alt
-
-# Score Details
-
-OK
-
-![](https://cdn.qwiklabs.com/assets/lab_enablement_notification/disable_lab-47cff1f6bc3610f58767251ff93c2f99cf4f9040.png)
-
-This content is not currently available
-
-We will notify you via email when it becomes available
-
-[No, thanks](https://partner.cloudskillsboost.google/focuses/489603672/set_up_lab_forward_url?course_template=60&parent=course_session)
-
-Yes, notify me
-
-![](https://cdn.qwiklabs.com/assets/lab_enablement_notification/notifcation_subscribed-2b4f9e51439e1a107488ab58a6e13c3c62ef8855.png)
-
-Great!
-
-We will contact you via email if it becomes available
-
-[Back to screen](https://partner.cloudskillsboost.google/focuses/489603672/set_up_lab_forward_url?course_template=60&parent=course_session)
-
-![](https://cdn.qwiklabs.com/assets/quota_management/quota_empty-2ba3ec879dea3091828ec9cfa060947292e2c554.png)
-
-Got it
-
-![](https://cdn.qwiklabs.com/assets/quota_management/one_lab_quota-77010e9a83e0a6c7543477868b8b808d70222adb.png)
-
-One lab at a time
-
-Confirm to end all existing labs and start this one
-
-Cancel
-
-Confirm
-
-![](https://cdn.qwiklabs.com/assets/labs/open_incognito_window-3ab2004605e88542dd7732361c3fc0e010c7fb6e.png)
-
-[Continue anyway](https://accounts.google.com/AddSession?service=accountsettings&sarp=1&continue=https%3A%2F%2Fconsole.cloud.google.com%2Fhome%2Fdashboard%3Fproject%3Dqwiklabs-gcp-01-bb1a90d0b941#Email=student-04-1ed375fd0fd7@qwiklabs.net)
-
-Cancel
-
-# How satisfied are you with this lab?*
-
-Cancel
-
-Submit
-
-error_outline
-
-# Are you sure? You may not be able to restart the lab, and you'll need to start from the beginning if you do.
-
-Cancel
-
-End Lab
-
-error
-
-# A newer version of this course is available. Your progress will carry over if you choose to upgrade. However, your completion percentage may change if the new version has added or removed any learning activities. Click the preview button to see the course changes before upgrading.
-
-Cancel
-
-[Preview](https://partner.cloudskillsboost.google/paths/79/course_templates/60/preview)
 
 

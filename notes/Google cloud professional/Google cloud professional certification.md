@@ -511,3 +511,46 @@ These functions can be used to construct application workflows from individual b
 
 cloud run functions are asynchronous use http invokation for synchronization 
 
+
+PROMPT Engineering 
+
+Generative AI encompasses a broader range of models capable of generating various types of content beyond just text, while LLM specifically refers to a subset of generative AI models focusing on language tasks.
+ - Generative artificial intelligence, which is commonly referred to as gen AI, is a subset of artificial intelligence
+ - that is capable of creating text, images, or other data using generative models, often in response to prompts.
+ - a prompt is a specific instruction, question, or cue given to a computer
+ ![[Pasted image 20250314202451.png]]
+
+
+![[Pasted image 20250314202525.png]]
+
+
+![[Pasted image 20250314202642.png]]
+
+![[Pasted image 20250314202711.png]]
+
+![[Pasted image 20250314202728.png]]
+
+wrong ans - hallucinations 
+no real time info or dont have req data 
+can work on what they see
+![[Pasted image 20250314202856.png]]
+
+
+![[Pasted image 20250314203051.png]]
+
+![[Pasted image 20250314203121.png]]
+
+![[Pasted image 20250314203212.png]]
+
+
+![[Pasted image 20250314203246.png]]
+
+![[Pasted image 20250314203307.png]]
+
+![[Pasted image 20250314203313.png]]
+
+![[Pasted image 20250314203326.png]]
+
+![[Pasted image 20250314203339.png]]
+
+![[Pasted image 20250314203353.png]]
