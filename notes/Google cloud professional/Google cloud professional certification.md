@@ -340,3 +340,45 @@ compute engines bills by second
 commited use discounts
 preemptible and spot VMS
  != compute engine VM
+![[Pasted image 20250314174018.png]]
+pay for what u need 
+has Auto scaling 
+
+VPC compatiblities 
+- has routing tables
+- no router provising or managing 
+- restrict acess to instances
+- add firewall rules
+
+vpc peering connection b/w 2 vpcs can be established 
+
+Cloud load balencer  
+
+![[Pasted image 20250314174534.png]]
+
+![[Pasted image 20250314174553.png]]
+
+Cloud DNS
+- managed DNS runs on same infra as google
+- low latencty high availability 
+
+edge caching
+![[Pasted image 20250314174712.png]]
+
+using of caching servers to store content closer to end users
+
+connecting networks to google VPC
+- using cloud VPN
+- direct peering - puts router in same public data center as google point of presence
+    -  uses a router to exchange traffic between networks
+- carrier peering 
+     - direct access from on premises network through service provider networks
+     - not covered by google service level agreement 
+ - dedicated interconnect 
+     - one or more direct connection to google
+ - partner interconnect
+    - cant reach a dedicated interconnect coloaction facility 
+    - useful if data doesnt need a warrent
+- cross cloud connect
+     - establish high bandwidth dedicated connectivity b/w google cloud and another cloud service provider
+     - 
