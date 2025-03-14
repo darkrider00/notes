@@ -409,3 +409,33 @@ when creates for us east4 but we are in asia-east 1 it created subnet for each r
 he **External IP addresses** for both VM instances are ephemeral. If an instance is stopped, any ephemeral external IP addresses assigned to the instance are released back into the general Compute Engine pool and become available for use by other projects.
 
 When a stopped instance is started again, a new ephemeral external IP address is assigned to the instance. Alternatively, you can reserve a static external IP address, which assigns the address to your project indefinitely until you explicitly release it.
+
+
+You can SSH because of the **allow-ssh** firewall rule, which allows incoming traffic from anywhere (0.0.0.0/0) for **tcp:22**. The SSH connection works seamlessly because Compute Engine generates an SSH key for you and stores it in one of the following locations:
+
+- By default, Compute Engine adds the generated key to project or instance metadata.
+- If your account is configured to use OS Login, Compute Engine stores the generated key with your user account.
+
+Alternatively, you can control access to Linux instances by creating SSH keys and editing public SSH key metadata.
+
+You can SSH to **mynet-us-vm** and ping **mynet-r2-vm**'s internal and external IP address as expected. Alternatively, you can SSH to **mynet-r2-vm** and ping **mynet-us-vm**'s internal and external IP address, which also works.
+
+![[Pasted image 20250314182245.png]]
+
+You can ping **mynet-r2-vm**'s internal IP because of the **allow-custom** firewall rule. even if  
+
+![[Pasted image 20250314182550.png]]
+
+**Note:** The **100% packet loss** indicates that you cannot ping **mynet-r2-vm**'s external IP. This is expected because you deleted the **allow-icmp** firewall rule!
+
+![[Pasted image 20250314182810.png]]
+
+![[Pasted image 20250314183146.png]]
+
+ The **Connection failed** message indicates that you cannot SSH to **mynet-us-vm** because you deleted the **allow-ssh** firewall rule!
+
+
+In this lab, you explored the default network along with its subnets, routes, and firewall rules. You deleted the default network and determined that you cannot create any VM instances without a VPC network.
+
+Thus, you created a new auto mode VPC network with subnets, routes, firewall rules, and two VM instances. Then you tested the connectivity for the VM instances and explored the effects of the firewall rules on connectivity.
+
