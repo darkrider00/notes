@@ -243,3 +243,73 @@ policies are inherited downroad
 
 folders let u assign policies to resources at a level of granualrity you choose
 
+project ID -  unique globally, assigned by google cloud but mutable during creation, Immutable after creation
+
+Project Name - need not be Unique
+- chosen by u
+- mutable
+
+Project number - unique
+- assigned by google cloud
+- Immutable
+
+Resource manager tool 
+- gather list of projects
+- create update delete recover projects
+- access trough RPC API REST API
+
+We can use folders to group projects 
+
+
+IAM - can apply policies that define who can do what on which resources
+
+- account
+- group
+- service account 
+- other
+
+to use a VM u should be able to start stop delete pause the VM u can group all these and give it as permission
+
+Basic 
+- owner,edito viewr , billing admin
+Predefined
+- compute engine
+     - a group or person can do specific set of actions 
+     Predefined actions: 
+     - compute .instance.delete
+     - compute.instance.get
+     - compute.instance.list
+     - compute.instance.setMachineType
+     - compute.instance.start
+
+Custom 
+- if we want some users to start and stop compute engine virtual machines but not reconfigure them 
+- you willl need the manage the permissions that define cutom tole u have created
+
+Service Account :
+lets say u have an application running in a VM, that needs to store data in cloud storage , but you dont want anyone on internet to have access to that data, , you can create a service account to authenticate that VM to cloud storage 
+
+- named with email address
+- access with cryptographic keys 
+- need to be managed 
+- it can have IAM policies
+
+ Google cloud console can be accessed through
+ - google cloud console
+     -  simple web based GUI
+     - easily find resources check health 
+     - facility to quickly find resources and connect instances
+ - cloud SDK
+     - set of tools manage resources and applications in google cloud
+     - cloud CLI interfacefor google cloud Products and services
+     - bq -A command -line tool for BigQuery
+     - debain based VM
+     - all tools are installed and maintained
+ - APIs
+     - offer APIs that allow code to written to control them 
+     - explorer shoes what  APIs are availble in what versions
+     - provides cloud client and google API client libraries
+     - lang represented : JAVA, PYTHON , PHP, C#, Go, Nodejs
+ - Google cloud APP
+     - satart stop SSH to connect into compute engine
+     - start stop cloud S
