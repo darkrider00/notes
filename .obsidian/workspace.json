@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/Google cloud professional certification.md",
+                "file": "notes/Google cloud professional/Labs/lab 4 - Cloud Run.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Google cloud professional certification"
+              "title": "lab 4 - Cloud Run"
             }
           }
         ],
@@ -303,19 +303,20 @@
   },
   "active": "d19f26b4f08226d9",
   "lastOpenFiles": [
+    "attachments/Pasted image 20250314202025.png",
+    "attachments/Pasted image 20250314201927.png",
+    "attachments/Pasted image 20250314201714.png",
+    "attachments/Pasted image 20250314201639.png",
+    "attachments/Pasted image 20250314201626.png",
+    "notes/Google cloud professional/Google cloud professional certification.md",
+    "notes/Google cloud professional/Labs/lab 4 - Cloud Run.md",
     "attachments/Pasted image 20250314200015.png",
     "attachments/Pasted image 20250314195935.png",
     "attachments/Pasted image 20250314195848.png",
     "notes/Google cloud professional/Labs/lab 3 - Getting Started with Cloud Storage and Cloud SQL.md",
     "attachments/Pasted image 20250314195743.png",
-    "notes/Google cloud professional/Google cloud professional certification.md",
     "attachments/Pasted image 20250314195703.png",
     "attachments/Pasted image 20250314195632.png",
-    "attachments/Pasted image 20250314195429.png",
-    "attachments/Pasted image 20250314195412.png",
-    "attachments/Pasted image 20250314195345.png",
-    "attachments/Pasted image 20250314195310.png",
-    "attachments/Pasted image 20250314195302.png",
     "notes/Google cloud professional/Labs/lab 2 - VPC Networking and Google Compute Engine.md",
     "notes/Google cloud professional/Labs/Lab 1 - use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance..md",
     "notes/Google cloud professional/Labs",
@@ -342,7 +343,6 @@
     "TCS hackquest/season 1/The Mask.md",
     "TCS hackquest/season 1/Delights.md",
     "TCS hackquest/season 1/DUSSHAS DICE.md",
-    "TCS hackquest/season 1/code pool.md",
     "TCS hackquest",
     "Untitled",
     "notes/LINUX/bash",
