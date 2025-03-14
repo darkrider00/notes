@@ -316,3 +316,9 @@ lets say u have an application running in a VM, that needs to store data in clou
      - administer applications deployed on app engine
      - upto date billing info
      - customizable graphs
+
+
+LAB : 
+
+
+A LAMP (Linux, Apache, MySQL, Perl/PHP/Python) is one of the most common software stacks for the web's most popular applications. Its generic software stack model has largely interchangeable component
