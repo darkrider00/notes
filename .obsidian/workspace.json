@@ -109,12 +109,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/Labs/lab 3 - Getting Started with Cloud Storage and Cloud SQL.md",
+                "file": "notes/Google cloud professional/Google cloud professional certification.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lab 3 - Getting Started with Cloud Storage and Cloud SQL"
+              "title": "Google cloud professional certification"
             }
           }
         ],
@@ -275,8 +275,11 @@
   },
   "active": "6cac6ce4eda7b0b6",
   "lastOpenFiles": [
-    "attachments/Pasted image 20250314190744.png",
+    "attachments/Pasted image 20250314193607.png",
     "notes/Google cloud professional/Labs/lab 3 - Getting Started with Cloud Storage and Cloud SQL.md",
+    "attachments/Pasted image 20250314193156.png",
+    "attachments/Pasted image 20250314192420.png",
+    "attachments/Pasted image 20250314190744.png",
     "notes/Google cloud professional/Google cloud professional certification.md",
     "attachments/Pasted image 20250314185953.png",
     "attachments/Pasted image 20250314185828.png",
@@ -285,9 +288,7 @@
     "attachments/Pasted image 20250314185648.png",
     "attachments/Pasted image 20250314185455.png",
     "attachments/Pasted image 20250314185121.png",
-    "attachments/Pasted image 20250314185035.png",
     "notes/Google cloud professional/Labs/lab 2 - VPC Networking and Google Compute Engine.md",
-    "attachments/Pasted image 20250314183146.png",
     "notes/Google cloud professional/Labs/Lab 1 - use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance..md",
     "notes/Google cloud professional/Labs",
     "notes/Google cloud professional/Untitled 1.md",

@@ -475,3 +475,7 @@ external : 34.169.47.174
 
 35.203.145.9 public ip of external instance 
 
+![[Pasted image 20250314192420.png]]
+
+![[Pasted image 20250314193156.png]]
+
