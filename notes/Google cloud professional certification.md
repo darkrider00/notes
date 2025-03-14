@@ -312,4 +312,7 @@ lets say u have an application running in a VM, that needs to store data in clou
      - lang represented : JAVA, PYTHON , PHP, C#, Go, Nodejs
  - Google cloud APP
      - satart stop SSH to connect into compute engine
-     - start stop cloud S
+     - start stop cloud SQL instances
+     - administer applications deployed on app engine
+     - upto date billing info
+     - customizable graphs
