@@ -412,3 +412,102 @@ Firestore
 
 containers
 ![[Pasted image 20250314193607.png]]
+
+Kubernetes
+- open source platform for managing containerized workloads
+- makes it easy to orchestrate many containers on many hosted microservices and deploy rollouts and roll backs
+- set of APIs to deploy containers on set of nodes called a cluster
+- divides into primary set of components that run as the control plane and set of nodes that run containers
+- describe as set of applications and how they should interact with each other and kubernetes figures how to make them happen 
+![[Pasted image 20250314194652.png]]
+
+pod -smallest unit in kubernetes that u can create or deploy 
+represents your running applications or your entire app 
+- generally u have only one container per pod
+![[Pasted image 20250314194809.png]]
+
+provides unique IP
+command > kubectl
+![[Pasted image 20250314194841.png]]
+
+Kubernetes creates a Service with a fixed IP address for your Pods, and a controller says "I need to attach
+
+an external load balancer with a public IP address to that Service so others outside the cluster can access it."
+
+In GKE, the load balancer is created as a network load balancer.
+
+To scale :
+![[Pasted image 20250314194931.png]]
+
+![[Pasted image 20250314195020.png]]
+
+if you want to apply new changes 
+
+GKE - google hosted managed kubernetes service in the cloud 
+- consits of multiple machine 
+
+![[Pasted image 20250314195149.png]]
+
+GKE manages all the control plane components for us 
+
+- still exposes ip address
+- Node configuration and management depends on the type of GKE mode you use.
+- With the Autopilot mode, which is recommended, GKE manages the underlying infrastructure such as node configuration, autoscaling, auto-upgrades, baseline security configurations, and baseline networking configuration.
+- With the Standard mode, you manage the underlying infrastructure, including configuring the individual nodes.
+
+![[Pasted image 20250314195302.png]]
+
+
+![[Pasted image 20250314195310.png]]
+
+helps us 
+![[Pasted image 20250314195345.png]]
+
+
+
+![[Pasted image 20250314195412.png]]
+
+![[Pasted image 20250314195429.png]]
+
+In Kubernetes, a group of one or more containers is called a pod. Containers in a pod are deployed together. They are started, stopped, and replicated as a group.The simplest workload that Kubernetes can deploy is a pod that consists only of a single container.
+
+
+
+Cloud run 
+
+![[Pasted image 20250314195632.png]]
+
+Process
+
+![[Pasted image 20250314195703.png]]
+
+Source flow 
+
+![[Pasted image 20250314195743.png]]
+
+
+The pricing model on Cloud Run is unique; as you only pay for the system resources you use
+while a container is handling web requests, with a granularity of 100ms, and when it’s starting or shutting down.
+
+The price of container time increases with CPU and memory.
+A container with more vCPU and memory is more expensive.
+You can use Cloud Run to run any binary, as long as it’s compiled for Linux sixty-four bit.
+
+![[Pasted image 20250314195848.png]]
+
+in cloud run 
+
+
+devlopment in cloud :
+![[Pasted image 20250314195935.png]]
+
+Cloud Run functions is a lightweight, event-based, asynchronous compute solution that allows you to create small, single-purpose
+
+functions that respond to cloud events, without the need to manage a server or a runtime environment.
+
+These functions can be used to construct application workflows from individual business logic tasks.
+
+![[Pasted image 20250314200015.png]]
+
+cloud run functions are asynchronous use http invokation for synchronization 
+
