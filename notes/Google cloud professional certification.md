@@ -241,3 +241,5 @@ level 4 - organisation node
 
 policies are inherited downroad 
 
+folders let u assign policies to resources at a level of granualrity you choose
+
