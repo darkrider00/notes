@@ -381,4 +381,31 @@ connecting networks to google VPC
     - useful if data doesnt need a warrent
 - cross cloud connect
      - establish high bandwidth dedicated connectivity b/w google cloud and another cloud service provider
-     - 
+
+
+Cloud storage 
+- standard storage -accessd frequently 
+- nearline storage - accessed once per month 
+- coldline storage - accessed every 90 days 
+- archive storage - once a year
+
+![[Pasted image 20250314185035.png]]
+
+auto class- based on access pattreens optimises features access
+
+![[Pasted image 20250314185121.png]]
+
+![[Pasted image 20250314185455.png]]
+
+![[Pasted image 20250314185648.png]]
+
+Firestore
+
+![[Pasted image 20250314185733.png]]
+
+![[Pasted image 20250314185818.png]]
+
+![[Pasted image 20250314185828.png]]
+
+![[Pasted image 20250314185953.png]]
+
