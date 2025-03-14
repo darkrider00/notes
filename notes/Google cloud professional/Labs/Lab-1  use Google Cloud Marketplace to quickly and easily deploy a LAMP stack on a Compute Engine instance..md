@@ -131,6 +131,7 @@ Copyright 2022 Google LLC All rights reserved. Google and the Google logo are tr
 
 
 
+A LAMP (Linux, Apache, MySQL, Perl/PHP/Python) is one of the most common software stacks for the web's most popular applications. Its generic software stack model has largely interchangeable component
 
 - click on start lab 
 - sign in with credentials 
@@ -155,4 +156,15 @@ changed the settings as epr doc and deplyed
 - ![[Pasted image 20250314171838.png]]
 
 - **:** Warnings may appear as the deployment is happening. You can disregard these for this lab.
+
+![[Pasted image 20250314172913.png]]
+
+lamp stack has been deployed 
+
+to verify to to the site page in right pane 
+![[Pasted image 20250314173014.png]]
+
+More information about bitnami LAMP stack :
+
+https://docs.bitnami.com/google/
 

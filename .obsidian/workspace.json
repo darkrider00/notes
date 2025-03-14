@@ -81,12 +81,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/Labs/Lab-1  use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance..md",
+                "file": "notes/Google cloud professional/Google cloud professional certification.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab-1  use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance."
+              "title": "Google cloud professional certification"
             }
           }
         ],
@@ -247,10 +247,14 @@
   },
   "active": "1dd279ccb4b71723",
   "lastOpenFiles": [
-    "attachments/Pasted image 20250314171838.png",
-    "notes/Google cloud professional/Google cloud professional certification.md",
-    "attachments/Pasted image 20250314171715.png",
+    "attachments/Pasted image 20250314174018.png",
+    "attachments/Pasted image 20250314173717.png",
     "notes/Google cloud professional/Labs/Lab-1  use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance..md",
+    "notes/Google cloud professional/Google cloud professional certification.md",
+    "attachments/Pasted image 20250314173014.png",
+    "attachments/Pasted image 20250314172913.png",
+    "attachments/Pasted image 20250314171838.png",
+    "attachments/Pasted image 20250314171715.png",
     "attachments/Pasted image 20250314171547.png",
     "attachments/Pasted image 20250314171519.png",
     "attachments/Pasted image 20250314171438.png",
@@ -259,10 +263,6 @@
     "notes/Google cloud professional/Labs",
     "notes/Google cloud professional/Untitled 1.md",
     "notes/Google cloud professional",
-    "attachments/Pasted image 20250308193125.png",
-    "attachments/Pasted image 20250308191340.png",
-    "attachments/Pasted image 20250308111808.png",
-    "attachments/Pasted image 20250308110321.png",
     "concepts.md",
     "notes/Burpsuite/Burpsuite - VAPT.md",
     "README.md",

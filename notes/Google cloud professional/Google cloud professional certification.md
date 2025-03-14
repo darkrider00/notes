@@ -318,7 +318,25 @@ lets say u have an application running in a VM, that needs to store data in clou
      - customizable graphs
 
 
-LAB : 
+VPC 
+- secure induvidual private cloud computing model hosted with public cloud
+- run code , store data, host website , anythign else that can be done on ordinary private cloud
+- hosted by remotely by public cloud provider
+
+VPC networks 
+- connect google cloud resources to each other and to the internet 
+- segmenting networks
+- using firewall to restrict access to instances
+- creating static cloud roues to forward traffic to specific destinations 
+
+size of subnet can be expanded and used worldwide
 
 
-A LAMP (Linux, Apache, MySQL, Perl/PHP/Python) is one of the most common software stacks for the web's most popular applications. Its generic software stack model has largely interchangeable component
+![[Pasted image 20250314173717.png]]
+
+this capablity can be used to build solutions that are resilient to disruptions and retain a simple network layout
+
+compute engines bills by second
+commited use discounts
+preemptible and spot VMS
+ != compute engine VM
