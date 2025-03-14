@@ -369,3 +369,43 @@ https://www.youtube.com/watch?v=8IXLpoN8Xj0
 
 ![[Pasted image 20250314175909.png]]
 
+![[Pasted image 20250314180213.png]]
+
+1. there is a route for each subnet.  
+    These routes are managed for you, but you can create custom static routes to direct some packets to specific destinations. For example, you can create a route that sends all outbound traffic to an instance configured as a NAT gateway.
+
+![[Pasted image 20250314180508.png]]
+
+These firewall rules allow **ICMP**, **RDP**, and **SSH** ingress traffic from anywhere (0.0.0.0/0) and all **TCP**, **UDP**, and **ICMP** traffic within the network (10.128.0.0/9). The **Targets**, **Filters**, **Protocols/ports**, and **Action** columns explain these rules.
+
+![[Pasted image 20250314180620.png]]
+
+![[Pasted image 20250314180736.png]]
+
+deleting the VPC network
+
+![[Pasted image 20250314180918.png]]
+
+all the routes are deleted when we delete default VPC network 
+
+![[Pasted image 20250314180956.png]]
+
+no firewall rules too
+
+![[Pasted image 20250314181053.png]]
+
+you cannot create a VM instance without a VPC network!
+
+![[Pasted image 20250314181325.png]]
+
+you cannot check or uncheck them because they are implied. These two rules have a lower **Priority** (higher integers indicate lower priorities) so that the allow ICMP, custom, RDP and SSH rules are considered first.
+
+**:** If you ever delete the default network, you can quickly re-create it by creating an auto mode network as you just did. After recreating the network, allow-internal changes to allow-custom firewall rule.
+
+![[Pasted image 20250314181515.png]]
+
+when creates for us east4 but we are in asia-east 1 it created subnet for each region 
+
+he **External IP addresses** for both VM instances are ephemeral. If an instance is stopped, any ephemeral external IP addresses assigned to the instance are released back into the general Compute Engine pool and become available for use by other projects.
+
+When a stopped instance is started again, a new ephemeral external IP address is assigned to the instance. Alternatively, you can reserve a static external IP address, which assigns the address to your project indefinitely until you explicitly release it.
