@@ -1,3 +1,5 @@
+
+## BASICS
 cloud - network of data centers
 
 instead of describing a complex web of software , servers, computers, networks, and security systems  we use one word called cloud 
@@ -45,7 +47,7 @@ cost effective - only pay for what they use
 
 - save costs, faster sec, reduction of management load , focusing on new capabilities (digitalization is made easy)
 
-### Challenges
+#### Challenges
 
 - best at understanding and using data 
 - best tech infra 
@@ -152,7 +154,7 @@ AI can take 3 to 36 months to to build
 - effort required to build AI solutions
 
 
-
+## Virutualization
 computing - computing power 
 - virtualization allows mutliple resources to run on same hardware 
 
@@ -223,6 +225,8 @@ Operational security layer
 
 cloud.google.com/products/calculator 
 
+ 
+ ## Storage and Virtual Machines and Networks in the Cloud
  rate quota and Allocation Quota
 
 ![[Pasted image 20250308193125.png]]
@@ -317,7 +321,6 @@ lets say u have an application running in a VM, that needs to store data in clou
      - upto date billing info
      - customizable graphs
 
-
 VPC 
 - secure induvidual private cloud computing model hosted with public cloud
 - run code , store data, host website , anythign else that can be done on ordinary private cloud
@@ -410,7 +413,8 @@ Firestore
 ![[Pasted image 20250314185953.png]]
 
 
-containers
+## containers in the cloud 
+
 ![[Pasted image 20250314193607.png]]
 
 Kubernetes
@@ -512,7 +516,7 @@ These functions can be used to construct application workflows from individual b
 cloud run functions are asynchronous use http invokation for synchronization 
 
 
-PROMPT Engineering 
+## PROMPT Engineering 
 
 Generative AI encompasses a broader range of models capable of generating various types of content beyond just text, while LLM specifically refers to a subset of generative AI models focusing on language tasks.
  - Generative artificial intelligence, which is commonly referred to as gen AI, is a subset of artificial intelligence

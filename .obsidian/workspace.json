@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/Google cloud professional certification.md",
+                "file": "notes/Google cloud professional/Contents.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Google cloud professional certification"
+              "title": "Contents"
             }
           }
         ],
@@ -303,6 +303,8 @@
   },
   "active": "d19f26b4f08226d9",
   "lastOpenFiles": [
+    "notes/Google cloud professional/Google cloud professional certification.md",
+    "notes/Google cloud professional/Contents.md",
     "attachments/Pasted image 20250314203353.png",
     "attachments/Pasted image 20250314203339.png",
     "attachments/Pasted image 20250314203326.png",
@@ -313,9 +315,7 @@
     "attachments/Pasted image 20250314203201.png",
     "attachments/Pasted image 20250314203121.png",
     "attachments/Pasted image 20250314203051.png",
-    "attachments/Pasted image 20250314202856.png",
     "notes/Google cloud professional/Labs/lab 4 - Cloud Run.md",
-    "notes/Google cloud professional/Google cloud professional certification.md",
     "notes/Google cloud professional/Labs/lab 3 - Getting Started with Cloud Storage and Cloud SQL.md",
     "notes/Google cloud professional/Labs/lab 2 - VPC Networking and Google Compute Engine.md",
     "notes/Google cloud professional/Labs/Lab 1 - use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance..md",
