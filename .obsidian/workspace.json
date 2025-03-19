@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/Contents.md",
+                "file": "notes/Google cloud professional/Google cloud professional certification.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Contents"
+              "title": "Google cloud professional certification"
             }
           }
         ],
@@ -303,8 +303,8 @@
   },
   "active": "d19f26b4f08226d9",
   "lastOpenFiles": [
-    "notes/Google cloud professional/Google cloud professional certification.md",
     "notes/Google cloud professional/Contents.md",
+    "notes/Google cloud professional/Google cloud professional certification.md",
     "attachments/Pasted image 20250314203353.png",
     "attachments/Pasted image 20250314203339.png",
     "attachments/Pasted image 20250314203326.png",
