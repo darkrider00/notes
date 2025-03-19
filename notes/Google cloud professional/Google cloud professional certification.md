@@ -558,3 +558,23 @@ can work on what they see
 ![[Pasted image 20250314203339.png]]
 
 ![[Pasted image 20250314203353.png]]
+
+### VPC networks 
+
+- Virtual private cloud is virtual version of physical network 
+- provides connectivity for your compute engine and VM instances
+- inbuilt pass through network load balencers and internal application load balaencers
+- distributes traffic from google cloud external load balencers to backends
+- u can create a route to send packets (we need to make sure that firewall is allowing our packets)
+- project can contain multiple vpc networks
+- start with default network (auto mode VPC network(has one subnet))
+
+![[Pasted image 20250319204219.png]]
+
+VPC networks are isolated by default
+- uses internal ip to communicate within and external ip to outside
+- Multiple Network interfaces are used when a single instance needs to act as a network appliance for tasks like load balencing and IDS/IPS
+
+example project : 
+![[Pasted image 20250319204952.png]]
+
