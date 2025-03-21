@@ -578,3 +578,5 @@ VPC networks are isolated by default
 example project : 
 ![[Pasted image 20250319204952.png]]
 
+![[Pasted image 20250319205133.png]]
+
