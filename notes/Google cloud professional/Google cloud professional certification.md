@@ -617,3 +617,18 @@ Custom routes
 
 ![[Pasted image 20250321165643.png]]
 
+![[Pasted image 20250322195525.png]]
+
+![[Pasted image 20250322195629.png]]
+
+![[Pasted image 20250322195656.png]]
+
+![[Pasted image 20250322200845.png]]
+
+
+![[Pasted image 20250322200907.png]]
+
+![[Pasted image 20250322200948.png]]
+
+
+
