@@ -580,3 +580,40 @@ example project :
 
 ![[Pasted image 20250319205133.png]]
 
+![[Pasted image 20250321164211.png]]
+
+Network Service Tier :
+![[Pasted image 20250321164352.png]]
+
+www.gcpn.com
+
+![[Pasted image 20250321164531.png]]
+
+![[Pasted image 20250321164635.png]]
+
+## VPC netwrok peering 
+- allows private connectivity across two VPC
+- across organizations
+- within the same project
+- across different projects
+
+![[Pasted image 20250321165117.png]]
+
+- u can peer computer engne, kubernetes , app engine flexible environments
+- peered VPC networks remain administratively separate 
+- no subnet IP ranges overlap across peered VPC networks
+- Transitive peering is supported
+- Each side Peering is supported independently 
+
+![[Pasted image 20250321165256.png]]
+
+![[Pasted image 20250321165414.png]]
+
+Custom routes
+- help achieve a desired granularity that cannot be achieved with default route
+- sharing routes and dynamic with peered VPC networks learn routes directly from their peered networks
+- if a custom route in peered network is updated your VPC network automatically learns and uses the updated custom toute
+- we can import and export routes
+
+![[Pasted image 20250321165643.png]]
+
