@@ -635,4 +635,19 @@ Migrations
 Migration requirements
 -  VM must be stopped 
 - must not be in instance group or network end point Group 
-- If 
+- If VM is unmanaged instance group or NEG, you must take it out the group before migrating it
+![[Pasted image 20250329121203.png]]
+
+limitations
+- VM instance cannot be migraed to a legacy network 
+- The MAC address allocated to the network interface during the migration 
+- If migratiing rhe VM to a network or subnet with diff IP adress of ur instance must change 
+- If migrating to subnet with same IP range the old IP addr can be kept (if not in use at destination)
+- An existing IP address can be kept in the new location subject to permissions
+
+## Networking monitoring and logging
+
+![[Pasted image 20250329121907.png]]
+
+- Alerting policies 
+- 
