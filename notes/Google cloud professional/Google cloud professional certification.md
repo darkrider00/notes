@@ -650,4 +650,7 @@ limitations
 ![[Pasted image 20250329121907.png]]
 
 - Alerting policies 
-- 
+![[Pasted image 20250329124745.png]]
+
+![[Pasted image 20250329124911.png]]
+
