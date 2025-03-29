@@ -631,4 +631,8 @@ Custom routes
 ![[Pasted image 20250322200948.png]]
 
 
-
+Migrations 
+Migration requirements
+-  VM must be stopped 
+- must not be in instance group or network end point Group 
+- If 
