@@ -826,3 +826,10 @@ In this lab, you created several custom mode VPC networks, firewall rules, and V
 ## End your lab
 
 When you have completed your lab, click **End Lab**. Google Cloud Skills Boost removes the resources you’ve used and cleans the account for you.
+
+
+![[Pasted image 20250331160451.png]]
+
+![[Pasted image 20250331160502.png]]
+
+![[Pasted image 20250331160608.png]]
