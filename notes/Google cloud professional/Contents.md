@@ -1,1 +1,8 @@
-BASICS![[Google cloud professional certification![[]]]]
+- BASICS [[GCP NOTES#BASICS]]
+- Virtualization [[GCP NOTES#Virutualization]]
+-  storage vms network in cloud [[GCP NOTES#Storage and Virtual Machines and Networks in the Cloud]]
+- containers [[GCP NOTES#containers in the cloud]]
+- prompt engineering [[GCP NOTES#PROMPT Engineering]]
+- VPC networks [[GCP NOTES#VPC networks]]
+- network monitoring and logging [[GCP NOTES#Networking monitoring and logging]]
+- 
