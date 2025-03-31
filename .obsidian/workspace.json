@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Lab-2 configuring VPC network peering.md",
+                "file": "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Analyzing Network Traffic with VPC Flow Logs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab-2 configuring VPC network peering"
+              "title": "Analyzing Network Traffic with VPC Flow Logs"
             }
           }
         ],
@@ -303,8 +303,9 @@
   },
   "active": "d19f26b4f08226d9",
   "lastOpenFiles": [
-    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Working with multiple VPC networks.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Lab-2 configuring VPC network peering.md",
+    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Analyzing Network Traffic with VPC Flow Logs.md",
+    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Working with multiple VPC networks.md",
     "attachments/Pasted image 20250331160608.png",
     "attachments/Pasted image 20250331160502.png",
     "attachments/Pasted image 20250331160451.png",
@@ -343,7 +344,6 @@
     "TCS hackquest/season 1",
     "TCS hackquest/season 2/shady.md",
     "TCS hackquest/season 2",
-    "TCS hackquest/season 1/Stranger things.md",
     "TCS hackquest",
     "Untitled",
     "notes/LINUX/bash",
