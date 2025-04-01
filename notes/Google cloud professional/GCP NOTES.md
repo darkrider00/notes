@@ -660,3 +660,28 @@ limitations
 
 ![[Pasted image 20250329152632.png]]
 
+### Route and Route Preferences 
+
+- subnets and Ip address cannot overlap with other subnets
+- Ip range must be a unique CIDR block 
+- New subnet IP ranges have to fall within valip IP ranges
+- they can expand but not shrink 
+- Auto mode can be expanded from/20 to /6
+
+![[Pasted image 20250401191503.png]]
+
+Route
+- define path network traffic takes from VM instance to other designations
+- fwd traffic to highest priority or specific route
+- deliver traffic only if matches firewall
+
+![[Pasted image 20250401191620.png]]
+
+- can be many types
+- - system generated - default and subnet routes that are automatically created
+- custom routes - used to traffic b/w subnets through a virtual appliance
+- VPC peering - diff in diff VPC network connected using peering
+- NCC routes  - reperesents a subnet IP range in VPC spoke
+- Policy based - apply to packets based on source IP dest IP or a combination
+![[Pasted image 20250401192001.png]]
+
