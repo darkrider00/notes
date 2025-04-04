@@ -1,101 +1,174 @@
+### **Workout Plan Overview**
 
-# 4-Week Strength & Calisthenics Hybrid Workout Plan (Checklist)
-
-## Warm-Up (Before Every Session, 10–12 Minutes)
-- [ ] **Dynamic Movements (5–7 Minutes):**
-  - [ ] Arm Circles (Forward & Backward): 20 seconds each direction.
-  - [ ] Torso Twists: 20 twists.
-  - [ ] Leg Swings (Front-to-Back and Side-to-Side): 10 swings per leg in each direction.
-  - [ ] Cat-Cow Stretches: 5–8 slow repetitions.
-  - [ ] World’s Greatest Stretch (Lunge with Twist): 5 reps per side.
-- [ ] **Core Activation (3–5 Minutes):**
-  - [ ] Plank to Downward Dog: 8–10 reps.
-  - [ ] Bird Dog: 10 reps per side.
-  - [ ] Dead Bug: 10–12 reps.
-  - [ ] Hollow Body Hold: 15–20 seconds.
+- **Frequency**: 5 days per week, 2 rest days.
+- **Duration**: ~60 minutes per session.
+- **Focus**:
+    - **Upper Body**: 4 days (2 push, 2 pull) to boost arm size and balance with your lower body.
+    - **Core**: Every day to build strength and define your six-pack.
+    - **Legs**: 1 day to maintain your developed lower body.
+    - **Fat Loss**: Cardio and calorie deficit to shed fat.
+    - **Flexibility**: Stretching at the end of each session.
+- **Equipment**: Combines calisthenics (e.g., pushups, pullups), machines (e.g., chest press, lat pull-down), and dumbbells.
 
 ---
 
-## Week 1 & Week 3
+### **Weekly Schedule**
 
-### Day 1: Upper Body (Push Focus)
-- [ ] Chest Press (Machine): 4 sets x 10–12 reps.
-- [ ] Incline Push-Ups: 3 sets to failure (~15–20 reps).
-- [ ] Shoulder Press (Machine): 4 sets x 10–12 reps.
-- [ ] Cable Chest Fly: 3 sets x 12–15 reps.
-- [ ] Plank (Knee or Full): 3 sets of 20–30 seconds.
-
-### Day 2: Lower Body (Legs Focus)
-- [ ] Leg Press (Machine): 4 sets x 10–12 reps.
-- [ ] Goblet Squats (With Dumbbell): 3 sets x 15 reps.
-- [ ] Romanian Deadlifts (Dumbbells): 4 sets x 10 reps.
-- [ ] Standing Calf Raises: 3 sets x 20 reps.
-- [ ] Russian Twists: 3 sets x 15 twists per side.
-
-### Day 3: Back & Core (Pull Focus)
-- [ ] Assisted Pull-Ups: 3 sets x 8–12 reps.
-- [ ] Lat Pulldown (Wide Grip): 4 sets x 10–12 reps.
-- [ ] Seated Cable Row (Straight Bar): 3 sets x 10–12 reps.
-- [ ] Dead Hangs (Grip Strength): 3 x 20–30 seconds.
-- [ ] Hanging Knee Raises: 3 sets x 12–15 reps.
-
-### Day 4: Functional & Full Body (Calisthenics Intro)
-- [ ] Push-Ups (Regular): 3 sets to failure (~15–25 reps).
-- [ ] Bodyweight Squats: 3 sets x 20 reps.
-- [ ] Incline Rows (Underneath a Bar): 3 sets x 8–12 reps.
-- [ ] Plank Shoulder Taps: 3 sets x 20 taps total.
-- [ ] Step-Ups (With Bench or Step): 3 sets x 10 reps per leg.
-
-### Day 5: Upper Body & Core (Strength + Calisthenics)
-- [ ] Bench Press (Flat, Barbell/Dumbbells): 4 sets x 10–12 reps.
-- [ ] Incline Push-Ups: 3 sets to failure.
-- [ ] Lat Pulldown: 4 sets x 10–12 reps.
-- [ ] Mountain Climbers: 3 sets x 30 seconds.
-- [ ] Plank to Side Plank: 3 sets x 30–45 seconds total.
+- **Day 1**: Push (Chest, Shoulders, Triceps) + Core
+- **Day 2**: Pull (Back, Biceps) + Core
+- **Day 3**: Legs + Core
+- **Day 4**: Push (Chest, Shoulders, Triceps) + Core
+- **Day 5**: Pull (Back, Biceps) + Core
+- **Days 6 & 7**: Rest or light activity (e.g., walking, stretching)
 
 ---
 
-## Week 2 & Week 4
+### **Workout Details**
 
-### Day 1: Upper Body (Push Focus)
-- [ ] Incline Dumbbell Press: 4 sets x 10–12 reps.
-- [ ] Decline Push-Ups: 3 sets to failure (~12–15 reps).
-- [ ] Dumbbell Arnold Press: 4 sets x 10–12 reps.
-- [ ] Dumbbell Chest Fly: 3 sets x 12–15 reps.
-- [ ] Side Plank: 3 sets x 15 seconds per side.
+#### **Day 1: Push + Core**
 
-### Day 2: Lower Body (Legs Focus)
-- [ ] Bulgarian Split Squats: 3 sets x 10 per leg.
-- [ ] Goblet Squats (With Dumbbell): 3 sets x 10–12 reps.
-- [ ] Seated Leg Extensions: 4 sets x 12–15 reps.
-- [ ] Standing Calf Raises: 3 sets x 20 reps.
-- [ ] Russian Twists: 3 sets x 15 twists per side.
+- **Warm-up**: 5-10 min (running machine at moderate pace or cycling)
+- **Exercises**:
+    - **Chest Press Machine**: 3 sets of 8-12 reps (targets chest for upper body balance)
+    - **Shoulder Press Machine**: 3 sets of 8-12 reps (builds shoulder and arm size)
+    - **Cable Tricep Pushdowns** (using cable machine): 3 sets of 10-15 reps (isolates triceps for arm growth)
+    - **Pushups**: 3 sets to failure (calisthenics; try diamond pushups if 25 is easy)
+- **Core**:
+    - **Planks**: 3 sets of 30-60 sec (full core engagement)
+    - **Russian Twists** (with dumbbell): 3 sets of 20 reps (obliques for six-pack definition)
+- **Cardio**: 10 min HIIT (running machine: 30 sec sprint, 30 sec walk, repeat)
+- **Stretch**: 5-10 min (focus on chest, shoulders, triceps, core)
 
-### Day 3: Back & Core (Pull Focus)
-- [ ] Neutral Grip Pull-Ups: 3 sets x 8–12 reps.
-- [ ] Single-Arm Dumbbell Row: 4 sets x 10 reps per arm.
-- [ ] T-Bar Rows: 3 sets x 10–12 reps.
-- [ ] Dead Hangs (Grip Strength): 3 x 20–30 seconds.
-- [ ] Dead Bug (Core Stability): 3 sets x 15.
-
-### Day 4: Functional & Full Body (Calisthenics Intro)
-- [ ] Diamond Push-Ups: 3 sets to failure.
-- [ ] Jump Squats: 3 sets x 12 reps.
-- [ ] Australian Rows (Under Bar): 3 sets x 10 reps.
-- [ ] Bird Dog (Core Stability): 3 sets x 10 per side.
-- [ ] Stair Climbers: 3 x 1 minute.
-
-### Day 5: Upper Body & Core (Strength + Calisthenics)
-- [ ] Dumbbell Bench Press: 4 sets x 10–12 reps.
-- [ ] Pike Push-Ups: 3 sets to failure.
-- [ ] Single-Arm Pulldown (Cable): 4 sets x 10–12 reps per side.
-- [ ] Mountain Climbers (Fast): 3 sets x 30 seconds.
-- [ ] Dead Bug (Core Stability): 3 sets x 15.
+**Total Time**: ~60 min
 
 ---
 
-## Checklist for Gym
-- [ ] Always warm up with the outlined routine for 10–12 minutes.
-- [ ] Track weights, reps, and sets to monitor progress.
-- [ ] Focus on proper form and control, especially during core and calisthenics exercises.
-- [ ] Adjust rest times and difficulty as needed.
+#### **Day 2: Pull + Core**
+
+- **Warm-up**: 5-10 min (cycling or running machine)
+- **Exercises**:
+    - **Lat Pull-Down**: 3 sets of 8-12 reps (widens back, aids pullup progress)
+    - **Seated Cable Row** (straight bar): 3 sets of 8-12 reps (back thickness)
+    - **Dumbbell Bicep Curls**: 3 sets of 10-15 reps (arm size focus)
+    - **Assisted Pullups** (pull-up stand with assistance or band): 3 sets of 5-8 reps (builds from your 2 pullups)
+- **Core**:
+    - **Hanging Leg Raises** (on pull-up stand): 3 sets of 15 reps (lower abs for six-pack)
+    - **Bicycle Crunches**: 3 sets of 20 reps (upper and oblique abs)
+- **Cardio**: 10 min steady-state (cycling at moderate pace)
+- **Stretch**: 5-10 min (back, biceps, core)
+
+**Total Time**: ~60 min
+
+---
+
+#### **Day 3: Legs + Core**
+
+- **Warm-up**: 5-10 min (running machine or cycling)
+- **Exercises**:
+    - **Leg Press** (low angle): 3 sets of 10-15 reps (quads and glutes maintenance)
+    - **Leg Extensions**: 3 sets of 10-15 reps (isolates quads)
+    - **Calf Raises Machine**: 3 sets of 15-20 reps (calf definition)
+- **Core**:
+    - **Planks**: 3 sets of 30-60 sec
+    - **Russian Twists** (with dumbbell): 3 sets of 20 reps
+- **Cardio**: 10 min HIIT (running machine) or steady-state (cycling)
+- **Stretch**: 5-10 min (legs, core)
+
+**Total Time**: ~60 min
+
+---
+
+#### **Day 4: Push + Core**
+
+- **Warm-up**: 5-10 min (running machine or cycling)
+- **Exercises**:
+    - **Butterfly Chest Machine**: 3 sets of 8-12 reps (variation for chest)
+    - **Dumbbell Shoulder Press**: 3 sets of 8-12 reps (shoulder growth)
+    - **Tricep Dips** (on adjustable bench): 3 sets of 10-15 reps (calisthenics for triceps)
+    - **Pushups**: 3 sets to failure (progress difficulty as needed)
+- **Core**:
+    - **Planks**: 3 sets of 30-60 sec
+    - **Hanging Leg Raises** (pull-up stand): 3 sets of 15 reps
+- **Cardio**: 10 min HIIT (running machine)
+- **Stretch**: 5-10 min (chest, shoulders, triceps, core)
+
+**Total Time**: ~60 min
+
+---
+
+#### **Day 5: Pull + Core**
+
+- **Warm-up**: 5-10 min (cycling or running machine)
+- **Exercises**:
+    - **Lat Pull-Down**: 3 sets of 8-12 reps
+    - **Cable Row** (straight bar, vary grip if possible): 3 sets of 8-12 reps
+    - **Cable Forearm Curls** (rotating pulley): 3 sets of 15-20 reps (arm size bonus)
+    - **Pullups** (assisted or unassisted): 3 sets of 5-8 reps
+- **Core**:
+    - **Bicycle Crunches**: 3 sets of 20 reps
+    - **Russian Twists** (with dumbbell): 3 sets of 20 reps
+- **Cardio**: 10 min steady-state (cycling)
+- **Stretch**: 5-10 min (back, biceps, forearms, core)
+
+**Total Time**: ~60 min
+
+---
+
+### **Progression Tips**
+
+- **Strength**: Increase machine/dumbbell weight or reps every 1-2 weeks as exercises get easier.
+- **Calisthenics**: Progress pushups (e.g., weighted or archer) and pullups (reduce assistance over time).
+- **Core**: Extend plank duration or add weight to twists/raises.
+- **Cardio**: Increase intensity (e.g., faster sprints) or duration slightly.
+
+---
+
+### **Rest Time Between Sets**
+
+- **Machines/Dumbbells**: 60-90 sec
+- **Calisthenics**: 30-60 sec
+- Keep rest tight to fit within 60 minutes.
+
+---
+
+### **Nutrition Plan**
+
+To lose fat and reveal your six-pack while building arm size, you need a calorie deficit with high protein:
+
+- **Daily Calories**: ~2,000-2,200 kcal
+    - Based on your height (173 cm), weight (69.5 kg), and moderate activity, maintenance is ~2,500-2,700 kcal. A 300-500 kcal deficit supports fat loss.
+- **Macronutrients**:
+    - **Protein**: 110-150g (1.6-2.2g/kg for muscle growth)
+    - **Carbs**: 200-250g (energy for workouts)
+    - **Fat**: 60-70g (hormonal health)
+- **Rest Days**: Maintain ~2,200 kcal to aid recovery.
+
+**Adjustments**:
+
+- If fat loss stalls after 2-3 weeks, drop 100-200 kcal.
+- If energy dips, increase slightly.
+
+---
+
+### **Free Apps for Tracking**
+
+- **Workout**:
+    - **Strong**: Free, simple for logging exercises and weights.
+    - **JEFIT**: Free with tracking (some features premium).
+- **Nutrition**:
+    - **MyFitnessPal**: Free, tracks calories and macros.
+
+**Recommendation**: Use **Strong** for workouts and **MyFitnessPal** for nutrition.
+
+---
+
+### **Additional Tips**
+
+- **Flexibility**: Stretching improves range of motion—consider yoga on rest days.
+- **Hydration**: Drink water consistently, especially during cardio.
+- **Sleep**: 7-8 hours nightly for recovery.
+- **Consistency**: Track progress (weight, arm size, abs visibility) weekly.
+
+---
+
+This plan uses your full equipment range—calisthenics (pushups, pullups), machines (chest press, lat pull-down), and dumbbells—to hit your goals: fat loss for a six-pack, bigger arms, stronger core, and better flexibility. Stick to the 60-minute sessions, follow the nutrition deficit, and use the apps to monitor progress. You’ll be on track for a leaner, stronger physique!
