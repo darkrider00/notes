@@ -112,4 +112,4 @@ Since you've set up SSH, try cloning using SSH instead of HTTPS:
 
 and it worked
 
-to prefer syncthing 
+to setup sync b/w mobile and pc refer to[[Setting up Syncthing]]
