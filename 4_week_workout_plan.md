@@ -8,7 +8,7 @@
     - **Legs**: 1 day to maintain your developed lower body.
     - **Fat Loss**: Cardio and calorie deficit to shed fat.
     - **Flexibility**: Stretching at the end of each session.
-- **Equipment**: Combines calisthenics (e.g., pushups, pullups), machines (e.g., chest press, lat pull-down), and dumbbells.
+- **Equipment**: Combines calisthenics (e.g., pushups, pullups), machines (e.g., chest press, lat pull-down), and dumbbells
 
 ---
 
