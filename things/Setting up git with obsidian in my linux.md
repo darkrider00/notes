@@ -111,3 +111,5 @@ Since you've set up SSH, try cloning using SSH instead of HTTPS:
 `git clone git@github.com:darkrider00/notes.git`
 
 and it worked
+
+to prefer syncthing 
