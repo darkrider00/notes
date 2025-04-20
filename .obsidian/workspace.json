@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/GCP NOTES.md",
+                "file": "notes/Google cloud professional/Labs/Routing and addressing/Cloud DNS - Traffic Steering using Geolocation Policy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GCP NOTES"
+              "title": "Cloud DNS - Traffic Steering using Geolocation Policy"
             }
           }
         ],
@@ -203,7 +203,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -303,6 +304,10 @@
   },
   "active": "d19f26b4f08226d9",
   "lastOpenFiles": [
+    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Analyzing Network Traffic with VPC Flow Logs.md",
+    "notes/Google cloud professional/Labs/Routing and addressing/Cloud DNS - Traffic Steering using Geolocation Policy.md",
+    "notes/Google cloud professional/Labs/Routing and addressing",
+    "notes/Google cloud professional/GCP NOTES.md",
     "attachments/Pasted image 20250420183630.png",
     "attachments/Pasted image 20250420183009.png",
     "attachments/Pasted image 20250420172922.png",
@@ -318,12 +323,10 @@
     "things/Setting up git with obsidian in my linux.md",
     "things/Setting up Syncthing.md",
     "things/SELF disicipline.md",
-    "notes/Google cloud professional/GCP NOTES.md",
     "attachments/Pasted image 20250401192001.png",
     "attachments/Pasted image 20250401191620.png",
     "attachments/Pasted image 20250401191503.png",
     "notes/Google cloud professional/Contents.md",
-    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Analyzing Network Traffic with VPC Flow Logs.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Lab-2 configuring VPC network peering.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Working with multiple VPC networks.md",
     "attachments/Pasted image 20250331160608.png",
@@ -332,7 +335,6 @@
     "HTB_CPTS/Academy/02. Information Gathering/Info Gathering.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "attachments/Pasted image 20250329152632.png",
-    "attachments/Pasted image 20250329152504.png",
     "notes/Google cloud professional/Labs/lab 4 - Cloud Run.md",
     "notes/Google cloud professional/Labs/lab 3 - Getting Started with Cloud Storage and Cloud SQL.md",
     "notes/Google cloud professional/Labs/lab 2 - VPC Networking and Google Compute Engine.md",
@@ -348,7 +350,6 @@
     "Untitled",
     "notes/LINUX/bash",
     "notes/OWASP",
-    "CTFS",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]
