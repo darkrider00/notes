@@ -683,6 +683,8 @@ Route
 - VPC peering - diff in diff VPC network connected using peering
 - NCC routes  - reperesents a subnet IP range in VPC spoke
 - Policy based - apply to packets based on source IP dest IP or a combination
+
 ![[Pasted image 20250401192001.png]]
 
 ![[Pasted image 20250420172922.png]]
+
