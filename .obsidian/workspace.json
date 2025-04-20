@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/GCP NOTES.md",
+                "file": "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Implement Private Google Access and Cloud NAT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GCP NOTES"
+              "title": "Implement Private Google Access and Cloud NAT"
             }
           }
         ],
@@ -203,8 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -304,13 +303,18 @@
   },
   "active": "d19f26b4f08226d9",
   "lastOpenFiles": [
+    "notes/Google cloud professional/GCP NOTES.md",
+    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Implement Private Google Access and Cloud NAT.md",
+    "notes/Google cloud professional/Labs/networking -Implement Private Google Access and Cloud NAT",
+    "attachments/Pasted image 20250420200854.png",
+    "attachments/Pasted image 20250420200039.png",
+    "attachments/Pasted image 20250420195416.png",
     "attachments/Pasted image 20250420195314.png",
     "attachments/Pasted image 20250420195135.png",
     "attachments/Pasted image 20250420195100.png",
     "notes/Google cloud professional/Labs/Routing and addressing/Cloud DNS - Traffic Steering using Geolocation Policy.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Analyzing Network Traffic with VPC Flow Logs.md",
     "notes/Google cloud professional/Labs/Routing and addressing",
-    "notes/Google cloud professional/GCP NOTES.md",
     "attachments/Pasted image 20250420183630.png",
     "attachments/Pasted image 20250420183009.png",
     "attachments/Pasted image 20250420172922.png",
@@ -327,13 +331,9 @@
     "things/Setting up Syncthing.md",
     "things/SELF disicipline.md",
     "attachments/Pasted image 20250401192001.png",
-    "attachments/Pasted image 20250401191620.png",
-    "attachments/Pasted image 20250401191503.png",
     "notes/Google cloud professional/Contents.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Lab-2 configuring VPC network peering.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Working with multiple VPC networks.md",
-    "attachments/Pasted image 20250331160608.png",
-    "attachments/Pasted image 20250331160502.png",
     "HTB_CPTS/Academy/02. Information Gathering/Info Gathering.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "notes/Google cloud professional/Labs/lab 4 - Cloud Run.md",
@@ -349,7 +349,6 @@
     "TCS hackquest",
     "Untitled",
     "notes/LINUX/bash",
-    "notes/OWASP",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]
