@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Traffic Blocklisting with Google Cloud Armor.md",
+                "file": "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring VPC Firewalls.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configuring Traffic Blocklisting with Google Cloud Armor"
+              "title": "Configuring VPC Firewalls"
             }
           }
         ],
@@ -304,8 +304,9 @@
   },
   "active": "d19f26b4f08226d9",
   "lastOpenFiles": [
-    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Implementing a Hub and Spoke using NCC.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Traffic Blocklisting with Google Cloud Armor.md",
+    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring VPC Firewalls.md",
+    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Implementing a Hub and Spoke using NCC.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Implement Private Google Access and Cloud NAT.md",
     "notes/Google cloud professional/GCP NOTES.md",
     "notes/Google cloud professional/Labs/networking -Implement Private Google Access and Cloud NAT",
@@ -342,7 +343,6 @@
     "notes/Google cloud professional/Labs/lab 4 - Cloud Run.md",
     "notes/Google cloud professional/Labs/lab 3 - Getting Started with Cloud Storage and Cloud SQL.md",
     "notes/Google cloud professional/Labs/lab 2 - VPC Networking and Google Compute Engine.md",
-    "notes/Google cloud professional/Labs/Lab 1 - use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance..md",
     "notes/Google cloud professional/Labs",
     "notes/Google cloud professional",
     "TCS hackquest/season 1",
