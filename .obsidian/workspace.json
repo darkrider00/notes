@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Network Connectivity Center as a Transit Hub.md",
+                "file": "notes/Google cloud professional/Labs/security/Configuring and Using VPC Flow Logs in Cloud Logging.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configuring Network Connectivity Center as a Transit Hub"
+              "title": "Configuring and Using VPC Flow Logs in Cloud Logging"
             }
           }
         ],
@@ -301,10 +301,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "d19f26b4f08226d9",
+  "active": "7bb12a26d89f78d9",
   "lastOpenFiles": [
-    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Defending Edge Cache with Cloud Armor.md",
+    "notes/Google cloud professional/Labs/security/Configuring VPC Firewalls.md",
+    "notes/Google cloud professional/Labs/security/Configuring and Using VPC Flow Logs in Cloud Logging.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Network Connectivity Center as a Transit Hub.md",
+    "notes/Google cloud professional/Labs/security",
+    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Defending Edge Cache with Cloud Armor.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Traffic Management with a Load Balancer.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring VPC Firewalls.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Traffic Blocklisting with Google Cloud Armor.md",
@@ -339,8 +342,6 @@
     "attachments/Pasted image 20250401192001.png",
     "notes/Google cloud professional/Contents.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Lab-2 configuring VPC network peering.md",
-    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Working with multiple VPC networks.md",
-    "HTB_CPTS/Academy/02. Information Gathering/Info Gathering.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "notes/Google cloud professional/Labs",
     "notes/Google cloud professional",
@@ -348,7 +349,6 @@
     "TCS hackquest/season 2",
     "TCS hackquest",
     "Untitled",
-    "notes/LINUX/bash",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]
