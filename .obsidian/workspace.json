@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Google cloud professional/Labs/security/Configuring and Using VPC Flow Logs in Cloud Logging.md",
+                "file": "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Network Connectivity Center as a Transit Hub.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configuring and Using VPC Flow Logs in Cloud Logging"
+              "title": "Configuring Network Connectivity Center as a Transit Hub"
             }
           }
         ],
@@ -203,7 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 211.5
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -301,10 +301,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "7bb12a26d89f78d9",
+  "active": "d19f26b4f08226d9",
   "lastOpenFiles": [
-    "notes/Google cloud professional/Labs/security/Configuring VPC Firewalls.md",
+    "notes/Google cloud professional/Labs/security/Using Customer-Managed Encryption Keys with Cloud Storage and Cloud KMS.md",
     "notes/Google cloud professional/Labs/security/Configuring and Using VPC Flow Logs in Cloud Logging.md",
+    "notes/Google cloud professional/Labs/security/Configuring VPC Firewalls.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Network Connectivity Center as a Transit Hub.md",
     "notes/Google cloud professional/Labs/security",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Defending Edge Cache with Cloud Armor.md",
@@ -341,7 +342,6 @@
     "things/SELF disicipline.md",
     "attachments/Pasted image 20250401192001.png",
     "notes/Google cloud professional/Contents.md",
-    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Lab-2 configuring VPC network peering.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "notes/Google cloud professional/Labs",
     "notes/Google cloud professional",
