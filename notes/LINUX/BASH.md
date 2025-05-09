@@ -1,4 +1,4 @@
-	## 1.Inception
+## 1.Inception
 
 program on our computer designed to be easy for you to talk to 
 
@@ -73,7 +73,7 @@ standard error
 
 A process isn't limited to just these three file descriptors, it can create new ones with their own number and connect them to other files, devices or processes as it sees fit.
 
-f a program needs its output to go to another program's input, as opposed to your display, it will instruct the kernel to connect its standard output to the other program's standard input. Now all the information it sends to its standard output file descriptor will flow into the other program's standard input file descriptor. These flows of information between files, devices and processes are called streams.
+if a program needs its output to go to another program's input, as opposed to your display, it will instruct the kernel to connect its standard output to the other program's standard input. Now all the information it sends to its standard output file descriptor will flow into the other program's standard input file descriptor. These flows of information between files, devices and processes are called streams.
 
 
 Stream - information flowing through links b/w files, devices  process in running system  can transport any kind of bytes and receiving end only consume their bytes in order they were sent 
