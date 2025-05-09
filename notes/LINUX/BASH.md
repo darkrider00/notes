@@ -516,10 +516,6 @@ This will change the variable in your current bash shell. As soon as you close t
 
 To find out where `bash` will locate the `ls` program when you execute it, you can use the `type` command. In your case, the output of `type ls` shows:
 
-bash
-
-Copy code
-
 ``ls is aliased to `ls --color=auto'``
 
 This means:
@@ -697,10 +693,6 @@ if we wanted to save all the output that would normally appear on the terminal t
 ### **What Happened in the Command?**
 
 The command you used was:
-
-bash
-
-Copy code
 
 `ls -l a b >myfiles.ls 2>myfiles.ls`
 
