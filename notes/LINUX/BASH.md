@@ -1198,18 +1198,10 @@ Britta's current record is 23.73s.
 
 ### **Bash String Substitution Syntax**
 
-bash
-
-CopyEdit
-
 `${variable/pattern/replacement}`
 
 - This replaces **the first occurrence** of `pattern` in `$variable` with `replacement`.
 - If you want to replace **all occurrences**, you use:
-    
-    bash
-    
-    CopyEdit
     
     `${variable//pattern/replacement}`
     
@@ -1217,10 +1209,6 @@ CopyEdit
 Now, let's analyze your command:
 
 ### **Your Example**
-
-bash
-
-CopyEdit
 
 `perplex@pop-os:~$ echo ${greeting/. / namasthe! }`
 
@@ -1237,19 +1225,9 @@ CopyEdit
     - In Bash substitution, the `.` (dot) **does not act as a wildcard** (unlike in regex).
     - It must be explicitly present in the variable.
 2. **Check `$greeting` Value**  
-    Run:
-    
-    bash
-    
-    CopyEdit
-    
     `echo "$greeting"`
     
     If your `$greeting` is:
-    
-    css
-    
-    CopyEdit
     
     `hello i am batman.`
     
@@ -1262,19 +1240,11 @@ CopyEdit
 
 1. If you meant to replace **just `.`**, you should do:
     
-    bash
-    
-    CopyEdit
-    
     `echo ${greeting/. /namasthe! }`
     
     (Notice I removed the space before `namasthe!`.)
     
 2. If you meant to replace all dots (`.`), use:
-    
-    bash
-    
-    CopyEdit
     
     `echo ${greeting//./namasthe!}`
     
@@ -1284,18 +1254,9 @@ CopyEdit
 
 ### **3️⃣ Third Command**
 
-bash
-
-CopyEdit
-
 `echo ${greeting/ / . }`
 
 **Output:**
-
-bash
-
-CopyEdit
-
 `hello . i am batman.`
 
 ✅ **Explanation:**
@@ -1314,17 +1275,9 @@ CopyEdit
 
 ### **4️⃣ Fourth Command**
 
-bash
-
-CopyEdit
-
 `echo ${greeting/. / namasthe\!}`
 
 **Output:**
-
-bash
-
-CopyEdit
 
 `hello i am batman.`
 
@@ -1339,18 +1292,9 @@ CopyEdit
 ### **🛠️ Fix for Replacing `.` with "namasthe!"**
 
 #### **1. If you want `.` to be replaced in the current session, store it in `greeting`:**
-
-bash
-
-CopyEdit
-
 `greeting="hello . i am batman." echo ${greeting/. / namasthe!}`
 
 **Output:**
-
-bash
-
-CopyEdit
 
 `hello namasthe!i am batman.`
 
@@ -1360,17 +1304,9 @@ Now the replacement works because `.` exists in `greeting`.
 
 If you want to print `!` literally, you need:
 
-bash
-
-CopyEdit
-
 `echo ${greeting/. / namasthe\!}`
 
 or
-
-bash
-
-CopyEdit
 
 `echo "${greeting/. / namasthe!}"`
 
