@@ -165,12 +165,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/LINUX/BASH.md",
+                "file": "notes/LINUX/Bash Scripting basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BASH"
+              "title": "Bash Scripting basics"
             }
           }
         ],
@@ -331,8 +331,9 @@
   },
   "active": "b144b17978bb3147",
   "lastOpenFiles": [
-    "notes/LINUX/INDEX page.md",
     "notes/LINUX/BASH.md",
+    "notes/LINUX/Bash Scripting basics.md",
+    "notes/LINUX/INDEX page.md",
     "notes/LINUX/File systems.md",
     "Untitled 1.md",
     "Untitled.md",
@@ -368,7 +369,6 @@
     "things/DDC toolbox for headphone correction set for viper4android.md",
     "things/Brainfog.md",
     "things/Boost Attention & Memory with Science-Based Tools.md",
-    "things/ATTENTION SPAN.md",
     "attachments/Pasted image 20250401192001.png",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "notes/Google cloud professional/Labs",
