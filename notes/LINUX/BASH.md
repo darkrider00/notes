@@ -991,7 +991,7 @@ santhosh
 perplex@pop-os:~/Documents$ 
 ```
 
-## 3.Variables and Expansions
+## Variables and Expansions
 
 #### Pathname expansion
 
