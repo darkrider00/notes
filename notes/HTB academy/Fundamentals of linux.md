@@ -55,8 +55,22 @@ htb-student@nixfund:/var/mail$
 ```
 in this case mtu value is 1500 for ens192
 
-Q: What is the name of the hidden "history" file in the htb-user's home directory?
-A: bash stores all the history in .bash_history file  in the home directory both folders contain the bash.hsitory 
+<mark style="background: #FF5582A6;">Q: </mark>What is the name of the hidden "history" file in the htb-user's home directory?
+<mark style="background: #ADCCFFA6;">A:</mark> bash stores all the history in .bash_history file  in the home directory all 3 users contain the bash_history file  whcih can seen with the command ls -la
+
+```bash
+htb-student@nixfund:~$ ls -la
+total 32
+drwxr-xr-x 4 htb-student htb-student 4096 Aug  3  2021 .
+drwxr-xr-x 5 root        root        4096 Aug  3  2021 ..
+-rw------- 1 htb-student htb-student    5 Sep 23  2020 .bash_history
+-rw-r--r-- 1 htb-student htb-student  220 Apr  4  2018 .bash_logout
+-rw-r--r-- 1 htb-student htb-student 3771 Apr  4  2018 .bashrc
+drwx------ 2 htb-student htb-student 4096 Aug  3  2021 .cache
+drwx------ 3 htb-student htb-student 4096 Aug  3  2021 .gnupg
+-rw-r--r-- 1 htb-student htb-student  807 Apr  4  2018 .profile
+htb-student@nixfund:~$ 
+```
 
 #### Mail question explanation
 

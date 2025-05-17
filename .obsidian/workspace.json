@@ -165,12 +165,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/HTB academy/Fundamentals of linux.md",
+                "file": "notes/HTB academy/Inode - A data structure used in Linux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fundamentals of linux"
+              "title": "Inode - A data structure used in Linux"
             }
           }
         ],
@@ -231,7 +231,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211.5
+    "width": 211.5,
+    "collapsed": true
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -331,8 +332,10 @@
   },
   "active": "b144b17978bb3147",
   "lastOpenFiles": [
-    "notes/Malware/Maldev.md",
+    "attachments/Pasted image 20250517144847.png",
     "notes/HTB academy/Fundamentals of linux.md",
+    "notes/HTB academy/Inode - A data structure used in Linux.md",
+    "notes/Malware/Maldev.md",
     "notes/HTB academy",
     "notes/Malware/Detection Mechanisms.md",
     "notes/Malware/Windows Essentials.md",
@@ -368,8 +371,6 @@
     "attachments/Pasted image 20250420183630.png",
     "attachments/Pasted image 20250420183009.png",
     "attachments/Pasted image 20250420172922.png",
-    "4_week_workout_plan.md",
-    "concepts.md",
     "attachments/Pasted image 20250401192001.png",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "notes/Google cloud professional/Labs",
