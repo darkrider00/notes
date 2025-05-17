@@ -165,12 +165,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/LINUX/Bash Scripting basics.md",
+                "file": "notes/Malware/Maldev.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bash Scripting basics"
+              "title": "Maldev"
             }
           }
         ],
@@ -331,8 +331,12 @@
   },
   "active": "b144b17978bb3147",
   "lastOpenFiles": [
-    "notes/LINUX/BASH.md",
+    "notes/Malware/Detection Mechanisms.md",
+    "notes/Malware/Windows Essentials.md",
+    "notes/Malware/required Programming.md",
+    "notes/Malware/Maldev.md",
     "notes/LINUX/Bash Scripting basics.md",
+    "notes/LINUX/BASH.md",
     "notes/LINUX/INDEX page.md",
     "notes/LINUX/File systems.md",
     "Untitled 1.md",
@@ -365,10 +369,6 @@
     "4_week_workout_plan.md",
     "concepts.md",
     "things/Games.md",
-    "things/Dual boot with windows and pop-os.md",
-    "things/DDC toolbox for headphone correction set for viper4android.md",
-    "things/Brainfog.md",
-    "things/Boost Attention & Memory with Science-Based Tools.md",
     "attachments/Pasted image 20250401192001.png",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "notes/Google cloud professional/Labs",
