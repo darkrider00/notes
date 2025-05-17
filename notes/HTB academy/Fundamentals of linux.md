@@ -248,7 +248,46 @@ htb-student@nixfund:~$
 Q:How many files exist on the system that have the ".log" file extension?
 A: 
 ```bash
+htb-student@nixfund:~$ find / -type f -name "*.log" 2>/dev/null | wc -l
+32
+htb-student@nixfund:~$ 
+```
 
+Q:  How many total packages are installed on the target system?
+A: using dpkg -l packages can be listed 
+```
+htb-student@nixfund:~$ dpkg -l
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                Version        Architecture   Description
++++-===================-==============-==============-============================================
+ii  accountsservice     0.6.45-1ubuntu amd64          query and manipulate user account informatio
+ii  acl                 2.2.52-3build1 amd64          Access control list utilities
+ii  acpid               1:2.0.28-1ubun amd64          Advanced Configuration and Power Interface e
+ii  adduser             3.116ubuntu1   all            add and remove users and groups
+ii  adwaita-icon-theme  3.28.0-1ubuntu all            default icon theme of GNOME (small subset)
+ii  amd64-microcode     3.20191021.1+r amd64          Processor microcode firmware for AMD CPUs
+
+```
+
+dpkg starts with the two letters that show the status of the each package.
+first -i = the package desired state is install 
+second i = the package is currently installed
+So if you see:
+
+`ii  nmap   7.80-1  amd64   Network exploration tool and security scanner`
+
+That means:
+
+- `nmap` is **properly installed** and functioning.
+
+`grep '^ii'`: Filters lines where the package is **installed** (marked with `ii`).
+
+```bash
+htb-student@nixfund:~$ dpkg -l | grep '^ii' | wc -l
+737
+htb-student@nixfund:~$ 
 ```
 
 #### Mail question explanation
