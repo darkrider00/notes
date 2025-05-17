@@ -72,6 +72,18 @@ drwx------ 3 htb-student htb-student 4096 Aug  3  2021 .gnupg
 htb-student@nixfund:~$ 
 ```
 
+<mark style="background: #FF5582A6;">Q:</mark> What is the index number of the "sudoers" file in the "/etc" directory?
+<mark style="background: #ADCCFFA6;">A: </mark>we can check the inode or index number of a file using "'ls -i [filename]"
+```bash
+htb-student@nixfund:/etc$ ls -i sudoers
+147627 sudoers
+htb-student@nixfund:/etc$ 
+```
+
+Q:  What is the name of the last modified file in the "/var/backups" directory?
+A:   refer to : https://linuxcommandlibrary.com/man/ls
+
+
 #### Mail question explanation
 
 ## Linux Mail System Basics

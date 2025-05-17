@@ -1,3 +1,5 @@
+Create a index
+
 - Everything in a file is linux 
 - contains several files , which includes datafiles, directories , systemfiles, library files etc
 - file are stored in hierarchical format (directories and sub directories)
@@ -139,6 +141,44 @@ Same inode → they are really the same file with **different names**.
 
 `touch file.txt ln -s file.txt softlink.txt ls -li`
 
-`123456 file.txt 789101 softlink.txt -> file.txt`
+`123456 file.txt 
+`789101 softlink.txt -> file.txt
 
 Different inodes → softlink is a separate file that **points to the original by name**.
+
+## Summary Table
+
+|Feature|Hard Link|Soft Link (Symlink)|
+|---|---|---|
+|Inode|Same as original|Different from original|
+|Points to|The actual file (inode)|The file name/path|
+|File Type|Real file|Shortcut/alias|
+|Works across filesystems?|❌ No|✅ Yes|
+|Breaks if original deleted?|❌ No|✅ Yes (becomes broken link)|
+|Usage|For backups, mirror names|For shortcuts (e.g. `/usr/bin/python`)|
+## Inode of a File
+
+Every file is assigned an inode number when you create it. This inode number refers to the metadata information stored in the inode table. Use the following command to display inode information of a file:
+
+```
+stat users.txt
+```
+
+![[Pasted image 20250517145344.png]]
+## Inode of a Directory
+
+The Linux file system treats every object as a file and thus similar to a file, the inode number is also assigned to a directory when it is first created. Use the stat command to display inode information of a directory:
+
+```
+stat Pictures/
+```
+
+![[Pasted image 20250517145431.png]]
+
+## Inode System Level
+
+When a Linux or UNIX-like file system is created, an inode table is also created along with it. This inode is an index of every file in the particular file system.
+
+Every computer contains many inodes and usually does not occupy all inodes. However, there are two numbers that you must watch for. First is the maximum number of inodes, which is generally almost 1 percent of the total disk space allocated to the file system. Second is the number of occupied inodes on your system.
+
+At the system level, Linux labels even the smallest units of data and indexes them using inodes. When an application or system utilities require to open or read these indexed files, they go to the inode table and find out the location of the particular file on the disk. So this is one of the most important data structures that are extremely important for the inner working of the Linux operating system.
