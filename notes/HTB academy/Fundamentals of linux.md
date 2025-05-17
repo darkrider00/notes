@@ -26,216 +26,43 @@ Refer [[Fundamentals of linux#Linux Mail System Basics]]
 
 <mark style="background: #FF5582A6;">Q:</mark>Which shell is specified for the htb-student user?
 <mark style="background: #ADCCFFA6;">A:</mark>refer: https://phoenixnap.com/kb/linux-shells
-**prints all the environment variables** currently set for the shell session of the user (in this case, `htb-student`).
-
-
-Which kernel release is installed on the system? (Format: 1.22.3)
-
-
- What is the name of the network interface that MTU is set to 1500?
-
-
-
-```bash
-
-[~/Desktop]
- perplex  ssh htb-student@10.129.199.82    
-The authenticity of host '10.129.199.82 (10.129.199.82)' can't be established.
-ED25519 key fingerprint is SHA256:PHsjpBEAl6hSCzjVohppUybupbLXdBZy8FqtwlMpmjU.
-This key is not known by any other names.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '10.129.199.82' (ED25519) to the list of known hosts.
-htb-student@10.129.199.82's password: 
-Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 4.15.0-123-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Sat May 17 08:04:25 UTC 2025
-
-  System load:  0.69              Processes:             160
-  Usage of /:   52.8% of 6.76GB   Users logged in:       0
-  Memory usage: 25%               IP address for ens192: 10.129.199.82
-  Swap usage:   0%
-
-
- * Canonical Livepatch is available for installation.
-   - Reduce system reboots and improve kernel security. Activate at:
-     https://ubuntu.com/livepatch
-
-0 packages can be updated.
-0 updates are security updates.
-
-
-Last login: Wed Sep 23 22:09:41 2020 from 10.10.14.6
-htb-student@nixfund:~$ uname -r
-4.15.0-123-generic
-htb-student@nixfund:~$ 
-htb-student@nixfund:~$ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-htb-student@nixfund:~$ man uname
-htb-student@nixfund:~$ uname -m
-x86_64
-htb-student@nixfund:~$ ls
-htb-student@nixfund:~$ cd /
-htb-student@nixfund:/$ ls
-bin    dev   initrd.img      lib64       mnt   root  snap  tmp  vmlinuz
-boot   etc   initrd.img.old  lost+found  opt   run   srv   usr  vmlinuz.old
-cdrom  home  lib             media       proc  sbin  sys   var
-htb-student@nixfund:/$ cd home/
-htb-student@nixfund:/home$ ls
-cry0l1t3  htb-student  mrb3n
-htb-student@nixfund:/home$ cd htb-student/
-htb-student@nixfund:~$ pwd
-/home/htb-student
-htb-student@nixfund:~$ cd ..
-htb-student@nixfund:/home$ ls
-cry0l1t3  htb-student  mrb3n
-htb-student@nixfund:/home$ cd cry0l1t3/
-htb-student@nixfund:/home/cry0l1t3$ ls
-htb-student@nixfund:/home/cry0l1t3$ ls -la
-total 40
-drwxr-xr-x 6 cry0l1t3 cry0l1t3 4096 Aug  3  2021 .
-drwxr-xr-x 5 root     root     4096 Aug  3  2021 ..
--rw------- 1 cry0l1t3 cry0l1t3  141 Sep 24  2020 .bash_history
--rw-r--r-- 1 cry0l1t3 cry0l1t3  220 Sep 23  2020 .bash_logout
--rw-r--r-- 1 cry0l1t3 cry0l1t3 3771 Sep 23  2020 .bashrc
-drwx------ 2 cry0l1t3 cry0l1t3 4096 Aug  3  2021 .cache
-drwx------ 3 cry0l1t3 cry0l1t3 4096 Aug  3  2021 .gnupg
-drwxrwxr-x 3 cry0l1t3 cry0l1t3 4096 Aug  3  2021 .local
--rw-r--r-- 1 cry0l1t3 cry0l1t3  807 Sep 23  2020 .profile
-drwx------ 2 cry0l1t3 cry0l1t3 4096 Aug  3  2021 .ssh
--rw-r--r-- 1 cry0l1t3 cry0l1t3    0 Sep 23  2020 .sudo_as_admin_successful
-htb-student@nixfund:/home/cry0l1t3$ cd ..
-htb-student@nixfund:/home$ ls
-cry0l1t3  htb-student  mrb3n
-htb-student@nixfund:/home$ cd mrb3n
-htb-student@nixfund:/home/mrb3n$ ls
-htb-student@nixfund:/home/mrb3n$ ls -la
-total 40
-drwxr-xr-x 6 mrb3n mrb3n 4096 Aug  3  2021 .
-drwxr-xr-x 5 root  root  4096 Aug  3  2021 ..
--rw------- 1 mrb3n mrb3n   14 Nov 12  2020 .bash_history
--rw-r--r-- 1 mrb3n mrb3n  220 Apr  4  2018 .bash_logout
--rw-r--r-- 1 mrb3n mrb3n 3771 Apr  4  2018 .bashrc
-drwx------ 2 mrb3n mrb3n 4096 Aug  3  2021 .cache
-drwx------ 3 mrb3n mrb3n 4096 Aug  3  2021 .gnupg
-drwxrwxr-x 3 mrb3n mrb3n 4096 Aug  3  2021 .local
--rw-r--r-- 1 mrb3n mrb3n  807 Apr  4  2018 .profile
-drwx------ 2 mrb3n mrb3n 4096 Aug  3  2021 .ssh
--rw-r--r-- 1 mrb3n mrb3n    0 Sep 23  2020 .sudo_as_admin_successful
-htb-student@nixfund:/home/mrb3n$ cd ..
-htb-student@nixfund:/home$ 
-htb-student@nixfund:/home$ cd ..
-htb-student@nixfund:/$ ls
-bin    dev   initrd.img      lib64       mnt   root  snap  tmp  vmlinuz
-boot   etc   initrd.img.old  lost+found  opt   run   srv   usr  vmlinuz.old
-cdrom  home  lib             media       proc  sbin  sys   var
-htb-student@nixfund:/$ cd var
-htb-student@nixfund:/var$ ls
-backups  crash  local  log   opt  snap   tmp
-cache    lib    lock   mail  run  spool  www
-htb-student@nixfund:/var$ cd mail/
-htb-student@nixfund:/var/mail$ ls
-htb-student@nixfund:/var/mail$ ls -la
-total 8
-drwxrwsr-x  2 root mail 4096 Aug  5  2019 .
-drwxr-xr-x 14 root root 4096 Sep 23  2020 ..
-htb-student@nixfund:/var/mail$ 
-
-
-
-
-
-
-
-
-htb-student@nixfund:/var/mail$ env | grep MAIL
-MAIL=/var/mail/htb-student
-htb-student@nixfund:/var/mail$ env
-LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
-SSH_CONNECTION=10.10.14.105 35848 10.129.199.82 22
-LESSCLOSE=/usr/bin/lesspipe %s %s
-LANG=en_US.UTF-8
-XDG_SESSION_ID=1
-USER=htb-student
-PWD=/var/mail
-HOME=/home/htb-student
-SSH_CLIENT=10.10.14.105 35848 22
-XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
-SSH_TTY=/dev/pts/0
-MAIL=/var/mail/htb-student
-TERM=xterm-256color
+**prints all the environment variables** currently set for the shell session of the user (in this case, `htb-student`). contains our output
 SHELL=/bin/bash
-SHLVL=1
-LOGNAME=htb-student
-XDG_RUNTIME_DIR=/run/user/1002
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-LESSOPEN=| /usr/bin/lesspipe %s
-_=/usr/bin/env
-OLDPWD=/var
+
+<mark style="background: #FF5582A6;">Q:</mark> Which kernel release is installed on the system? (Format: 1.22.3)
+<mark style="background: #ADCCFFA6;">A: </mark> again for this we can use the Uname command uname -r gives us the version that system is running
+```bash
 htb-student@nixfund:/var/mail$ uname -r
 4.15.0-123-generic
-htb-student@nixfund:/var/mail$ ifconfig
-ens192: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 10.129.199.82  netmask 255.255.0.0  broadcast 10.129.255.255
-        inet6 fe80::250:56ff:fe94:dd53  prefixlen 64  scopeid 0x20<link>
-        inet6 dead:beef::250:56ff:fe94:dd53  prefixlen 64  scopeid 0x0<global>
-        ether 00:50:56:94:dd:53  txqueuelen 1000  (Ethernet)
-        RX packets 1478  bytes 127496 (127.4 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 738  bytes 80836 (80.8 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
 
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 1050  bytes 82927 (82.9 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 1050  bytes 82927 (82.9 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+<mark style="background: #FF5582A6;">Q: </mark>What is the name of the network interface that MTU is set to 1500?
+<mark style="background: #ADCCFFA6;">A: </mark>MTU: is the maximum transfer unit for the specific network interface 
+- In Linux, the Maximum Transmission Unit (MTU) is the largest packet size that can be transmitted over a network interface without fragmentation. 
+- The default MTU size for Ethernet is 1500 bytes, but it can be changed for specific needs, such as using jumbo frames with an MTU size of 9000 bytes to improve performance on VLANs.
 
-htb-student@nixfund:/var/mail$ ip -d link list
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 addrgenmode eui64 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 
-2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
-    link/ether 00:50:56:94:dd:53 brd ff:ff:ff:ff:ff:ff promiscuity 0 addrgenmode eui64 numtxqueues 4 numrxqueues 4 gso_max_size 65536 gso_max_segs 65535 
+```bash
+ip a | grep mtu
+```
+used to check the mtu value for network interfaces
+
+```bash
+htb-student@nixfund:/var/mail$ ip a | grep mtu
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
 htb-student@nixfund:/var/mail$ 
 
 ```
+in this case mtu value is 1500 for ens192
 
+Q: What is the name of the hidden "history" file in the htb-user's home directory?
+A: bash stores all the history in .bash_history file  in the home directory both folders contain the bash.hsitory 
 
-
-
-Mail question explanation
+#### Mail question explanation
 
 ## Linux Mail System Basics
 
-### 🔹 1. Where is mail stored?
+ 🔹 1. Where is mail stored?
 
 In traditional Linux systems (especially on Debian-based ones like Ubuntu), **local email for system users** is stored in:
 
@@ -257,17 +84,11 @@ CopyEdit
 
 ---
 
-### 🔹 2. So what is `/var/mail`?
+🔹 2. So what is `/var/mail`?
 
 Think of `/var/mail` as:
 
 > 📁 A folder that contains **inbox files** for every user on the system.
-
-Example:
-
-bash
-
-CopyEdit
 
 `$ ls /var/mail root       htb-student       alice       bob`
 
@@ -275,7 +96,7 @@ Each file inside `/var/mail/` holds the **mail messages** for that user.
 
 ---
 
-### 🔹 3. Why is it `/var/mail/htb-student` and not just `/var/mail`?
+ 🔹 3. Why is it `/var/mail/htb-student` and not just `/var/mail`?
 
 Because:
 
@@ -285,10 +106,6 @@ Because:
     
 
 Each user has their **own file** in there:
-
-bash
-
-CopyEdit
 
 `/var/mail/$USER`
 
@@ -301,12 +118,118 @@ So:
 
 
 **Q:** What is the path to the htb-student’s mail?  
-**A:**
-
-bash
-
-CopyEdit
-
-`/var/mail/htb-student`
+**A:**`/var/mail/htb-student`
 
 This file contains all mail received by the user `htb-student`.
+
+
+#### environment question
+
+### What are environment variables?
+
+They are **key-value pairs** that define how processes run in your shell. For example:
+
+|Variable|Value|Meaning|
+|---|---|---|
+|`USER`|`htb-student`|The username of the current user|
+|`HOME`|`/home/htb-student`|The user's home directory|
+|`SHELL`|`/bin/bash`|The default shell the user is using|
+|`PATH`|`/usr/local/sbin:/usr/local/bin:...`|Tells the shell where to look for commands|
+|`MAIL`|`/var/mail/htb-student`|The path to the user’s mail file|
+|`PWD`|`/var/mail`|Present working directory|
+|`TERM`|`xterm-256color`|Terminal type (used for formatting output)|
+|`LANG`|`en_US.UTF-8`|System language and encoding|
+|`SSH_CLIENT`|`10.10.14.105 35848 22`|SSH client IP and port info (you're connected over SSH)|
+|`LS_COLORS`|(long color code string)|Used to define colors for file types in terminal|
+
+---
+
+### 🧠 Use Cases for `env`
+
+- Debugging environment issues (e.g., wrong `$PATH`)
+    
+- Checking where your mail is (`$MAIL`)
+    
+- Finding out default language (`$LANG`)
+    
+- Verifying if you're in an SSH session (`$SSH_CLIENT`, `$SSH_CONNECTION`)
+    
+- Checking what shell or terminal you're using (`$SHELL`, `$TERM`)
+
+
+## CHEAT SHEET
+
+| **Command**              | **Description**                                                                                                                                            |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `man <tool>`             | Opens man pages for the specified tool.                                                                                                                    |
+| `<tool> -h`              | Prints the help page of the tool.                                                                                                                          |
+| `apropos <keyword>`      | Searches through man pages' descriptions for instances of a given keyword.                                                                                 |
+| `cat`                    | Concatenate and print files.                                                                                                                               |
+| `whoami`                 | Displays current username.                                                                                                                                 |
+| `id`                     | Returns users identity.                                                                                                                                    |
+| `hostname`               | Sets or prints the name of the current host system.                                                                                                        |
+| `uname`                  | Prints operating system name.                                                                                                                              |
+| `pwd`                    | Returns working directory name.                                                                                                                            |
+| `ifconfig`               | The `ifconfig` utility is used to assign or view an address to a network interface and/or configure network interface parameters.                          |
+| `ip`                     | Ip is a utility to show or manipulate routing, network devices, interfaces, and tunnels.                                                                   |
+| `netstat`                | Shows network status.                                                                                                                                      |
+| `ss`                     | Another utility to investigate sockets.                                                                                                                    |
+| `ps`                     | Shows process status.                                                                                                                                      |
+| `who`                    | Displays who is logged in.                                                                                                                                 |
+| `env`                    | Prints environment or sets and executes a command.                                                                                                         |
+| `lsblk`                  | Lists block devices.                                                                                                                                       |
+| `lsusb`                  | Lists USB devices.                                                                                                                                         |
+| `lsof`                   | Lists opened files.                                                                                                                                        |
+| `lspci`                  | Lists PCI devices.                                                                                                                                         |
+| `sudo`                   | Execute command as a different user.                                                                                                                       |
+| `su`                     | The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser). A shell is then executed. |
+| `useradd`                | Creates a new user or update default new user information.                                                                                                 |
+| `userdel`                | Deletes a user account and related files.                                                                                                                  |
+| `usermod`                | Modifies a user account.                                                                                                                                   |
+| `addgroup`               | Adds a group to the system.                                                                                                                                |
+| `delgroup`               | Removes a group from the system.                                                                                                                           |
+| `passwd`                 | Changes user password.                                                                                                                                     |
+| `dpkg`                   | Install, remove and configure Debian-based packages.                                                                                                       |
+| `apt`                    | High-level package management command-line utility.                                                                                                        |
+| `aptitude`               | Alternative to `apt`.                                                                                                                                      |
+| `snap`                   | Install, remove and configure snap packages.                                                                                                               |
+| `gem`                    | Standard package manager for Ruby.                                                                                                                         |
+| `pip`                    | Standard package manager for Python.                                                                                                                       |
+| `git`                    | Revision control system command-line utility.                                                                                                              |
+| `systemctl`              | Command-line based service and systemd control manager.                                                                                                    |
+| `ps`                     | Prints a snapshot of the current processes.                                                                                                                |
+| `journalctl`             | Query the systemd journal.                                                                                                                                 |
+| `kill`                   | Sends a signal to a process.                                                                                                                               |
+| `bg`                     | Puts a process into background.                                                                                                                            |
+| `jobs`                   | Lists all processes that are running in the background.                                                                                                    |
+| `fg`                     | Puts a process into the foreground.                                                                                                                        |
+| `curl`                   | Command-line utility to transfer data from or to a server.                                                                                                 |
+| `wget`                   | An alternative to `curl` that downloads files from FTP or HTTP(s) server.                                                                                  |
+| `python3 -m http.server` | Starts a Python3 web server on TCP port 8000.                                                                                                              |
+| `ls`                     | Lists directory contents.                                                                                                                                  |
+| `cd`                     | Changes the directory.                                                                                                                                     |
+| `clear`                  | Clears the terminal.                                                                                                                                       |
+| `touch`                  | Creates an empty file.                                                                                                                                     |
+| `mkdir`                  | Creates a directory.                                                                                                                                       |
+| `tree`                   | Lists the contents of a directory recursively.                                                                                                             |
+| `mv`                     | Move or rename files or directories.                                                                                                                       |
+| `cp`                     | Copy files or directories.                                                                                                                                 |
+| `nano`                   | Terminal based text editor.                                                                                                                                |
+| `which`                  | Returns the path to a file or link.                                                                                                                        |
+| `find`                   | Searches for files in a directory hierarchy.                                                                                                               |
+| `updatedb`               | Updates the locale database for existing contents on the system.                                                                                           |
+| `locate`                 | Uses the locale database to find contents on the system.                                                                                                   |
+| `more`                   | Pager that is used to read STDOUT or files.                                                                                                                |
+| `less`                   | An alternative to `more` with more features.                                                                                                               |
+| `head`                   | Prints the first ten lines of STDOUT or a file.                                                                                                            |
+| `tail`                   | Prints the last ten lines of STDOUT or a file.                                                                                                             |
+| `sort`                   | Sorts the contents of STDOUT or a file.                                                                                                                    |
+| `grep`                   | Searches for specific results that contain given patterns.                                                                                                 |
+| `cut`                    | Removes sections from each line of files.                                                                                                                  |
+| `tr`                     | Replaces certain characters.                                                                                                                               |
+| `column`                 | Command-line based utility that formats its input into multiple columns.                                                                                   |
+| `awk`                    | Pattern scanning and processing language.                                                                                                                  |
+| `sed`                    | A stream editor for filtering and transforming text.                                                                                                       |
+| `wc`                     | Prints newline, word, and byte counts for a given input.                                                                                                   |
+| `chmod`                  | Changes permission of a file or directory.                                                                                                                 |
+| `chown`                  | Changes the owner and group of a file or directory.                                                                                                        |
