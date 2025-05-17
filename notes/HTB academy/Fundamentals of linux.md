@@ -133,8 +133,8 @@ htb-student@nixfund:/var/backups$
 
 ```
 
-Q: What is the name of the config file that has been created after 2020-03-03 and is smaller than 28k but larger than 25k?
-A: 
+<mark style="background: #FF5582A6;">Q: </mark>What is the name of the config file that has been created after 2020-03-03 and is smaller than 28k but larger than 25k?
+<mark style="background: #ADCCFFA6;">A: </mark>
 ```bash
 perplex007@htb[/htb]$ find / -type f -name *.conf -user root -size +20k -newermt 2020-03-03 -exec ls -al {} \; 2>/dev/null
 
@@ -152,7 +152,104 @@ perplex007@htb[/htb]$ find / -type f -name *.conf -user root -size +20k -newermt
 -rw-r--r-- 1 root root 21254 May  2 11:59 /etc/sqlmap/sqlmap.conf
 ```
 in the above session 
+- type |Hereby, we define the type of the searched object. In this case, '`f`' stands for '`file'.|
+- |`-name *.conf`|With '`-name`', we indicate the name of the file we are looking for. The asterisk (`*`) stands for 'all' files with the '`.conf`' extension.|
+- |`-user root`|This option filters all files whose owner is the root user.|
+- |`-size +20k`|We can then filter all the located files and specify that we only want to see the files that are larger than 20 KiB|
+- |`-newermt 2020-03-03`|With this option, we set the date. Only files newer than the specified date will be presented.|
+- |`-exec ls -al {} \;`|This option executes the specified command, using the curly brackets as placeholders for each result. The backslash escapes the next character from being interpreted by the shell because otherwise, the semicolon would terminate the command and not reach the redirection.|
+- |`2>/dev/null`|This is a `STDERR` redirection to the '`null device`', which we will come back to in the next section. This redirection ensures that no errors are displayed in the terminal. This redirection must `not` be an option of the 'find' command.|
 
+### 🔍 The Syntax:
+
+
+`-exec ls -al {} \;`
+
+This is a way to **execute a command on each file** that `find` matches.
+
+---
+
+### 🧠 What Each Part Means:
+
+|Part|Meaning|
+|---|---|
+|`-exec`|Tells `find` to **execute a command** on each file it finds|
+|`ls -al`|This is the command being run — in this case, it's a **long listing (`-l`) with file details** and `-a` to show hidden files (if any)|
+|`{}`|A **placeholder** — this is replaced by the **path to the current file** that `find` is processing|
+|`\;`|Ends the `-exec` clause. The semicolon (`;`) tells `find` that the command ends here. The **backslash (`\`) escapes** the semicolon to prevent your **shell from interpreting it too early**|
+
+---
+
+### 📦 Example:
+
+Let’s say you run:
+
+bash
+
+CopyEdit
+
+`find /etc -name "*.conf" -exec ls -al {} \;`
+
+And let’s say `find` locates:
+
+- `/etc/ssh/sshd_config`
+    
+- `/etc/logrotate.conf`
+    
+
+What really happens behind the scenes is:
+
+`ls -al /etc/ssh/sshd_config ls -al /etc/logrotate.conf`
+
+It runs the `ls -al` command separately **for each file found**.
+
+---
+
+### 🛡️ Why the Backslash?
+
+In Bash or most shells:
+
+- `;` normally **ends a shell command**
+    
+- So if you wrote `-exec ls -al {}; ;`, the shell thinks the first command ended **before `find` is finished**
+    
+
+✅ `\;` tells the shell:
+
+> "Hey, this semicolon is part of the `find` command — don't interpret it yet."
+
+---
+
+### ✅ Summary:
+
+`-exec ls -al {} \;`
+
+> For every file found by `find`, **run `ls -al` on that file**, with `{}` being replaced by the file path. Use `\;` to end the `-exec` safely.
+
+```bash
+htb-student@nixfund:~$ find / -type f -name "*.conf" -user root -size +25k -size -28k -newermt 2020-03-03 -exec ls -al {} \; 2>/dev/null
+
+-rw-r--r-- 1 root root 27422 Jun 12  2020 /usr/share/drirc.d/00-mesa-defaults.conf
+htb-student@nixfund:~$ 
+```
+
+<mark style="background: #FF5582A6;">Q: </mark>Submit the full path of the "xxd" binary.
+<mark style="background: #ADCCFFA6;">A:</mark>  `xxd` – Make a hexdump or do the reverse
+- Creates a **hex dump** of a file or stdin.
+- Can **revert** a hex dump back to binary.
+- Useful for viewing binary files or patching binaries.
+refer to [[Fundamentals of linux#hex dump xxd]]
+```bash 
+htb-student@nixfund:~$ which xxd
+/usr/bin/xxd
+htb-student@nixfund:~$ 
+```
+
+Q:How many files exist on the system that have the ".log" file extension?
+A: 
+```bash
+
+```
 
 #### Mail question explanation
 
@@ -329,3 +426,92 @@ They are **key-value pairs** that define how processes run in your shell. For ex
 | `wc`                     | Prints newline, word, and byte counts for a given input.                                                                                                   |
 | `chmod`                  | Changes permission of a file or directory.                                                                                                                 |
 | `chown`                  | Changes the owner and group of a file or directory.                                                                                                        |
+
+#### hex dump xxd
+### 🔹 **Examples**
+
+**Hexdump a file:**
+
+sh
+
+CopyEdit
+
+`xxd file`
+
+**Reverse hexdump:**
+
+sh
+
+CopyEdit
+
+`xxd -r hexfile > binaryfile`
+
+**Plain hex dump (continuous):**
+
+sh
+
+CopyEdit
+
+`xxd -p -c 20 -l 120 file`
+
+**Dump from byte offset 0x30 onward:**
+
+sh
+
+CopyEdit
+
+`xxd -s 0x30 file`
+
+**Patch binary file at offset 0x37:**
+
+sh
+
+CopyEdit
+
+`echo "0000037: 3574 68" | xxd -r - file`
+
+**Generate C-style hex array:**
+
+sh
+
+CopyEdit
+
+`xxd -i file`
+
+**Create a 65537-byte file with last byte = 'A':**
+
+sh
+
+CopyEdit
+
+`echo "010000: 41" | xxd -r > file`
+
+---
+
+### 🔹 **Editor Integration (e.g., Vim)**
+
+Hexdump selected lines:
+
+vim
+
+CopyEdit
+
+`:'a,'z!xxd`
+
+Reverse hex dump:
+
+vim
+
+CopyEdit
+
+`:'a,'z!xxd -r`
+
+---
+
+### 🔹 **Caveats**
+
+- `xxd -r` ignores anything after the needed hex bytes per line.
+    
+- ASCII column in the dump is ignored during reverse.
+    
+- `-s` behaves differently with `+` when reading from stdin (due to file pointer behavior).
