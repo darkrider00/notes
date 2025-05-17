@@ -1,10 +1,38 @@
 
-Find out the machine hardware name and submit it as the answer.
+Use Tags
+
+<mark style="background: #FF5582A6;">Q:</mark> Find out the machine hardware name and submit it as the answer.
+<mark style="background: #ADCCFFA6;">A: </mark> Ref: https://www.man7.org/linux/man-pages/man1/uname.1.html
+       Print certain system information.  With no OPTION, same as **-s**.
+              **-m**, **--machine**
+              print the machine hardware name
+
+<mark style="background: #FF5582A6;">Q:</mark> What is the path to htb-student's home directory?
+<mark style="background: #ADCCFFA6;">A: </mark> pwd is command that is going to print the working directory
+	 htb-student@nixfund:~$ pwd
+	/home/htb-student
+
+<mark style="background: #FF5582A6;">Q:</mark> What is the path to the htb-student's mail?
+<mark style="background: #ADCCFFA6;">A: </mark> In Linux everything is a file so we do have a directory for htb-Student's mail we can navigate to the root directory '/' and then if we do ls we do have a mail directory
+```bash
+htb-student@nixfund:/var$ ls
+backups  crash  local  log   opt  snap   tmp
+cache    lib    lock   mail  run  spool  www
+```
+then first i thought the answer is /var/mail no, 
+ where is htb-student in /var/mail/? /var/mail/htb-student.
+<mark style="background: #FFB8EBA6;">The usual style in Linux is that every user with a home directory has their mail stored in the /var/mail/$USER directory.</mark>
+Refer [[Fundamentals of linux#Linux Mail System Basics]]
+
+<mark style="background: #FF5582A6;">Q:</mark>Which shell is specified for the htb-student user?
+<mark style="background: #ADCCFFA6;">A:</mark>refer: https://phoenixnap.com/kb/linux-shells
+**prints all the environment variables** currently set for the shell session of the user (in this case, `htb-student`).
 
 
+Which kernel release is installed on the system? (Format: 1.22.3)
 
 
-
+ What is the name of the network interface that MTU is set to 1500?
 
 
 
@@ -199,3 +227,86 @@ htb-student@nixfund:/var/mail$ ip -d link list
 htb-student@nixfund:/var/mail$ 
 
 ```
+
+
+
+
+Mail question explanation
+
+## Linux Mail System Basics
+
+### 🔹 1. Where is mail stored?
+
+In traditional Linux systems (especially on Debian-based ones like Ubuntu), **local email for system users** is stored in:
+
+bash
+
+CopyEdit
+
+`/var/mail/`
+
+This is a **directory** where each file is named after the **username** of the recipient.
+
+So if there’s a user `htb-student`, their mail is stored at:
+
+bash
+
+CopyEdit
+
+`/var/mail/htb-student`
+
+---
+
+### 🔹 2. So what is `/var/mail`?
+
+Think of `/var/mail` as:
+
+> 📁 A folder that contains **inbox files** for every user on the system.
+
+Example:
+
+bash
+
+CopyEdit
+
+`$ ls /var/mail root       htb-student       alice       bob`
+
+Each file inside `/var/mail/` holds the **mail messages** for that user.
+
+---
+
+### 🔹 3. Why is it `/var/mail/htb-student` and not just `/var/mail`?
+
+Because:
+
+- `/var/mail` is just the **folder**.
+    
+- `/var/mail/htb-student` is the **file** that holds **htb-student’s inbox**.
+    
+
+Each user has their **own file** in there:
+
+bash
+
+CopyEdit
+
+`/var/mail/$USER`
+
+So:
+
+- For `root` → `/var/mail/root`
+    
+- For `htb-student` → `/var/mail/htb-student`
+    
+
+
+**Q:** What is the path to the htb-student’s mail?  
+**A:**
+
+bash
+
+CopyEdit
+
+`/var/mail/htb-student`
+
+This file contains all mail received by the user `htb-student`.
