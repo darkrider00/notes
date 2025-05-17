@@ -80,10 +80,58 @@ htb-student@nixfund:/etc$ ls -i sudoers
 htb-student@nixfund:/etc$ 
 ```
 
-Q:  What is the name of the last modified file in the "/var/backups" directory?
-A:   refer to : https://linuxcommandlibrary.com/man/ls
+<mark style="background: #FF5582A6;">Q: </mark> What is the name of the last modified file in the "/var/backups" directory?
+<mark style="background: #ADCCFFA6;">A:  </mark> refer to : https://linuxcommandlibrary.com/man/ls
+-it is used to sort the resut by modification date , newest comes first 
+```
+htb-student@nixfund:/var/backups$ ls -lt
+total 2160
+-rw-r--r-- 1 root root    41872 Nov 12  2020 apt.extended_states.0
+-rw-r--r-- 1 root root     4437 Nov 12  2020 apt.extended_states.1.gz
+-rw-r--r-- 1 root root   742750 Nov 11  2020 dpkg.status.0
+-rw-r--r-- 1 root root   206270 Nov 11  2020 dpkg.status.1.gz
+-rw-r--r-- 1 root root   206270 Nov  5  2020 dpkg.status.2.gz
+-rw-r--r-- 1 root root   206270 Nov  5  2020 dpkg.status.3.gz
+-rw-r--r-- 1 root root   206270 Nov  5  2020 dpkg.status.4.gz
+-rw-r--r-- 1 root root   206270 Nov  5  2020 dpkg.status.5.gz
+-rw-r--r-- 1 root root   206270 Nov  5  2020 dpkg.status.6.gz
+-rw-r--r-- 1 root root    51200 Oct 29  2020 alternatives.tar.0
+-rw-r--r-- 1 root root     4623 Oct 22  2020 apt.extended_states.2.gz
+-rw-r--r-- 1 root root     2497 Oct 16  2020 alternatives.tar.1.gz
+-rw-r--r-- 1 root root     4601 Oct 15  2020 apt.extended_states.3.gz
+-rw-r--r-- 1 root root     2492 Sep 24  2020 alternatives.tar.2.gz
+-rw-r--r-- 1 root root      367 Sep 23  2020 dpkg.statoverride.0
+-rw-r--r-- 1 root root      229 Sep 23  2020 dpkg.statoverride.1.gz
+-rw-r--r-- 1 root root      229 Sep 23  2020 dpkg.statoverride.2.gz
+-rw-r--r-- 1 root root      229 Sep 23  2020 dpkg.statoverride.3.gz
+-rw-r--r-- 1 root root      229 Sep 23  2020 dpkg.statoverride.4.gz
+-rw-r--r-- 1 root root      229 Sep 23  2020 dpkg.statoverride.5.gz
+-rw-r--r-- 1 root root      229 Sep 23  2020 dpkg.statoverride.6.gz
+-rw-r--r-- 1 root root     4572 Sep 23  2020 apt.extended_states.4.gz
+-rw------- 1 root root     2014 Sep 23  2020 passwd.bak
+-rw------- 1 root shadow   1362 Sep 23  2020 shadow.bak
+-rw------- 1 root shadow    716 Sep 23  2020 gshadow.bak
+-rw------- 1 root root      860 Sep 23  2020 group.bak
+-rw-r--r-- 1 root root      437 Aug  5  2019 dpkg.diversions.0
+-rw-r--r-- 1 root root      202 Aug  5  2019 dpkg.diversions.1.gz
+-rw-r--r-- 1 root root      202 Aug  5  2019 dpkg.diversions.2.gz
+-rw-r--r-- 1 root root      202 Aug  5  2019 dpkg.diversions.3.gz
+-rw-r--r-- 1 root root      202 Aug  5  2019 dpkg.diversions.4.gz
+-rw-r--r-- 1 root root      202 Aug  5  2019 dpkg.diversions.5.gz
+-rw-r--r-- 1 root root      202 Aug  5  2019 dpkg.diversions.6.gz
+htb-student@nixfund:/var/backups$
+```
+according to the date newest is `apt.extended_states.0`
 
+<mark style="background: #FF5582A6;">Q: </mark>What is the inode number of the "shadow.bak" file in the "/var/backups" directory?
+A: using -i we can get the inode or index number of a specific file 
+```bash
+htb-student@nixfund:/var/backups$ ls -lt -i | grep shadow.bak 
+265293 -rw------- 1 root shadow   1362 Sep 23  2020 shadow.bak
+265817 -rw------- 1 root shadow    716 Sep 23  2020 gshadow.bak
+htb-student@nixfund:/var/backups$ 
 
+```
 #### Mail question explanation
 
 ## Linux Mail System Basics
