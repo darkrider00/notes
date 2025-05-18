@@ -8,7 +8,7 @@ Index:
 4. Find files and Directories [[Fundamentals of linux#Find Files and Directories]]
 5. File Descriptors and Redirections [[Fundamentals of linux#File Descriptors and Redirections]]
 6. Filter Contents [[Fundamentals of linux#Filter Contents]]
-7. 
+7. Regular Expressisons [[Fundamentals of linux#Regular Expressions]]
 # System Information
 
 <mark style="background: #FF5582A6;">Q:</mark> Find out the machine hardware name and submit it as the answer.
@@ -937,3 +937,68 @@ Let me know if you're using macOS or Linux — I’ll tailor it exactly to your 
 
 Q: Search for all lines beginning with `Password` and containing `yes`.
 A: 
+grep understands three different  versions  of  regular  expression
+       syntax:  “basic” (BRE), “extended” (ERE) and “perl” (PCRE).  In GNU
+       grep there is no  difference  in  available  functionality  between
+       basic  and  extended  syntaxes.   In  other  implementations, basic
+       regular expressions are less powerful. 
+
+```bash
+grep '^Password.*yes' filename
+```
+
+Q: Search for all lines that end with 'yes'
+A: 
+grep 'yes$' filename
+Explanation:
+
+yes$ matches lines that end with the word yes.
+$ asserts end of line.
+
+If you're looking for exactly the word "yes" at the end (not "always" or "notyes"), you can make it stricter:
+
+grep '\<yes\>$' filename
+\< — start of the word
+\> — end of the word
+\<yes\>$ ensures only 'yes' as a whole word appears at the end of the line.
+
+### Permission management
+
+## SUID & SGID
+
+- Linux allows us to configure special permissions on files through the Set User ID (`SUID`) and Set Group ID (`SGID`) bits.
+- function like temporary access passes, enabling users to run certain programs with the privileges of another user or group
+- administrators can use `SUID` or `SGID` to grant users elevated rights for specific applications, allowing tasks to be performed with the necessary permissions, even if the user themselves doesn’t normally have them.
+```shell-session
+cry0l1t3@htb[/htb]$ ls -l shell
+
+-rwxr-x--x   1 cry0l1t3 htbteam 0 May  4 22:12 shell
+```
+
+| Field | Meaning                                  |
+| ----- | ---------------------------------------- |
+| `-`   | Regular file                             |
+| `rwx` | Owner (`cry0l1t3`): read, write, execute |
+| `r-x` | Group (`htbteam`): read, execute         |
+| `--x` | Others: execute only                     |
+
+One common risk is when administrators, unfamiliar with an application's full functionality, assign `SUID` or `SGID` bits indiscriminately. For example, if the `SUID` bit is applied to a program like `journalctl`, which includes a function to launch a shell from within its interface, any user running this program could execute a shell as root. This grants them complete control over the system, presenting a significant security vulnerability. More information about this and other such applications can be found at [GTFObins](https://gtfobins.github.io/gtfobins/journalctl/).
+
+## Sticky Bit
+- Sticky bits in Linux are like locks on files within shared spaces
+- ensures only certain users can modify or delete files , even if other have access to the directory
+- This feature is especially useful in shared environments, like public directories, where multiple users are working together.
+By setting the sticky bit, you ensure that important files aren’t accidentally or maliciously altered by someone who shouldn’t have the authority to do so, adding an important safeguard to collaborative workspaces.
+
+  Permission Management
+
+```shell-session
+cry0l1t3@htb[/htb]$ ls -l
+
+drw-rw-r-t 3 cry0l1t3 cry0l1t3   4096 Jan 12 12:30 scripts
+drw-rw-r-T 3 cry0l1t3 cry0l1t3   4096 Jan 12 12:32 reports
+```
+
+In this example, we see that both directories have the sticky bit set. However, the `reports` folder has an uppercase `T`, and the `scripts` folder has a lowercase `t`.
+
+If the sticky bit is capitalized (`T`), then this means that all other users do not have `execute` (`x`) permissions and, therefore, cannot see the contents of the folder nor run any programs from it. The lowercase sticky bit (`t`) is the sticky bit where the `execute` (`x`) permissions have been set.
