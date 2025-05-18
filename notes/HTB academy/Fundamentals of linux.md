@@ -811,3 +811,12 @@ perplex007@htb[/htb]$ cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | 
 6
 ```
 
+<mark style="background: #FF5582A6;">Q: </mark>How many services are listening on the target system on all interfaces? (Not on localhost and IPv4 only)
+<mark style="background: #ADCCFFA6;">A:</mark> 7
+netstat -l is going to list the services running on the system 
+
+![[Pasted image 20250518172918.png]]
+
+in the above image among the rcp services mentioned there are total of 7 services on IPV4
+
+Q: Determine what user the ProFTPd server is running under. Submit the username as the answer.
