@@ -827,4 +827,113 @@ in the above image among the rcp services mentioned there are total of 7 service
 
 Q:  Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths (https://www.inlanefreight.com/directory" or "/another/directory") of that domain. Submit the number of these paths as the answer.
 
+A: 34 
+
+```bash
+curl [https://www.inlanefreight.com/](https://www.inlanefreight.com/) | grep –Po https://www.inlanefreight.com[^’\]*” |sort –u | wc — l
+```
+
+### Regular Expressions 
+
+## Grouping
+
+Among other things, regex offers us the possibility to group the desired search patterns. Basically, regex follows three different concepts, which are distinguished by the three different brackets:
+
+### Grouping Operators
+
+||**Operators**|**Description**|
+|---|---|---|
+|1|`(a)`|The round brackets are used to group parts of a regex. Within the brackets, you can define further patterns which should be processed together.|
+|2|`[a-z]`|The square brackets are used to define character classes. Inside the brackets, you can specify a list of characters to search for.|
+|3|`{1,10}`|The curly brackets are used to define quantifiers. Inside the brackets, you can specify a number or a range that indicates how often a previous pattern should be repeated.|
+|4|`\|`|Also called the OR operator and shows results when one of the two expressions matches|
+|5|`.*`|Operates similarly to an AND operator by displaying results only when both expressions are present and match in the specified order|
+
+#### OR operator
+
+  Regular Expressions
+
+```shell-session
+cry0l1t3@htb:~$ grep -E "(my|false)" /etc/passwd
+
+lxd:x:105:65534::/var/lib/lxd/:/bin/false
+pollinate:x:109:1::/var/cache/pollinate:/bin/false
+mysql:x:116:120:MySQL Server,,:/nonexistent:/bin/false
+```
+
+Since one of the two search parameters always occurs in the three lines, all three lines are displayed accordingly. However, if we use the `AND` operator, we will get a different result for the same search parameters.
+
+#### AND operator
+
+  Regular Expressions
+
+```shell-session
+cry0l1t3@htb:~$ grep -E "(my.*false)" /etc/passwd
+
+mysql:x:116:120:MySQL Server,,:/nonexistent:/bin/false
+```
+
+Basically, what we are saying with this command is that we are looking for a line where we want to see both `my` and `false`. A simplified example would also be to use `grep` twice and look like this:
+
+  Regular Expressions
+
+```shell-session
+cry0l1t3@htb:~$ grep -E "my" /etc/passwd | grep -E "false"
+
+mysql:x:116:120:MySQL Server,,:/nonexistent:/bin/false
+```
+
+---
+
+Here are some optional tasks to help you practice RegEx and improve your ability to handle them more effectively. These exercises will use the `/etc/ssh/sshd_config` file on your `Pwnbox` instance, allowing you to explore real-world applications of RegEx in a configuration file. By completing these tasks, you'll gain hands-on experience in working with patterns, searching, and manipulating text in practical scenarios.
+
+<mark style="background: #FF5582A6;">Q: </mark>Show all lines that do not contain the # character.
+<mark style="background: #ADCCFFA6;">A: </mark>
+```bash
+grep -v '#' filename
+```
+-v inverts the match print non matching stuff
+
+<mark style="background: #FF5582A6;">Q: </mark>Search for all lines that contain a word that starts
+<mark style="background: #ADCCFFA6;">A: </mark>grep '\bPermit' [filename]
+
+- `\b` matches a **word boundary**, ensuring that "Permit" is the start of a word.
+    
+- `grep` interprets `*` differently — it matches **zero or more of the preceding character**, so `permit*` means "permi" followed by zero or more "t"s
+
+<mark style="background: #FF5582A6;">Q: </mark>Search for all lines that contain a word ending with `Authentication`.
+<mark style="background: #ADCCFFA6;">A: </mark>
+`grep '\<.*Authentication\>' filename`
+
+---
+
+### 🔍 Explanation:
+
+- `\<` — start of a word boundary
+    
+- `.*Authentication` — any characters ending in "Authentication"
+    
+- `\>` — end of a word boundary
+    
+
+Alternatively, you can use:
+
+`grep -E '\b\w*Authentication\b' filename`
+
+- `-E` enables **extended regex**
+    
+- `\b` matches a **word boundary**
+    
+- `\w*Authentication` matches any word ending in "Authentication"
+
+<mark style="background: #FF5582A6;">Q: </mark>Search for all lines containing the word `Key`.
+<mark style="background: #ADCCFFA6;">A: </mark>grep '\<Key\>' filename
+
+ To match "Key" regardless of case (key, Key, KEY, etc):
+ 
+`grep -i -E '\bKey\b' filename`
+
+Let me know if you're using macOS or Linux — I’ll tailor it exactly to your setup.
+
+Q: Search for all lines beginning with `Password` and containing `yes`.
 A: 
