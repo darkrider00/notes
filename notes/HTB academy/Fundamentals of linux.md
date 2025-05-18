@@ -1,7 +1,14 @@
 
 #linux #bash #hackthebox #linux_fundamentals
 
-
+Index:
+1. System Information [[Fundamentals of linux#System Information]]
+2. Navigation [[Fundamentals of linux#Navigation]]
+3. working with files and directories [[Fundamentals of linux#Working with Files and Directories]]
+4. Find files and Directories [[Fundamentals of linux#Find Files and Directories]]
+5. File Descriptors and Redirections [[Fundamentals of linux#File Descriptors and Redirections]]
+6. Filter Contents [[Fundamentals of linux#Filter Contents]]
+7. 
 # System Information
 
 <mark style="background: #FF5582A6;">Q:</mark> Find out the machine hardware name and submit it as the answer.
@@ -250,16 +257,19 @@ htb-student@nixfund:~$ which xxd
 htb-student@nixfund:~$ 
 ```
 
-Q:How many files exist on the system that have the ".log" file extension?
-A: 
+
+# File Descriptors and Redirections
+
+<mark style="background: #FF5582A6;">Q:</mark>How many files exist on the system that have the ".log" file extension?
+<mark style="background: #ADCCFFA6;">A: </mark>
 ```bash
 htb-student@nixfund:~$ find / -type f -name "*.log" 2>/dev/null | wc -l
 32
 htb-student@nixfund:~$ 
 ```
 
-Q:  How many total packages are installed on the target system?
-A: using dpkg -l packages can be listed 
+<mark style="background: #FF5582A6;">Q: </mark> How many total packages are installed on the target system?
+<mark style="background: #ADCCFFA6;">A: </mark>using dpkg -l packages can be listed 
 ```
 htb-student@nixfund:~$ dpkg -l
 Desired=Unknown/Install/Remove/Purge/Hold
@@ -514,7 +524,7 @@ Reverse hex dump:
 - `-s` behaves differently with `+` when reading from stdin (due to file pointer behavior).
 
 
-### some more commands
+# Filter Contents
 
 - more - more content of the file 
 ### `cat /etc/passwd`
@@ -606,3 +616,6 @@ sync:x:4:65534:sync:/bin:/bin/sync
 postgres:x:111:117:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
 user6:x:1000:1000:,,,:/home/user6:/bin/bash
 ```
+
+## Tr
+To replace a certain character from a line with characters  the syntax is first option we define character we want to replace with and second option we define character we want to replace 
