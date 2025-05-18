@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "things/Protocol for studying & learning.md",
+                "file": "notes/HTB academy/Fundamentals of linux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Protocol for studying & learning"
+              "title": "Fundamentals of linux"
             }
           }
         ]
@@ -178,13 +178,13 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "things/Protocol for studying & learning.md",
     "concepts.md",
     "notes/HTB academy/Fundamentals of linux.md",
     "attachments/Pasted image 20250518174146.png",
     "attachments/Pasted image 20250518172918.png",
     "notes/LINUX/BASH.md",
     "notes/HTB academy/Inode - A data structure used in Linux.md",
-    "things/Protocol for studying & learning.md",
     "Untitled.md",
     "notes/Google cloud professional/Labs/lab 3 - Getting Started with Cloud Storage and Cloud SQL.md",
     "notes/Google cloud professional/Labs/lab 2 - VPC Networking and Google Compute Engine.md",

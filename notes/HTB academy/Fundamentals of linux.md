@@ -10,7 +10,7 @@ Index:
 6. Filter Contents [[Fundamentals of linux#Filter Contents]]
 7. Regular Expressisons [[Fundamentals of linux#Regular Expressions]]
 8. Permission management [[Fundamentals of linux#Permission management]]
-9. User Management
+9. User Management [[Fundamentals of linux#User Management]]
 # System Information
 
 <mark style="background: #FF5582A6;">Q:</mark> Find out the machine hardware name and submit it as the answer.
@@ -1014,11 +1014,47 @@ imagine a new employee named Alex joins your company and is provided with a Linu
 ```
 
 #### Execution as a user
-
-  User Management
-
 ```shell-session
 perplex007@htb[/htb]$ cat /etc/shadow
 
 cat: /etc/shadow: Permission denied
 ```
+- /etc/shadow file is a critical system stores encrypted password information for all user accounts
+- For security reasons it is readable and writable only by the root user to prevent unauthorized access to sensitive data 
+-  users can utilize the `sudo` command. The `sudo` command, short for "superuser do," allows permitted users to execute commands with the security privileges of another user, typically the superuser or root.
+- enables users to perform administrative tasks without logging in as the root user, which is a best practice for maintaining system security. We will explore sudo permissions in greater detail in the `Linux Security` section
+
+#### Execution as root
+
+```shell-session
+perplex007@htb[/htb]$ sudo cat /etc/shadow
+
+root:<SNIP>:18395:0:99999:7:::
+daemon:*:17737:0:99999:7:::
+bin:*:17737:0:99999:7:::
+<SNIP>
+```
+
+Here is a list that will help us to better understand and deal with user management.
+
+|**ommand**|**Description**|
+|---|---|
+|`sudo`|Execute command as a different user.|
+|`su`|The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser). A shell is then executed.|
+|`useradd`|Creates a new user or update default new user information.|
+|`userdel`|Deletes a user account and related files.|
+|`usermod`|Modifies a user account.|
+|`addgroup`|Adds a group to the system.|
+|`delgroup`|Removes a group from the system.|
+|`passwd`|Changes user password.|
+
+The most effective way to gain proficiency in user management is to practice using the individual commands along with their various options in a controlled environment.
+
+ Q: Which option needs to be set to create a home directory for a new user using "useradd" command?
+A: -m
+
+Q:  Which option needs to be set to lock a user account using the "usermod" command? (long version of the option)
+A:--lock
+
+Q:Which option needs to be set to execute a command as a different user using the "su" command? (long version of the option)
+A:
