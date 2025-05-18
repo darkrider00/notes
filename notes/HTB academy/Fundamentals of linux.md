@@ -819,4 +819,12 @@ netstat -l is going to list the services running on the system
 
 in the above image among the rcp services mentioned there are total of 7 services on IPV4
 
-Q: Determine what user the ProFTPd server is running under. Submit the username as the answer.
+<mark style="background: #FF5582A6;">Q: </mark>Determine what user the ProFTPd server is running under. Submit the username as the answer.
+<mark style="background: #ADCCFFA6;">A: </mark>in linux everything is a file including services so i google where wis the ProFTPd file is present it's in /etc/proftpd, in tht there is afile named ProFTPd.conf whcih contain information about the services running which includes the user of tht service 
+
+![[Pasted image 20250518174146.png]]
+
+
+Q:  Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths (https://www.inlanefreight.com/directory" or "/another/directory") of that domain. Submit the number of these paths as the answer.
+
+A: 
