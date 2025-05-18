@@ -618,4 +618,183 @@ user6:x:1000:1000:,,,:/home/user6:/bin/bash
 ```
 
 ## Tr
-To replace a certain character from a line with characters  the syntax is first option we define character we want to replace with and second option we define character we want to replace 
+To replace a certain character from a line with characters  the syntax is first option we define character we want to replace  and second option we define character we want to replace with
+
+```shell-session
+perplex007@htb[/htb]$ cat /etc/passwd | grep -v "false\|nologin" | tr ":" " "
+
+root x 0 0 root /root /bin/bash
+sync x 4 65534 sync /bin /bin/sync
+postgres x 111 117 PostgreSQL administrator,,, /var/lib/postgresql /bin/bash
+mrb3n x 1000 1000 mrb3n /home/mrb3n /bin/bash
+cry0l1t3 x 1001 1001  /home/cry0l1t3 /bin/bash
+htb-student x 1002 1002  /home/htb-student /bin/bash
+```
+
+## Column
+
+used to diplay results in tabular format using -t
+
+```shell-session
+perplex007@htb[/htb]$ cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | column -t
+
+root         x  0     0      root               /root        		 /bin/bash
+sync         x  4     65534  sync               /bin         		 /bin/sync
+postgres     x  111   117    PostgreSQL         administrator,,,    /var/lib/postgresql		/bin/bash
+mrb3n        x  1000  1000   mrb3n              /home/mrb3n  	     /bin/bash
+cry0l1t3     x  1001  1001   /home/cry0l1t3     /bin/bash
+htb-student  x  1002  1002   /home/htb-student  /bin/bash
+```
+
+## Awk
+
+As we may have noticed, the line for the user "`postgres`" has one column too many. To keep it as simple as possible to sort out such results, the (`g`)`awk` programming is beneficial, which allows us to display the first (`$1`) and last (`$NF`) result of the line.
+
+**`awk`** is a programming language designed for **pattern scanning and processing**. It's mostly used to manipulate and analyze **structured text files**, like CSVs, logs, or any column-based data.
+
+It works line by line, **splitting each line into fields** (usually by whitespace or a specified delimiter), and then lets you perform actions based on those fields.
+
+## Basic `awk` Syntax
+
+`awk '{action}' filename`
+
+Or if you're piping data:
+
+`some_command | awk '{action}'`
+
+- Each line is automatically split into **fields**: `$1`, `$2`, `$3`, ..., `$NF`
+    
+    - `$1`: first field
+        
+    - `$2`: second field
+        
+    - `$NF`: last field (`NF` = Number of Fields)
+
+### 1. Print first column of a file:
+
+`awk '{print $1}' file.txt`
+
+### 2. Print first and third column:
+
+`awk '{print $1, $3}' file.txt`
+
+### 3. Print lines where the second field is greater than 100:
+
+`awk '$2 > 100 {print $0}' file.txt`
+
+### 4. Use custom delimiter (e.g., colon `:` in `/etc/passwd`):
+
+
+`awk -F ':' '{print $1, $7}' /etc/passwd`
+
+- `-F ':'` tells `awk` to split fields by `:` instead of whitespace.
+
+```shell-session
+perplex007@htb[/htb]$ cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | awk '{print $1, $NF}'
+
+root /bin/bash
+sync /bin/sync
+postgres /bin/bash
+mrb3n /bin/bash
+cry0l1t3 /bin/bash
+htb-student /bin/bash
+```
+
+### `cat /etc/passwd`
+
+- Displays the contents of the `/etc/passwd` file.
+    
+- This file stores **user account information**.
+    
+- Each line represents a user and follows this structure:
+    
+
+`username:password:UID:GID:comment:home_directory:shell`
+
+`htb-student:x:1001:1001::/home/htb-student:/bin/bash`
+
+---
+
+### 🔹 2. `grep -v "false\|nologin"`
+
+- `grep -v`: Invert match — it **excludes** lines that match the pattern.
+    
+- `false\|nologin`: This regex matches lines containing either `false` or `nologin` (which are non-interactive shells).
+    
+
+So this step **filters out system users** or disabled users like:
+
+`nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin`
+
+---
+
+### 🔹 3. `tr ":" " "`
+
+- `tr` (translate) replaces characters.
+    
+- Here, it's **replacing colons (`:`) with spaces**, so `awk` can split fields by whitespace.
+    
+
+`htb-student:x:1001:1001::/home/htb-student:/bin/bash`
+
+`htb-student x 1001 1001  /home/htb-student /bin/bash`
+
+---
+
+### 🔹 4. `awk '{print $1, $NF}'`
+
+- `awk` processes each line, split into **fields** (default separator is whitespace).
+    
+- `$1`: First field → **username**
+    
+- `$NF`: Last field → **shell**
+    
+
+So, for:
+
+`htb-student x 1001 1001  /home/htb-student /bin/bash`
+
+We get:
+
+`htb-student /bin/bash`
+
+---
+
+## ✅ Final Output:
+`root /bin/bash 
+`sync /bin/sync
+`postgres /bin/bash 
+`mrb3n /bin/bash 
+`cry0l1t3 /bin/bash 
+`htb-student /bin/bash`
+
+### 💡 Interpretation:
+
+This tells us that:
+
+- These users have valid login shells (`/bin/bash` or `/bin/sync`).
+    
+- They are **not disabled/system accounts**.
+    
+- Useful in security auditing or CTFs to identify valid interactive user accounts.
+
+
+
+## Sed
+
+a stream editor used to replace a pattern matching with one regular expression with another regular expression pattern 
+
+Let us stick to the last results and say we want to replace the word "`bin`" with "`HTB`."
+
+```shell-session
+perplex007@htb[/htb]$ cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | awk '{print $1, $NF}' | sed 's/bin/HTB/g'
+
+root /HTB/bash
+sync /HTB/sync
+postgres /HTB/bash
+mrb3n /HTB/bash
+cry0l1t3 /HTB/bash
+htb-student /HTB/bash
+```
+
+The "`s`" flag at the beginning stands for the substitute command. Then we specify the pattern we want to replace. After the slash (`/`), we enter the pattern we want to use as a replacement in the third position. Finally, we use the "`g`" flag, which stands for replacing all matches.
