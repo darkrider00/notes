@@ -1,5 +1,8 @@
 
-Use Tags
+#linux #bash #hackthebox #linux_fundamentals
+
+
+# System Information
 
 <mark style="background: #FF5582A6;">Q:</mark> Find out the machine hardware name and submit it as the answer.
 <mark style="background: #ADCCFFA6;">A: </mark> Ref: https://www.man7.org/linux/man-pages/man1/uname.1.html
@@ -55,6 +58,8 @@ htb-student@nixfund:/var/mail$
 ```
 in this case mtu value is 1500 for ens192
 
+# Navigation
+
 <mark style="background: #FF5582A6;">Q: </mark>What is the name of the hidden "history" file in the htb-user's home directory?
 <mark style="background: #ADCCFFA6;">A:</mark> bash stores all the history in .bash_history file  in the home directory all 3 users contain the bash_history file  whcih can seen with the command ls -la
 
@@ -79,6 +84,8 @@ htb-student@nixfund:/etc$ ls -i sudoers
 147627 sudoers
 htb-student@nixfund:/etc$ 
 ```
+
+# Working with Files and Directories
 
 <mark style="background: #FF5582A6;">Q: </mark> What is the name of the last modified file in the "/var/backups" directory?
 <mark style="background: #ADCCFFA6;">A:  </mark> refer to : https://linuxcommandlibrary.com/man/ls
@@ -133,6 +140,8 @@ htb-student@nixfund:/var/backups$
 
 ```
 
+# Find Files and Directories
+
 <mark style="background: #FF5582A6;">Q: </mark>What is the name of the config file that has been created after 2020-03-03 and is smaller than 28k but larger than 25k?
 <mark style="background: #ADCCFFA6;">A: </mark>
 ```bash
@@ -183,10 +192,6 @@ This is a way to **execute a command on each file** that `find` matches.
 ### 📦 Example:
 
 Let’s say you run:
-
-bash
-
-CopyEdit
 
 `find /etc -name "*.conf" -exec ls -al {} \;`
 
@@ -298,19 +303,11 @@ htb-student@nixfund:~$
 
 In traditional Linux systems (especially on Debian-based ones like Ubuntu), **local email for system users** is stored in:
 
-bash
-
-CopyEdit
-
 `/var/mail/`
 
 This is a **directory** where each file is named after the **username** of the recipient.
 
 So if there’s a user `htb-student`, their mail is stored at:
-
-bash
-
-CopyEdit
 
 `/var/mail/htb-student`
 
@@ -470,59 +467,28 @@ They are **key-value pairs** that define how processes run in your shell. For ex
 ### 🔹 **Examples**
 
 **Hexdump a file:**
-
-sh
-
-CopyEdit
-
 `xxd file`
 
 **Reverse hexdump:**
-
-sh
-
-CopyEdit
 
 `xxd -r hexfile > binaryfile`
 
 **Plain hex dump (continuous):**
 
-sh
-
-CopyEdit
-
 `xxd -p -c 20 -l 120 file`
 
 **Dump from byte offset 0x30 onward:**
-
-sh
-
-CopyEdit
-
 `xxd -s 0x30 file`
 
 **Patch binary file at offset 0x37:**
-
-sh
-
-CopyEdit
 
 `echo "0000037: 3574 68" | xxd -r - file`
 
 **Generate C-style hex array:**
 
-sh
-
-CopyEdit
-
 `xxd -i file`
 
 **Create a 65537-byte file with last byte = 'A':**
-
-sh
-
-CopyEdit
-
 `echo "010000: 41" | xxd -r > file`
 
 ---
@@ -531,17 +497,9 @@ CopyEdit
 
 Hexdump selected lines:
 
-vim
-
-CopyEdit
-
 `:'a,'z!xxd`
 
 Reverse hex dump:
-
-vim
-
-CopyEdit
 
 `:'a,'z!xxd -r`
 
@@ -573,7 +531,7 @@ CopyEdit
     
 - You press `Space` to go to the next page or `q` to quit.
 
-## Less
+### Less
 
 If we now take a look at the tool `less`, we will notice on the man page that it contains many more features than `more`.
 it opens like a new screen and wait for input if u give q as input it will quit
@@ -581,22 +539,70 @@ it opens like a new screen and wait for input if u give q as input it will quit
 ref: https://linux.die.net/man/1/less
 ref: https://man7.org/linux/man-pages/man1/more.1.html
 
-## Head
+### Head
 
 Sometimes we will only be interested in specific issues either at the beginning of the file or the end. If we only want to get the `first` lines of the file, we can use the tool `head`. By default, `head` prints the first ten lines of the given file or input, if not specified otherwise.
 
 
-## Tail
+### Tail
 
 If we only want to see the last parts of a file or results, we can use the counterpart of `head` called `tail`, which returns the `last` ten lines.
 
-## Sort
+```shell-session
+[!bash!]$ tail /etc/passwd
+
+miredo:x:115:65534::/var/run/miredo:/usr/sbin/nologin
+usbmux:x:116:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+rtkit:x:117:119:RealtimeKit,,,:/proc:/usr/sbin/nologin
+nm-openvpn:x:118:120:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+nm-openconnect:x:119:121:NetworkManager OpenConnect plugin,,,:/var/lib/NetworkManager:/usr/sbin/nologin
+pulse:x:120:122:PulseAudio daemon,,,:/var/run/pulse:/usr/sbin/nologin
+beef-xss:x:121:124::/var/lib/beef-xss:/usr/sbin/nologin
+lightdm:x:122:125:Light Display Manager:/var/lib/lightdm:/bin/false
+do-agent:x:998:998::/home/do-agent:/bin/false
+user6:x:1000:1000:,,,:/home/user6:/bin/bash
+```
+### Sort
 
 Depending on which results and files are dealt with, they are rarely sorted. Often it is necessary to sort the desired results alphabetically or numerically to get a better overview. For this, we can use a tool called `sort`.
 
-## Grep
+```shell-session
+[!bash!]$ cat /etc/passwd | sort
+
+_apt:x:104:65534::/nonexistent:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+cry0l1t3:x:1001:1001::/home/cry0l1t3:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+dnsmasq:x:107:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+dovecot:x:114:117:Dovecot mail server,,,:/usr/lib/dovecot:/usr/sbin/nologin
+dovenull:x:115:118:Dovecot login user,,,:/nonexistent:/usr/sbin/nologin
+ftp:x:113:65534::/srv/ftp:/usr/sbin/nologin
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+htb-student:x:1002:1002::/home/htb-student:/bin/bash
+<SNIP>
+```
+### Grep
 
 In many cases, we will need to search for specific results that match patterns we define. One of the most commonly used tools for this purpose is grep, which provides a wide range of powerful features for pattern searching. For instance, we can use grep to search for users who have their default shell set to `/bin/bash`.
 
-## Cut
+```bash
+[!bash!]$ cat /etc/passwd | grep "/bin/bash"
+
+root:x:0:0:root:/root:/bin/bash
+mrb3n:x:1000:1000:mrb3n:/home/mrb3n:/bin/bash
+cry0l1t3:x:1001:1001::/home/cry0l1t3:/bin/bash
+htb-student:x:1002:1002::/home/htb-student:/bin/bash
+```
+### Cut
 To remove unnecessary character from the desired output cut is used -d is used to set the delimiter with -f is used to specify the position in the line we want output 
+
+```shell-session
+[!bash!]$ cat /etc/passwd | grep -v "false\|nologin"
+
+root:x:0:0:root:/root:/bin/bash
+sync:x:4:65534:sync:/bin:/bin/sync
+postgres:x:111:117:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+user6:x:1000:1000:,,,:/home/user6:/bin/bash
+```

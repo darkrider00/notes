@@ -1,3 +1,4 @@
+#linux #bash #linux_fundamentals 
 ## 1.Inception
 
 program on our computer designed to be easy for you to talk to 
