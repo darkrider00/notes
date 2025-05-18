@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "Protocol for studying & learning"
             }
-          },
-          {
-            "id": "b144b17978bb3147",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/HTB academy/Fundamentals of linux.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Fundamentals of linux"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -191,12 +176,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b144b17978bb3147",
+  "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "concepts.md",
+    "notes/HTB academy/Fundamentals of linux.md",
     "attachments/Pasted image 20250518174146.png",
     "attachments/Pasted image 20250518172918.png",
     "notes/LINUX/BASH.md",
-    "notes/HTB academy/Fundamentals of linux.md",
     "notes/HTB academy/Inode - A data structure used in Linux.md",
     "things/Protocol for studying & learning.md",
     "Untitled.md",
@@ -231,7 +217,6 @@
     "attachments/Pasted image 20250420195416.png",
     "attachments/Pasted image 20250420195314.png",
     "attachments/Pasted image 20250420195135.png",
-    "attachments/Pasted image 20250420195100.png",
     "notes/Google cloud professional/Labs/Routing and addressing",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "notes/Google cloud professional/Labs",

@@ -9,6 +9,8 @@ Index:
 5. File Descriptors and Redirections [[Fundamentals of linux#File Descriptors and Redirections]]
 6. Filter Contents [[Fundamentals of linux#Filter Contents]]
 7. Regular Expressisons [[Fundamentals of linux#Regular Expressions]]
+8. Permission management [[Fundamentals of linux#Permission management]]
+9. User Management
 # System Information
 
 <mark style="background: #FF5582A6;">Q:</mark> Find out the machine hardware name and submit it as the answer.
@@ -990,8 +992,6 @@ One common risk is when administrators, unfamiliar with an application's full fu
 - This feature is especially useful in shared environments, like public directories, where multiple users are working together.
 By setting the sticky bit, you ensure that important files aren’t accidentally or maliciously altered by someone who shouldn’t have the authority to do so, adding an important safeguard to collaborative workspaces.
 
-  Permission Management
-
 ```shell-session
 cry0l1t3@htb[/htb]$ ls -l
 
@@ -1002,3 +1002,23 @@ drw-rw-r-T 3 cry0l1t3 cry0l1t3   4096 Jan 12 12:32 reports
 In this example, we see that both directories have the sticky bit set. However, the `reports` folder has an uppercase `T`, and the `scripts` folder has a lowercase `t`.
 
 If the sticky bit is capitalized (`T`), then this means that all other users do not have `execute` (`x`) permissions and, therefore, cannot see the contents of the folder nor run any programs from it. The lowercase sticky bit (`t`) is the sticky bit where the `execute` (`x`) permissions have been set.
+
+# User Management
+-  Administrators frequently need to create new user accounts or assign existing users to specific groups to enforce appropriate access controls. Additionally, executing commands as a different user is often necessary for tasks that require different privileges.
+- example: certain groups need permissions to modify files or directories essential for maintaining system security and integrity 
+- allows us to gather more detailed info locally on that machine 
+- imp for troubleshooting and auditing purposes
+
+```
+imagine a new employee named Alex joins your company and is provided with a Linux-based workstation to perform their tasks. As a system administrator, you need to create a user account for Alex and add them to the appropriate groups that grant access to necessary resources, such as project files or development tools. Additionally, there may be situations where Alex needs to execute commands with elevated privileges or as a different user to complete certain tasks.
+```
+
+#### Execution as a user
+
+  User Management
+
+```shell-session
+perplex007@htb[/htb]$ cat /etc/shadow
+
+cat: /etc/shadow: Permission denied
+```
