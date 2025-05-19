@@ -11,6 +11,8 @@ Index:
 7. Regular Expressisons [[Fundamentals of linux#Regular Expressions]]
 8. Permission management [[Fundamentals of linux#Permission management]]
 9. User Management [[Fundamentals of linux#User Management]]
+10. Package Management [[Fundamentals of linux#Package Management]]
+11. Service and Process Management [[Fundamentals of linux#Service and Process Management]]
 # System Information
 
 <mark style="background: #FF5582A6;">Q:</mark> Find out the machine hardware name and submit it as the answer.
@@ -1069,4 +1071,162 @@ The features that most package management systems provide are:
 - Additional system-related configuration and functionality
 - Quality control
 
-The package management software retrieves the necessary changes for system installation fro the package and implent 
+The package management software retrieves the necessary changes for system installation fro the package and implement  changes to install software or tht package 
+- if the package management software recognizes the additional packages are required for proper functioning of the package that has not been installed , a dependency is included and either warns the admin or reload the missing software from the repository 
+- if installed software has been deleted the package management system then retakes the package's information modifies it's configuration and deletes files
+There are different package management programs that we can use for this. Here is a list of examples of such programs:
+
+|**Command**|**Description**|
+|---|---|
+|`dpkg`|The `dpkg` is a tool to install, build, remove, and manage Debian packages. The primary and more user-friendly front-end for `dpkg` is aptitude.|
+|`apt`|Apt provides a high-level command-line interface for the package management system.|
+|`aptitude`|Aptitude is an alternative to apt and is a high-level interface to the package manager.|
+|`snap`|Install, configure, refresh, and remove snap packages. Snaps enable the secure distribution of the latest apps and utilities for the cloud, servers, desktops, and the internet of things.|
+|`gem`|Gem is the front-end to RubyGems, the standard package manager for Ruby.|
+|`pip`|Pip is a Python package installer recommended for installing Python packages that are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation.|
+|`git`|Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.|
+#### Advanced Package Manager (APT)
+- Debain based linux use APT package manager 
+- A package is an archive file containing multiple .deb files
+- dpkg utility is used to install programms from associated .deb file
+- when we install a standard .deb file we may run into dependency issues and needed to download and install one or multiple additional packages
+- Repositories can be labeled as stable , testing or unstable
+- APT uses a database called APT cache , this provide info about packages in our system installed in offline 
+- we can search APT cache 
+
+```shell-session
+perplex007@htb[/htb]$ apt-cache search impacket
+
+impacket-scripts - Links to useful impacket scripts examples
+polenum - Extracts the password policy from a Windows system
+python-pcapy - Python interface to the libpcap packet capture library (Python 2)
+python3-impacket - Python3 module to easily build and dissect network protocols
+python3-pcapy - Python interface to the libpcap packet capture library (Python 3)
+```
+
+We can then view additional information about a package.
+
+  Package Management
+
+```shell-session
+perplex007@htb[/htb]$ apt-cache show impacket-scripts
+
+Package: impacket-scripts
+Version: 1.4
+Architecture: all
+Maintainer: Kali Developers <devel@kali.org>
+Installed-Size: 13
+Depends: python3-impacket (>= 0.9.20), python3-ldap3 (>= 2.5.0), python3-ldapdomaindump
+Breaks: python-impacket (<< 0.9.18)
+Replaces: python-impacket (<< 0.9.18)
+Priority: optional
+Section: misc
+Filename: pool/main/i/impacket-scripts/impacket-scripts_1.4_all.deb
+Size: 2080
+<SNIP>
+```
+
+We can also list all installed packages.
+
+  Package Management
+
+```shell-session
+perplex007@htb[/htb]$ apt list --installed
+
+Listing... Done
+accountsservice/rolling,now 0.6.55-2 amd64 [installed,automatic]
+adapta-gtk-theme/rolling,now 3.95.0.11-1 all [installed]
+adduser/rolling,now 3.118 all [installed]
+adwaita-icon-theme/rolling,now 3.36.1-2 all [installed,automatic]
+aircrack-ng/rolling,now 1:1.6-4 amd64 [installed,automatic]
+<SNIP>
+```
+
+If we are missing some packages, we can search for it and install it using the following command.
+
+  Package Management
+
+```shell-session
+perplex007@htb[/htb]$ sudo apt install impacket-scripts -y
+
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  impacket-scripts
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,080 B of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+Get:1 https://euro2-emea-mirror.parrot.sh/mirrors/parrot rolling/main amd64 impacket-scripts all 1.4 [2,080 B]
+Fetched 2,080 B in 0s (15.2 kB/s)
+Selecting previously unselected package impacket-scripts.
+(Reading database ... 378459 files and directories currently installed.)
+Preparing to unpack .../impacket-scripts_1.4_all.deb ...
+Unpacking impacket-scripts (1.4) ...
+Setting up impacket-scripts (1.4) ...
+Scanning application launchers
+Removing duplicate launchers from Debian
+Launchers are updated
+```
+
+
+## DPKG
+- we can also download the programs and tools from the repositories 
+In this example, we download 'strace' for Ubuntu 18.04 LTS.
+
+```shell-session
+perplex007@htb[/htb]$ wget http://archive.ubuntu.com/ubuntu/pool/main/s/strace/strace_4.21-1ubuntu1_amd64.deb
+
+--2020-05-15 03:27:17--  http://archive.ubuntu.com/ubuntu/pool/main/s/strace/strace_4.21-1ubuntu1_amd64.deb
+Resolving archive.ubuntu.com (archive.ubuntu.com)... 91.189.88.142, 91.189.88.152, 2001:67c:1562::18, ...
+Connecting to archive.ubuntu.com (archive.ubuntu.com)|91.189.88.142|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 333388 (326K) [application/x-debian-package]
+Saving to: ‘strace_4.21-1ubuntu1_amd64.deb’
+
+strace_4.21-1ubuntu1_amd64.deb       100%[===================================================================>] 325,57K  --.-KB/s    in 0,1s    
+
+2020-05-15 03:27:18 (2,69 MB/s) - ‘strace_4.21-1ubuntu1_amd64.deb’ saved [333388/333388]
+```
+
+ now we can use both `apt` and `dpkg` to install the package. Since we have already worked with `apt`, we will turn to `dpkg` in the next example.
+
+```shell-session
+perplex007@htb[/htb]$ sudo dpkg -i strace_4.21-1ubuntu1_amd64.deb 
+
+(Reading database ... 154680 files and directories currently installed.)
+Preparing to unpack strace_4.21-1ubuntu1_amd64.deb ...
+Unpacking strace (4.21-1ubuntu1) over (4.21-1ubuntu1) ...
+Setting up strace (4.21-1ubuntu1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+```
+
+With this, we have already installed the tool and can test if it works properly.
+
+```shell-session
+perplex007@htb[/htb]$ strace -h
+
+usage: strace [-CdffhiqrtttTvVwxxy] [-I n] [-e expr]...
+              [-a column] [-o file] [-s strsize] [-P path]...
+              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
+   or: strace -c[dfw] [-I n] [-e expr]... [-O overhead] [-S sortby]
+              -p pid... / [-D] [-E var=val]... [-u username] PROG [ARGS]
+
+Output format:
+  -a column      alignment COLUMN for printing syscall results (default 40)
+  -i             print instruction pointer at time of syscall
+```
+
+# Service and Process Management
+- Services known as daemons 
+- daemons are fundamental components of a linux system that run silently in the background without directt user interaction
+- perform crucial tasks that keep the system operational and provide additional functionalities 
+
+Services can be classified into two types 
+- System services
+- User installed Services
+THe system services are required during the system startup ,
+Perform essential hardware related tasks and initialize system components are required to run the operating system and to function properly
+
+Theuser installed services are added by the users and typically include server applications and other background process provide specific features or capabilities.
+
