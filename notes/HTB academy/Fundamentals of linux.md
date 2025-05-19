@@ -1058,3 +1058,15 @@ The most effective way to gain proficiency in user management is to practice usi
 
 <mark style="background: #FF5582A6;">Q:</mark>Which option needs to be set to execute a command as a different user using the "su" command? (long version of the option)
 <mark style="background: #ADCCFFA6;">A:</mark>--command
+
+# Package Management
+- packages are archives of binaries of software, configuration files, information about dependencies, keep track of updates and upgrades.
+The features that most package management systems provide are:
+- Package downloading
+- Dependency resolution
+- A standard binary package format
+- Common installation and configuration locations
+- Additional system-related configuration and functionality
+- Quality control
+
+The package management software retrieves the necessary changes for system installation fro the package and implent 
