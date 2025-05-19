@@ -1050,11 +1050,11 @@ Here is a list that will help us to better understand and deal with user managem
 
 The most effective way to gain proficiency in user management is to practice using the individual commands along with their various options in a controlled environment.
 
- Q: Which option needs to be set to create a home directory for a new user using "useradd" command?
-A: -m
+<mark style="background: #FF5582A6;"> Q: </mark>Which option needs to be set to create a home directory for a new user using "useradd" command?
+<mark style="background: #ADCCFFA6;">A: </mark>-m
 
-Q:  Which option needs to be set to lock a user account using the "usermod" command? (long version of the option)
-A:--lock
+<mark style="background: #FF5582A6;">Q:  </mark>Which option needs to be set to lock a user account using the "usermod" command? (long version of the option)
+<mark style="background: #ADCCFFA6;">A:-</mark>-lock
 
-Q:Which option needs to be set to execute a command as a different user using the "su" command? (long version of the option)
-A:
+<mark style="background: #FF5582A6;">Q:</mark>Which option needs to be set to execute a command as a different user using the "su" command? (long version of the option)
+<mark style="background: #ADCCFFA6;">A:</mark>--command
