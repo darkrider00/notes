@@ -1930,4 +1930,347 @@ When backing up data on an Ubuntu system, we have several options, including:
 Rsync - opensource tool allows for fast and secure backups locally or remotely 
 - it only transfers portions of the files that have changed, efficient when dealing with large data
 - useful for network transfers (syncing files b/w servers and creating incremental backups over the internet)
-- Duplicity - builds on Rsync , adds encruption fe
+- Duplicity - builds on Rsync , adds encruption feature to protect backups 
+- allows us to encrypt backup copies ensuring sensitive data remains secure even if stored on remote servers,
+- provides extra layers of security while maintaining Rsync's efficient data transfer capabilities
+- Deja Dup is a simple, accessible safe that anyone can operate, while still offering the same level of protection. Encrypting your backups adds an additional lock on your safe, ensuring that even if someone finds it, they can't get inside.
+
+Deja Dup offers a graphical interface that makes the backup process straightforward. Behind the scenes, it also uses Rsync, and like Duplicity, it supports encrypted backups. Deja Dup is ideal for users who want quick, easy access to backup and restore options without needing to dive into the command line.
+
+-  On Ubuntu systems, you can use additional encryption tools like GnuPG, eCryptfs, or LUKS to add another layer of protection to your backups.
+- sing tools like Rsync, Duplicity, and Deja Dup, you can ensure that your data is securely stored and easily retrievable, giving you confidence that, in case of an unexpected data loss, your information can be restored quickly and reliably.
+
+In order to install Rsync on Ubuntu, we can use the `apt` package manager:
+
+#### Install Rsync
+```shell-session
+perplex007@htb[/htb]$ sudo apt install rsync -y
+```
+
+This will install the latest version of Rsync on the system. Once the installation is complete, we can begin using the tool to back up and restore data. To backup an entire directory using `rsync`, we can use the following command:
+
+#### Rsync - Backup a local Directory to our Backup-Server
+
+  Backup and Restore
+
+```shell-session
+perplex007@htb[/htb]$ rsync -av /path/to/mydirectory user@backup_server:/path/to/backup/directory
+```
+
+This command will copy the entire directory (`/path/to/mydirectory`) to a remote host (`backup_server`), to the directory `/path/to/backup/directory`. The option `archive` (`-a`) is used to preserve the original file attributes, such as permissions, timestamps, etc., and using the `verbose` (`-v`) option provides a detailed output of the progress of the `rsync` operation.
+
+We can also add additional options to customize the backup process, such as using compression and incremental backups. We can do this like the following:
+
+  Backup and Restore
+
+```shell-session
+perplex007@htb[/htb]$ rsync -avz --backup --backup-dir=/path/to/backup/folder --delete /path/to/mydirectory user@backup_server:/path/to/backup/directory
+```
+
+With this, we back up the `mydirectory` to the remote `backup_server`, preserving the original file attributes, timestamps, and permissions, and enabled compression (`-z`) for faster transfers. The `--backup` option creates incremental backups in the directory `/path/to/backup/folder`, and the `--delete` option removes files from the remote host that is no longer present in the source directory.
+
+If we want to restore our directory from our backup server to our local directory, we can use the following command:
+
+#### Rsync - Restore our Backup
+
+  Backup and Restore
+
+```shell-session
+perplex007@htb[/htb]$ rsync -av user@remote_host:/path/to/backup/directory /path/to/mydirectory
+```
+
+---
+
+## Encrypted Rsync
+
+To ensure the security of our `rsync` file transfer between our local host and our backup server, we can combine the use of SSH and other security measures. By using SSH, we are able to encrypt our data as it is being transferred, making it much more difficult for any unauthorized individual to access it. Additionally, we can also use firewalls and other security protocols to ensure that our data is kept safe and secure during the transfer. By taking these steps, we can be confident that our data is protected and our file transfer is secure. Therefore we tell `rsync` to use SSH like the following:
+
+#### Secure Transfer of our Backup
+
+  Backup and Restore
+
+```shell-session
+perplex007@htb[/htb]$ rsync -avz -e ssh /path/to/mydirectory user@backup_server:/path/to/backup/directory
+```
+
+The data transfer between our local host and the backup server occurs over the encrypted SSH connection, which provides confidentiality and integrity protection for the data being transferred. This encryption process ensures that the data is protected from any potential malicious actors who would otherwise be able to access and modify the data without authorization. The encryption key itself is also safeguarded by a comprehensive set of security protocols, making it even more difficult for any unauthorized person to gain access to the data. In addition, the encrypted connection is designed to be highly resistant to any attempts to breach security, allowing us to have confidence in the protection of the data being transferred.
+
+---
+
+## Auto-Synchronization
+
+To enable auto-synchronization using `rsync`, you can use a combination of `cron` and `rsync` to automate the synchronization process. Scheduling the cron job to run at regular intervals ensures that the contents of the two systems are kept in sync. This can be especially beneficial for organizations that need to keep their data synchronized across multiple machines. Furthermore, setting up auto-synchronization with `rsync` can be a great way to save time and effort, as it eliminates the need for manual synchronization. It also helps to ensure that the files and data stored in the systems are kept up-to-date and consistent, which helps to reduce errors and improve efficiency.
+
+Therefore we create a new script called `RSYNC_Backup.sh`, which will trigger the `rsync` command to sync our local directory with the remote one. However, because we are using a script to perform SSH for the rsync connection, we need to configure key-based authentication. This is to bypass the need to input our password when connecting with SSH.
+
+First, we generate a key pair for our user.
+
+  Backup and Restore
+
+```shell-session
+
+perplex007@htb[/htb]$ ssh-keygen -t rsa -b 2048
+
+```
+
+Follow the prompts to specify the location (default is `~/.ssh/id_rsa`) and optionally provide a passphrase (leave it empty for no passphrase). Then, we need to copy our public key to the remote server.
+
+  Backup and Restore
+
+```shell-session
+
+perplex007@htb[/htb]$ ssh-copy-id user@backup_server
+
+```
+
+Now, we can create our script to automate the rsync backup.
+
+#### RSYNC_Backup.sh
+
+Code: bash
+
+```bash
+#!/bin/bash
+
+rsync -avz -e ssh /path/to/mydirectory user@backup_server:/path/to/backup/directory
+```
+
+Then, in order to ensure that the script is able to execute properly, we must provide the necessary permissions. Additionally, it's also important to make sure that the script is owned by the correct user, as this will ensure that only the correct user has access to the script and that the script is not tampered with by any other user.
+
+  Backup and Restore
+
+```shell-session
+perplex007@htb[/htb]$ chmod +x RSYNC_Backup.sh
+```
+
+After that, we can create a crontab that tells `cron` to run the script every hour at the 0th minute.
+
+  Backup and Restore
+
+```shell-session
+
+perplex007@htb[/htb]$ cronjob -e
+
+```
+
+We can adjust the timing to suit our needs. To do so, the crontab needs the following content:
+
+#### Auto-Sync - Crontab
+
+  Backup and Restore
+
+```shell-session
+0 * * * * /path/to/RSYNC_Backup.sh
+```
+
+With this setup, `cron` will be responsible for executing the script at the desired interval, ensuring that the `rsync` command is run and the contents of the local directory are synchronized with the remote host.
+
+We encourage you to try out rsync using Pwnbox. Instead of syncing files with a remote server, you can use Pwnbox as both your source and destination, which makes testing simpler. To do this, create two directories on Pwnbox:
+
+1. `to_backup` (where your original data is stored) and another called
+2. `synced_backup` (where the synchronized data will be copied)
+
+You will then transfer the data from the `to_backup` directory to the `synced_backup` directory using `rsync`. To automate this process, set up a `cron` job that runs every minute to ensure continuous synchronization. Remember, because we are testing this locally, we can use the loopback IP address 127.0.0.1 as the address for the "remote" host.
+
+# File System Management
+
+- `ext2` is an older file system with no journaling capabilities, which makes it less suited for modern systems but still useful in certain low-overhead scenarios (like USB drives).
+    
+- `ext3` and `ext4` are more advanced, with journaling (which helps in recovering from crashes), and ext4 is the default choice for most modern Linux systems because it offers a balance of performance, reliability, and large file support.
+    
+- `Btrfs` is known for advanced features like snapshotting and built-in data integrity checks, making it ideal for complex storage setups.
+    
+- `XFS` excels at handling large files and has high performance. It is best suited for environments with high I/O demands
+    
+- `NTFS`, originally developed for Windows, is useful for compatibility when dealing with dual-boot systems or external drives that need to work on both Linux and Windows systems.
+
+Linux's file system architecture is based on the Unix model, organized in a hierarchical structure. This structure consists of several components, the most critical being `inodes`. `Inodes` are data structures that store metadata about each file and directory, including permissions, ownership, size, and timestamps. Inodes do not store the file’s actual data or name, but they contain pointers to the blocks where the file’s data is stored on the disk.
+
+The `inode` table is a collection of these inodes, essentially acting as a database that the Linux kernel uses to track every file and directory on the system. This structure allows the operating system to efficiently access and manage files. Understanding and managing inodes is a crucial aspect of file system management in Linux, especially in scenarios where a disk is running out of inode space before running out of actual storage capacity.
+
+Let's use an analogy, think of the Linux file system like a library. The `inodes` are like index cards in the library’s catalog system (`inode table`). Each card contains detailed information about a book (file) its title, author, location, and other details but not the actual book. The `inode` table is the entire catalog that helps the library (operating system) quickly find and manage the books (files).
+
+In Linux, files can be stored in one of several key types:
+
+- Regular files
+- Directories
+- Symbolic links
+
+## Disks & Drives
+
+managing physical storage devices, including hard drives, solid-state drives, and removable storage devices. The main tool for disk management on Linux is the `fdisk`, which allows us to create, delete, and manage partitions on a drive. It can also display information about the partition table, including the size and type of each partition. Partitioning a drive on Linux involves dividing the physical storage space into separate, logical sections. Each partition can then be formatted with a specific file system, such as ext4, NTFS, or FAT32, and can be mounted as a separate file system. The most common partitioning tool on Linux is also `fdisk`, `gpart`, and `GParted`.
+
+#### Fdisk
+
+  File System Management
+
+```shell-session
+perplex007@htb[/htb]$ sudo fdisk -l
+
+Disk /dev/vda: 160 GiB, 171798691840 bytes, 335544320 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x5223435f
+
+Device     Boot     Start       End   Sectors  Size Id Type
+/dev/vda1  *         2048 158974027 158971980 75.8G 83 Linux
+/dev/vda2       158974028 167766794   8792767  4.2G 82 Linux swap / Solaris
+
+Disk /dev/vdb: 452 KiB, 462848 bytes, 904 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+```
+
+## Mounting
+-each logical partition or storage drive must be assigned to specific directory in the file system it is known as mounting 
+- involves linking a drive or partition making contents accessbile from the direcoty drive is mounted to 
+- used to manually mount the filesystems on linux
+if you want certain file systems or partitions to be automatically mounted when the system boots, you can define them in the `/etc/fstab` file. This file lists the file systems and their associated mount points, along with options like read/write permissions and file system types, ensuring that specific drives or partitions are available upon startup without needing manual intervention.
+
+#### Mounted File systems at Boot
+
+  File System Management
+
+```shell-session
+perplex007@htb[/htb]$ cat /etc/fstab
+
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a device; this may
+# be used with UUID= as a more robust way to name devices that works even if
+# disks are added and removed. See fstab(5).
+#
+# <file system>                      <mount point>  <type>  <options>  <dump>  <pass>
+UUID=3d6a020d-...SNIP...-9e085e9c927a /              btrfs   subvol=@,defaults,noatime,nodiratime,nodatacow,space_cache,autodefrag 0 1
+UUID=3d6a020d-...SNIP...-9e085e9c927a /home          btrfs   subvol=@home,defaults,noatime,nodiratime,nodatacow,space_cache,autodefrag 0 2
+UUID=21f7eb94-...SNIP...-d4f58f94e141 swap           swap    defaults,noatime 0 0
+
+```
+
+#### List Mounted Drives
+
+  File System Management
+
+```shell-session
+perplex007@htb[/htb]$ mount
+
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=4035812k,nr_inodes=1008953,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=814580k,mode=755,inode64)
+/dev/vda1 on / type btrfs (rw,noatime,nodiratime,nodatasum,nodatacow,space_cache,autodefrag,subvolid=257,subvol=/@)
+```
+
+To mount a file system, we can use the `mount` command followed by the device name and the mount point. For example, to mount a USB drive with the device name `/dev/sdb1` to the directory `/mnt/usb`, we would use the following command:
+
+#### Mount a USB drive
+
+  File System Management
+
+```shell-session
+perplex007@htb[/htb]$ sudo mount /dev/sdb1 /mnt/usb
+perplex007@htb[/htb]$ cd /mnt/usb && ls -l
+
+total 32
+drwxr-xr-x 1 root root   18 Oct 14  2021 'Account Takeover'
+drwxr-xr-x 1 root root   18 Oct 14  2021 'API Key Leaks'
+drwxr-xr-x 1 root root   18 Oct 14  2021 'AWS Amazon Bucket S3'
+drwxr-xr-x 1 root root   34 Oct 14  2021 'Command Injection'
+drwxr-xr-x 1 root root   18 Oct 14  2021 'CORS Misconfiguration'
+drwxr-xr-x 1 root root   52 Oct 14  2021 'CRLF Injection'
+drwxr-xr-x 1 root root   30 Oct 14  2021 'CSRF Injection'
+drwxr-xr-x 1 root root   18 Oct 14  2021 'CSV Injection'
+drwxr-xr-x 1 root root 1166 Oct 14  2021 'CVE Exploits'
+...SNIP...
+```
+
+#### Unmount
+
+  File System Management
+
+```shell-session
+perplex007@htb[/htb]$ sudo umount /mnt/usb
+```
+
+It is important to note that we must have sufficient permissions to unmount a file system. We also cannot unmount a file system that is in use by a running process. To ensure that there are no running processes that are using the file system, we can use the `lsof` command to list the open files on the file system.
+
+- if we find any process using the file system we must stop before unmounting 
+- we can unmount a file system automatically when system is shutdown by adding entry to the /etc/fstab file
+- /etc/fstab file contains info about all file system mounted on the system
+- to unmount a file system automatically shutdown we need to add noauto option to the entry in the /etc/fstab file for that system
+
+#### Fstab File
+
+Code: txt
+
+```txt
+/dev/sda1 / ext4 defaults 0 0
+/dev/sda2 /home ext4 defaults 0 0
+/dev/sdb1 /mnt/usb ext4 rw,noauto,user 0 0
+192.168.1.100:/nfs /mnt/nfs nfs defaults 0 0
+```
+
+## SWAP
+
+Swap space is an essential part of memory management in Linux and plays a critical role in ensuring smooth system performance, especially when the available physical memory (RAM) is fully utilized. When the system runs out of physical memory, the kernel moves inactive pages of memory (data not immediately in use) to the swap space, freeing up RAM for active processes. This process is known as swapping.
+
+#### Creating Swap Space
+
+Swap space can be set up either during the installation of the operating system or added later using the mkswap and swapon commands.
+
+- `mkswap` is used to prepare a device or file to be used as swap space by creating a Linux swap area
+    
+- `swapon` activates the swap space, allowing the system to use it
+
+The size of the `swap space` is not fixed and depends on your system's physical memory and intended usage. For example, a system with less RAM or running memory-intensive applications might need more swap space. However, modern systems with large amounts of RAM may require less or even no swap space, depending on specific use cases.
+
+When setting up swap space, it’s important to allocate it on a dedicated partition or file, separate from the rest of the file system. This prevents fragmentation and ensures efficient use of the swap area when needed. Additionally, because sensitive data can be temporarily stored in swap space, it's recommended to encrypt the swap space to safeguard against potential data exposure.
+
+#### Swap Space for Hibernation
+
+Besides extending physical memory, swap space is also used for `hibernation`. Hibernation is a power-saving feature that saves the system’s state (including open applications and processes) to the swap space and powers off the system. When the system is powered back on, it restores its previous state from the swap space, resuming exactly where it left off.
+
+<mark style="background: #FF5582A6;">Q:  </mark>How many partitions exist in our Pwnbox? (Format: 0)
+<mark style="background: #ADCCFFA6;">A: </mark>3
+
+# Containerization
+
+Docker - open source patform for automating the deployment of applications as self contained units called containers
+- uses layerd filesystem and resource isolation features to provide flexibility and portability 
+- provides tools for createing deploying and managing applications
+#### Install Docker-Engine
+
+Installing Docker is relatively straightforward. We can use the following script to install it on a Ubuntu host:
+
+Code: bash
+
+```bash
+#!/bin/bash
+
+# Preparation
+sudo apt update -y
+sudo apt install ca-certificates curl gnupg lsb-release -y
+sudo mkdir -m 0755 -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Install Docker Engine
+sudo apt update -y
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+# Add user htb-student to the Docker group
+sudo usermod -aG docker htb-student
+echo '[!] You need to log out and log back in for the group changes to take effect.'
+
+# Test Docker installation
+docker run hello-world
+```
+
+- The Docker engine and specific Docker images are needed to run a container. These can be obtained from the [Docker Hub](https://hub.docker.com/), a repository of pre-made images, or created by the user
+- The Docker Hub is a cloud-based registry for software repositories or a library for Docker images.
+- divided into public and private areas where public allows to upload and share images with the community 
+- contains official images from docker from docker dev team , established open source projects 
