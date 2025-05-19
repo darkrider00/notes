@@ -13,6 +13,10 @@ Index:
 9. User Management [[Fundamentals of linux#User Management]]
 10. Package Management [[Fundamentals of linux#Package Management]]
 11. Service and Process Management [[Fundamentals of linux#Service and Process Management]]
+12. Task Scheduling [[Fundamentals of linux#Task Scheduling]]
+13. Network Services [[Fundamentals of linux#Network Services]]
+14. working with web services [[Fundamentals of linux#Working with Web Services]]
+15. Backup and Restore [[Fundamentals of linux#Backup and Restore]]
 # System Information
 
 <mark style="background: #FF5582A6;">Q:</mark> Find out the machine hardware name and submit it as the answer.
@@ -1909,3 +1913,21 @@ Remember, this is a learning process, not an exam. Doing your own research and i
 
 As you face these challenges, you'll develop the skills needed to tackle real-world situations, where there’s often no one-size-fits-all solution. Embrace this process of exploration and discovery, as it's the best way to grow
 
+<mark style="background: #FF5582A6;">Q: </mark>Find a way to start a simple HTTP server inside Pwnbox or your local VM using "npm". Submit the command that starts the web server on port 8080 (use the short argument to specify the port number).
+
+<mark style="background: #ADCCFFA6;">A: </mark>http-server -p 8080 after installing npm refer to the manpage to get the answer
+
+<mark style="background: #FF5582A6;">Q:</mark> Find a way to start a simple HTTP server inside Pwnbox or your local VM using "php". Submit the command that starts the web server on the localhost (127.0.0.1) on port 8080.
+<mark style="background: #ADCCFFA6;">A: </mark>php -S 127.0.0.1:8080, refer to the man page 
+
+# Backup and Restore
+
+When backing up data on an Ubuntu system, we have several options, including:
+
+- Rsync
+- Deja Dup
+- Duplicity
+Rsync - opensource tool allows for fast and secure backups locally or remotely 
+- it only transfers portions of the files that have changed, efficient when dealing with large data
+- useful for network transfers (syncing files b/w servers and creating incremental backups over the internet)
+- Duplicity - builds on Rsync , adds encruption fe
