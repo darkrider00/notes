@@ -2473,3 +2473,12 @@ Namespaces are a crucial aspect of containerization as they provide a high degre
 Moreover, containers come with their own root file system (`mnt`), which is entirely different from the host system's root file system. This separation between the two ensures that any changes or modifications made within the container's file system do not affect the host system's file system. However, it is important to remember that while namespaces provide a high level of isolation, they do not provide complete security. Therefore, it is always advisable to implement additional security measures to further protect the container and the host system from potential security breaches.
 
 
+# Network Configuration
+
+network access control (`NAC`). As penetration testers, we need to be well-versed in how NAC can enhance network security and the various technologies available. Key NAC models include:
+
+|**Type**|**Description**|
+|---|---|
+|Discretionary Access Control (`DAC`)|This model allows the owner of the resource to set permissions for who can access it.|
+|Mandatory Access Control (`MAC`)|Permissions are enforced by the operating system, not the owner of the resource, making it more secure but less flexible.|
+|Role-Based Access Control (`RBAC`)|Permissions are assigned based on roles within an organization, making it easier to manage user privileges.|
