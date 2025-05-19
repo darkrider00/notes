@@ -1507,5 +1507,148 @@ ls: cannot access 'MISSING_FILE': No such file or directory
 
 Pipes (`|`) depend not only on the correct and error-free operation of the previous processes but also on the previous processes' results.
 
-Q: Use the "systemctl" command to list all units of services and submit the unit name with the description "Load AppArmor profiles managed internally by snapd" as the answer.
-A: 
+<mark style="background: #FF5582A6;">Q: </mark>Use the "systemctl" command to list all units of services and submit the unit name with the description "Load AppArmor profiles managed internally by snapd" as the answer.
+<mark style="background: #ADCCFFA6;">A: </mark>using systemctl to list all the services and grepping required text gives us the answer
+![[Pasted image 20250519101658.png]]
+
+# Task Scheduling
+
+- allows users and administrators to automate tasks by running them at specific or regular intervals
+- eliminating need for manual initiation
+- BY sheduling tasks it ensures they are performed consistently and reliably 
+- alerts can be configured to notify admin or users when certain events occur
+
+## Systemd
+
+Systemd is a service used in Linux systems such as Ubuntu, Redhat Linux, and Solaris to start processes and scripts at a specific time.
+
+we can set up processes and scripts to run at a specific time or time interval and can also specify specific events and triggers that will trigger a specific task
+
+1. Create a timer (schedules when your `mytimer.service` should run)
+2. Create a service (executes the commands or script)
+3. Activate the timer
+
+#### Create a Timer
+
+To create a timer for systemd, we need to create a directory where the timer script will be stored.
+
+  Task Scheduling
+
+```shell-session
+perplex007@htb[/htb]$ sudo mkdir /etc/systemd/system/mytimer.timer.d
+perplex007@htb[/htb]$ sudo vim /etc/systemd/system/mytimer.timer
+```
+
+Next, we need to create a script that configures the timer. The script must contain the following options: "Unit", "Timer" and "Install". The "Unit" option specifies a description for the timer. The "Timer" option specifies when to start the timer and when to activate it. Finally, the "Install" option specifies where to install the timer.
+
+#### Mytimer.timer
+
+Code: txt
+
+```txt
+[Unit]
+Description=My Timer
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=1hour
+
+[Install]
+WantedBy=timers.target
+```
+
+Here it depends on how we want to use our script. For example, if we want to run our script only once after the system boot, we should use `OnBootSec` setting in `Timer`. However, if we want our script to run regularly, then we should use the `OnUnitActiveSec` to have the system run the script at regular intervals. Next, we need to create our `service`.
+
+#### Create a Service
+
+  Task Scheduling
+
+```shell-session
+perplex007@htb[/htb]$ sudo vim /etc/systemd/system/mytimer.service
+```
+
+Here we set a description and specify the full path to the script we want to run. The "multi-user.target" is the unit system that is activated when starting a normal multi-user mode. It defines the services that should be started on a normal system startup.
+
+Code: txt
+
+```txt
+[Unit]
+Description=My Service
+
+[Service]
+ExecStart=/full/path/to/my/script.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+After that, we have to let `systemd` read the folders again to include the changes.
+
+#### Reload Systemd
+
+  Task Scheduling
+
+```shell-session
+perplex007@htb[/htb]$ sudo systemctl daemon-reload
+```
+
+After that, we can use `systemctl` to `start` the service manually and `enable` the autostart.
+
+#### Start the Timer & Service
+
+  Task Scheduling
+
+```shell-session
+perplex007@htb[/htb]$ sudo systemctl start mytimer.timer
+perplex007@htb[/htb]$ sudo systemctl enable mytimer.timer
+```
+
+This way, `mytimer.service` will be launched automatically according to the intervals (or delays) you set in `mytimer.timer`.
+
+## Cron
+- allows users and admins to exec tasks at a specific time or within time intervals
+- we can use cron to automate same tasks
+- need to create a script then tell cron daemon to call it at a specific time
+
+Process for for setting up Cron daemon is little differnt than systemd
+TO setup Cron daemon we need to store tasks in file called crontab
+
+ The structure of Cron consists of the following components
+
+| **Time Frame**         | **Description**                                                       |
+| ---------------------- | --------------------------------------------------------------------- |
+| Minutes (0-59)         | This specifies in which minute the task should be executed.           |
+| Hours (0-23)           | This specifies in which hour the task should be executed.             |
+| Days of month (1-31)   | This specifies on which day of the month the task should be executed. |
+| Months (1-12)          | This specifies in which month the task should be executed.            |
+| Days of the week (0-7) | This specifies on which day of the week the task should be executed.  |
+
+ such a crontab could look like this:
+Code: txt
+```txt
+# System Update
+0 */6 * * * /path/to/update_software.sh
+
+# Execute scripts
+0 0 1 * * /path/to/scripts/run_scripts.sh
+
+# Cleanup DB
+0 0 * * 0 /path/to/scripts/clean_database.sh
+
+# Backups
+0 0 * * 7 /path/to/scripts/backup.sh
+```
+The "System Update" should be executed once every sixth hour. This is indicated by the entry `0 */6` in the hour column. The task is executed by the script `update_software.sh`, whose path is given in the last column.
+
+The task `execute scripts` is to be executed every first day of the month at midnight. This is indicated by the entries `0` and `0` in the minute and hour columns and `1` in the days-of-the-month column. The task is executed by the `run_scripts.sh` script, whose path is given in the last column.
+
+The third task, `Cleanup DB`, is to be executed every Sunday at midnight. This is specified by the entries `0` and `0` in the minute and hour columns and `0` in the days-of-the-week column. The task is executed by the `clean_database.sh` script, whose path is given in the last column.
+
+The fourth task, `backups`, is to be executed every Sunday at midnight. This is indicated by the entries `0` and `0` in the minute and hour columns and `7` in the days-of-the-week column. The task is executed by the `backup.sh` script, whose path is given in the last column.
+
+It is also possible to receive notifications when a task is executed successfully or unsuccessfully. In addition, we can create logs to monitor the execution of the tasks.
+
+## Systemd vs. Cron
+
+Systemd and Cron are both tools that can be used in Linux systems to schedule and automate processes. The key difference between these two tools is how they are configured. With Systemd, you need to create a timer and services script that tells the operating system when to run the tasks. On the other hand, with Cron, you need to create a `crontab` file that tells the cron daemon when to run the tasks.
+
