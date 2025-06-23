@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/HTB academy/Fundamentals of linux.md",
+                "file": "things/un.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fundamentals of linux"
+              "title": "un"
             }
           }
         ]
@@ -178,8 +178,9 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "notes/HTB academy/Inode - A data structure used in Linux.md",
     "notes/HTB academy/Fundamentals of linux.md",
+    "things/un.md",
+    "notes/HTB academy/Inode - A data structure used in Linux.md",
     "attachments/Pasted image 20250519103930.png",
     "attachments/Pasted image 20250519101658.png",
     "things/Protocol for studying & learning.md",
