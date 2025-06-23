@@ -442,7 +442,7 @@ print(x / y)   # 3.333...
 print(x // y)  # 3
 print(x ** 2)  # 100
 ```
-#### 2.6 Built-in Functions for Numbers
+#### Built-in Functions for Numbers
 
 - abs(x): Absolute value (e.g., abs(-5) → 5).
 - round(x, n): Rounds to n decimal places (e.g., round(3.14159, 2) → 3.14).
@@ -452,6 +452,385 @@ print(x ** 2)  # 100
 
 #### Related Modules
 
-- math: Mathematical functions (e.g., math.sqrt(16) → 4.0).
-- random: Random number generation (e.g., random.randint(1, 10)).
-- decimal: Precise decimal arithmetic (e.g., decimal.Decimal("0.1")).
+Python provides **modules** (libraries) to extend functionality for various types, especially for sequences, dictionaries, and sets. Common modules relevant to Unit-I include:
+
+- **string**: Utilities for string operations.
+    - Example: string.ascii_letters → "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".
+- **collections**: Advanced data structures for sequences and mappings.
+    - Example: collections.Counter("hello") → Counter({'l': 2, 'h': 1, 'e': 1, 'o': 1}).
+- **itertools**: Tools for efficient iteration (used with sequences, generators).
+    - Example: itertools.chain([1, 2], [3, 4]) → iterator yielding 1, 2, 3, 4.
+- **random**: Random operations on sequences.
+    - Example: random.choice(["a", "b"]) → random item ("a" or "b").
+- **math**: Mathematical operations (sometimes used with sequences of numbers).
+    - Example: math.prod([2, 3]) → 6 (Python 3.8+).
+```python
+import string
+print(string.digits)  # 0123456789
+import random
+print(random.shuffle([1, 2, 3]))  # Shuffles list in place
+```
+
+#### Sequences
+
+A [sequence](https://docs.python.org/3/glossary.html#term-sequence) is a data structure that contains items arranged in order, and you can access each item using an integer index that represents its position in the sequence. You can always find the length of a sequence. Here are some examples of sequences from Python’s basic built-in data types:
+```python
+>>> # List
+>>> countries = ["USA", "Canada", "UK", "Norway", "Malta", "India"]
+>>> for country in countries:
+...     print(country)
+...
+USA
+Canada
+UK
+Norway
+Malta
+India
+>>> len(countries)
+6
+>>> countries[0]
+'USA'
+
+>>> # Tuple
+>>> countries = "USA", "Canada", "UK", "Norway", "Malta", "India"
+>>> for country in countries:
+...     print(country)
+...
+USA
+Canada
+UK
+Norway
+Malta
+India
+>>> len(countries)
+6
+>>> countries[0]
+'USA'
+
+>>> # Strings
+>>> country = "India"
+>>> for letter in country:
+...     print(letter)
+...
+I
+n
+d
+i
+a
+>>> len(country)
+5
+>>> country[0]
+'I'
+```
+
+Lists, tuples, and strings are among Python’s most basic data types. Even though they’re different types with distinct characteristics, they have some common traits. You can summarize the characteristics that define a Python sequence as follows:
+
+- A sequence is an [iterable](https://realpython.com/python-iterators-iterables/), which means you can iterate through it.
+- A sequence has a length, which means you can pass it to [`len()`](https://realpython.com/len-python-function/) to get its number of elements.
+- An element of a sequence can be accessed based on its position in the sequence using an integer index. You can use the square bracket notation to index a sequence.
+
+There are other built-in data types in Python that also have all of these characteristics. One of these is the [`range` object](https://realpython.com/python-range/):
+
+```python
+>>> numbers = range(5, 11)
+>>> type(numbers)
+<class 'range'>
+
+>>> len(numbers)
+6
+
+>>> numbers[0]
+5
+>>> numbers[-1]
+10
+
+>>> for number in numbers:
+...     print(number)
+...
+5
+6
+7
+8
+9
+10
+```
+
+
+#### Strings
+
+- **Immutable** sequence of characters (e.g., "hello", 'world', """multiline""").
+- **Operations**:
+    - Concatenation: "a" + "b" → "ab".
+    - Repetition: "ha" * 2 → "haha".
+    - Slicing: "hello"[1:4] → "ell".
+    - Membership: "e" in "hello" → True.
+- **Methods**:
+    - upper(), lower(): Change case.
+    - strip(): Remove whitespace.
+    - split(delim): Split into list (e.g., "a,b".split(",") → ["a", "b"]).
+    - join(seq): Join sequence (e.g., ",".join(["a", "b"]) → "a,b").
+
+```python
+s = "Hello, World"
+print(s.lower())      # hello, world
+print(s.split(", "))  # ['Hello', 'World']
+```
+
+#### Lists
+
+- **Mutable**, ordered sequence of items (e.g., [1, "hi", 3.14]).
+- **Operations**:
+    - Append: lst.append(item).
+    - Remove: lst.remove(item).
+    - Indexing: lst[0].
+    - Slicing: lst[1:3].
+- **Methods**:
+    - pop(): Remove and return item.
+    - extend(seq): Add multiple items.
+```python
+lst = [1, 2]
+lst.append(3)
+print(lst[0:2])  # [1, 2]
+```
+
+### Tuples
+
+- **Immutable**, ordered sequence (e.g., (1, 2, "hi")).
+- Faster than lists due to immutability.
+- **Operations**: Indexing, slicing, concatenation.
+```python
+tup = (1, 2, 3)
+print(tup[1])  # 2
+```
+
+#### Dictionaries and Set Types
+
+#### 1. Dictionaries
+
+A **dictionary** is a **mutable**, unordered (before Python 3.7) collection of **key-value pairs**. It stores data as mappings where each **key is **unique** and **immutable** (e.g., strings, numbers, tuples), and each key is associated with a **value** (any type).
+
+- **Syntax**: {key1: value1, key2: value2}.
+- **Properties**:
+    - Keys must be immutable (e.g., str, int, tuple); values can be mutable or immutable.
+    - Unordered in Python 3.6 and earlier; maintains insertion order since Python 3.7.
+    - Access time is fast (O(1) average) due to hashing.
+- **Operations**:
+    - Access: dict[key] (e.g., d["name"]).
+    - Update/Add: dict[key] = value (e.g., d["age"] = 20).
+    - Delete: del dict[key] (e.g., del d["key"]).
+    - Check key: key in dict (e.g., "name" in d → True).
+- **Methods**:
+    - keys(): Returns all keys (e.g., d.keys()).
+    - values(): Returns all values (e.g., d.values()).
+    - items(): Returns key-value pairs (e.g., d.items()).
+    - get(key, default): Returns value for key or default if key doesn’t exist (e.g., d.get("age", 0)).
+    - pop(key): Removes and returns value for key (e.g., d.pop("key")).
+- **Example:
+```python
+d = {"name": "Alice", "age": 20}
+d["age"] = 21  # Update
+d["city"] = "Delhi"  # Add
+print(d)  # {'name': 'Alice', 'age': 21, 'city': 'Delhi'}
+del d["city"]           # Delete
+print(d.get("name"))  # Alice
+print(d.keys())      # dict_keys(['name', 'age'])
+```
+
+## 2. Set Types
+
+A **set is a **mutable**, **unordered** collection of **unique** elements (no duplicates). A **frozen set** is an **immutable** version of a set.
+
+- **Syntax**:
+    - Set: {1, 2, 3} or set() (empty set).
+    - Frozen set: frozenset([1, 2, 3]).
+- **Properties**:
+    - Elements must be **immutable** (e.g., numbers, strings, tuples).
+    - Unordered, no duplicates.
+    - Fast membership testing (O(1) average).
+    - Used for mathematical set operations.
+- **Operations**:
+    - Add: set.add(item) (e.g., s.add(4)).
+    - Remove: set1 | set2 (union), set1 & set2 (intersection), set1 - set2 (difference).
+    - Discard: set.discard(item) (no error if item doesn’t exist).
+    - Remove: set.remove(item) (raises error if item doesn’t exist).
+- **Methods**:
+    - union() or | (e.g., s1.union(s2)).
+    - intersection() or & (e.g., s1.intersection(s2)).
+    - difference() or - (e.g., s1.difference(s2)).
+    - issubset(), issuperset(): Check subset/superset relations.
+```python
+s = {1, 2, 2}  # Duplicates ignored: {1, 2}
+s.add(3)
+print(s)  # {1, 2, 3}
+s2 = {2, 3, 4}
+print(s | s2)  # {1, 2, 3, 4} (union)
+print(s & s2)  # {2, 3} (intersection)
+fs = frozenset([1, 2])
+print(fs)  # frozenset({1, 2})
+```
+
+#### Control Flow
+
+**Control flow** determines the order in which Python executes code using conditionals and loops.
+
+- **Conditional Statements**:
+    - if, elif, else: Execute code based on conditions.
+```python
+x = 5
+if x > 0:
+    print("Positive")  # Positive
+elif x == 0:
+    print("Zero")
+else:
+    print("Negative")
+```
+
+**Loops**:
+- for: Iterates over a sequence (e.g., list, string).
+```python
+for i in [1, 2, 3]:
+    print(i)  # 1, 2, 3
+```
+  - while: Repeats while a condition is true.
+  ```python
+  x = 1
+while x <= 3:
+    print(x)  # 1, 2, 3
+    x += 1
+```
+
+**Break and Continue**:
+- break: Exits the loop.
+- continue: Skips to the next iteration.
+```python
+for i in range(5):
+    if i == 3:
+        break
+    print(i)  # 0, 1, 2
+```
+
+#### Truthiness
+
+**Truthiness** refers to how Python evaluates objects as True or False in conditions (e.g., if statements).
+- **Falsy Values**: Evaluate to False:
+    - 0, 0.0, "" (empty string), [] (empty list), {} (empty dict), () (empty tuple), None, False.
+- **Truthy Values**: Evaluate to True:
+    - Non-zero numbers (e.g., 1, -1, 3.14), non-empty sequences (e.g., "hi", [1]), True.
+```python
+x = ""
+if x:
+    print("Truthy")
+else:
+    print("Falsy")  # Falsy
+y = [1]
+if y:
+    print("Truthy")  # Truthy
+```
+
+refer: https://www.pythonmorsels.com/truthiness/
+
+#### Sorting
+
+**Sorting** arranges elements in a sequence in ascending or descending order.
+- **sorted(iterable)**: Returns a new sorted list from any iterable.
+    - Parameters: key (custom sorting function), reverse=True (descending).
+- **list.sort()**: Sorts a list in place (modifies original).
+
+```python
+lst = [3, 1, 2]
+print(sorted(lst))      # [1, 2, 3]
+lst.sort(reverse=True)
+print(lst)              # [3, 2, 1]
+print(sorted("hello"))  # ['e', 'h', 'l', 'l', 'o']
+```
+
+#### List Comprehensions
+
+**List comprehensions** provide a concise way to create lists using a single line.
+
+- **Syntax**: [expression for item in iterable if condition].
+- More readable and efficient than traditional loops.
+```python
+squares = [x**2 for x in range(5) if x % 2 == 0]
+print(squares)  # [0, 4, 16]
+# Equivalent loop:
+# squares = []
+# for x in range(5):
+#     if x % 2 == 0:
+#         squares.append(x**2)
+```
+
+## List Comprehensions
+
+**List comprehensions** provide a concise way to create lists using a single line of code. They are more readable and efficient than traditional loops.
+
+- **Syntax**: [expression for item in iterable if condition]
+    - expression: Operation on item.
+    - item: Variable representing each element in iterable.
+    - iterable: A sequence (e.g., list, string, range).
+    - if condition: Optional filter.
+- **Purpose**: Generate lists by applying an expression to each item in an iterable, optionally filtering items.
+
+```python
+squares = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
+evens = [x for x in range(10) if x % 2 == 0]  # [0, 2, 4, 6, 8]
+```
+- **Advantages**:
+    - Shorter code compared to loops.
+    - Faster execution for simple operations.
+- **Example with Loop Equivalent**:
+```python
+# List comprehension
+odds = [x for x in range(5) if x % 2 != 0]  # [1, 3]
+# Equivalent loop
+odds = []
+for x in range(5):
+    if x % 2 != 0:
+        odds.append(x)
+```
+
+## Generators
+
+**Generators** are functions that produce values one at a time, saving memory by not storing the entire sequence in memory at once. They are iterators, created using the yield keyword.
+- **Syntax**: Use def with yield to return values incrementally.
+- **Purpose**: Efficiently handle large datasets or infinite sequences.
+- **Key Features**:
+    - Lazy evaluation: Values are generated only when requested.
+    - Single-use: Can be iterated over once.
+```python
+def my_gen():
+    yield 1
+    yield 2
+    yield 3
+g = my_gen()
+print(next(g))  # 1
+print(next(g))  # 2
+# Or use a loop
+for i in my_gen():
+    print(i)  # 1, 2, 3
+```
+- **Generator Expression**: Similar to list comprehension, but uses () instead of [].
+    - Example: squares = (x**2 for x in range(3)) → generates 0, 1, 4 one at a time.
+
+**Iterators** are objects that allow iteration over a sequence (e.g., lists, strings) using iter() and next() functions.
+
+- **Key Functions**:
+    - iter(obj): Returns an iterator object for an iterable.
+    - next(iterator): Retrieves the next item; raises StopIteration when exhausted.
+- **Purpose**: Provide a standard way to traverse sequences.
+```python
+lst = [1, 2, 3]
+it = iter(lst)      # Create iterator
+print(next(it))     # 1
+print(next(it))     # 2
+print(next(it))     # 3
+# print(next(it))   # Raises StopIteration
+```
+
+- **Relation to Generators**: Generators are a type of iterator, but not all iterators are generators.
+- **For Loops**: Internally use iterators to traverse sequences.
+  ```python
+for x in [1, 2, 3]:  # Uses iter() and next() internally
+    print(x)         # 1, 2, 3
+```
+
