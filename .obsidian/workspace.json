@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "things/un.md",
+                "file": "Python notes/UNIT-1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "un"
+              "title": "UNIT-1"
             }
           }
         ]
@@ -178,8 +178,10 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "notes/HTB academy/Fundamentals of linux.md",
     "things/un.md",
+    "Python notes/UNIT-1.md",
+    "Python notes",
+    "notes/HTB academy/Fundamentals of linux.md",
     "notes/HTB academy/Inode - A data structure used in Linux.md",
     "attachments/Pasted image 20250519103930.png",
     "attachments/Pasted image 20250519101658.png",
@@ -212,7 +214,6 @@
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Defending Edge Cache with Cloud Armor.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Traffic Management with a Load Balancer.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring VPC Firewalls.md",
-    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Traffic Blocklisting with Google Cloud Armor.md",
     "notes/Google cloud professional/Labs/networking -Implement Private Google Access and Cloud NAT",
     "attachments/Pasted image 20250420200854.png",
     "attachments/Pasted image 20250420200039.png",
@@ -223,7 +224,6 @@
     "notes/Google cloud professional",
     "TCS hackquest/season 1",
     "TCS hackquest/season 2",
-    "TCS hackquest",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]
