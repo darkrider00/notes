@@ -3,7 +3,6 @@
 Python basics, Objects- Python Objects, Standard Types, Other Built-in Types, Internal Types, Standard Type Operators, Standard Type Built-in Functions, Categorizing the Standard Types, Unsupported Types Numbers - Introduction to Numbers, Integers, Floating Point Real Numbers, Complex Numbers, Operators, Built-in Functions, Related Modules Sequences - Strings, Lists, and Tuples, Dictionaries and Set Types Control Flow, Truthiness, Sorting, List Comprehensions, Generators and Iterators
 
 #### Python Basics:
-
 **Python** is a **high-level**, **interpreted**, and **general-purpose** programming language created by **Guido van Rossum** and first released in **1991**. It is known for its:
 
 - **Simple and readable syntax**, which resembles English, making it beginner-friendly.
@@ -13,7 +12,6 @@ Python basics, Objects- Python Objects, Standard Types, Other Built-in Types, In
 Python is **interpreted**, meaning the code is executed line-by-line by the **Python Interpreter** without needing compilation, which simplifies debugging and development.
 
 #### Key Features of Python
-
 1. **Easy to Learn and Read**: Python’s syntax is clear and concise, reducing the learning curve for beginners.
 2. **Dynamically Typed**: No need to declare variable types; Python assigns types at runtime.
     - Example: x = 10 (Python infers x is an integer).
@@ -25,7 +23,6 @@ Python is **interpreted**, meaning the code is executed line-by-line by the **Py
 8. **Garbage Collection**: Automatically manages memory, freeing developers from manual memory management.
 
 #### Python Execution
-
 Python code can be executed in two ways:
 
 1. **Interactive Mode**: Using the Python shell (IDLE or command-line), where you type and run code instantly.
@@ -35,7 +32,6 @@ Python code can be executed in two ways:
 
 
 #### Variables and Data Types
-
 - **Variables**: Containers for storing data. Created when a value is assigned, e.g., x = 10.
     - No need to declare type; Python infers it dynamically.
     - Variable names are **case-sensitive** (X and x are different) and follow rules:
@@ -59,7 +55,6 @@ print(x, y, name, is_student)  # Output: 10 3.14 Alice True
 ```
 
 #### Basic Syntax
-
 - **Comments**: Used to add notes in code, ignored by the interpreter.
     - Single-line: `# This is a comment.`
     - Multi-line: `This is a multi-line comment.`
@@ -77,7 +72,6 @@ total = 1 + 2 + \
 print(total)  # Output: 10
 ```
 #### Input and Output
-
 - **Output**: Use print() to display data.
 ```python
 print("Hello, World!")  # Output: Hello, World!
@@ -89,7 +83,6 @@ name = input("Enter your name: ")
 print("Hello,", name)
 ```
 #### Basic Operators
-
 Operators perform operations on variables and values:
 
 1. **Arithmetic**: + (add), - (subtract), * (multiply), / (divide), // (floor division), % (modulus), ** (exponentiation).
@@ -120,8 +113,7 @@ print(x)  # 15
 
 ### Objects
 
-## 1. Python Objects
-
+#### 1. Python Objects
 In Python, **everything is an object**, including numbers, strings, lists, functions, and even modules. An object is an instance of a **class**, and it has:
 
 - **Identity**: A unique identifier for the object, accessed using id().
@@ -140,7 +132,6 @@ print(x)        # Value: 10
 
 A Class is like an object constructor, or a "blueprint" for creating objects.
 #### Create a Class
-
 To create a class, use the keyword `class`:
 ```python
 #Create a class named MyClass, with a property named x:
@@ -148,7 +139,6 @@ class MyClass:
   x = 5
 ```
 #### Create Object
-
 Now we can use the class named MyClass to create objects:
 ```python
 p1 = MyClass()  
@@ -156,7 +146,6 @@ print(p1.x)
 ```
 
 #### The __init__() Function
-
 The examples above are classes and objects in their simplest form, and are not really useful in real life applications.
 
 To understand the meaning of classes we have to understand the built-in __init__() function.
@@ -179,7 +168,6 @@ print(p1.age)
 ```
 
 #### Standard Types
-
 Python’s **standard types** are the built-in data types used to store and manipulate data. They are categorized as:
 
 1. **Numbers**:
@@ -211,7 +199,6 @@ print(type(x), type(s), type(lst), type(d), type(s1))
 ```
 
 #### Other Built-in Types
-
 Besides standard types, Python includes additional built-in types used in specific contexts:
 1. **NoneType**: Represents None, used to indicate no value or null.
     - Example: x = None; print(x) → None.
@@ -225,7 +212,6 @@ print(type(greet))  # <class 'function'>
 
 
 #### Internal Types
-
 **Internal types** are used by Python’s interpreter for its internal operations and are rarely manipulated directly by programmers:
 
 1. **Code Objects**: Represent compiled Python code, used by functions.
@@ -237,7 +223,6 @@ print(type(greet))  # <class 'function'>
 These types are low-level and typically accessed only in advanced scenarios (e.g., debugging or creating interpreters).
 
 #### Standard Type Operators
-
 **Operators** are symbols used to perform operations on objects. Python supports several types of operators for standard types:
 
 1. **Arithmetic Operators** (for numbers):
@@ -261,12 +246,10 @@ These types are low-level and typically accessed only in advanced scenarios (e.g
     - Slicing: [start:end] (e.g., "hello"[1:4] → "ell").
 
 #### Standard Type Built-in Functions
-
 Standard type built-in functions are predefined functions in Python that operate on standard types (e.g., numbers, strings, lists, tuples, dictionaries, sets, booleans). These functions help perform common tasks like checking types, converting data, finding lengths, or manipulating values. They are available without importing any modules.
 
 ## Key Built-in Functions
-
-Here’s a concise list of the most important built-in functions for standard types, with their purpose and examples:
+a concise list of the most important built-in functions for standard types, with their purpose and examples:
 
 1. **type(obj)**
     - **Purpose**: Returns the data type (class) of an object.
@@ -363,7 +346,6 @@ print(repr([1, 2]))  # '[1, 2]'
 ```
 
 #### Categorizing the Standard Types
-
 Standard types can be categorized based on their properties:
 
 1. **Mutable vs. Immutable**:
@@ -398,7 +380,6 @@ d = {"a": 1}      # Mutable, unordered (pre-3.7), non-sequence, iterable
 s1 = {1, 2}       # Mutable, unordered, non-sequence, iterable
 ```
 #### Unsupported Types
-
 Python does not natively support certain data types found in other languages:
 - **Fixed-size Arrays**: Python uses lists or the array module/NumPy for array-like functionality.
 - **Pointers**: Python does not support direct memory manipulation like C/C++.
@@ -406,34 +387,28 @@ Python does not natively support certain data types found in other languages:
 - **Why Unsupported**: Python’s design prioritizes simplicity and abstraction, using higher-level types like lists and strings.
 
 ## Numbers
-
 Numbers in Python represent numerical data and include **integers**, **floating-point real numbers**, and **complex numbers**.
 
 #### Introduction to Numbers
-
 - Numbers are **immutable** types used for arithmetic and calculations.
 - Types: Integers (whole numbers), floats (decimals), and complex (real + imaginary).
 
 #### Integers
-
 - Whole numbers, positive, negative, or zero (e.g., 5, -10, 0).
 - No size limit in Python 3 (no overflow).
 - Example: x = 100; print(type(x)) → <class 'int'>.
 
 #### Floating-Point Real Numbers
-
 - Numbers with decimal points (e.g., 3.14, -0.001).
 - Stored with limited precision (IEEE 754 standard).
 - Example: y = 2.5; print(type(y)) → <class 'float'>.
 
 #### Complex Numbers
-
 - Numbers with real and imaginary parts, denoted by j (e.g., 3 + 4j).
 - Attributes: .real (real part), .imag (imaginary part).
 - Example: z = 3 + 4j; print(z.real, z.imag) → 3.0 4.0.
 
 #### Operators for Numbers
-
 - **Arithmetic**: +, -, *, / (true division), // (floor division), % (modulus), ** (exponentiation).
 - **Comparison**: ==, !=, <, >, <=, >=.
 ```python
@@ -443,7 +418,6 @@ print(x // y)  # 3
 print(x ** 2)  # 100
 ```
 #### Built-in Functions for Numbers
-
 - abs(x): Absolute value (e.g., abs(-5) → 5).
 - round(x, n): Rounds to n decimal places (e.g., round(3.14159, 2) → 3.14).
 - pow(x, y): x raised to y (e.g., pow(2, 3) → 8).
@@ -451,7 +425,6 @@ print(x ** 2)  # 100
 - int(x), float(x), complex(x): Type conversions.
 
 #### Related Modules
-
 Python provides **modules** (libraries) to extend functionality for various types, especially for sequences, dictionaries, and sets. Common modules relevant to Unit-I include:
 
 - **string**: Utilities for string operations.
@@ -472,7 +445,6 @@ print(random.shuffle([1, 2, 3]))  # Shuffles list in place
 ```
 
 #### Sequences
-
 A [sequence](https://docs.python.org/3/glossary.html#term-sequence) is a data structure that contains items arranged in order, and you can access each item using an integer index that represents its position in the sequence. You can always find the length of a sequence. Here are some examples of sequences from Python’s basic built-in data types:
 ```python
 >>> # List
@@ -557,7 +529,6 @@ There are other built-in data types in Python that also have all of these charac
 
 
 #### Strings
-
 - **Immutable** sequence of characters (e.g., "hello", 'world', """multiline""").
 - **Operations**:
     - Concatenation: "a" + "b" → "ab".
@@ -577,7 +548,6 @@ print(s.split(", "))  # ['Hello', 'World']
 ```
 
 #### Lists
-
 - **Mutable**, ordered sequence of items (e.g., [1, "hi", 3.14]).
 - **Operations**:
     - Append: lst.append(item).
@@ -594,7 +564,6 @@ print(lst[0:2])  # [1, 2]
 ```
 
 ### Tuples
-
 - **Immutable**, ordered sequence (e.g., (1, 2, "hi")).
 - Faster than lists due to immutability.
 - **Operations**: Indexing, slicing, concatenation.
@@ -605,8 +574,7 @@ print(tup[1])  # 2
 
 #### Dictionaries and Set Types
 
-#### 1. Dictionaries
-
+#### Dictionaries
 A **dictionary** is a **mutable**, unordered (before Python 3.7) collection of **key-value pairs**. It stores data as mappings where each **key is **unique** and **immutable** (e.g., strings, numbers, tuples), and each key is associated with a **value** (any type).
 
 - **Syntax**: {key1: value1, key2: value2}.
@@ -636,8 +604,7 @@ print(d.get("name"))  # Alice
 print(d.keys())      # dict_keys(['name', 'age'])
 ```
 
-## 2. Set Types
-
+## Set Types
 A **set is a **mutable**, **unordered** collection of **unique** elements (no duplicates). A **frozen set** is an **immutable** version of a set.
 
 - **Syntax**:
@@ -670,7 +637,6 @@ print(fs)  # frozenset({1, 2})
 ```
 
 #### Control Flow
-
 **Control flow** determines the order in which Python executes code using conditionals and loops.
 
 - **Conditional Statements**:
@@ -710,7 +676,6 @@ for i in range(5):
 ```
 
 #### Truthiness
-
 **Truthiness** refers to how Python evaluates objects as True or False in conditions (e.g., if statements).
 - **Falsy Values**: Evaluate to False:
     - 0, 0.0, "" (empty string), [] (empty list), {} (empty dict), () (empty tuple), None, False.
@@ -730,7 +695,6 @@ if y:
 refer: https://www.pythonmorsels.com/truthiness/
 
 #### Sorting
-
 **Sorting** arranges elements in a sequence in ascending or descending order.
 - **sorted(iterable)**: Returns a new sorted list from any iterable.
     - Parameters: key (custom sorting function), reverse=True (descending).
@@ -745,9 +709,7 @@ print(sorted("hello"))  # ['e', 'h', 'l', 'l', 'o']
 ```
 
 #### List Comprehensions
-
 **List comprehensions** provide a concise way to create lists using a single line.
-
 - **Syntax**: [expression for item in iterable if condition].
 - More readable and efficient than traditional loops.
 ```python
@@ -763,7 +725,6 @@ print(squares)  # [0, 4, 16]
 ## List Comprehensions
 
 **List comprehensions** provide a concise way to create lists using a single line of code. They are more readable and efficient than traditional loops.
-
 - **Syntax**: [expression for item in iterable if condition]
     - expression: Operation on item.
     - item: Variable representing each element in iterable.
@@ -790,8 +751,7 @@ for x in range(5):
 ```
 
 ## Generators
-
-**Generators** are functions that produce values one at a time, saving memory by not storing the entire sequence in memory at once. They are iterators, created using the yield keyword.
+A generator is a special type of iterator that produces values one at a time using the yield keyword, like a vending machine dispensing snacks one by one instead of giving you the whole stock at once. It saves memory by generating values on demand rather than storing them. For example, a generator yielding numbers def gen(): yield 1; yield 2; for i in gen(): print(i) is like a chef preparing fresh dishes (1, 2) one at a time when you ask, rather than cooking everything upfront.
 - **Syntax**: Use def with yield to return values incrementally.
 - **Purpose**: Efficiently handle large datasets or infinite sequences.
 - **Key Features**:
@@ -812,8 +772,8 @@ for i in my_gen():
 - **Generator Expression**: Similar to list comprehension, but uses () instead of [].
     - Example: squares = (x**2 for x in range(3)) → generates 0, 1, 4 one at a time.
 
-**Iterators** are objects that allow iteration over a sequence (e.g., lists, strings) using iter() and next() functions.
-
+### Iterators 
+An iterator in Python is like a librarian who hands you one book at a time from a shelf (sequence, like a list or string). It uses iter() to create an iterator object and next() to fetch the next item until the sequence is exhausted, raising StopIteration. For example, iterating over a list [1, 2, 3] is like flipping through pages of a notebook one by one, accessing each number in order using it = iter([1, 2, 3]); print(next(it)) to get 1, then 2, and so on.
 - **Key Functions**:
     - iter(obj): Returns an iterator object for an iterable.
     - next(iterator): Retrieves the next item; raises StopIteration when exhausted.
