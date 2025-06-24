@@ -1322,21 +1322,6 @@ lst.sort(reverse=True)
 print(lst)              # [3, 2, 1]
 print(sorted("hello"))  # ['e', 'h', 'l', 'l', 'o']
 ```
-
-#### List Comprehensions
-**List comprehensions** provide a concise way to create lists using a single line.
-- **Syntax**: [expression for item in iterable if condition].
-- More readable and efficient than traditional loops.
-```python
-squares = [x**2 for x in range(5) if x % 2 == 0]
-print(squares)  # [0, 4, 16]
-# Equivalent loop:
-# squares = []
-# for x in range(5):
-#     if x % 2 == 0:
-#         squares.append(x**2)
-```
-
 ## List Comprehensions
 
 **List comprehensions** provide a concise way to create lists using a single line of code. They are more readable and efficient than traditional loops.
