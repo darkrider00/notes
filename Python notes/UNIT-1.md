@@ -116,38 +116,84 @@ print("Hello,", name)
 Operators perform operations on variables and values:
 An **operator** in Python is a symbol or keyword that instructs the interpreter to perform a specific operation on one or more **operands** (values or variables). Examples include:
 
-1. **Arithmetic**: + (add), - (subtract), * (multiply), / (divide), // (floor division), % (modulus), ** (exponentiation).
-```python
-x = 10
-y = 3
-print(x + y)  # 13
-print(x // y)  # 3
-print(x ** 2)  # 100
-```
-2. **Comparison**: == (equal), != (not equal), <, >, <=, >=.
-```python
-print(x > y)  # True
-```
-3. **Logical**: and, or, not.
-```python
-print(x > 5 and y < 5)  # True
-```
-4. **Assignment**: =, +=, -=, *=, /=, etc.
-```python
-x += 5  # x = x + 5
-print(x)  # 15
-```
+### **Arithmetic Operators**
+**Definition:**  
+Used to perform mathematical operations like addition, subtraction, multiplication, etc.
 
-#### Why They’re Needed
-- Provide a **concise syntax** for operations like addition, comparison, logic.
-- Enable **operator overloading**, allowing custom behavior in user-defined classes (via `__add__`, etc.) [programiz.com](https://www.programiz.com/python-programming/operator-overloading?utm_source=chatgpt.com).
-- Act as the building blocks in **expressions**, improving code readability and maintainability.
+|Operator|Description|Example|Output|
+|---|---|---|---|
+|+|Addition|5 + 3|8|
+|-|Subtraction|5 - 3|2|
+|*|Multiplication|5 * 3|15|
+|/|Division|5 / 3|1.6667|
+|//|Floor Division|5 // 3|1|
+|%|Modulus|5 % 3|2|
+|**|Exponentiation|2 ** 3|8|
+
+**Try it yourself:**  
+What will be the output of `7 % 3 + 4 * 2`?
+
+### **Assignment Operators**
+**Definition:**  
+Used to assign values to variables with additional operations.
+
+| Operator | Example | Same As    |
+| -------- | ------- | ---------- |
+| =        | x = 5   | x = 5      |
+| +=       | x += 3  | x = x + 3  |
+| -=       | x -= 2  | x = x - 2  |
+| *=       | x *= 4  | x = x * 4  |
+| /=       | x /= 2  | x = x / 2  |
+| %=       | x %= 3  | x = x % 3  |
+| //=      | x //= 2 | x = x // 2 |
+| **=      | x **= 2 | x = x ** 2 |
+### **Comparison Operators**
+**Definition:**  
+Used to compare two values. Output is either `True` or `False`.
+
+| Operator | Description      | Example | Output |
+| -------- | ---------------- | ------- | ------ |
+| ==       | Equal to         | 5 == 5  | True   |
+| !=       | Not equal to     | 5 != 3  | True   |
+| >        | Greater than     | 5 > 3   | True   |
+| <        | Less than        | 5 < 2   | False  |
+| >=       | Greater or equal | 5 >= 5  | True   |
+| <=       | Less or equal    | 5 <= 2  | False  |
+### **Logical Operators**
+**Definition:**  
+Used to combine conditional statements.
+
+| Operator | Description           | Example             | Output |
+| -------- | --------------------- | ------------------- | ------ |
+| and      | True if both are True | (5 > 3) and (3 < 4) | True   |
+| or       | True if one is True   | (5 > 3) or (3 > 5)  | True   |
+| not      | Inverts the result    | not(5 > 3)          | False  |
+### **Bitwise Operators**
+**Definition:**  
+Operate on bits and perform bit-by-bit operations.
+
+| Operator | Description | Example | Output |
+| -------- | ----------- | ------- | ------ |
+| &        | AND         | 5 & 3   | 1      |
+|          |             | OR      | 5      |
+| ^        | XOR         | 5 ^ 3   | 6      |
+| ~        | NOT         | ~5      | -6     |
+| <<       | Left Shift  | 5 << 1  | 10     |
+| >>       | Right Shift | 5 >> 1  | 2      |
+
+### **Identity Operators**
+**Definition:**  
+Check if two variables point to the same object in memory.
+
+| Operator | Description             | Example    |
+| -------- | ----------------------- | ---------- |
+| is       | True if same object     | a is b     |
+| is not   | True if not same object | a is not b |
 
 ### Objects
 
 #### 1. Python Objects
 In Python, **everything is an object**, including numbers, strings, lists, functions, and even modules. An object is an instance of a **class**, and it has:
-
 - **Identity**: A unique identifier for the object, accessed using id().
 - **Type**: The data type or class of the object, accessed using type().
 - **Value**: The actual data stored in the object.
@@ -159,30 +205,121 @@ print(type(x))  # <class 'int'>
 print(x)        # Value: 10
 ```
 
+#### **Real-life Analogy**:
+Imagine a **car**:
+- It has **attributes** (color, brand, speed) and **methods** (start(), stop(), accelerate()).
+- In Python, a car can be represented as an object — grouping all these together.
 - Objects can be **mutable** (changeable, e.g., lists) or **immutable** (unchangeable, e.g., strings, tuples).
 - Python manages objects using **reference counting** and **garbage collection** to handle memory.
 
 A Class is like an object constructor, or a "blueprint" for creating objects.
-#### Create a Class
-To create a class, use the keyword `class`:
+#### Creating an object
+When creating an object from a class, we use a special method called the constructor, defined as __init__(), to initialize the object's attributes. ****Example:****
 ```python
-#Create a class named MyClass, with a property named x:
-class MyClass:  
-  x = 5
+class Car:
+    def __init__(self, model, price):
+        self.model = model
+        self.price = price
+
+Audi = Car("R8", 100000)
+print(Audi.model) 
+print(Audi.price)
 ```
-#### Create Object
-Now we can use the class named MyClass to create objects:
+```
+R8
+100000
+```
+****Explanation: Car**** class defines a blueprint for car objects. The ****__init__()**** constructor initializes the model and price attributes, using self to refer to the current object. When ****Audi = Car("R8", 100000)**** is executed, "R8" is assigned to model and 100000 to price. These attributes are accessed via dot notation, like ****Audi.model**** and ****Audi.price****.
+#### Accessing class members
+In Python, you can access both instance variables and methods of a class using an object. Instance variables are unique to each object, while methods define the behavior of the objects. Below are examples demonstrating how to access and interact with class members:
+****Example 1:**** In this example, we use methods to access and modify the car's attributes.
 ```python
-p1 = MyClass()  
-print(p1.x)
+class Car:
+    def __init__(self, model):
+        self.model = model
+
+    def setprice(self, price):
+        self.price = price
+
+    def getprice(self):
+        return self.price
+
+Audi = Car("R8")
+Audi.setprice(1000000)
+print(Audi.getprice())
+
+1000000 #output
+```
+****Explanation: Car**** class defines a blueprint for car objects with a constructor ****(__init__())**** to initialize the model attribute. The ****setprice()**** method assigns a price and ****getprice()**** retrieves it. When ****Audi = Car("R8")**** is executed, the model is set to "R8", the price is set using ****setprice()**** and the price is accessed with ****getprice()****.
+
+****Example 2:**** In this example, we create multiple car objects and access the model and price attributes directly using the objects, without the need for methods.
+```python
+class Car:
+    vehicle = 'Car'
+
+    def __init__(self, model, price):
+        self.model = model
+        self.price = price
+
+Audi = Car("R8", 100000)
+BMW = Car("I8", 10000000)
+
+print(Audi.model, Audi.price)
+print(BMW.model, BMW.price)
+
 ```
 
+```
+R8 100000
+I8 10000000
+```
+****Explanation: Car**** class defines a blueprint with a class variable vehicle and a constructor to initialize model and price. When ****Audi = Car("R8", 100000)**** and ****BMW = Car("I8", 10000000)**** are executed, the attributes are set and accessed directly, like ****Audi.model**** and ****Audi.price.****
+
+#### Self keyword in Python objects
+In Python objects, the [self keyword](https://www.geeksforgeeks.org/self-in-python-class/) represents the current instance of the class. It is automatically passed to instance methods and is used to access and modify the object's own attributes and methods. By using self, each object can maintain its own separate state, ensuring that operations are performed on the correct instance. ****Example:****
+```python
+class Test:
+    def __init__(self, a, b):
+        self.country = a
+        self.capital = b
+
+    def fun(self):
+        print("Capital of " + self.country + " is " + self.capital)
+
+x = Test("India", "Delhi")
+x.fun()
+```
+
+```
+Capital of India isDelhi
+```
+****Explanation: Test**** class uses the ****__init__()**** constructor to initialize the country and capital attributes with self. When ****x**** is created with "India" and "Delhi", ****x.country**** and ****x.capital**** are set. The ****fun()**** method then accesses these attributes via self .
+## Deleting an object
+You can delete objects, variables or object properties using the del keyword. This removes the reference to the object or attribute from memory, allowing Python's garbage collector to reclaim the memory if no other references exist. ****Example:****
+```python
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+        
+Audi = Car("Audi", "A6") # creating obj
+
+del Audi # deleting obj
+print(Audi.brand)
+```
+```
+Hangup (SIGHUP)  
+Traceback (most recent call last):  
+  File "/home/guest/sandbox/Solution.py", line 10, in <module>  
+    print(Audi.brand)  
+          ^^^^  
+NameError: name 'Audi' is not defined
+```
+**Explanation:** After creating the Audi object, the ****del**** keyword deletes it. Attempting to access ****Audi.brand**** afterward results in an error because the object no longer exists.
 #### The __init__() Function
-The examples above are classes and objects in their simplest form, and are not really useful in real life applications.
-
-To understand the meaning of classes we have to understand the built-in __init__() function.
-
-All classes have a function called __init__(), which is always executed when the class is being initiated.
+- The examples above are classes and objects in their simplest form, and are not really useful in real life applications.
+- To understand the meaning of classes we have to understand the built-in __init__() function.
+- All classes have a function called __init__(), which is always executed when the class is being initiated.
 
 Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
 ```python
@@ -200,8 +337,30 @@ print(p1.age)
 ```
 
 #### Standard Types
-Python’s **standard types** are the built-in data types used to store and manipulate data. They are categorized as:
+**Standard types in Python** refer to the fundamental data types that come built-in with the language. These are the types used to represent most kinds of data you’ll encounter when coding in Python.
+#### Why It’s Needed:
+Understanding standard types is critical because:
+- They form the **building blocks of any Python program**.
+- Efficient use of types allows better **data manipulation and memory usage**.
+- Knowing what operations are allowed on each type **prevents bugs** and helps write optimized code.
+#### Real-life Example:
+Think of data types as containers:
+- A **string** like `"apple"` is like a box of alphabets.
+- A **list** like `[1, 2, 3]` is a shopping bag where you can add or remove items.
+- A **dictionary** like `{"name": "Ram"}` is a phonebook with key-value pairs.
+#### Technical Explanation:
+Python standard types can be categorized into:
 
+| **Category** | **Types Included**                 | **Examples**                   |
+| ------------ | ---------------------------------- | ------------------------------ |
+| Text         | `str`                              | `"hello"`                      |
+| Numeric      | `int`, `float`, `complex`          | `5`, `3.14`, `4 + 3j`          |
+| Sequence     | `list`, `tuple`, `range`           | `[1,2,3]`, `(1,2)`, `range(5)` |
+| Mapping      | `dict`                             | `{"a": 1}`                     |
+| Set Types    | `set`, `frozenset`                 | `{1,2,3}`                      |
+| Boolean      | `bool`                             | `True`, `False`                |
+| Binary       | `bytes`, `bytearray`, `memoryview` | `b'abc'`, `bytearray(5)`       |
+| None Type    | `NoneType`                         | `None`                         |
 1. **Numbers**:
     - Integers (int): Whole numbers, e.g., 5, -10.
     - Floating-point (float): Decimal numbers, e.g., 3.14.
@@ -231,7 +390,7 @@ print(type(x), type(s), type(lst), type(d), type(s1))
 ```
 
 #### Other Built-in Types
-Besides standard types, Python includes additional built-in types used in specific contexts:
+In addition to standard types like `int`, `str`, `list`, etc., **Python also provides other built-in types** that support low-level operations such as working with binary data, object references, and memory views.
 1. **NoneType**: Represents None, used to indicate no value or null.
     - Example: x = None; print(x) → None.
 2. **Boolean**: True and False, used in logical operations.
