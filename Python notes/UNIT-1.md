@@ -835,7 +835,22 @@ Think of organizing kitchen items:
 | **Binary Types**   | Handles binary data                      | `bytes`, `bytearray`, `memoryview` |
 
 Standard types can be categorized based on their properties:
+### Categorization of Python Standard Types
 
+| **Category**         | **Type**         | **Explanation**                                            | **Examples**                                                                      |
+| -------------------- | ---------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **1. Mutability**    | **Mutable**      | Can be changed after creation                              | `list`, `dict`, `set`  <br>`x = [1,2]; x.append(3)` → `[1, 2, 3]`                 |
+|                      | **Immutable**    | Cannot be changed after creation                           | `int`, `float`, `str`, `tuple`, `frozenset`  <br>`s = "hi"; s[0] = "H"` → ❌ Error |
+| **2. Ordering**      | **Ordered**      | Maintains insertion order (important for indexing/slicing) | `str`, `list`, `tuple`, `dict (Py 3.7+)`  <br>`a = [10, 20]; a[0]` → `10`         |
+|                      | **Unordered**    | No guarantee of order                                      | `set`, `dict (pre-3.7)`  <br>`set([1,2,3])` may print differently each time       |
+| **3. Sequence Type** | **Sequence**     | Supports indexing, slicing, iteration in order             | `str`, `list`, `tuple`, `range`  <br>`s = "abc"; s[1]` → `'b'`                    |
+|                      | **Non-Sequence** | Doesn’t support indexing or slicing                        | `dict`, `set`  <br>`x = {1,2}; x[0]` → ❌ Error                                    |
+| **4. Iterability**   | **Iterable**     | Can be looped using a `for` loop or iterator               | `str`, `list`, `tuple`, `dict`, `set`  <br>`for i in [1,2]: print(i)` ✅           |
+|                      | **Non-Iterable** | Not directly loopable                                      | `int`, `float`, `None`  <br>`for i in 10:` → ❌ Error                              |
+| **5. Hashability**   | **Hashable**     | Can be used as a key in a dictionary or in a set           | `int`, `float`, `str`, `tuple (if elements are immutable)`  <br>`{(1,2): "a"}` ✅  |
+|                      | **Non-Hashable** | Cannot be used as a key or set element                     | `list`, `dict`, `set`  <br>`{{1:2}: "val"}` → ❌ Error                             |
+| **6. Callability**   | **Callable**     | Can be called using `()` (like functions or classes)       | `def func(): pass`, `class A: pass`, `lambda`  <br>`func()` ✅                     |
+|                      | **Non-Callable** | Not callable                                               | `int`, `list`, `str`, `dict`, `tuple`  <br>`5()` → ❌ Error                        |
 
 
 ```python
@@ -845,29 +860,82 @@ d = {"a": 1}      # Mutable, unordered (pre-3.7), non-sequence, iterable
 s1 = {1, 2}       # Mutable, unordered, non-sequence, iterable
 ```
 #### Unsupported Types
-Python does not natively support certain data types found in other languages:
-- **Fixed-size Arrays**: Python uses lists or the array module/NumPy for array-like functionality.
-- **Pointers**: Python does not support direct memory manipulation like C/C++.
-- **Character Type**: Single characters are treated as strings of length 1 (e.g., "a").
-- **Why Unsupported**: Python’s design prioritizes simplicity and abstraction, using higher-level types like lists and strings.
+data types or structures that **cannot be directly used** with specific operations, functions, or interfaces due to **lack of compatibility or implementation**.
+##### Why do Unsupported Types Exist?
+- Python is **strongly typed** and certain operations require objects to support specific methods or behaviors.
+- Some types are **not compatible** with certain operations (e.g., arithmetic with a set).
+- Custom objects must implement **special methods (dunder methods)** to behave like built-in types.
+#### **Examples of Unsupported Types in Context**
 
+| **Operation**        | **Type(s) Involved** | **Result**  | **Reason**                          |
+| -------------------- | -------------------- | ----------- | ----------------------------------- |
+| `'hello' + 5`        | `str` + `int`        | `TypeError` | Cannot concatenate string with int  |
+| `{1, 2, 3} + {4, 5}` | `set` + `set`        | `TypeError` | Sets don’t support `+` operator     |
+| `5[0]`               | `int`                | `TypeError` | Integers are not subscriptable      |
+| `None + 2`           | `NoneType` + `int`   | `TypeError` | NoneType doesn't support arithmetic |
+| `dict() / 2`         | `dict` and `int`     | `TypeError` | Division not defined for dicts      |
+#### Unsupported Types / Operations in Python
+
+| **Category**                        | **Unsupported Type / Operation**     | **Explanation**                                                           | **Example (Code)**                  | **Error Type**         |
+| ----------------------------------- | ------------------------------------ | ------------------------------------------------------------------------- | ----------------------------------- | ---------------------- |
+| Immutable assignment                | Modifying immutable types            | You cannot modify immutable objects like `str`, `tuple` or `int` directly | `'hello'[0] = 'H'`                  | `TypeError`            |
+| Key restrictions                    | Using mutable types as dict/set keys | Dict/set keys must be **hashable** (i.e., immutable)                      | `d = {[1, 2]: 'val'}`               | `TypeError`            |
+| Type mismatch                       | Unsupported operand types            | Certain operations are not allowed between incompatible types             | `5 + '5'`                           | `TypeError`            |
+| Out-of-range access                 | Invalid indexing                     | Accessing invalid index in sequences                                      | `[1, 2][5]`                         | `IndexError`           |
+| Key access                          | Nonexistent dict keys                | Accessing keys not present in a dictionary                                | `{'a': 1}['b']`                     | `KeyError`             |
+| Division by zero                    | Dividing by 0                        | You cannot divide any number by zero                                      | `5 / 0`                             | `ZeroDivisionError`    |
+| Import errors                       | Invalid or non-existent module       | Trying to import a module that doesn’t exist                              | `import unknownmodule`              | `ModuleNotFoundError`  |
+| Name access                         | Using undefined variables            | Referring to a variable that hasn’t been defined                          | `print(x)` (before defining `x`)    | `NameError`            |
+| Unsupported operations              | Applying wrong operations on types   | Not all types support operations like `-`, `+`, `*`, `/`, etc.            | `None + 1` or `len(42)`             | `TypeError`            |
+| Slicing non-sequence                | Slicing an int/float                 | Only sequences like list, tuple, str support slicing                      | `5[1:2]`                            | `TypeError`            |
+| Modifying frozensets                | Changing frozen set content          | Frozensets are immutable                                                  | `fs = frozenset([1, 2]); fs.add(3)` | `AttributeError`       |
+| Writing to file opened in read mode | Writing on 'r' mode files            | You must open the file in write (`w`) or append (`a`) mode to write       | `open('file.txt', 'r').write('Hi')` | `UnsupportedOperation` |
+| Incorrect unpacking                 | Mismatch in unpacking count          | The number of variables must match the iterable length                    | `a, b = [1, 2, 3]`                  | `ValueError`           |
+| Attribute access                    | Accessing non-existent attributes    | Not all objects have all attributes                                       | `"hi".append('o')`                  | `AttributeError`       |
+| Float as index                      | Using float as list/tuple index      | Index must be an integer                                                  | `[1, 2, 3][1.0]`                    | `TypeError`            |
+
+#### **How to Handle Unsupported Types**
+- Use `type()` or `isinstance()` to check types before operations.
+- Convert types when necessary:
+```python
+str(5) + " apples"  # Output: "5 apples"
+list({1, 2})        # Output: [1, 2]
+```
+
+```python
+# Example of unsupported operation
+try:
+    result = 'Age: ' + 21
+except TypeError as e:
+    print("Error:", e)  # Output: can only concatenate str (not "int") to str
+
+# Handling it properly
+result = 'Age: ' + str(21)
+print(result)  # Output: Age: 21
+
+```
 ## Numbers
 Numbers in Python represent numerical data and include **integers**, **floating-point real numbers**, and **complex numbers**.
 
+#### **Why Are Numbers Important?**
+- Used in **mathematical calculations**
+- Essential in **data analysis**, **scientific computing**, **AI**, **finance**
+- Required for **loop counters**, **conditional logic**, and **indexing**
+#### **Key Characteristics**
+- **Immutable:** Any arithmetic operation creates a new object.
+- **Automatic Type Conversion:** Python auto-converts between types (e.g., `int` to `float` when needed).
+- **Built-in Support:** Python provides built-in operators and functions for math operations.
 #### Introduction to Numbers
 - Numbers are **immutable** types used for arithmetic and calculations.
 - Types: Integers (whole numbers), floats (decimals), and complex (real + imaginary).
-
 #### Integers
 - Whole numbers, positive, negative, or zero (e.g., 5, -10, 0).
 - No size limit in Python 3 (no overflow).
 - Example: x = 100; print(type(x)) → <class 'int'>.
-
 #### Floating-Point Real Numbers
 - Numbers with decimal points (e.g., 3.14, -0.001).
 - Stored with limited precision (IEEE 754 standard).
 - Example: y = 2.5; print(type(y)) → <class 'float'>.
-
 #### Complex Numbers
 - Numbers with real and imaginary parts, denoted by j (e.g., 3 + 4j).
 - Attributes: .real (real part), .imag (imaginary part).
@@ -890,23 +958,105 @@ print(x ** 2)  # 100
 - int(x), float(x), complex(x): Type conversions.
 
 #### Related Modules
-Python provides **modules** (libraries) to extend functionality for various types, especially for sequences, dictionaries, and sets. Common modules relevant to Unit-I include:
+Python provides a rich set of **standard library modules** that extend the functionality of built-in types like strings, lists, dictionaries, sets, and numbers. These modules help in performing specialized tasks efficiently and with cleaner code.
 
-- **string**: Utilities for string operations.
-    - Example: string.ascii_letters → "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".
-- **collections**: Advanced data structures for sequences and mappings.
-    - Example: collections.Counter("hello") → Counter({'l': 2, 'h': 1, 'e': 1, 'o': 1}).
-- **itertools**: Tools for efficient iteration (used with sequences, generators).
-    - Example: itertools.chain([1, 2], [3, 4]) → iterator yielding 1, 2, 3, 4.
-- **random**: Random operations on sequences.
-    - Example: random.choice(["a", "b"]) → random item ("a" or "b").
-- **math**: Mathematical operations (sometimes used with sequences of numbers).
-    - Example: math.prod([2, 3]) → 6 (Python 3.8+).
+### 1. `string` — String Utilities
+
+The `string` module provides constants and utility functions for working with common string patterns (like ASCII characters, punctuation, whitespace).
+
+#### Key Features:
+
+| Constant               | Description                       | Example                                                  |
+| ---------------------- | --------------------------------- | -------------------------------------------------------- |
+| `string.ascii_letters` | All lowercase + uppercase letters | `'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'` |
+| `string.digits`        | All numeric digits `"0" to "9"`   | `'0123456789'`                                           |
+| `string.punctuation`   | All punctuation characters        | `'!"#$%&\'()*+,-./:;<=>?@[\\]^_`{                        |
+
 ```python
 import string
-print(string.digits)  # 0123456789
+print(string.ascii_uppercase)  # ABCDEFGHIJKLMNOPQRSTUVWXYZ
+print(string.whitespace)       # Includes ' ', '\t', '\n', etc.
+```
+
+### 2. `collections` — Advanced Data Structures
+
+The `collections` module provides alternative container datatypes beyond built-in types like `list`, `dict`, and `set`.
+#### Key Tools:
+
+| Tool            | Description                                        | Example                                           |
+| --------------- | -------------------------------------------------- | ------------------------------------------------- |
+| `Counter()`     | Counts frequency of elements in an iterable        | `Counter('hello') → {'h':1, 'e':1, 'l':2, 'o':1}` |
+| `defaultdict()` | Dict with default value for missing keys           | `defaultdict(int)`                                |
+| `namedtuple()`  | Tuple with named fields (like a lightweight class) | `namedtuple('Point', ['x', 'y'])`                 |
+| `deque()`       | Double-ended queue                                 | Faster `append`/`pop` from both ends              |
+```python
+from collections import Counter, deque
+print(Counter("banana"))   # {'b': 1, 'a': 3, 'n': 2}
+
+dq = deque([1, 2, 3])
+dq.appendleft(0)
+print(dq)  # deque([0, 1, 2, 3])
+
+```
+
+### 3. `itertools` — Itertools for Efficient Iteration
+This module provides fast, memory-efficient tools for creating and using iterators.
+#### Key Tools:
+
+| Function                   | Description                           | Example Use Case                            |
+| -------------------------- | ------------------------------------- | ------------------------------------------- |
+| `itertools.chain()`        | Combines multiple iterables into one  | `chain([1,2],[3,4]) → 1,2,3,4`              |
+| `itertools.permutations()` | All possible orderings (permutations) | `permutations("ab") → ('a','b'), ('b','a')` |
+| `itertools.combinations()` | Combinations of a given length        | `combinations("abc", 2)` → ('a','b'), ...   |
+| `itertools.product()`      | Cartesian product                     | `product([1,2], ['a','b'])`                 |
+```python
+from itertools import chain, permutations
+
+for item in chain([1, 2], [3, 4]):
+    print(item, end=" ")  # 1 2 3 4
+
+print(list(permutations("abc", 2)))  # [('a','b'), ('a','c'), ('b','a')...]
+
+```
+
+### 4. `random` — Randomization Tools
+This module helps in performing random operations, especially useful for games, simulations, or data sampling.
+#### Key Functions:
+
+| Function              | Description                                  | Example                                |
+| --------------------- | -------------------------------------------- | -------------------------------------- |
+| `random.choice(seq)`  | Returns a random element from a sequence     | `choice(['a', 'b']) → 'a' or 'b'`      |
+| `random.shuffle(seq)` | Shuffles the list in place (no return value) | `shuffle([1,2,3])`                     |
+| `random.randint(a,b)` | Returns a random integer between a and b     | `randint(1,10) → any int from 1 to 10` |
+```python
 import random
-print(random.shuffle([1, 2, 3]))  # Shuffles list in place
+
+items = [1, 2, 3, 4]
+random.shuffle(items)
+print(items)  # [3, 1, 4, 2] (shuffled output)
+
+print(random.choice("Python"))  # Random letter like 't' or 'h'
+
+```
+
+### 5. `math` — Math Utilities for Numbers
+The `math` module provides access to mathematical functions like factorial, sqrt, power, log, trigonometric operations, etc.
+#### Key Functions:
+
+| Function              | Description                           | Example              |
+| --------------------- | ------------------------------------- | -------------------- |
+| `math.sqrt(x)`        | Square root of x                      | `sqrt(16) → 4.0`     |
+| `math.factorial(x)`   | Factorial of x                        | `factorial(5) → 120` |
+| `math.prod(iterable)` | Product of all elements (Python 3.8+) | `prod([2, 3]) → 6`   |
+| `math.ceil(x)`        | Smallest integer ≥ x                  | `ceil(2.3) → 3`      |
+| `math.floor(x)`       | Largest integer ≤ x                   | `floor(2.9) → 2`     |
+```python
+import math
+
+print(math.sqrt(25))     # 5.0
+print(math.prod([2, 3])) # 6
+print(math.ceil(4.1))    # 5
+
 ```
 
 #### Sequences
