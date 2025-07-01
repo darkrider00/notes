@@ -51,7 +51,7 @@ Python code can be executed in two ways:
 - To **store different kinds of data** (text, numbers, logic, etc.)
 - To **perform valid operations** (e.g., you can add two numbers, but not a string and number directly)
 - To **manage memory efficiently** (different types use different amounts of memory)
-- To **prevent errors** in program logic by ensuring correct usage of values
+- To **prevent errors** i<mark style="background: #FF5582A6;">n program logic by ensuring correct u</mark>sage of values
 Python has the following data types built-in by default, in these categories:
     - **Numbers**: Integers (10), Floating-point (3.14), Complex (3+4j).
     - **Sequences**: Strings ("hello"), Lists ([1, 2, 3]), Tuples ((1, 2, 3)).
