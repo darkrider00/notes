@@ -394,3 +394,50 @@ If you want to sell a share, you need to sell it to a buyer willing to buy it fr
 
 ![[Pasted image 20250701104035.png]]
 
+Before the T+1 day, the earmarked shares are delivered to the depository. On settlement day, the blocked shares are debited from your demat account and moved to the clearing corporation for payin. Against the debit of such shares, you’d have received a credit for the sale after deducting all charges. You may be interested to note that you will receive 80% of the funds on T-Day and the remaining 20% on T+1. In other words, the seller will be settled fully on a T+1 basis, just like how the buyer is settled.
+
+## What happens when you buy a stock?
+
+Assume on a Monday, you buy 100 shares of Reliance Industries at Rs.1,000/- per share. The total buy value is Rs.1,00,000/- (100 * 1000). The day you make the transaction is the trade date; brokers refer to this as the ‘T Day.’
+
+When you place an order to buy, the broker quickly validates if you have the necessary funds. In this example, the order will go through only if you have Rs.1,00,000/- in your trading account; it will be rejected otherwise. Assuming the trade is executed through Zerodha, the applicable charges are –
+
+|Sl No|Chargeable Item|Applicable Charges|Amount|
+|---|---|---|---|
+|01|Brokerage|Zero for Equity Delivery. For intraday, charges are 0.03% or Rs.20/- whichever is lower, per executed order|Zero|
+|02|Security Transaction Charges(STT)|0.1% of the turnover|100/-|
+|03|Exchange transaction Charges|0.00345% of the turnover|3.45/-|
+|04|GST|18% of Brokerage + Transaction charges + SEBI charges|0.62/-|
+|07|SEBI Charges|Rs.10 per crore of transaction|0.12/-|
+|**Total**|   |   |**104.19/-**|
+
+dditionally, Rs.15/- towards stamp duty is applicable. Stamp duty is charged at 0.015% on the buy side. Hence the total applicable charges are **Rs.119.19**.
+
+ote that these rates are subject to change; you can visit [Zerodha’s Brokerage calculator](https://zerodha.com/brokerage-calculator/#tab-equities) to figure out the exact applicable rate when you wish to carry out a transaction.
+
+- on the T day, the broker generates a ‘contract note’ and emails you the copy to your registered email id.  A contract note is like a bill detailing all your daily transactions. You can save the contract note for future reference.
+-  A contract note gives you a break up of all daily transactions and the trade reference number. It also shows the breakup of charges charged by the broker.
+
+ Earlier when you used to buy the shares, these would be delivered to your demat account on T+2 day.
+ - if you bought shares on Monday, these will be credited to your demat account only on Wednesday. With T+1 settlement, if you buy shares on Monday, they will be credited to your demat account on Tuesday, the next day itself.
+
+## What happens when you sell a stock?
+The day you sell the stocks is again referred to as the ‘T Day’. The stock gets blocked when you sell the stock from your DEMAT account, and by the end of the day, the stocks are ‘earmarked’ for settlement.
+
+ You may be interested to note that you will receive 80% of the funds on T-Day and the remaining 20% on T+1. In other words, the seller will be settled fully on a T+1 basis, just like how the buyer is settled.
+
+What transpires between T day and T+1 is a complex settlement process involving the stockbroker, clearing corporation, depository, and the stock exchange.
+
+you need to remember that equity transactions are settled on a T+1 basis, meaning, if you are a buyer, you will get the shares on T+1, and if you are a seller, the funds are credited on a T+1 basis.
+
+## Benefits of Earmarking:
+
+|Feature|Earlier|Now (with Earmarking)|
+|---|---|---|
+|Shares held by|Broker (in pool account)|You (in your DEMAT account)|
+|Broker misuse possible?|✅ Yes|❌ No|
+|Transparency|❌ Low|✅ High|
+|Risk to investor|✅ High|❌ Low|
+|SEBI compliance|❌ No|✅ Yes (from Nov 2022)|
+
+
