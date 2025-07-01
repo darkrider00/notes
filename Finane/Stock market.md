@@ -441,3 +441,15 @@ you need to remember that equity transactions are settled on a T+1 basis, meanin
 |SEBI compliance|❌ No|✅ Yes (from Nov 2022)|
 
 
+## Dividends
+- portions of profits made by the company, which are distributed to the company’s shareholders.
+- Dividends are paid on a per-share basis.
+- Infosys recently declared a dividend of Rs.42/- per share, which means you get Rs.42/- as dividend income for every share you own. Suppose you own 100 Infosys shares; you can get 100*42 = Rs.4,200/- as dividend income.
+
+![[Pasted image 20250701115207.png]]
+
+_Dividend Declaration Date:_ This is the date on which the AGM takes place, and the company’s board approves the dividend issue
+
+_Record Date:_ The date the company decides to review the shareholder’s register to list all eligible shareholders for the dividend.
+
+ Usually, the time difference between the dividend declaration date and the record date is 30 days
