@@ -177,3 +177,208 @@ You can opt for a ‘**Limit**’ order when you are particular about the price 
 
 You can also opt for a **market order** when you intend to buy at market-available prices instead of a limited price.
 
+## **The Stock Buy Order Form (on Zerodha, Upstox, etc.)**
+
+When you want to **buy** a share (say, of **ITC**), you’ll use a form inside your broker’s trading platform. That form will ask for:
+
+- **Exchange** (NSE or BSE)
+    
+- **Order Type** (Limit, Market, SL, SL-M)
+    
+- **Quantity** (how many shares)
+    
+- **Product Type** (CNC or MIS)
+    
+- Other optional details (trigger price, disclosed quantity)
+    
+
+Let’s go through these options **step-by-step**:
+
+---
+
+## 1️⃣ **Exchange Selection: NSE or BSE**
+
+- **Default is NSE** (National Stock Exchange), but you can change to **BSE** if you prefer.
+    
+- Both exchanges list stocks like ITC. Choose one depending on liquidity or preference.
+    
+
+---
+
+## 2️⃣ **Order Type: What Price Are You Willing to Pay?**
+
+### 🔹 A. **Limit Order**
+
+- **You set the exact price.**
+    
+- Example: ITC is trading at ₹262.25, but you want to buy it only if it drops to ₹261.
+    
+- You place a **limit order at ₹261**.
+    
+- If the price doesn’t reach ₹261, your order **won’t execute**.
+    
+- **Pros:** Price control
+    
+- **Cons:** Might miss the trade if price never hits ₹261.
+    
+
+---
+
+### 🔹 B. **Market Order**
+
+- **Buy at the current market price** (whatever it is at that moment).
+    
+- Example: You place a market order, and ITC is available at ₹262.25 — you'll get it at that or the next best price.
+    
+- **Pros:** Instant execution
+    
+- **Cons:** You don’t control the price — it might jump suddenly.
+    
+
+---
+
+### 🔹 C. **SL (Stop-Loss) Order**
+
+Used **after** you've already bought a stock, to **limit your losses**.
+
+- Example:
+    
+    - You bought ITC at ₹262.25.
+        
+    - You don’t want to lose more than ₹7, so you place an SL order at ₹255.
+        
+    - If ITC falls to ₹255, your SL order becomes active and **sells the stock** to protect you from further losses.
+        
+
+But it needs a **Trigger Price** to become active.
+
+### 🔹 D. **SL-M (Stop-Loss Market)**
+
+Same as SL, **but instead of setting a price to sell**, you say “sell at market price” once it hits the trigger.
+
+- **SL:** Stop Loss with a limit price.
+    
+- **SL-M:** Stop Loss with a market price (ensures execution once triggered).
+    
+
+---
+
+## 3️⃣ **Quantity**
+
+- How many shares you want.
+    
+- Example: You want **1 share** of ITC → enter **1** in the quantity box.
+    
+
+---
+
+## 4️⃣ **Product Type: CNC vs MIS**
+
+|**Product Type**|**Use Case**|**Meaning**|
+|---|---|---|
+|CNC (Cash and Carry)|**Delivery trade**|You will **own the share** in your **DEMAT account**. Use if you're holding for **days, months, or years**.|
+|MIS (Margin Intraday Square-off)|**Intraday trade**|You plan to **buy and sell on the same day**. Broker gives extra leverage, but will **auto-close your position by 3:15 PM**.|
+
+---
+
+## 📦 Example Walkthrough
+
+You want to buy **1 share of ITC at ₹261** using **CNC (Delivery)**:
+
+1. Select **Exchange** = NSE
+    
+2. Select **Order Type** = Limit
+    
+3. Set **Price** = 261
+    
+4. Set **Quantity** = 1
+    
+5. Set **Product Type** = CNC
+    
+6. Press **Submit**
+    
+
+✅ If ITC falls to ₹261 and there’s a seller — **your order is executed**.
+
+📥 You now own 1 share of ITC in your **DEMAT account**.
+
+📨 Your broker and the exchange will send you a **confirmation**, and your order gets a **unique ID** (Order Ticket Number).
+
+
+## **he order book and Trade book**
+
+Think of the order book and trade book as online registers within the trading terminal. The order book keeps track of all the orders you have sent to the exchange, and the trade book tracks all the trades. Think of it this way – when you order goods on Amazon, you first add items to the cart. The cart is the order book. You can add items, delete, or modify the order from the cart (order book). But when you press the buy button on Amazon, the order gets placed, and a receipt is generated. The trade book is that receipt. You also get a detailed receipt emailed to you called a ‘Contract Note’; we will discuss that later; for now think about the trade book as a general receipt for all the trades you carry out on the terminal.
+
+So the order book has all the details regarding your order. You can navigate to the order book by clicking the Orders tab.
+
+[![](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_134-1024x503.png)](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_134.png)
+
+The order book provides the details of the orders you have placed. You should access the order book to:
+
+- - Double-check the order details – quantity, price, order type, product type
+    - Modify the orders – For example, if you want to modify the buy order, say from 261 to 259.
+    - Check Status – After placing the order, you can check the status. The status would state open if the order is completed partially, it would state completed if the order has been completed, and it would state rejected if your order has been rejected. You can also see the details of the rejection in the order book.
+
+If you notice, there is an open order to buy one share of ITC at Rs.261.
+
+If you hover over the pending orders, you can find the option to modify or cancel the order.
+
+[![](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_137.png)](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_137.png)
+
+By clicking ‘modify,’ the order form will be invoked, and you can make the desired changes to the order.
+
+Once the order is processed, and the trade has been executed, the trade details will be available in the trade book. You can find the trade book just below the order book.
+
+Here is a snapshot of the trade book:
+
+[![](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_138.png)](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_138.png)
+
+The trade book confirms that the user ordered to buy one share of ITC at Rs 262.2. Also, notice a unique exchange order number is generated for the trade.
+
+So with this, our first task is complete!
+
+We now officially own one share of ITC. This share will reside in our DEMAT account until you decide to sell it.
+
+The next task is to track the price of Infosys. The first step would be to add Infosys to the market watch. We can do this by searching for Infosys in the search box.
+
+[![](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_139-300x182.png)](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_139.png)
+
+Once we select Infy, we press add to add it to the market watch.
+
+[![](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_141.png)](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_141.png)
+
+Notice we have two stocks on the watchlist now – Infy and ITC. We can now track live price information on Infosys. The last trade price is Rs.1014.75; the stock is down -0.11% from its previous day’s close of Rs.1015.85. Infosys opened the day at Rs.1014.80, making a low of Rs.998.40 and a high of Rs.1028.95. The volumes were 3.6 million shares.
+
+Please note while the open price will be fixed at Rs. 1014.80, the high and low prices change as and when the price of Infosys changes. For example, if Infosys moves from Rs.1014.2 to Rs.1050, the high price will reflect Rs. 1050 as the new high.
+
+Notice below that the LTP of Infosys is in green, and ITC is in red. The cell is highlighted in green if the current LTP is higher than the previous close, and red otherwise.
+
+Have a look at the snapshot below:
+
+[![](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_142-300x184.png)](https://zerodha.com/varsity/wp-content/uploads/2014/09/Screenshot_142.png)
+
+While writing this chapter, the price of Infosys moved from 1014.20 to 1020.80, and the color changed to red from blue.
+
+Besides the basic information about the LTP, OHLC, and volume, we can also dig deeper to understand real-time market participation, which is available in market depth. I want to draw your attention to the blue and red numbers called the Bid and Offer prices.
+
+If you want to buy a share, you need to buy it from a seller. The seller will offer the shares at a price that he or she thinks is fair. The price that the seller offers you is called the ‘**Offer Price.’** The offer price is highlighted in red. Let us analyze this in a bit more detail.
+
+|Sl No|Offer Price|Offer Quantity|Number of Sellers|
+|---|---|---|---|
+|01|3294.80|2|2|
+|02|3294.85|4|2|
+|03|3295.00|8|2|
+|04|3296.20|25|1|
+|05|3296.25|5|1|
+
+The first offer price is Rs.3294.80. At this particular moment, this is the best price to buy the stock and there are only two shares available at this price being offered by two different sellers (both of them are selling one share each). The next best price is Rs.3294.85. At this price, four shares are offered by two different sellers. The third best price is Rs.3295, at which eight shares are available, and two sellers offer this. So on and so forth.
+
+he higher the asking price, the lower the priority. For example, the 5th position is an asking price of Rs.3296.25 for five shares. This is because the stock exchanges prioritize sellers willing to offer their shares at the lowest possible price.
+
+ if you want to buy ten shares at Rs.3294.8, you can only buy two shares because only two are being offered at Rs.3294.8. However, if you are not particular about the price (aka limit price), you can place a market order. When you place a market order to buy 10 shares, this is how it will go –
+- Two shares are bought @ Rs.3294.8
+- Four shares are bought @ Rs.3294.85
+- Four shares are bought @ Rs.3295.00
+
+The ten shares will be bought at three different prices. Also, in the process, the LTP of Infosys will jump to Rs.3295 from Rs.3294.8
+
