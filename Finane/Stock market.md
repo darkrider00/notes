@@ -508,3 +508,181 @@ A buyback can be seen as a company’s method to invest in itself by buying shar
 When a company announces a buyback, it signals the company’s confidence in itself. Hence this is usually positive for the share price, but like other things in the market, always evaluate the reasons for the corporate action.
 
 
+_Repo Rate_ – Banks can borrow from the RBI. The rate at which RBI lends money to other banks is called the Repo Rate. If the repo rate is high, the cost of borrowing is high, leading to slow economic growth. You can check the latest repo rate (And other rates, too) on RBI’s [website](https://www.rbi.org.in/). Markets don’t like the RBI increasing the repo rates because it slows down economic growth.
+
+_Reverse repo rate_ – Reverse Repo rate is the rate at which RBI borrows money from banks. Or in other words, Reverse Repo is the deposit rate RBI offers to other banks when the banks park funds with RBI. When banks deposit money to RBI, they are certain that RBI will not default, so the rate RBI offers is relatively low. However, the banking system’s money supply reduces when banks deposit money with RBI (at a lower rate) instead of the corporate entity. An increase in the reverse repo rate is not great for the economy as it tightens the money supply. Sometimes via the central bank’s policy, the central bank mandates higher deposits by banks; again, this is a way to curtail excess money supply in the mainstream economy.
+
+_Cash reserve ratio (CRR) –_ Every bank must maintain funds with RBI. The amount that they maintain is dependent on the CRR. If CRR increases, more money is sucked out of the mainstream economy, which is not good for the economy.
+
+![[Pasted image 20250701150340.png]]
+
+in RBI website
+
+There are two inflation indices – The Wholesale Price Index (WPI) and Consumer Price Index (CPI).
+
+_Wholesale Price Index (WPI)_ – The WPI indicates the movement in prices at the wholesale level. It captures the price change when goods are bought and sold wholesale. WPI is an easy and convenient method to calculate inflation. The inflation measured here is at an institutional level and does not necessarily capture the consumer’s inflation.
+
+_Consumer Price Index_ _(CPI)_– The CPI, on the other hand, captures the effect of the change in prices at a retail level. As a consumer, CPI inflation is what matters. The calculation of CPI is quite detailed as it involves classifying consumption into various categories and subcategories across urban and rural regions. Each of these categories is made into an index, the final CPI index is a composition of several internal indices. The CPI captures the effect of inflation on daily household consumables like fruits, vegetables, cereals, and even fuels like petrol and diesel.
+
+The computation of CPI is quite rigorous and detailed. It is one of the most critical metrics for studying the economy.  A national statistical agency, the Ministry of Statistics and Programme Implementation (MOSPI), publishes the CPI numbers around the 2nd week of every month. The RBI’s challenge is to strike a balance between inflation and interest rates. Usually, a low-interest rate tends to increase inflation, and a high-interest rate tends to arrest inflation.
+
+
+## Index of Industrial Production (IIP)
+
+## Purchasing Managers Index (PMI)
+
+## 12.6 – Budget
+## 12.7 – Corporate Earnings Announcement
+## 12.8 – Non Financial events
+
+
+
+To give you a preview, here is a typical illustration of a trader’s thought process while developing a POV (whether to buy or sell stocks) based on a particular method of analysis –
+
+**FA-based POV** – The company’s quarterly numbers look impressive. The company has reported a 25% top-line and 15% bottom-line growth. The company’s guidance also looks positive. With all the fundamental factors aligned, the stock looks bullish; hence the stock is a buy.
+
+**TA-based POV –** The MACD indicator has turned bullish along with a bullish engulfing candlestick pattern; the stock is also trading at its support point, with that study, its short-term sentiment looks positive; therefore, the stocks are a buy.
+
+**QA-based POV –** With the recent up move, the stock’s price to earnings (PE) touched the 3rd standard deviation. There is only a 1% chance for the PE to breach the 3rd standard deviation. Hence, it is prudent to expect a reversion to mean the stock is a sell.
+
+**Outside view –** The analyst on TV recommends a buy on the stock; therefore, the stock is a buy.
+
+
+If the POV is bullish, you can choose to do one of the following:
+
+1. Buy the stock in the spot market.
+2. Buy the stock in the derivatives markets.
+    1. Within derivatives, you can choose to buy the futures.
+    2. Or choose to trade via the options market.
+        1. Within the options market, there are call options and put options.
+        2. You can combine call and put options to create a synthetic bullish trade.
+
+So what you choose to do after developing a POV is a different ball game.  Choosing the right instrument to trade that complements your POV is critical to profitable trading.
+
+For example, if I’m extremely bullish on the stock from a 1-year perspective, I’m better off making a delivery trade. However, if I’m out rightly bullish on the stock from a short-term perspective (say one week), I’d rather choose a futures instrument to trade.
+
+If I’m bullish with constraints attached (for example – I’m expecting the markets to bounce because of a great budget announcement, but I don’t want to risk much), it would be prudent to choose an option instrument.
+
+So the message here is – the market participant should develop a point of view and complement the POV with the right trading instrument. A well-researched POV combined with the right instrument to trade is a perfect recipe for market success.
+
+Also, by now, hopefully, you have got a sense of how all the different modules in “Varsity” play an important role in assimilating the market.
+
+
+![[Pasted image 20250701150912.png]]
+
+
+## 🏁 **1. IPO (Initial Public Offering)**
+
+### 📌 What is it?
+
+- **The company enters the stock market for the first time**.
+    
+- Shares are offered to the public to raise capital.
+    
+
+### 📍Purpose:
+
+- Fund business growth.
+    
+- Let early investors (like venture capitalists) cash out.
+    
+
+### ✅ Key Points:
+
+- **First-time listing**.
+    
+- Involves a lot of compliance: DRHP, SEBI approval, merchant bankers.
+    
+- Once listed, the company’s shares can be traded in the secondary market.
+    
+
+---
+
+## 🔁 **2. FPO (Follow-on Public Offer)**
+
+### 📌 What is it?
+
+- A **listed company** issues **new shares** to raise **additional capital**.
+    
+
+### 📍Purpose:
+
+- Fund expansion, reduce debt, or improve capital base.
+    
+
+### ✅ Key Points:
+
+- Works like an IPO: draft prospectus, SEBI approval, ASBA bidding.
+    
+- **Creates new shares → Dilutes existing shareholders' stake**.
+    
+- Involves a **price band** and **book-building process**.
+    
+- Takes **time and cost** due to regulations.
+    
+
+### 📌 Example:
+
+- **Engineers India Ltd** FPO (Feb 2014) – Price Band: ₹145–₹150; 3x oversubscribed.
+    
+
+---
+
+## 🔃 **3. OFS (Offer for Sale)**
+
+### 📌 What is it?
+
+- A way for **existing promoters or major shareholders** to **sell part of their holdings**.
+    
+- No new shares are issued.
+    
+
+### 📍Purpose:
+
+- Help promoters reduce their stake.
+    
+- Maintain SEBI’s **minimum public shareholding (25%)** rule.
+    
+
+### ✅ Key Points:
+
+- **No dilution** – total number of shares stays the same.
+    
+- **Quicker and cheaper** than an FPO (No SEBI approval needed).
+    
+- Used by **large listed companies (₹1000 Cr+ Market Cap)**.
+    
+- Floor price is set; shares allotted at or above cut-off price.
+    
+- Allotment and settlement are **fast (T+1)**.
+    
+
+### 📌 Example:
+
+- **NTPC Ltd** OFS (Aug 2017) – 46.35 million shares; Fully subscribed.
+    
+
+---
+
+## 🆚 Summary Table
+
+|Feature|IPO|FPO|OFS|
+|---|---|---|---|
+|First-time listing?|✅ Yes|❌ No|❌ No|
+|Shares Created?|✅ Yes (new shares)|✅ Yes (new shares)|❌ No (existing shares only)|
+|Purpose|Raise capital for the first time|Raise more capital|Promoters reduce stake|
+|Affects Shareholding %?|✅ Yes|✅ Yes (dilution)|❌ No|
+|Time & Regulatory Approval|Long, strict|Long, strict|Quick, fewer approvals|
+|Who sells?|Company|Company|Promoters / Big Shareholders|
+|Eligibility|Unlisted companies|Listed companies|Listed companies with ₹1000 Cr+ Market Cap|
+
+---
+
+## 🔑 In Short:
+
+- **IPO** – "We're going public!"
+    
+- **FPO** – "We’re already public, now we want **more money** by issuing new shares."
+    
+- **OFS** – "Promoters want to **sell some of their shares** to the public quickly."
+
