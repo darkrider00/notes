@@ -453,3 +453,15 @@ _Dividend Declaration Date:_ This is the date on which the AGM takes place, and
 _Record Date:_ The date the company decides to review the shareholder’s register to list all eligible shareholders for the dividend.
 
  Usually, the time difference between the dividend declaration date and the record date is 30 days
+
+_Ex-Date/Ex-Dividend date:_ With the T+1 settlement cycle, the ex-dividend date normally is on the same day as the record date.
+So for all practical purposes, if you want to be entitled to receive a dividend, you need to ensure you buy the shares before the ex-dividend date.
+
+_Dividend Payout Date:_ The date on which the dividends are paid to shareholders listed in the company register.
+
+_Cum Dividend_: The shares are said to be cum dividends till the ex-dividend date.
+
+When the stock goes ex-dividend, usually, the stock drops to the extent of dividends paid. For example, if ITC (trading at Rs. 335) has declared a dividend of Rs.15. On ex-date, the stock price will drop to the extent of the dividend paid, and as in this case, the price of ITC will drop down to Rs.320. The reason for this price drop is that the dividend amount paid no longer sits on the company’s balance sheet
+
+ From the balance sheet perspective, dividends paid are considered cash out. Hence the new stock price has to factor in the shrunk balance sheet. Hence the price drops. That said, you will not always notice a significant price drop in the share price.
+
