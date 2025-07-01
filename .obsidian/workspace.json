@@ -11,17 +11,14 @@
             "id": "ae21732285f92867",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Untitled 1.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "Finane/Stock market.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled 1"
+              "icon": "lucide-file",
+              "title": "Stock market"
             }
           }
         ]
@@ -182,6 +179,8 @@
   "active": "ae21732285f92867",
   "lastOpenFiles": [
     "Untitled 1.canvas",
+    "Finane/Stock market.md",
+    "Finane",
     "notes/Portswigger/SQL injection/SQL injection.md",
     "Untitled.canvas",
     "notes/LINUX/BASH.md",
@@ -216,7 +215,6 @@
     "notes/LINUX/File systems.md",
     "Untitled 1.md",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Network Connectivity Center as a Transit Hub.md",
-    "notes/Google cloud professional/Labs/security/Using Customer-Managed Encryption Keys with Cloud Storage and Cloud KMS.md",
     "notes/Google cloud professional/Labs/security",
     "notes/Google cloud professional/Labs/networking -Implement Private Google Access and Cloud NAT",
     "attachments/Pasted image 20250420200854.png",
@@ -226,7 +224,6 @@
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "notes/Google cloud professional/Labs",
     "notes/Google cloud professional",
-    "TCS hackquest/season 1",
-    "TCS hackquest/season 2"
+    "TCS hackquest/season 1"
   ]
 }
