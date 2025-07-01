@@ -465,3 +465,46 @@ When the stock goes ex-dividend, usually, the stock drops to the extent of divid
 
  From the balance sheet perspective, dividends paid are considered cash out. Hence the new stock price has to factor in the shrunk balance sheet. Hence the price drops. That said, you will not always notice a significant price drop in the share price.
 
+A special dividend is non-recurring and happens on a ‘one-time basis.’ The special dividends are usually very large payments compared to a regular dividend, and that’s when the stock price significantly drops. The drop in stock price should not be considered negative as you would receive a cash payment as a shareholder.
+
+dividends can be paid anytime during the financial year. If it’s paid during the financial year, it is called the interim dividend. If the dividend is paid at the end of the financial year, it is called the final dividend.
+
+A bonus issue is a stock dividend allotted by the company to reward the shareholders
+
+-  The bonus shares are issued out of the reserves of the company. The shareholders receive these free shares against shares they currently hold. These allotments typically come in a fixed ratio of 1:1, 2:1, 3:1, etc. In a bonus issue, the stock price declines to the extent of the bonus ratio, but this decline should not be mistaken for a correction in stock price or a fall.
+
+To illustrate this, let us assume a bonus issue on different ratios – 1:1, 3:1 and 5:1
+
+|Bonus Issue|No. of shares held before bonus.|Share price before Bonus issue|Value of Investment|No. of shares post Bonus.|Share price after Bonus issue|Value of Investment|
+|---|---|---|---|---|---|---|
+|1:1|100|75|7,500|200|37.5|7500|
+|3:1|30|550|16,500|120|137.5|16,500|
+|5:1|2000|15|30,000|12,000|2.5|30,000|
+
+## Stock Split
+
+The word stock split sounds weird, but this happens regularly in the markets. What this means is quite literally – the stocks that you hold are split!
+
+Similar to a bonus issue, when the company declares a stock split, the number of shares held increases, but the investment value remains the same. The big difference between a bonus and a split is that in the bonus issue, the face value of the company remains unchanged, but in a stock split, the face value changes. Suppose the stock’s face value is Rs.10, and there is a 1:2 stock split, then the face value will change to Rs.5. If you owned one share before the split, you would now own two shares after the split.
+
+We will illustrate this with an example:
+
+|Split Ratio|Old FV|No. of shares you own before split|Share Price before split|Investment Value before split|New FV|No. of shares you own after the split|Share Price after the split|Investment value after the split|
+|---|---|---|---|---|---|---|---|---|
+|1:2|10|100|900|90,000|5|200|450|90,000|
+|1:5|10|100|900|90,000|2|500|180|90,000|
+
+
+## Buyback of shares
+
+A buyback can be seen as a company’s method to invest in itself by buying shares from other investors in the market. Buybacks reduce the number of shares outstanding in the market; however, the buyback of shares is an important corporate restructuring method. There could be many reasons why corporates choose to buy back shares…
+
+1. Improve the profitability on a per-share basis
+2. To consolidate their stake in the company.
+3. To prevent other companies from taking over.
+4. To show the confidence of the promoters about their company.
+5. To support the share price from declining in the markets.
+
+When a company announces a buyback, it signals the company’s confidence in itself. Hence this is usually positive for the share price, but like other things in the market, always evaluate the reasons for the corporate action.
+
+
