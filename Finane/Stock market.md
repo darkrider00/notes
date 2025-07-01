@@ -382,3 +382,15 @@ he higher the asking price, the lower the priority. For example, the 5th positi
 
 The ten shares will be bought at three different prices. Also, in the process, the LTP of Infosys will jump to Rs.3295 from Rs.3294.8
 
+If you want to sell a share, you need to sell it to a buyer willing to buy it from you. The buyer will buy the shares at a price that they thinks is fair. The price that the buyer expects is called the ‘bid price.’ The bid price is highlighted in blue. Let us analyze this part in a bit more detail:
+
+|Sl No|Bid Price|Bid Quantity|Number of Buyers|
+|---|---|---|---|
+|01|3294.75|10|5|
+|02|3294.20|6|1|
+|03|3294.15|1|1|
+|04|3293.85|6|1|
+|05|3293.75|125|1|
+
+![[Pasted image 20250701104035.png]]
+
