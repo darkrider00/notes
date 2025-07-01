@@ -173,3 +173,7 @@ Market Segment – A market segment is a division within which a certain type of
 3. Currency Derivatives (CDS) – The CDS segment is where currency pairs like USD INR, EUR INR, JPY INR are traded. The trading is via futures and options; hence it’s called the currency derivative market.
 4. Wholesale Debt Market (WDM) – The wholesale debt market deals with fixed-income securities. Debt instruments include government securities, treasury bills, bonds issued by a public sector undertaking, corporate bonds, corporate debentures, etc.
 
+You can opt for a ‘**Limit**’ order when you are particular about the price you want to pay for a stock.
+
+You can also opt for a **market order** when you intend to buy at market-available prices instead of a limited price.
+
