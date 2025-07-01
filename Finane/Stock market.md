@@ -142,5 +142,34 @@ You sell the stock at Rs.425, and 2 days later, assuming the stock trades at Rs.
  trade’s first leg was to sell at Rs.425, and the second leg was to buy the stock at Rs.405. This is always the case with shorting – you first sell at a price you perceive as high to buy it back at a lower price later.
 
  The important point to remember is that when you short a stock, you must ensure that you buy back the stock the same day before the market closes. Of course, you can short a stock in the derivatives segment and carry forward the position for a few days. But at this point, ignore the derivatives bit and understand that all short positions in stocks (also called cash segment) have to be closed before the market closes. In other words, a short position in the cash market works only on an intraday basis.
- - 
+ - 1. When you short, you have a bearish view of the stock. You profit if the stock price goes down. After you short, if the stock price goes up, you will end up making a loss.
+2. When you short a stock, ensure you buy the stock back the same day before the market closes unless you use derivatives to short.
+3. Shorting a stock is easy – you select the stock you wish to short and click on sell.
+
+|Position|1st Leg|2nd Leg|Expectation|Make money when|You will lose money if|
+|---|---|---|---|---|---|
+|Long|Buy|Sell|Bullish|Stock goes up|Stock price drops|
+|Short|Sell|Buy|Bearish|Stock goes down|Stock price goes up|
+
+Square off is a term used to indicate that you intend to close an existing position. If you are long on a stock squaring off the position means selling the stock
+
+Squaring off a position means repurchasing the stock when you are short on the stock. Remember, when you repurchase it, you are just closing an existing position, and you are not going long!
+
+|When you are|Square off position is|
+|---|---|
+|Long|Sell the stock|
+|Short|Buy the stock|
+
+Intraday position **_–_** This is a trading position you initiate with an expectation to square off the position within the same day. For example, all short positions in stocks are intraday
+
+ OHLC ­– OHLC in stock prices refers to open, high, low, and close. We will understand more about this in the technical analysis module. For now, open is the price at which the stock opens for the day, high is the highest price at which the stock trade during the day, low is the lowest price at which the stock trades during the day, and close is the closing price of the stock. For example, the OHLC of ACC on 17th June was 1486, 1511, 1467, and 1499.
+
+ Volumes and their impact on stock prices are important concepts that we will explore in greater detail in the technical analysis module. Volumes represent the total transactions (buy and sell put together) for a particular stock on a particular day. For example, on 17th June, the volume on ACC was 5, 33,819 shares.
+
+Market Segment – A market segment is a division within which a certain type of financial instrument is traded. Each financial instrument is characterized by its risk and reward
+
+1. Capital Market (CM) – Capital market segments offer tradable securities, such as stocks and exchange-traded funds (ETFs). So if you were to buy or sell shares of a company, you are essentially operating in the capital market segment. Shorting stocks, too, comes under the capital market segment. The cash market is sometimes referred to as the spot market.
+2. Futures and Options (FO) – Futures and Options, generally referred to as the equity derivative segment, are where leveraged products are traded. We will explore the derivative markets in greater depth in the derivatives module (Futures modules and Options Module)
+3. Currency Derivatives (CDS) – The CDS segment is where currency pairs like USD INR, EUR INR, JPY INR are traded. The trading is via futures and options; hence it’s called the currency derivative market.
+4. Wholesale Debt Market (WDM) – The wholesale debt market deals with fixed-income securities. Debt instruments include government securities, treasury bills, bonds issued by a public sector undertaking, corporate bonds, corporate debentures, etc.
 
