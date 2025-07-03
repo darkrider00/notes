@@ -156,3 +156,66 @@ Two things are quite prominent…
  - If you think about the real body in conjunction with the upper shadow ignoring the lower shadow, what do you think had happened? The presence of the upper shadow tells us that the bulls did attempt to take the market higher. However, they were not really successful in their endeavour.
  -  If the bulls were truly successful, then the real body would have been a long blue candle and not really a short candle. Hence this can be treated as an attempt by the bulls to take the markets higher, but they were not really successful at it.
 
+**The lower shadow –** The lower shadow connects the real body to the low point of the day. If it is a red candle, the low and close are connected. If it is a blue candle, the low and open are connected.
+- . The presence of the lower shadow tells us that the bears did attempt to take the market lower. However, they were not really successful in their endeavour. If the bears were truly successful, then the real body would have been long red candle and not really a short candle. Hence, the bears’ attempt to take the markets lower can be treated as an attempt, but they were not really successful.
+
+![[Pasted image 20250703154428.png]]
+
+![[Pasted image 20250703154437.png]]
+
+## Spinning tops in an uptrend
+
+An obvious observation is that there is an uptrend in the market, which implies the bulls have been in absolute control over the last few trading sessions
+- 1. The bulls are no longer in control; spinning tops would not be formed on the charts if they were.
+1. The spinning top basically conveys indecision in the market, i.e. neither the bulls nor the bears can influence the markets.
+2. Placing the above fact in the context of an uptrend, we can conclude two things…
+    1. The bulls could be consolidating their position before initiating another leg of the up move.
+    2. Or the bulls are fatigued and may give way to bears. Hence a correction could be around the corner.
+    3. The chances of both these events taking place are equal, i.e. 50%
+
+
+![[Pasted image 20250703155415.png]]
+### ✅ Example Strategy (if you already hold the stock):
+
+Assume you **bought before the rally**, and now the price has risen well.
+
+You hold **500 shares**.
+
+**What you do:**
+
+- **Sell 50% (250 shares)** to **lock in some profits**
+    
+- **Keep 50% (250 shares)** in case the **rally continues**
+    
+
+---
+
+## 📈 Two Possible Outcomes After the Spinning Tops:
+
+### 1. **If Price Falls (Bears Take Over):**
+
+- You already booked profits on 250 shares at a higher price ✅
+- You can choose to sell the remaining 250 shares now
+- You avoided a big loss and **averaged out at a higher exit**
+### 2. **If Price Rises (Bulls Resume Rally):**
+
+- You still own 250 shares ✅
+- So you continue to **ride the uptrend** and earn more profit
+
+
+To sum up, the spinning top candle shows confusion and indecision in the market with an equal probability of reversal or continuation. Until the situation becomes clear, the traders should be cautious and minimize their position size.
+
+## The Dojis
+- The Doji’s are very similar to the spinning tops, except that it does not have a real body.
+- The classic definition of a Doji suggests that the open price should be equal to the close price with virtually a non-existent real body. The upper and lower wicks can be of any length.
+![[Pasted image 20250703155619.png]]
+
+1. A spinning top has a small real body. The upper and lower shadows are almost equal in length.
+2. The colour of the spinning top does not matter. What matters is the fact that the open and close prices are very close to each other.
+3. Spinning tops convey indecision in the market with both bulls and bears being in equal control.
+4. Spinning top at the top end of the rally indicates that either the bulls are pausing before they can resume the uptrend further or the bears are preparing to break the trend. In either case, the trader’s stance has to be cautious. If the trader intends to buy, he is better off buying only half the quantity, and he should wait for the markets to move in his direction.
+5. Spinning top at the bottom end of the rally indicates that either the bears are pausing before they can resume the downtrend further or the bulls are preparing to break the trend and take the markets higher. Either case, the trader’s stance has to be cautious. If the traders intend to buy, he is better off buying only half the quantity, and he should wait for the markets to make a move.
+6. Doji’s are very similar to spinning tops. Doji also conveys indecision in the market. By definition, dojis do not have a real body. However, in reality, even if a wafer-thin body appears, it is acceptable.
+7. A trader’s stance based on dojis is similar to the stance taken when a spinning top occurs.
+
+
