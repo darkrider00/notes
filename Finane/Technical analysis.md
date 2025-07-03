@@ -219,3 +219,98 @@ To sum up, the spinning top candle shows confusion and indecision in the market 
 7. A trader’s stance based on dojis is similar to the stance taken when a spinning top occurs.
 
 
+## Paper Umbrella
+
+![[Pasted image 20250703160309.png]]
+
+A paper umbrella consists of two trend reversal patterns, namely the hanging man and the hammer.
+
+The hanging man pattern is bearish, and the hammer pattern is relatively bullish. A paper umbrella is characterized by a long lower shadow with a small upper body.
+
+If the paper umbrella appears at the bottom end of a downward rally, it is called the **‘Hammer**
+If the paper umbrella appears at the top end of an uptrend rally, it is called the **‘Hanging Man’**.
+
+![[Pasted image 20250703160552.png]]
+
+![[Pasted image 20250703160611.png]]
+
+Lower shadow must be at least **2x the real body** size. This is called the “shadow-to-body ratio.”
+
+The **same-looking candle** means different things in different places:
+
+|Pattern|Appears at...|Market Sentiment|
+|---|---|---|
+|**Hammer** 🛠️|**Bottom of a downtrend**|**Bullish reversal**|
+|**Hanging Man** 💀|**Top of an uptrend**|**Bearish reversal**|
+Given OHLC:
+
+- **Open = 100**
+- **High = 103**
+- **Low = 94**
+- **Close = 102**
+
+Let’s analyze:
+1. **Candle type?**
+    - Close > Open → ✅ **Bullish candle**
+2. **Real Body Length = Close - Open = 102 - 100 = 2**
+3. **Lower Shadow Length = Open - Low = 100 - 94 = 6**
+4. **Shadow-to-Body Ratio = 6 / 2 = 3 ➜** ✅ Valid paper umbrella
+
+#### Case 1: At the **bottom of a downtrend** → It's a **Hammer**
+- Suggests **selling pressure was strong**, but **buyers fought back**
+- Signals a **potential bullish reversal**
+- **Buy trade** can be initiated
+- ✅ Set **stop loss at the candle’s low** (₹94 in this case)
+
+#### Case 2: At the **top of an uptrend** → It's a **Hanging Man**
+- Suggests buyers were active, but **sellers are creeping in**
+- Signals a **possible bearish reversal**
+- ⚠️ **Caution for long positions**; may trigger a **sell trade**
+- ✅ Set **stop loss at the candle’s high** (₹103 in this case)
+
+The long lower shadow shows that **bears pushed the price down**, but **bulls rejected the lower levels**. This **rejection wick** tells us **the mood may be shifting**.
+
+|Feature|Value|
+|---|---|
+|Pattern Formed|✅ Paper Umbrella|
+|Type|Bullish candle|
+|Real Body|2 (102 – 100)|
+|Lower Shadow|6 (100 – 94)|
+|Ratio|6:2 = 3 ➜ **Valid**|
+|Interpretation|**Hammer if at bottom** (bullish), **Hanging Man if at top** (bearish)|
+
+![[Pasted image 20250703161336.png]]
+
+The chart below shows the presence of two hammers formed at the bottom of a downtrend.
+
+
+### Example from Your Chart:
+In the image:
+- Each hammer appears **after a downtrend**
+- Long lower shadows, small real bodies ✅
+- Blue body in both cases ✅
+- Uptrend follows the hammer formation 📈
+## 🧑‍💼 **How to Trade a Hammer:**
+
+- **Risk-Taker:**  
+    Buy **on the same day** at around 3:20 PM if:
+    - Open and Close are close (within 1–2%)
+    - Lower shadow ≥ 2x real body
+- **Risk-Averse:**  
+    Wait for the **next day**:
+    
+    - If it forms a **blue candle** (bullish), buy then
+
+#### 🛡️ Stop Loss:
+- Set the **stop-loss at the low** of the hammer candle
+
+|Step|Action|
+|---|---|
+|1.|Identify a **downtrend**|
+|2.|Spot a **hammer** candle|
+|3.|**Verify**: small body, long lower shadow (≥ 2x body), little upper shadow|
+|4.|Entry based on **risk appetite**|
+|5.|Place **stop-loss at hammer's low**|
+|6.|Monitor the **next candles for confirmation**|
+
+
