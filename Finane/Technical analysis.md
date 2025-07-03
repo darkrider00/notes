@@ -48,7 +48,32 @@ engulf - governing previous candles body
 
 ![[Pasted image 20250703171643.png]]
 
-
+2 ways 
+1- aggresive - there is a reversal pattren 
+2- u wait for next day to cross day 2 high then market is bullish
 
 ![[Pasted image 20250703171739.png]]
+
+2 wyas
+1- there is a reversal pattren
+2- wait for the next day for the low to be crossed to say the market is bearish
+
+
+## piercing and dark cloud
+
+![[Pasted image 20250703172831.png]]
+
+
+![[Pasted image 20250703172905.png]]
+
+ same 2 ways mentioned above
+### morning star and evening star
+
+![[Pasted image 20250703173530.png]]
+
+![[Pasted image 20250703173738.png]]![[Pasted image 20250703173821.png]]
+
+![[Pasted image 20250703173914.png]]
+
+![[Pasted image 20250703174014.png]]
 
