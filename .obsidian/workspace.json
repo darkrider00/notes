@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finane/Stock market.md",
+                "file": "Finane/Technical analysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stock market"
+              "title": "Technical analysis"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -178,12 +179,20 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "attachments/Pasted image 20250701150912.png",
-    "attachments/Pasted image 20250701150340.png",
-    "attachments/Pasted image 20250701115207.png",
-    "attachments/Pasted image 20250701104035.png",
-    "Untitled 1.canvas",
+    "attachments/Pasted image 20250703153900.png",
+    "attachments/Pasted image 20250703153755.png",
+    "attachments/Pasted image 20250703153735.png",
+    "attachments/Pasted image 20250703153711.png",
+    "attachments/Pasted image 20250703153525.png",
+    "attachments/Pasted image 20250703153357.png",
+    "attachments/Pasted image 20250703153305.png",
+    "attachments/Pasted image 20250703153239.png",
+    "attachments/Pasted image 20250703152658.png",
+    "attachments/Pasted image 20250703152514.png",
     "Finane/Stock market.md",
+    "Finane/Technical analysis.md",
+    "attachments/Pasted image 20250701150912.png",
+    "Untitled 1.canvas",
     "Finane",
     "notes/Portswigger/SQL injection/SQL injection.md",
     "Untitled.canvas",
@@ -197,19 +206,12 @@
     "Python notes",
     "notes/HTB academy/Fundamentals of linux.md",
     "notes/HTB academy/Inode - A data structure used in Linux.md",
-    "attachments/Pasted image 20250519103930.png",
-    "attachments/Pasted image 20250519101658.png",
     "things/Protocol for studying & learning.md",
     "concepts.md",
-    "attachments/Pasted image 20250518174146.png",
-    "attachments/Pasted image 20250518172918.png",
     "Untitled.md",
     "notes/Google cloud professional/Labs/lab 3 - Getting Started with Cloud Storage and Cloud SQL.md",
     "notes/Google cloud professional/Labs/lab 2 - VPC Networking and Google Compute Engine.md",
     "notes/Google cloud professional/Labs/Lab 1 - use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance..md",
-    "attachments/Pasted image 20250517145431.png",
-    "attachments/Pasted image 20250517145344.png",
-    "attachments/Pasted image 20250517144847.png",
     "notes/Malware/Maldev.md",
     "notes/HTB academy",
     "notes/Malware/Detection Mechanisms.md",
@@ -218,7 +220,6 @@
     "notes/LINUX/INDEX page.md",
     "notes/LINUX/File systems.md",
     "Untitled 1.md",
-    "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals/Configuring Network Connectivity Center as a Transit Hub.md",
     "notes/Google cloud professional/Labs/security",
     "notes/Google cloud professional/Labs/networking -Implement Private Google Access and Cloud NAT",
     "notes/Google cloud professional/Labs/Routing and addressing",
