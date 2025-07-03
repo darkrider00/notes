@@ -314,3 +314,108 @@ In the image:
 |6.|Monitor the **next candles for confirmation**|
 
 
+![[Pasted image 20250703162348.png]]
+
+The chart below shows a hammer’s formation where both the risk taker and the risk-averse would have set up a profitable trade. This is a 15 minutes intraday chart of Cipla Ltd.
+
+Buy Price for a risk-taker – He takes the trade on the Hammer candle itself at – Rs.444/-
+
+Buy price for a risk-averse – He takes the trade on the next candle after evaluating that the candle is blue at – Rs. 445.4/-
+
+Stoploss for both the traders is at Rs.441.5/-,, which is the low of the hammer formation.
+
+![[Pasted image 20250703162536.png]]
+
+![[Pasted image 20250703162540.png]]
+
+Both the hammers qualified on the preconditions of a hammer, i.e.:
+
+1. The prior trend to be a downtrend
+2. Shadow to real body ratio
+
+once you initiate the trade you stay in it until either the stop loss or the target is reached. It would help if you did not tweak the trade until one of these events occurs. The loss in this particular trade (first hammer) is inevitable. But remember this is a calculated risk and not a mere speculative risk.
+
+### Key Takeaways from This Example:
+
+1. ✅ **Hammers must be confirmed** by the next candle (green and closing above body)
+2. ❌ Not all hammers lead to reversals — **they're high-probability setups**, not guarantees
+3. Always **set stop-loss at the hammer’s low**
+4. 🎯 Once in the trade, **don’t exit early** unless SL/target is hit — this builds discipline
+
+### 📘 Summary:
+
+|Feature|First Hammer|Second Hammer|
+|---|---|---|
+|Hammer Shape|Valid|Valid|
+|Prior Trend|Downtrend ✅|Downtrend ✅|
+|Confirmation|❌ No green candle|✅ Possibly had|
+|Risk-Averse Entry|No Entry|Entry allowed|
+|Outcome|Loss avoided|SL Hit|
+|Lesson|Wait for confirmation|Trade failed, but process was correct|
+
+If a paper umbrella appears at the top end of a trend, it is called a Hanging Man. The bearish hanging man is a single candlestick and a top reversal pattern. A hanging man signals a market high. The hanging man is classified as a hanging man **only if an uptrend precedes it**.   Since the hanging man is seen after a high, the bearish hanging man pattern signals to sell pressure.
+
+
+![[Pasted image 20250703163013.png]]
+
+Since the hanging man is seen after a high, the bearish hanging man pattern signals to sell pressure.
+
+A hanging man can be of any colour, and it does not really matter as long as it qualifies ‘the shadow to real body’ ratio
+
+1. The market is in an uptrend. Hence the bulls are in absolute control.
+2. New highs and higher lows characterize the market.
+3. The day the hanging man pattern appears, the bears have managed to make an entry.
+4. This is emphasized by a long lower shadow of the hanging man.
+5. The entry of bears signifies that they are trying to break the stronghold of the bulls.
+
+6. For the risk-taker, a short trade can be initiated the same day around the closing price.
+7. For the risk-averse, a short trade can be initiated at the close of the next day after ensuring that a red candle would appear.
+    1. The method to validate the candle for the risk-averse, and risk-taker is the same as explained in a hammer pattern.
+
+
+![[Pasted image 20250703163159.png]]
+
+
+Open = 592, High = 593.75, Low = 587, Close = 593. Based on this, the trade set up would be as follows:
+- The risk-taker initiates the short trade on the day the pattern appears (at 593)
+- The risk-averse initiates the short trade on the next day at closing prices after ensuring it is a red candle day
+- Both the risk-taker and the risk-averse would have initiated their respective trades
+- The stoploss price for this trade would be the high price, i.e. above 593.75
+
+The trade would have been profitable for both the risk types.
+
+
+## The shooting star
+
+Unlike a paper umbrella, the shooting star does not have a long lower shadow. Instead, it has a long upper shadow where the shadow’s length is at least twice the length of the real body. The body’s colour does not matter, but the pattern is slightly more reliable if the real body is red.
+
+The longer the upper wick, the more bearish is the pattern. The small real body is a common feature between the shooting star and the paper umbrella.
+
+Going by the textbook definition, the shooting star should not have a lower shadow. However, a small lower shadow, as seen in the chart above, is considered alright. The shooting star is a bearish pattern; **hence the prior trend should be bullish**.
+
+
+![[Pasted image 20250703163718.png]]
+The OHLC data on the shooting star is; open = 1426, high = 1453, low = 1410, close = 1417. The short trade set up on this would be:
+
+1. The risk-taker will initiate the trade-in 1417, basically on the same day the shooting star forms.
+    1. The risk-taker initiates the trade the same day after ensuring that the day has formed a shooting star. To confirm this, the trader has to validate:
+        1. If the current market price is more or less equal to the low price
+        2. The length of the upper shadow is at least twice the length of the real body.
+    2. The risk-averse will initiate the trade on the next day, only after ensuring that the 2nd day a red candle has formed.
+2. Once the trade has been initiated, the stoploss is to be placed at the pattern’s high. In the case, the stop loss is at 1453
+### ⚠️ Remember:
+
+Don’t act **just on the candle alone** — always wait for **confirmation** (next red candle or breakdown).
+
+
+1. A paper umbrella has a long lower shadow and a small real body. The lower shadow and the real body should maintain the ‘shadow to real body’ ratio. In the case of the paper umbrella, the lower shadow should be at least twice the real body’s length.
+2. Since the open and close prices are close to each other, the paper umbrella’s colour should not matter.
+3. If a paper umbrella appears at the bottom of a downtrend, it is called the ‘hammer.’
+4. If the paper umbrella appears at the top end of an uptrend, it is called the hanging man.
+5. The hammer is a bullish pattern, and one should look at buying opportunities when it appears.
+    1. The low of the hammer acts as the stop-loss price trade.
+6. The hanging man is a bearish pattern which appears at the top end of the trend, and one should look at selling opportunities when it appears.
+    1. The high of the hanging man acts as the stop loss price for the trade.
+7. The shooting star is a bearish pattern which appears at the top end of the trend. One should look at shorting opportunities when a shooting star appears.
+    1. The high of the shooting star will be the stop loss price for the trade.
+8. 
