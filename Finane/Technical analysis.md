@@ -77,3 +77,16 @@ engulf - governing previous candles body
 
 ![[Pasted image 20250703174014.png]]
 
+
+
+![[Pasted image 20250703174311.png]]
+
+support zone is more buying activity in the area
+
+the 2 points at least to make zone support 
+
+![[Pasted image 20250703174533.png]]
+
+
+![[Pasted image 20250703174656.png]]
+
