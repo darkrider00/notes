@@ -143,5 +143,47 @@ What if in 15 years from today, Rs.75,000,000/- is less valuable than Rs.15,000,
 
 
 **Opportunity cost = Risk free rate + Risk premium**
+This is what you could’ve earned _elsewhere_, safely.
+
+- Risk-Free Rate (Govt Bond): **7.5%**
+    
+- Add Risk Premium (e.g., 1.5%):  
+    ➡️ Total: **9% Opportunity Cost**
 
 **Present value = Future value / (1+ discount rate ) ^ (time)**
+
+Where:
+- Future Value (FV) = ₹75,000,000
+- r = discount rate = 9% = 0.09
+- n = number of years = 15    
+
+= 75,000,000 / (1+9%)^(15)
+= 20,590,353
+
+
+
+The future value of money is simply the inverse of the present value of money. Going by the real estate example, the future value of money helps us find an answer to a question like this –
+- What will be the value of Rs.20,590,353/- in 15 years from now?
+To find an answer to this question, we again must find out the opportunity cost. Irrespective of future value or present value problems we are trying to solve, the opportunity cost remains the same.
+
+So, 9% will be the opportunity cost.
+
+**= P*(1+R)^(n),** which is also the future value, therefor –
+
+**Future value =** **P*(1+R)^(n)**
+
+Where,
+
+- P = Amount
+- R = opportunity cost
+- N = Time period
+
+Applying this,
+
+= 20,590,353 * (1+9%)^(15)
+
+Remember, when we worked out the present value of Rs.75,000,000/- at a 9% discount rate for 15 years, the answer was 20,590,353. Now, we are trying to do the exact opposite i.e compound 20,590,353 at 9% for 15 years. So the answer has to be 75,000,000. When you do this math –
+
+= 20,590,353 * (1+9%)^(15)
+
+= **75,000,000**
