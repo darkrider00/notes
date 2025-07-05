@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finane/Technical analysis.md",
+                "file": "Finane/MF.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Technical analysis"
+              "title": "MF"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "144bcbbe281555fb",
@@ -179,6 +178,9 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "attachments/Pasted image 20250705104949.png",
+    "Finane/Technical analysis.md",
+    "Finane/MF.md",
     "attachments/Pasted image 20250703174656.png",
     "attachments/Pasted image 20250703174533.png",
     "attachments/Pasted image 20250703174311.png",
@@ -189,9 +191,7 @@
     "attachments/Pasted image 20250703173530.png",
     "attachments/Pasted image 20250703172905.png",
     "attachments/Pasted image 20250703172831.png",
-    "attachments/Pasted image 20250703171739.png",
     "Finane/Stock market.md",
-    "Finane/Technical analysis.md",
     "Untitled 1.canvas",
     "Finane",
     "notes/Portswigger/SQL injection/SQL injection.md",
@@ -219,7 +219,6 @@
     "notes/Malware/required Programming.md",
     "notes/LINUX/INDEX page.md",
     "notes/LINUX/File systems.md",
-    "Untitled 1.md",
     "notes/Google cloud professional/Labs/security",
     "notes/Google cloud professional/Labs/networking -Implement Private Google Access and Cloud NAT",
     "notes/Google cloud professional/Labs/Routing and addressing",
