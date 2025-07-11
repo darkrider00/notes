@@ -187,3 +187,51 @@ Remember, when we worked out the present value of Rs.75,000,000/- at a 9% discou
 = 20,590,353 * (1+9%)^(15)
 
 = **75,000,000**
+
+
+
+![[Pasted image 20250711120501.png]]
+
+
+As a fund manager, you decide to invest the funds, i.e. Rs.275,000/- across ten stocks. For the sake of simplicity, you choose to invest the same amount across all the ten stocks. The distribution of funds in this manner is referred to as the ‘equally distributed portfolio’.
+
+![[Pasted image 20250711120515.png]]
+
+- The shares are issued to all investors. The number of shares is proportional to the individual investment made
+- The funds are invested in the markets across ten different stocks
+
+sted in the market, the value of the overall fund depends on how the shares perform daily. A few stocks can go up, and a few can come down, resulting in either a profit or a loss. This profit and loss should be passed to the investors. The quantum of profit or loss experienced by the investors is directly dependent on the amount of money each investor has invested in the fund.
+
+Let’s continue the example to see how the P&L pass through happens. I’ve randomly assigned percentage movement to all these stocks.
+
+
+![[Pasted image 20250711120637.png]]
+
+
+Let’s continue the example to see how the P&L pass through happens. I’ve randomly assigned percentage movement to all these stocks.
+
+ proportion to their investments. To ensure a fair distribution, all we need to do is, ensure the notional value goes up (or down) by the same percentage as the fund, which is 1.0340% in this case.
+
+Initial notional value (day 1) – 10
+
+P&L % in funds – 1.0340%
+
+New notional value (day 2) – 10 *(1+1.0340%) = 10.1034
+
+![[Pasted image 20250711120926.png]]
+
+ if you add up all the new investment amount, you will get the new fund value, i.e. Rs.277,844/-.
+
+
+A mutual fund’s net asset value or NAV is one of the most important metrics. On an end of day basis, the mutual fund company does the following calculations –
+
+- The value of all the investments
+- Expenses of running the mutual fund
+
+Based on these two parameters, the NAV of a fund is estimated daily. The formula to calculate the NAV is –
+
+NAV = (Value of all the assets – the expenses)/number of shares (units)
+
+I’ll end this chapter here.  I’ll be happy if you have fully understood the concept of what a fund is and the role NAV plays.
+
+
