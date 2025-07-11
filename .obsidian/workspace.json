@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finane/MF.md",
+                "file": "Python notes/UNIT-2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MF"
+              "title": "UNIT-2"
             }
           }
         ]
@@ -178,11 +178,13 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "attachments/Pasted image 20250711161534.png",
+    "Finane/MF.md",
+    "Python notes/UNIT-2.md",
     "attachments/Pasted image 20250711120926.png",
     "attachments/Pasted image 20250711120637.png",
     "attachments/Pasted image 20250711120515.png",
     "attachments/Pasted image 20250711120501.png",
-    "Finane/MF.md",
     "attachments/Pasted image 20250705104949.png",
     "Finane/Technical analysis.md",
     "attachments/Pasted image 20250703174656.png",
@@ -190,7 +192,6 @@
     "attachments/Pasted image 20250703174311.png",
     "attachments/Pasted image 20250703174014.png",
     "attachments/Pasted image 20250703173914.png",
-    "attachments/Pasted image 20250703173821.png",
     "Finane/Stock market.md",
     "Untitled 1.canvas",
     "Finane",
@@ -218,7 +219,6 @@
     "notes/Malware/Windows Essentials.md",
     "notes/Malware/required Programming.md",
     "notes/LINUX/INDEX page.md",
-    "notes/LINUX/File systems.md",
     "notes/Google cloud professional/Labs/security",
     "notes/Google cloud professional/Labs/networking -Implement Private Google Access and Cloud NAT",
     "notes/Google cloud professional/Labs/Routing and addressing",
