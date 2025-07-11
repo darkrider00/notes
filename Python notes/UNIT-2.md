@@ -1828,3 +1828,1328 @@ On running the code, we will get the following output
 <class 'IndexError'>
 ```
 
+As you can see we just extracted and printed out the information about the class to which the exception that we have just caught belongs to!
+
+But how exactly did we do that?  
+If you have a look at the _except_ clause. In the line
+
+```python
+except Exception as e:
+```
+
+
+what we have done is, we have assigned the caught exception to an object named “_e”._ Then by using the built-in python function _type()_, we have printed out the class name that the object _e_ belongs to.
+
+```python
+print(type(e))
+```
+
+### Where to get more details about Exception Types
+
+Now that we have the “Exception Type”, next we will probably need to get some information about that particular type so that we can get a better understanding of why our code has failed. In order to do that, the best place to start is the official documentation.
+
+For built in exceptions you can have a look at the [Python Documentation](https://docs.python.org/3/library/exceptions.html#bltin-exceptions)
+
+For Exception types that come with the libraries that you use with your code, refer to the documentation of your library.
+
+## Piece#2: Printing Exception Value a.k.a Error message
+
+The Exception type is definitely useful for debugging, but, a message like _IndexError_ might sound cryptic and a good understandable error-message will make our job of debugging easier without having to look at the documentation.
+
+In other words, if your program is to be run on the command line and you wish to log why the program just crashed then it is better to use an “Error message” rather than an “Exception Type”.
+
+The example below shows how to print such an Error message.
+
+```pythpn
+# Example 3: Print Default Error message
+try:
+  my_list = [1,2]
+  print (my_list[3])
+except Exception as e:
+  print(e)
+```
+
+
+This will print the default error message as follows
+
+```python
+list index out of range
+```
+
+Each Exception type comes with its own error message. This can be retrieved using the built-in function _print()_.
+
+Say your program is going to be run by a not-so-tech-savvy user, in that case, you might want to print something friendlier. You can do so by passing in the string to be printed along with the constructor as follows.
+
+```python
+# Example 4: Print Custom Error message
+
+try:
+
+raise IndexError('Custom message about IndexError')
+
+except Exception as e:
+
+print(e)
+```
+
+This will print
+
+```python
+Custom message about IndexError
+```
+
+To understand how the built-in function _print()_ does this magic, and see some more examples of manipulating these error messages, I recommend reading my other article in the link below.
+
+If you wish to print both the Error message and the Exception type, which I recommend, you can do so like below.
+
+```python
+# Example 5: Print Error message and Exception type
+
+try:
+
+my_list = [1,2]
+
+print (my_list[3])
+
+except Exception as e:
+
+print(repr(e))
+```
+
+This will print something like
+
+```python
+IndexError('list index out of range')
+```
+
+Now that we have understood how to get control over the usage of Pieces 1 and 2, let us go ahead and look at the last and most important piece for debugging, **the stack-trace** which tells us where exactly in our program have the Exception occurred.
+
+## Piece#3: Printing/Logging the stack-trace using the traceback object
+
+Stack-trace in Python is packed into an object named _traceback_ object.
+
+This is an interesting one as the _traceback_ class in Python comes with several useful methods to exercise complete control over what is printed.
+
+Let us see how to use these options using some examples!
+
+```python
+# Example 6: Print or Log the entire traceback Message
+
+import traceback
+
+try:
+
+my_list = [1,2]
+
+print (my_list[3])
+
+except Exception:
+
+traceback.print_exc()
+```
+
+This will print something like
+
+```python
+Traceback (most recent call last):
+  File "<ipython-input-38-f9a1ee2cf77a>", line 5, in <module>
+    print (my_list[3])
+IndexError: list index out of range
+```
+
+
+which contains the entire error messages printed by the Python interpreter if we fail to handle the exception.
+
+Here, instead of crashing the program, we have printed this entire message using our exception handler with the help of the _print_exc()_ method of the _traceback_ class.
+
+The above Example-6 is too simple, as, in the real-world, we will normally have several nested function calls which will result in a deeper stack. Let us
+
+
+```python
+# Example 7: A Deeper Stack with several function calls
+
+def func3():
+
+my_list = [1,2]
+
+print (my_list[3])
+
+def func2():
+
+print('calling func3')
+
+func3()
+
+def func1():
+
+print('calling func2')
+
+func2()
+
+try:
+
+print('calling func1')
+
+func1()
+
+except Exception as e:
+
+traceback.print_exc()
+```
+
+Here in the _try_ clause we call _func1()_, which in-turn calls _func2()_, which in-turn calls _func3()_, which produces an IndexError. Running the code above we get the following output
+
+```python
+calling func1
+calling func2
+calling func3
+Traceback (most recent call last):
+  File "<ipython-input-42-2267707e164f>", line 15, in <module>
+    func1()
+  File "<ipython-input-42-2267707e164f>", line 11, in func1
+    func2()
+  File "<ipython-input-42-2267707e164f>", line 7, in func2
+    func3()
+  File "<ipython-input-42-2267707e164f>", line 3, in func3
+    print (my_list[3])
+IndexError: list index out of range
+```
+
+Say we are not interested in some of the above information. Say we just want to print out the Traceback and skip the error message and Exception type (the last line above), then we can modify the code like shown below.
+
+# Example 8: Skipping the last line of Traceback
+
+```python
+# Example 8: Skipping the last line of Traceback
+
+def func3():
+
+my_list = [1,2]
+
+print (my_list[3])
+
+def func2():
+
+func3()
+
+def func1():
+
+func2()
+
+try:
+
+func1()
+
+except Exception as e:
+
+traceback_lines = traceback.format_exc().splitlines()
+
+for line in traceback_lines:
+
+if line != traceback_lines[-1]:
+
+print(line)
+```
+
+Here we have used the _format_exc()_ method available in the _traceback_ class to get the traceback information as a string and used _splitlines()_ method to transform the string into a list of lines and stored that in a list object named _traceback_lines_
+
+Then with the help of a simple _for_ loop we have skipped printing the last line with index of -1 to get an output like below
+
+```python
+Traceback (most recent call last):
+  File "<ipython-input-43-aff649563444>", line 3, in <module>
+    func1()
+  File "<ipython-input-42-2267707e164f>", line 11, in func1
+    func2()
+  File "<ipython-input-42-2267707e164f>", line 7, in func2
+    func3()
+  File "<ipython-input-42-2267707e164f>", line 3, in func3
+    print (my_list[3])
+```
+
+Another interesting variant of formatting the information in the traceback object is to control the depth of stack that is actually printed out.
+
+If your program uses lots of external library code, odds are the stack will get very deep, and printing out each and every level of function call might not be very useful. If you ever find yourself in such a situation you can set the _limit_ argument in the _print_exc()_ method like shown below.
+
+```python
+traceback.print_exc(limit=2, file=sys.stdout)
+```
+
+This will limit the number of levels to 2. Let us use this line of code in our Example and see how that behaves
+
+
+## Best Practices while Printing Exception messages
+
+### When to Use Which Piece
+
+- **Use Piece#1 only on very short programs and only during the development/testing phase** to get some clues on the Exceptions without letting the interpreter crash your program. Once finding out, implement specific handlers to do something about these exceptions. If you are not sure how to handle the exceptions have a look at my other article below where I have explained 3 ways to handle Exceptions  
+    [Exceptions in Python: Everything You Need To Know!](https://embeddedinventor.com/exceptions-in-python-everything-you-need-to-know/)
+- **Use Piece#2 to print out some friendly information either for yourself or for your user** to inform them what exactly is happening.
+- **Use all 3 pieces on your finished product**, so that if an exception ever occurs while your program is running on your client’s computer, you can log the errors and have use that information to fix your bugs.
+
+### Where to print
+
+One point worth noting here is that the default file that _print()_ uses is the _stdout_ file stream and not the _stderr_ stream. To use _stderr_ instead, you can modify the code like this
+
+```python
+Example 10: Where to print error messages
+
+`import sys try:   #some naughty statements that irritate us with exceptions except Exception as e:   print(e, file=sys.stderr)`
+
+```
+
+
+The above code is considered better practice, as errors are meant to go to _stderr_ and not _stdout_.
+
+You can always print these into a separate log file too if that is what you need. This way, you can organize the logs collected in a better manner by separating the informational printouts from the error printouts.
+
+
+**Why exceptions at all?** 
+
+Python exceptions provide a mechanism for handling errors that occur during the execution of a program. Unlike syntax errors, which are detected by the parser, Python raises exceptions when an error occurs in syntactically correct code.
+
+Knowing how to raise, catch, and handle exceptions effectively helps to ensure your program behaves as expected, even when encountering errors.
+
+- Exceptions in Python occur when **syntactically correct code** results in an **error**.
+- **The `try` … `except` block** lets you execute code and handle exceptions that arise.
+- You can use the `else`, and `finally` **keywords** for more refined **exception handling**.
+- It’s **bad practice** to **catch all exceptions** at once using `except Exception` or the bare `except` clause.
+- Combining `try`, `except`, and `pass` allows your program to **continue silently** without handling the exception.
+
+
+### sys Module
+
+The ****sys module**** in [Python](https://www.geeksforgeeks.org/python-programming-language-tutorial/) provides access to variables and functions that interact closely with the Python interpreter and runtime environment. It allows developers to manipulate various aspects of program execution and the interpreter itself. It's Key capabilities include:
+
+- Accessing command-line arguments.
+- Fetching the Python interpreter version.
+- Redirecting input/output streams, such as sys.stdin, sys.stdout and sys.stderr.
+- Exiting the program gracefully.
+- Handling exceptions and configuring interpreter settings.
+
+```python
+import sys
+print(sys.version)
+```
+
+****Output****
+
+3.6.9 (default, Oct  8 2020, 12:12:24)  
+[GCC 8.4.0]
+
+****Explanation:**** This code prints the version of the Python interpreter currently in use, which helps in identifying compatibility and environment details.
+
+## Input and Output using Python sys
+
+The ****sys module**** controls program input, output, and error streams, enabling precise data handling beyond standard input and print functions.
+
+****1. sys.stdin:**** Reads input directly from the standard input stream and supports reading multiple lines or redirected input.
+
+```python
+import sys
+
+for line in sys.stdin:
+    if 'q' == line.rstrip():
+        break
+    print(f'Input : {line}')
+print("Exit")
+
+```
+
+****2. sys.stdout:**** Writes output to the standard output stream and allows low-level control over printed output.
+
+```python
+import sys
+sys.stdout.write('Geeks')
+```
+
+****Output****
+Geeks
+
+****3. sys.stderr:**** Writes messages to the standard error stream and separates error messages from regular output
+
+```python
+import sys
+def fun(*args):
+    print(*args, file=sys.stderr)
+
+fun("Hello World")
+```
+
+## Command-Line Arguments
+
+Command-line arguments are those which are passed during the calling of the program along with the calling statement. To achieve this using the sys module, the sys module provides a variable called sys.argv. It's main purpose are:
+
+- It is a list of command-line arguments.
+- len(sys.argv) provides the number of command-line arguments.
+
+```python
+import sys
+n = len(sys.argv)
+
+print("Total arguments passed:", n)
+print("Name of Python script:", sys.argv[0])
+print("Arguments passed:", end=" ")
+
+for i in range(1, n):
+    print(sys.argv[i], end=" ")
+
+Sum = 0
+for i in range(1, n):
+    Sum += int(sys.argv[i])
+
+print(Sum)
+```
+
+![[Pasted image 20250711170502.png]]
+****Explanation:**** This code sums the command-line arguments passed to the script by converting each to an integer and adding them up using the sys module.
+
+### Exiting the Program
+
+****sys.exit([arg])**** can be used to exit the program. The optional argument arg can be an integer giving the exit or another type of object. If it is an integer, zero is considered "successful termination".
+
+> Note: A string can also be passed to the sys.exit() method.
+
+```python
+import sys
+age = 17
+if age < 18:
+    sys.exit("Age less than 18")
+else:
+    print("Age is not less than 18")
+```
+
+
+****Output****
+An exception has occurred, use %tb to see the full traceback.   
+SystemExit: Age less than 18
+
+****Explanation:**** This code uses sys****.exit()**** to terminate the program if age is less than 18, displaying a message otherwise, it prints that the age is not less than 18.
+
+## Working with Modules
+
+[sys.path](https://www.geeksforgeeks.org/sys-path-in-python/) is a list in the sys module that defines directories Python searches for modules after checking built-ins. As a regular list, it can be modified at runtime to add, remove or reorder paths.
+> ****Note:**** sys.path is an ordinary list and can be manipulated.
+
+****Example 1:**** Listing all paths
+```python
+import sys
+
+print(sys.path)
+```
+
+![[Pasted image 20250711170726.png]]
+
+
+****Explanation:**** This code will print the system paths that Python uses to search for modules. The ****sys.path**** list contains the directories that Python will search for modules when it imports them.
+
+****Example 2:**** Truncating sys.path
+```python
+import sys
+sys.path = []
+import pandas
+```
+
+ModuleNotFoundError: No module named 'pandas'
+
+****Explanation:**** This code will raise an error because the pandas module cannot be found if sys.path is emptied. By setting ****sys.path**** to an empty list, Python is prevented from locating any modules outside built-ins.
+
+## sys.modules()
+
+****sys.modules**** is a dictionary that contains all the modules currently imported in the Python interpreter. The keys are module names, and the values are the corresponding module objects. Example:
+
+
+```python
+import sys
+print(sys.modules)
+```
+
+output:
+
+![[Pasted image 20250711170806.png]]
+
+****Explanation:**** This code will print a dictionary of all the modules that have been imported by the current Python interpreter. The dictionary keys are the module names, and the dictionary values are the module objects.
+
+## Reference Count
+
+****sys.getrefcount()**** method is used to get the reference count for any given object. This value is used by Python as when this value becomes 0, the memory for that particular value is deleted. Example:
+
+```python
+import sys
+a = 'Geeks'
+print(sys.getrefcount(a))
+```
+
+**Output**
+
+4
+
+****Explanation:****This code prints the reference count of the object a, which indicates how many times it is referenced. When the count reaches 0, the object is no longer used and is garbage collected.
+
+## More Functions in Python sys
+
+|Function|Description|
+|---|---|
+|[sys.setrecursionlimit()](https://www.geeksforgeeks.org/python-sys-setrecursionlimit-method/)|sys.setrecursionlimit() method is used to set the maximum depth of the Python interpreter stack to the required limit.|
+|[sys.getrecursionlimit() method](https://www.geeksforgeeks.org/python-sys-getrecursionlimit-method/)|sys.getrecursionlimit() method is used to find the current recursion limit of the interpreter or to find the maximum depth of the Python interpreter stack.|
+|[sys.settrace()](https://www.geeksforgeeks.org/python-sys-settrace/)|It is used for implementing debuggers, profilers and coverage tools. This is thread-specific and must register the trace using threading.settrace(). On a higher level, sys.settrace() registers the traceback to the Python interpreter|
+|[sys.setswitchinterval() method](https://www.geeksforgeeks.org/python-sys-setswitchinterval-method/)|sys.setswitchinterval() method is used to set the interpreter’s thread switch interval (in seconds).|
+|[sys.maxsize()](https://www.geeksforgeeks.org/sys-maxsize-in-python/)|It fetches the largest value a variable of data type Py_ssize_t can store.|
+|[sys.maxint](https://www.geeksforgeeks.org/sys-maxint-in-python/)|maxint/INT_MAX denotes the highest value that can be represented by an integer.|
+|[sys.getdefaultencoding() method](https://www.geeksforgeeks.org/python-sys-getdefaultencoding-method/)|sys.getdefaultencoding() method is used to get the current default string encoding used by the Unicode implementation.|
+
+
+# Python Modules and File Operations
+
+This guide covers Python modules, namespaces, file operations, and related concepts, with practical examples and exercise solutions. It is designed to help you understand how to create and use modules, manage namespaces, work with files, and apply these concepts to solve problems.
+
+## 1. Understanding Modules
+
+A **module** is a Python file (`.py`) containing definitions and statements that can be imported into other programs. Python's standard library includes many modules, such as `doctest` and `string`, which provide reusable functionality.
+
+### Example: Using the `keyword` Module
+
+```python
+from keyword import iskeyword, kwlist
+
+# Check if a string is a Python keyword
+print(iskeyword('for'))  # True
+print(iskeyword('all'))  # False
+
+# List all Python keywords
+print(kwlist)
+# Output: ['and', 'as', 'assert', 'break', 'class', 'continue', 'def', ...]
+```
+
+**Explanation**:
+
+- The `keyword` module provides `iskeyword()`, a boolean function that checks if a string is a Python keyword.
+- `kwlist` is a data attribute containing a list of all Python keywords.
+- Use `pydoc` to explore other standard library modules (e.g., `pydoc -g` or `pydoc -p 7464`).
+
+## 2. Creating Modules
+
+You can create a module by saving a `.py` file with functions, variables, or other definitions.
+
+### Example: Creating and Using a `seqtools` Module
+
+```python
+# seqtools.py
+def remove_at(pos, seq):
+    """
+    Remove character at position pos from sequence seq.
+    >>> remove_at(4, 'A string!')
+    'A sting!'
+    """
+    return seq[:pos] + seq[pos+1:]
+```
+
+**Usage in Python Shell**:
+
+```python
+# Option 1: Import specific function
+from seqtools import remove_at
+s = "A string!"
+print(remove_at(4, s))  # Output: A sting!
+
+# Option 2: Import module
+import seqtools
+print(seqtools.remove_at(4, s))  # Output: A sting!
+```
+
+**Explanation**:
+
+- Save the code in a file named `seqtools.py`.
+- Import the module or specific functions without the `.py` extension.
+- Use the dot operator (`.`) to access module attributes or functions.
+
+## 3. Namespaces
+
+A **namespace** is a container that allows the same name to be used in different contexts without ambiguity. Modules and functions each have their own namespaces.
+
+### Example: Namespaces in Modules
+
+```python
+# module1.py
+question = "What is the meaning of life, the Universe, and everything?"
+answer = 42
+
+# module2.py
+question = "What is your quest?"
+answer = "To seek the holy grail."
+
+# namespace_test.py
+import module1
+import module2
+
+print(module1.question)  # What is the meaning of life, the Universe, and everything?
+print(module2.question)  # What is your quest?
+print(module1.answer)    # 42
+print(module2.answer)    # To seek the holy grail.
+```
+
+**Explanation**:
+
+- Each module (`module1`, `module2`) has its own namespace, preventing naming collisions.
+- Use `import module` to preserve namespaces, avoiding conflicts compared to `from module import *`.
+
+### Example: Namespaces in Functions
+
+```python
+def f():
+    n = 7
+    print(f"printing n inside of f: {n}")
+
+def g():
+    n = 42
+    print(f"printing n inside of g: {n}")
+
+n = 11
+print(f"printing n before calling f: {n}")
+f()
+print(f"printing n after calling f: {n}")
+g()
+print(f"printing n after calling g: {n}")
+```
+
+**Output**:
+
+```
+printing n before calling f: 11
+printing n inside of f: 7
+printing n after calling f: 11
+printing n inside of g: 42
+printing n after calling g: 11
+```
+
+**Explanation**:
+
+- Each function (`f`, `g`) has its own namespace, so `n` inside `f` and `g` doesn't affect the global `n`.
+- Namespaces isolate variables, allowing multiple programmers to work without collisions.
+
+## 4. Attributes and the Dot Operator
+
+Module attributes (variables, functions) are accessed using the dot operator (`.`).
+
+### Example: String Module Functions
+
+```python
+import string
+
+print(string.capitalize('maryland'))  # Output: Maryland
+print(string.capwords("what's all this, then, amen?"))  # Output: What's All This, Then, Amen?
+print(string.center('How to Center Text', 70))  # Output: centered text
+print(string.upper('angola'))  # Output: ANGOLA
+```
+
+**Explanation**:
+
+- The `string` module provides functions like `capitalize`, `capwords`, `center`, and `upper`.
+- Access them using `string.function_name()`.
+
+### Example: String and List Methods
+
+```python
+# String methods
+s = 'maryland'
+print(s.capitalize())  # Output: Maryland
+print(s.upper())  # Output: MARYLAND
+
+# List methods
+mylist = []
+mylist.append(5)
+mylist.append(27)
+mylist.append(3)
+mylist.append(12)
+print(mylist)  # Output: [5, 27, 3, 12]
+mylist.insert(1, 12)
+print(mylist.count(12))  # Output: 2
+mylist.extend([5, 9, 5, 11])
+print(mylist.index(9))  # Output: 6
+mylist.reverse()
+mylist.sort()
+mylist.remove(12)
+print(mylist)  # Output: [3, 5, 5, 5, 9, 11, 12, 27]
+```
+
+**Explanation**:
+
+- String methods (e.g., `capitalize`, `upper`) are invoked on string objects.
+- List methods (e.g., `append`, `insert`, `count`, `extend`, `index`, `reverse`, `sort`, `remove`) modify or query lists.
+
+## 5. Reading and Writing Text Files
+
+Files store data in non-volatile memory. Python uses the `open()` function to read or write files.
+
+### Example: Writing to a File
+
+```python
+# Write to a file
+with open('test.dat', 'w') as myfile:
+    myfile.write("Now is the time")
+    myfile.write("to close the file")
+```
+
+**Explanation**:
+
+- `'w'` mode creates or overwrites the file.
+- The `with` statement ensures the file is closed after writing.
+
+### Example: Reading from a File
+
+```python
+# Read from a file
+with open('test.dat', 'r') as myfile:
+    text = myfile.read()
+    print(text)  # Output: Now is the timeto close the file
+```
+
+**Explanation**:
+
+- `'r'` mode opens the file for reading.
+- `read()` retrieves the entire file content as a string.
+
+### Example: Copying a File
+
+```python
+def copy_file(oldfile, newfile):
+    """
+    Copy content from oldfile to newfile, 50 characters at a time.
+    """
+    with open(oldfile, 'r') as infile, open(newfile, 'w') as outfile:
+        while True:
+            text = infile.read(50)
+            if text == "":
+                break
+            outfile.write(text)
+```
+
+**Explanation**:
+
+- Reads 50 characters at a time until the file ends (`text == ""`).
+- Uses `with` to handle file closing automatically.
+
+## 6. Processing Text Files
+
+Text files are processed line by line using methods like `readline()` and `readlines()`.
+
+### Example: Writing and Reading Lines
+
+```python
+# Write lines to a file
+with open("test.dat", "w") as outfile:
+    outfile.write("line one\nline two\nline three\n")
+
+# Read lines
+with open("test.dat", "r") as infile:
+    print(infile.readline())  # Output: line one
+    print(infile.readlines())  # Output: ['line two\n', 'line three\n']
+```
+
+**Explanation**:
+
+- `write()` adds newline characters (`\n`) to separate lines.
+- `readline()` reads one line, including the newline.
+- `readlines()` returns remaining lines as a list.
+
+### Example: Filtering Lines
+
+```python
+def filter(oldfile, newfile):
+    """
+    Copy oldfile to newfile, omitting lines starting with '#'.
+    """
+    with open(oldfile, 'r') as infile, open(newfile, 'w') as outfile:
+        while True:
+            text = infile.readline()
+            if text == "":
+                break
+            if text[0] == '#':
+                continue
+            outfile.write(text)
+```
+
+**Explanation**:
+
+- `readline()` reads one line at a time.
+- `continue` skips lines starting with `#`.
+- The loop ends when an empty string is read.
+
+## 7. Directories and File Paths
+
+Files are organized in directories, and paths specify their location.
+
+### Example: Reading a File with a Path
+
+```python
+with open('/usr/share/dict/words', 'r') as wordsfile:
+    wordlist = wordsfile.readlines()
+    print(wordlist[:6])  # Output: ['\n', 'A\n', "A's\n", 'AOL\n', "AOL's\n", 'Aachen\n']
+```
+
+**Explanation**:
+
+- The path `/usr/share/dict/words` points to a file in a Unix system.
+- `readlines()` reads all lines into a list.
+
+## 8. Counting Letters with `ord` and `chr`
+
+The `ord()` function returns a character's ASCII code, and `chr()` converts an integer to a character.
+
+### Example: Using `ord` and `chr`
+
+```python
+print(ord('a'))  # Output: 97
+print(chr(65))   # Output: A
+```
+
+**Explanation**:
+
+- `ord('a')` returns 97, the ASCII code for lowercase 'a'.
+- `chr(65)` returns 'A', the character for ASCII code 65.
+
+## 9. The `sys` Module and Command Line Arguments
+
+The `sys` module provides access to system-specific variables and functions, including `argv` for command-line arguments.
+
+### Example: Using `sys.argv`
+
+```python
+# demo_argv.py
+import sys
+
+print(sys.argv)  # Output: ['demo_argv.py', 'this', 'and', 'that', '1', '2', '3']
+```
+
+**Command Line**:
+
+```bash
+$ python demo_argv.py this and that 1 2 3
+```
+
+**Explanation**:
+
+- `sys.argv` is a list where the first element is the script name, followed by command-line arguments.
+- Arguments with spaces must be quoted (e.g., `"this and"`).
+
+## 10. Exercise Solutions
+
+Below are solutions to the exercises, structured as Python scripts with explanations.
+
+### Exercise 1: Exploring the `calendar` Module
+
+**Task**: Use `pydoc` to explore the `calendar` module and test `calendar` and `isleap`.
+
+```python
+import calendar
+
+# Print a yearly calendar
+year = calendar.calendar(2008)
+print(year)  # Outputs a formatted calendar for 2008
+
+# Test isleap
+print(calendar.isleap(2008))  # Output: True (2008 is a leap year)
+print(calendar.isleap(2007))  # Output: False
+```
+
+**Explanation**:
+
+- `calendar.calendar(year)` generates a text calendar for the given year.
+- `calendar.isleap(year)` takes an integer year and returns `True` if it's a leap year, `False` otherwise.
+- **Notes**: A leap year is divisible by 4, except for century years not divisible by 400.
+
+### Exercise 2: Exploring the `math` Module
+
+**Task**: Use `pydoc` to explore the `math` module.
+
+```python
+import math
+
+# Test ceil and floor
+print(math.ceil(4.2))   # Output: 5.0
+print(math.floor(4.2))  # Output: 4.0
+
+# Square root equivalent
+x = 16
+sqrt = x ** 0.5  # Same as math.sqrt(16)
+print(sqrt)  # Output: 4.0
+
+# Data constants
+print(math.pi)  # Output: 3.141592653589793
+print(math.e)   # Output: 2.718281828459045
+```
+
+**Explanation**:
+
+- **Functions**: `math.ceil(x)` rounds up to the nearest integer; `math.floor(x)` rounds down.
+- **Square Root**: `x ** 0.5` computes the square root without `math.sqrt`.
+- **Constants**: `math.pi` and `math.e` are predefined constants.
+- **Total Functions**: The `math` module has around 50 functions (check `pydoc math`).
+
+### Exercise 3: Exploring the `copy` Module
+
+**Task**: Investigate `deepcopy` and identify where it would be useful.
+
+```python
+import copy
+
+nested_list = [[1, 2], [3, 4]]
+shallow_copy = nested_list.copy()
+deep_copy = copy.deepcopy(nested_list)
+
+shallow_copy[0][0] = 99
+print(nested_list)  # Output: [[99, 2], [3, 4]]
+print(deep_copy)    # Output: [[1, 2], [3, 4]]
+```
+
+**Explanation**:
+
+- `copy.deepcopy()` creates a fully independent copy of an object, including nested structures.
+- Useful in exercises involving complex data structures (e.g., matrix multiplication from the previous chapter) to avoid modifying the original data.
+- **Note**: Shallow copies only copy the top-level structure, leaving nested objects shared.
+
+### Exercise 4: Creating Modules and Testing Namespaces
+
+**Task**: Create `mymodule1.py`, `mymodule2.py`, and `namespace_test.py`.
+
+```python
+# mymodule1.py
+myage = 30  # Your current age
+year = 2025  # Current year
+print("My name is %s" % __name__)
+
+if __name__ == '__main__':
+    print("This won't run if I'm imported.")
+```
+
+```python
+# mymodule2.py
+myage = 0    # Age at birth
+year = 1995  # Year of birth
+print("My name is %s" % __name__)
+
+if __name__ == '__main__':
+    print("This won't run if I'm imported.")
+```
+
+```python
+# namespace_test.py
+import mymodule1
+import mymodule2
+
+print((mymodule2.myage - mymodule1.myage) == (mymodule2.year - mymodule1.year))
+print("My name is %s" % __name__)
+```
+
+**Explanation**:
+
+- **Output**: Running `namespace_test.py` prints `True` or `False` based on age/year differences, followed by `My name is __main__` for `namespace_test.py` and `My name is mymodule1`/`mymodule2` for imports.
+- `__name__` is `__main__` when a script is run directly, otherwise it’s the module name when imported.
+- The `if __name__ == '__main__':` block in `mymodule1.py` only runs when executed directly, not when imported.
+
+### Exercise 5: Exploring `this` Module
+
+**Task**: Import `this` and note Tim Peters' comments on namespaces.
+
+```python
+import this
+```
+
+**Explanation**:
+
+- The `this` module prints "The Zen of Python" by Tim Peters.
+- On namespaces, it says: "Namespaces are one honking great idea -- let's do more of those!"
+- This emphasizes the importance of namespaces for organizing code and avoiding naming conflicts.
+
+### Exercise 6: Exploring `string` Module Functions
+
+**Task**: Test three functions from the `string` module.
+
+```python
+import string
+
+print(string.lower('ANGOLA'))  # Output: angola
+print(string.strip('  hello  '))  # Output: hello
+print(string.replace('hello world', 'world', 'Python'))  # Output: hello Python
+```
+
+**Explanation**:
+
+- `string.lower(s)` converts a string to lowercase.
+- `string.strip(s)` removes leading/trailing whitespace.
+- `string.replace(s, old, new)` replaces all occurrences of `old` with `new`.
+
+### Exercise 7: Rewriting `matrix_mult` with List Methods
+
+**Task**: Rewrite `matrix_mult` using list methods (assuming a matrix multiplication function from a previous chapter).
+
+```python
+def matrix_mult(A, B):
+    """
+    Multiply two matrices A and B.
+    >>> matrix_mult([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+    [[19, 22], [43, 50]]
+    """
+    result = []
+    for i in range(len(A)):
+        row = []
+        for j in range(len(B[0])):
+            product = sum(A[i][k] * B[k][j] for k in range(len(B)))
+            row.append(product)
+        result.append(row)
+    return result
+```
+
+**Explanation**:
+
+- Uses `append` to build rows and the result matrix.
+- `sum()` with a generator expression computes the dot product for each element.
+- List methods simplify matrix construction compared to manual indexing.
+
+### Exercise 8: Exploring `str` and `list` Methods with `dir`
+
+**Task**: Use `dir(str)` and `dir(list)` to find new methods.
+
+```python
+# String methods
+s = "hello world"
+print(s.join(['a', 'b']))  # Output: ahello worldb
+print(s.find('o'))  # Output: 4
+print(s.rjust(15))  # Output:     hello world
+
+# List methods
+lst = [1, 2, 3]
+lst.pop(1)
+print(lst)  # Output: [1, 3]
+lst.clear()
+print(lst)  # Output: []
+lst.extend([4, 5])
+print(lst)  # Output: [4, 5]
+```
+
+**Explanation**:
+
+- **String Methods**:
+    - `join(iterable)`: Joins iterable elements with the string as a separator.
+    - `find(sub)`: Returns the lowest index of `sub` or -1 if not found.
+    - `rjust(width)`: Right-justifies the string to the specified width.
+- **List Methods**:
+    - `pop(index)`: Removes and returns the item at `index`.
+    - `clear()`: Removes all items from the list.
+    - `extend(iterable)`: Adds all items from `iterable` to the list.
+
+### Exercise 9: Implementing `myreplace`
+
+**Task**: Implement `myreplace` using `split` and `join`.
+
+```python
+def myreplace(old, new, s):
+    """
+    Replace all occurrences of old with new in the string s.
+    >>> myreplace(',', ';', 'this, that, and, some, other, thing')
+    'this; that; and; some; other; thing'
+    >>> myreplace(' ', '**', 'Words will now be separated by stars.')
+    'Words**will**now**be**separated**by**stars.'
+    """
+    return new.join(s.split(old))
+```
+
+**Explanation**:
+
+- `s.split(old)` splits the string into a list at each occurrence of `old`.
+- `new.join(...)` joins the list elements with `new` as the separator.
+- Passes all doctests by correctly replacing all instances of `old` with `new`.
+
+### Exercise 10: Creating `wordtools.py` Module
+
+**Task**: Implement functions in `wordtools.py` with doctests.
+
+```python
+# wordtools.py
+def cleanword(word):
+    """
+    Remove non-alphabetic characters from a word.
+    >>> cleanword('what?')
+    'what'
+    >>> cleanword('"now!"')
+    'now'
+    >>> cleanword('?+="word!,@$()"')
+    'word'
+    """
+    return ''.join(c for c in word if c.isalpha())
+
+def has_dashdash(s):
+    """
+    Check if a string contains '--'.
+    >>> has_dashdash('distance--but')
+    True
+    >>> has_dashdash('several')
+    False
+    >>> has_dashdash('spoke--fancy')
+    True
+    """
+    return '--' in s
+
+def extract_words(s):
+    """
+    Extract alphabetic words from a string, converting to lowercase.
+    >>> extract_words('Now is the time!  "Now", is the time? Yes, now.')
+    ['now', 'is', 'the', 'time', 'now', 'is', 'the', 'time', 'yes', 'now']
+    >>> extract_words('she tried to curtsey as she spoke--fancy')
+    ['she', 'tried', 'to', 'curtsey', 'as', 'she', 'spoke', 'fancy']
+    """
+    return [cleanword(word).lower() for word in s.split() if cleanword(word)]
+
+def wordcount(word, wordlist):
+    """
+    Count occurrences of a word in a wordlist.
+    >>> wordcount('now', ['now', 'is', 'time', 'is', 'now', 'is', 'is'])
+    ['now', 2]
+    >>> wordcount('is', ['now', 'is', 'time', 'is', 'now', 'is', 'the', 'is'])
+    ['is', 4]
+    """
+    return [word, wordlist.count(word)]
+
+def wordset(wordlist):
+    """
+    Return a sorted list of unique words.
+    >>> wordset(['now', 'is', 'time', 'is', 'now', 'is', 'is'])
+    ['is', 'now', 'time']
+    >>> wordset(['I', 'a', 'a', 'is', 'a', 'is', 'I', 'am'])
+    ['I', 'a', 'am', 'is']
+    """
+    return sorted(set(wordlist))
+
+def longestword(wordset):
+    """
+    Return the length of the longest word in wordset.
+    >>> longestword(['a', 'apple', 'pear', 'grape'])
+    5
+    >>> longestword(['a', 'am', 'I', 'be'])
+    2
+    """
+    return max(len(word) for word in wordset) if wordset else 0
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+```
+
+**Explanation**:
+
+- **Doctest Integration**: The `if __name__ == '__main__':` block runs doctests when `wordtools.py` is executed directly, but not when imported. `__name__` is `wordtools` when imported, `__main__` when run directly.
+- **Function Details**:
+    - `cleanword`: Removes non-alphabetic characters using a list comprehension.
+    - `has_dashdash`: Checks for `'--'` using the `in` operator.
+    - `extract_words`: Splits the string, cleans each word, and converts to lowercase.
+    - `wordcount`: Returns a list with the word and its count in `wordlist`.
+    - `wordset`: Uses `set` to get unique words and `sorted` to order them.
+    - `longestword`: Uses `max` with a generator to find the longest word length.
+
+### Exercise 11: Sorting Fruits
+
+**Task**: Write `sort_fruits.py` to sort fruits from `unsorted_fruits.txt` into `sorted_fruits.txt`.
+
+```python
+# sort_fruits.py
+with open('unsorted_fruits.txt', 'r') as infile:
+    fruits = infile.readlines()
+    fruits = [fruit.strip() for fruit in fruits]  # Remove newlines
+    fruits.sort()  # Sort alphabetically
+    with open('sorted_fruits.txt', 'w') as outfile:
+        for fruit in fruits:
+            outfile.write(fruit + '\n')
+```
+
+**Explanation**:
+
+- Reads all lines from `unsorted_fruits.txt`.
+- Strips newlines, sorts the list, and writes to `sorted_fruits.txt` with newlines.
+- Assumes `unsorted_fruits.txt` contains one fruit per line.
+
+### Exercise 12: Analyzing `countletters.py`
+
+**Task**: Answer questions about `countletters.py`.
+
+```python
+# countletters.py
+def display(i):
+    if i == 10: return 'LF'
+    if i == 13: return 'CR'
+    if i == 32: return 'SPACE'
+    return chr(i)
+
+with open('alice_in_wonderland.txt', 'r') as infile:
+    text = infile.read()
+
+counts = 128 * [0]
+for letter in text:
+    counts[ord(letter)] += 1
+
+with open('alice_counts.dat', 'w') as outfile:
+    outfile.write("%-12s%s\n" % ("Character", "Count"))
+    outfile.write("=================\n")
+    for i in range(len(counts)):
+        if counts[i]:
+            outfile.write("%-12s%d\n" % (display(i), counts[i]))
+```
+
+**Answers**:
+
+1. **Reading the File**:
+    
+    - `infile = open('alice_in_wonderland.txt', 'r')`: Opens the file in read mode.
+    - `text = infile.read()`: Reads the entire file into a string.
+    - `infile.close()`: Closes the file to free resources.
+    - `type(text)` returns `<class 'str'>` (a string).
+2. **Purpose of `128 * [0]`**:
+    
+    - `128 * [0]` creates a list of 128 zeros, representing counts for ASCII characters (0-127).
+    - ASCII has 128 standard characters, so `counts` tracks occurrences of each character.
+3. **Counting Loop**:
+    
+    - `for letter in text: counts[ord(letter)] += 1`: Iterates over each character in `text`, increments the count at index `ord(letter)` (ASCII value) in `counts`.
+4. **Purpose of `display` Function**:
+    
+    - Converts ASCII values to readable representations.
+    - Checks for special characters: 10 (line feed, LF), 13 (carriage return, CR), 32 (space, SPACE).
+    - These are non-printable or special characters in ASCII, so they’re labeled for clarity.
+5. **Writing Header**:
+    
+    - `outfile = open('alice_counts.dat', 'w')`: Opens the output file in write mode.
+    - `outfile.write("%-12s%s\n" % ("Character", "Count"))`: Writes a header with "Character" left-aligned in 12 spaces, followed by "Count".
+    - `outfile.write("=================\n")`: Writes a separator line.
+    - Output in `alice_counts.dat`: `Character Count\n=================\n`.
+6. **Writing Counts**:
+    
+    - `for i in range(len(counts))`: Loops over indices 0-127 (ASCII range).
+    - `if counts[i]`: Only writes characters with non-zero counts.
+    - `outfile.write("%-12s%d\n" % (display(i), counts[i]))`: Writes the character (via `display(i)`) and its count.
+    - Purpose of `if counts[i]`: Skips characters that don’t appear in the text to keep the output concise.
+
+### Exercise 13: Calculating Mean
+
+**Task**: Write `mean.py` to compute the mean of numbers from the command line.
+
+```python
+# mean.py
+from sys import argv
+
+nums = [float(x) for x in argv[1:]]
+print(sum(nums) / len(nums))
+```
+
+**Explanation**:
+
+- Converts command-line arguments (`argv[1:]`) to floats.
+- Computes the mean as `sum(nums) / len(nums)`.
+- Matches sample outputs (e.g., `python mean.py 3 4` outputs `3.5`).
+
+### Exercise 14: Calculating Median
+
+**Task**: Write `median.py` to compute the median of numbers from the command line.
+
+```python
+# median.py
+from sys import argv
+
+nums = sorted([float(x) for x in argv[1:]])
+n = len(nums)
+if n % 2 == 0:
+    median = (nums[n//2 - 1] + nums[n//2]) / 2
+else:
+    median = nums[n//2]
+print(median)
+```
+
+**Explanation**:
+
+- Converts and sorts command-line arguments.
+- For odd `n`, the median is the middle number; for even `n`, it’s the average of the two middle numbers.
+- Matches sample outputs (e.g., `python median.py 3 7 11` outputs `7`).
+
+### Exercise 15: Modifying `countletters.py`
+
+**Task**: Modify `countletters.py` to take the input file as a command-line argument.
+
+```python
+# countletters.py
+import sys
+
+def display(i):
+    if i == 10: return 'LF'
+    if i == 13: return 'CR'
+    if i == 32: return 'SPACE'
+    return chr(i)
+
+def count_letters(input_file, output_file):
+    with open(input_file, 'r') as infile:
+        text = infile.read()
+    
+    counts = 128 * [0]
+    for letter in text:
+        counts[ord(letter)] += 1
+    
+    with open(output_file, 'w') as outfile:
+        outfile.write("%-12s%s\n" % ("Character", "Count"))
+        outfile.write("=================\n")
+        for i in range(len(counts)):
+            if counts[i]:
+                outfile.write("%-12s%d\n" % (display(i), counts[i]))
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: python countletters.py <input_file>")
+        sys.exit(1)
+    input_file = sys.argv[1]
+    output_file = input_file.replace('.txt', '_counts.dat')
+    count_letters(input_file, output_file)
+```
+
+**Explanation**:
+
+- Takes the input file from `sys.argv[1]`.
+- Generates the output file name by replacing `.txt` with `_counts.dat`.
+- Checks for correct argument count and prints usage instructions if invalid.
+- Encapsulates logic in `count_letters` for reusability.
+
+## 11. Glossary
+
+- **argv**: A list in the `sys` module containing command-line arguments.
+- **attribute**: A variable or function defined in a module, accessed via the dot operator.
+- **command line**: The interface where commands are entered.
+- **delimiter**: A character separating parts of a path or text (e.g., `/` in paths).
+- **directory**: A folder containing files or other directories.
+- **dot operator**: `.` used to access module attributes or methods.
+- **file**: A named storage unit for data.
+- **file system**: A method for organizing files and directories.
+- **import statement**: Makes module contents available (e.g., `import module` or `from module import name`).
+- **method**: A function-like attribute of an object, invoked with the dot operator.
+- **mode**: File operation mode (`'r'`, `'w'`, `'a'`).
+- **module**: A `.py` file with reusable code.
+- **namespace**: A container for names to avoid conflicts.
+- **pydoc**: A tool to generate documentation for Python modules.
+- **standard library**: Python’s built-in collection of modules.
+- **text file**: A file with printable characters and newlines.
+- **volatile memory**: Memory (e.g., RAM) that loses data when power is off.
+
+## Module Attributes
+
+These are **special variables** defined by default in every module.
+
+|Attribute|Description|
+|---|---|
+|`__name__`|Name of the module. Set to `"__main__"` if run directly.|
+|`__doc__`|Documentation string of the module (if provided).|
+|`__file__`|Path of the file from which the module was loaded.|
+|`__package__`|Name of the package the module belongs to (for relative imports).|
+|`__cached__`|Location of the cached bytecode file (usually `.pyc`).|
+
+```python
+# Example
+import math
+print(math.__name__)     # 'math'
+print(math.__doc__)      # Description of the module
+print(math.__file__)     # Path to the math module binary
+```
+
