@@ -2,7 +2,7 @@
   "attachmentFolderPath": "attachments",
   "pdfExportSettings": {
     "includeName": true,
-    "pageSize": "Letter",
+    "pageSize": "A4",
     "landscape": false,
     "margin": "2",
     "downscalePercent": 100

@@ -916,18 +916,18 @@ print(os.listdir())
 print(os.listdir(“D:\\”))
 ```
 
-# Working with Files and Directories in Python
+Working with Files and Directories in Python
 
 This guide provides a comprehensive overview of Python's file and directory operations, covering reading/writing files, directory listings, file attributes, archiving, and more. Each section includes practical code examples and explanations to help you understand and apply these concepts effectively.
 
-## Reading and Writing Files with `with open()`
+Reading and Writing Files with `with open()`
 
 Python's `with open(...) as ...` pattern is a clean and efficient way to handle file operations, ensuring files are properly closed after use. The `open()` function takes a filename and mode (`'r'` for reading, `'w'` for writing) as arguments.
 
-### Example: Reading a File
+Example: Reading a File
 
 ```python
-# Reading the entire content of a text file
+Reading the entire content of a text file
 with open('data.txt', 'r') as f:
     data = f.read()
     print(data)
@@ -939,10 +939,10 @@ with open('data.txt', 'r') as f:
 - `'r'` mode opens the file for reading.
 - `f.read()` retrieves the entire file content as a string.
 
-### Example: Writing to a File
+Example: Writing to a File
 
 ```python
-# Writing data to a text file
+Writing data to a text file
 with open('data.txt', 'w') as f:
     data = 'some data to be written to the file'
     f.write(data)
@@ -956,16 +956,16 @@ with open('data.txt', 'w') as f:
 
 For more details, refer to [Reading and Writing Files in Python](https://realpython.com/read-write-files-python/).
 
-## Getting Directory Listings
+Getting Directory Listings
 
 Python provides multiple ways to list directory contents using the `os` and `pathlib` modules. Modern Python prefers `os.scandir()` or `pathlib.Path()` for efficiency and additional file attribute access.
 
-### Example: Using `os.listdir()`
+Example: Using `os.listdir()`
 
 ```python
 import os
 
-# List all entries in a directory
+List all entries in a directory
 entries = os.listdir('my_directory/')
 for entry in entries:
     print(entry)
@@ -976,12 +976,12 @@ for entry in entries:
 - `os.listdir()` returns a list of all files and directories in the specified path.
 - The example loops through the entries and prints their names.
 
-### Example: Using `os.scandir()`
+Example: Using `os.scandir()`
 
 ```python
 import os
 
-# List directory contents with scandir()
+List directory contents with scandir()
 with os.scandir('my_directory/') as entries:
     for entry in entries:
         print(entry.name)
@@ -993,12 +993,12 @@ with os.scandir('my_directory/') as entries:
 - The `with` statement ensures the iterator is closed, freeing resources.
 - `entry.name` accesses the name of each file or directory.
 
-### Example: Using `pathlib.Path()`
+Example: Using `pathlib.Path()`
 
 ```python
 from pathlib import Path
 
-# List directory contents with pathlib
+List directory contents with pathlib
 basepath = Path('my_directory/')
 for entry in basepath.iterdir():
     print(entry.name)
@@ -1009,16 +1009,16 @@ for entry in basepath.iterdir():
 - `Path.iterdir()` yields `Path` objects for each entry in the directory.
 - `pathlib` provides an object-oriented approach, making it intuitive for file system operations.
 
-## Filtering Files and Directories
+Filtering Files and Directories
 
 To list only files or directories, you can filter the results using `os.path`, `os.scandir()`, or `pathlib.Path()`.
 
-### Example: Listing Files with `os.listdir()`
+Example: Listing Files with `os.listdir()`
 
 ```python
 import os
 
-# List only files using os.listdir()
+List only files using os.listdir()
 basepath = 'my_directory/'
 for entry in os.listdir(basepath):
     if os.path.isfile(os.path.join(basepath, entry)):
@@ -1030,12 +1030,12 @@ for entry in os.listdir(basepath):
 - `os.path.isfile()` checks if the entry is a file (not a directory).
 - `os.path.join()` constructs the full path to the entry for accurate checking.
 
-### Example: Listing Files with `os.scandir()`
+Example: Listing Files with `os.scandir()`
 
 ```python
 import os
 
-# List only files using scandir()
+List only files using scandir()
 basepath = 'my_directory/'
 with os.scandir(basepath) as entries:
     for entry in entries:
@@ -1048,12 +1048,12 @@ with os.scandir(basepath) as entries:
 - `entry.is_file()` directly checks if the entry is a file.
 - This approach is cleaner and more efficient than using `os.listdir()` with `os.path`.
 
-### Example: Listing Files with `pathlib.Path()`
+Example: Listing Files with `pathlib.Path()`
 
 ```python
 from pathlib import Path
 
-# List only files using pathlib
+List only files using pathlib
 basepath = Path('my_directory/')
 files = [entry.name for entry in basepath.iterdir() if entry.is_file()]
 for file in files:
@@ -1065,11 +1065,11 @@ for file in files:
 - Uses a generator expression to filter files with `entry.is_file()`.
 - Combines filtering and iteration in a concise, readable way.
 
-## Getting File Attributes
+Getting File Attributes
 
 File attributes like size and modification time can be retrieved using `os.scandir()` or `pathlib.Path()`.
 
-### Example: Retrieving File Modification Times
+Example: Retrieving File Modification Times
 
 ```python
 from datetime import datetime
@@ -1080,7 +1080,7 @@ def convert_date(timestamp):
     d = datetime.utcfromtimestamp(timestamp)
     return d.strftime('%d %b %Y')
 
-# Get file attributes with scandir()
+Get file attributes with scandir()
 with os.scandir('my_directory/') as entries:
     for entry in entries:
         if entry.is_file():
@@ -1094,16 +1094,16 @@ with os.scandir('my_directory/') as entries:
 - `convert_date()` formats the timestamp into a readable date (e.g., "04 Oct 2018").
 - Only files are processed, checked with `entry.is_file()`.
 
-## Creating Directories
+Creating Directories
 
 Python supports creating single or multiple directories using `os` and `pathlib`.
 
-### Example: Creating a Single Directory
+Example: Creating a Single Directory
 
 ```python
 from pathlib import Path
 
-# Create a single directory with pathlib
+Create a single directory with pathlib
 directory = Path('example_directory/')
 directory.mkdir(exist_ok=True)
 ```
@@ -1113,12 +1113,12 @@ directory.mkdir(exist_ok=True)
 - `Path.mkdir()` creates a directory at the specified path.
 - `exist_ok=True` prevents an error if the directory already exists.
 
-### Example: Creating Multiple Directories
+Example: Creating Multiple Directories
 
 ```python
 import os
 
-# Create nested directories
+Create nested directories
 os.makedirs('2023/10/05', mode=0o770, exist_ok=True)
 ```
 
@@ -1128,17 +1128,17 @@ os.makedirs('2023/10/05', mode=0o770, exist_ok=True)
 - `mode=0o770` sets permissions (owner and group read/write/execute).
 - `exist_ok=True` avoids errors if the directories exist.
 
-## Filename Pattern Matching
+Filename Pattern Matching
 
 Python provides tools like `fnmatch`, `glob`, and `pathlib` for matching filenames against patterns.
 
-### Example: Using `fnmatch` for Pattern Matching
+Example: Using `fnmatch` for Pattern Matching
 
 ```python
 import os
 import fnmatch
 
-# Find all .txt files
+Find all .txt files
 for file_name in os.listdir('some_directory/'):
     if fnmatch.fnmatch(file_name, '*.txt'):
         print(file_name)
@@ -1149,12 +1149,12 @@ for file_name in os.listdir('some_directory/'):
 - `fnmatch.fnmatch()` matches filenames against a wildcard pattern (e.g., `*.txt`).
 - Iterates over directory contents to find matching files.
 
-### Example: Using `glob` for Recursive Search
+Example: Using `glob` for Recursive Search
 
 ```python
 import glob
 
-# Find all .py files recursively
+Find all .py files recursively
 for file in glob.iglob('**/*.py', recursive=True):
     print(file)
 ```
@@ -1164,16 +1164,16 @@ for file in glob.iglob('**/*.py', recursive=True):
 - `glob.iglob()` searches for files matching the pattern recursively.
 - `recursive=True` includes subdirectories in the search.
 
-## Creating and Extracting Archives
+Creating and Extracting Archives
 
 Python supports ZIP and TAR archives using `zipfile` and `tarfile` modules, with high-level utilities in `shutil`.
 
-### Example: Creating a ZIP Archive
+Example: Creating a ZIP Archive
 
 ```python
 import zipfile
 
-# Create a new ZIP archive
+Create a new ZIP archive
 file_list = ['file1.py', 'file2.py']
 with zipfile.ZipFile('archive.zip', 'w') as zipobj:
     for name in file_list:
@@ -1185,12 +1185,12 @@ with zipfile.ZipFile('archive.zip', 'w') as zipobj:
 - Opens a ZIP file in write mode (`'w'`), which creates a new archive.
 - Adds each file in `file_list` to the archive using `zipobj.write()`.
 
-### Example: Extracting a TAR Archive
+Example: Extracting a TAR Archive
 
 ```python
 import tarfile
 
-# Extract all files from a TAR archive
+Extract all files from a TAR archive
 with tarfile.open('example.tar', 'r') as tar_file:
     tar_file.extractall(path='extracted/')
 ```
@@ -1200,16 +1200,16 @@ with tarfile.open('example.tar', 'r') as tar_file:
 - Opens a TAR file in read mode (`'r'`).
 - `extractall()` extracts all files to the specified `path`.
 
-## Deleting Files and Directories
+Deleting Files and Directories
 
 Python provides methods to delete files and directories using `os`, `pathlib`, and `shutil`.
 
-### Example: Deleting a File
+Example: Deleting a File
 
 ```python
 from pathlib import Path
 
-# Delete a file with pathlib
+Delete a file with pathlib
 data_file = Path('data.txt')
 try:
     data_file.unlink()
@@ -1222,12 +1222,12 @@ except FileNotFoundError as e:
 - `Path.unlink()` deletes the specified file.
 - Handles `FileNotFoundError` to avoid crashes if the file doesn't exist.
 
-### Example: Deleting a Directory Tree
+Example: Deleting a Directory Tree
 
 ```python
 import shutil
 
-# Delete a directory and its contents
+Delete a directory and its contents
 trash_dir = 'bad_dir'
 try:
     shutil.rmtree(trash_dir)
@@ -1240,16 +1240,16 @@ except OSError as e:
 - `shutil.rmtree()` deletes a directory and all its contents recursively.
 - Handles errors like non-empty directories or permissions issues.
 
-## Copying and Moving Files
+Copying and Moving Files
 
 The `shutil` module provides functions for copying and moving files and directories.
 
-### Example: Copying a File
+Example: Copying a File
 
 ```python
 import shutil
 
-# Copy a file
+Copy a file
 shutil.copy2('source.txt', 'destination.txt')
 ```
 
@@ -1257,12 +1257,12 @@ shutil.copy2('source.txt', 'destination.txt')
 
 - `shutil.copy2()` copies the file and preserves metadata (e.g., timestamps, permissions).
 
-### Example: Moving a Directory
+Example: Moving a Directory
 
 ```python
 import shutil
 
-# Move a directory
+Move a directory
 shutil.move('dir_1/', 'backup/')
 ```
 
@@ -1271,16 +1271,16 @@ shutil.move('dir_1/', 'backup/')
 - `shutil.move()` moves the directory to the specified destination.
 - If the destination exists, the directory is moved inside it; otherwise, it is renamed.
 
-## Reading Multiple Files with `fileinput`
+Reading Multiple Files with `fileinput`
 
 The `fileinput` module allows reading multiple files sequentially, useful for processing multiple inputs.
 
-### Example: Reading Multiple Files
+Example: Reading Multiple Files
 
 ```python
 import fileinput
 
-# Read multiple files and print their contents
+Read multiple files and print their contents
 for line in fileinput.input(['file1.txt', 'file2.txt']):
     if fileinput.isfirstline():
         print(f'\n--- Reading {fileinput.filename()} ---')
@@ -1293,16 +1293,16 @@ for line in fileinput.input(['file1.txt', 'file2.txt']):
 - `fileinput.isfirstline()` detects the start of a new file.
 - `fileinput.filename()` retrieves the current file's name.
 
-## Temporary Files and Directories
+Temporary Files and Directories
 
 The `tempfile` module creates temporary files and directories that are automatically deleted when closed.
 
-### Example: Creating a Temporary File
+Example: Creating a Temporary File
 
 ```python
 from tempfile import TemporaryFile
 
-# Create and use a temporary file
+Create and use a temporary file
 with TemporaryFile('w+t') as fp:
     fp.write('Hello universe!')
     fp.seek(0)
@@ -1314,13 +1314,13 @@ with TemporaryFile('w+t') as fp:
 - `TemporaryFile` creates a temporary file in write+text mode (`'w+t'`).
 - The file is automatically deleted when the `with` block ends.
 
-### Example: Creating a Temporary Directory
+Example: Creating a Temporary Directory
 
 ```python
 import tempfile
 import os
 
-# Create and use a temporary directory
+Create and use a temporary directory
 with tempfile.TemporaryDirectory() as tmpdir:
     print(f'Created temporary directory: {tmpdir}')
     print(f'Exists: {os.path.exists(tmpdir)}')
@@ -1333,16 +1333,16 @@ print(f'Exists after context: {os.path.exists(tmpdir)}')
 - The directory is deleted when the `with` block ends, confirmed by `os.path.exists()`.
 
 
-## File Exception in Python
+File Exception in Python
 
 Python Exception Handling handles errors that occur during the execution of a program. Exception handling allows to respond to the error, instead of crashing the running program. It enables you to catch and manage errors, making your code more robust and user-friendly. Let's look at an example:
 
-### Handling a Simple Exception in Python
+Handling a Simple Exception in Python
 
 Exception handling helps in preventing crashes due to errors. Here’s a basic example demonstrating how to catch an exception and handle it gracefully:
 
 ```python
-# Simple Exception Handling Example
+Simple Exception Handling Example
 n = 10
 try:
     res = n / 0  # This will raise a ZeroDivisionError
@@ -1357,7 +1357,7 @@ Can't be divided by zero!
 ****Explanation:**** In this example, dividing number by 0 raises a [****ZeroDivisionError****](https://www.geeksforgeeks.org/zerodivisionerror-float-division-by-zero-in-python/). The try block contains the code that might cause an exception and the except block handles the exception, printing an error message instead of stopping the program.
 
 
-## Difference Between Exception and Error
+Difference Between Exception and Error
 
 - Error: Errors are serious issues that a program should not try to handle. They are usually problems in the code's logic or configuration and need to be fixed by the programmer. Examples include syntax errors and memory errors.
 
@@ -1365,10 +1365,10 @@ Can't be divided by zero!
 
 
 ```python
-# Syntax Error (Error)
+Syntax Error (Error)
 print("Hello world"  # Missing closing parenthesis
 
-# ZeroDivisionError (Exception)
+ZeroDivisionError (Exception)
 n = 10
 res = n / 0
 ```
@@ -1376,23 +1376,23 @@ res = n / 0
 ****Explanation:**** A syntax error is a coding mistake that prevents the code from running. In contrast, an exception like ZeroDivisionError can be managed during the program's execution using exception handling.
 
 
-### Syntax and Usage
+Syntax and Usage
 
 Exception handling in Python is done using the try, except, else and finally blocks.
 
 ```python
 try:  
-# Code that might raise an exception  
+Code that might raise an exception  
 except SomeException:  
-# Code to handle the exception  
+Code to handle the exception  
 else:  
-# Code to run if no exception occurs  
+Code to run if no exception occurs  
 finally:  
-# Code to run regardless of whether an exception occurs
+Code to run regardless of whether an exception occurs
 
 ```
 
-## try, except, else and finally Blocks
+try, except, else and finally Blocks
 
 - ****try Block****: [try block](https://www.geeksforgeeks.org/python-try-except/) lets us test a block of code for errors. Python will "try" to execute the code in this block. If an exception occurs, execution will immediately jump to the except block.
 - ****except Block:**** [except block](https://www.geeksforgeeks.org/python-try-except/) enables us to handle the error or exception. If the code inside the try block throws an error, Python jumps to the except block and executes it. We can handle specific exceptions or use a general except to catch all exceptions.
@@ -1431,7 +1431,7 @@ Execution complete.
 - ****else block**** runs if no exception occurs, displaying the result.
 - ****finally block**** runs regardless of the outcome, indicating the completion of execution.
 
-## Common Exceptions in Python
+Common Exceptions in Python
 
 Python has many [built-in exceptions](https://www.geeksforgeeks.org/built-exceptions-python/), each representing a specific error condition. Some common ones include:
 
@@ -1455,11 +1455,11 @@ Python has many [built-in exceptions](https://www.geeksforgeeks.org/built-excep
 |[`ImportError`](https://www.geeksforgeeks.org/importerror-unknown-location-in-python/)|Raised when an import statement has issues.|
 |[`ModuleNotFoundError`](https://www.geeksforgeeks.org/how-to-fix-the-module-not-found-error/)|Raised when a module cannot be found.|
 
-## Python Catching Exceptions
+Python Catching Exceptions
 
 When working with exceptions in Python, we can handle errors more efficiently by specifying the types of exceptions we expect. This can make code both safer and easier to debug.
 
-### Catching Specific Exceptions
+Catching Specific Exceptions
 
 Catching specific exceptions makes code to respond to different exception types differently.
 
@@ -1488,7 +1488,7 @@ Not Valid!
 - The ValueError is caught because the string "str" cannot be converted to an integer.
 - If x were 0 and conversion successful, the ZeroDivisionError would be caught when attempting to calculate its inverse.
 
-### Catching Multiple Exceptions
+Catching Multiple Exceptions
 
 We can catch multiple exceptions in a single block if we need to handle them in the same way or we can separate them if different types of exceptions require different handling.
 
@@ -1515,14 +1515,14 @@ Error invalid literal for int() with base 10: 'twenty'
 - TypeError might occur if the operation was incorrectly applied to non-integer types, but it's not triggered in this specific setup.
 - IndexError would be caught if an index outside the range of the list was accessed, but in this scenario, it's under control.
 
-### Catch-All Handlers and Their Risks
+Catch-All Handlers and Their Risks
 
 Here's a simple calculation that may fail due to various reasons.
 
 ****Example:****
 ```python
 try:
-    # Simulate risky calculation: incorrect type operation
+    Simulate risky calculation: incorrect type operation
     res = "100" / 20
     
 except ArithmeticError:
@@ -1542,7 +1542,7 @@ Something went wrong!
 - An ArithmeticError (more specific like ZeroDivisionError) might be caught if this were a number-to-number division error. However, TypeError is actually triggered here due to attempting to divide a string by a number.
 - ****catch-all except:**** is used to catch the TypeError, demonstrating the risk that the programmer might not realize the actual cause of the error (type mismatch) without more detailed error logging.
 
-## Raise an Exception
+Raise an Exception
 
 We [raise](https://www.geeksforgeeks.org/python-raise-keyword/) an exception in Python using the raise keyword followed by an instance of the exception class that we want to trigger. We can choose from built-in exceptions or define our own custom exceptions by inheriting from Python's built-in Exception class.
 
@@ -1572,26 +1572,26 @@ Age cannot be negative.
 - The function set checks if the age is negative. If so, it raises a ValueError with a message explaining the issue.
 - This ensures that the age attribute cannot be set to an invalid state, thus maintaining the integrity of the data.
 
-### Advantages of Exception Handling:
+Advantages of Exception Handling:
 
 - ****Improved program reliability****: By handling exceptions properly, you can prevent your program from crashing or producing incorrect results due to unexpected errors or input.
 - ****Simplified error handling****: Exception handling allows you to separate error handling code from the main program logic, making it easier to read and maintain your code.
 - ****Cleaner code:**** With exception handling, you can avoid using complex conditional statements to check for errors, leading to cleaner and more readable code.
 - ****Easier debugging****: When an exception is raised, the Python interpreter prints a traceback that shows the exact location where the exception occurred, making it easier to debug your code.
 
-### Disadvantages of Exception Handling:
+Disadvantages of Exception Handling:
 
 - ****Performance overhead:**** Exception handling can be slower than using conditional statements to check for errors, as the interpreter has to perform additional work to catch and handle the exception.
 - ****Increased code complexity****: Exception handling can make your code more complex, especially if you have to handle multiple types of exceptions or implement complex error handling logic.
 - ****Possible security risks:**** Improperly handled exceptions can potentially reveal sensitive information or create security vulnerabilities in your code, so it's important to handle exceptions carefully and avoid exposing too much information about your program.
 
 
-### Context Manager in Python
+Context Manager in Python
 
 In any programming language, the usage of resources like file operations or database connections is very common. But these resources are limited in supply. Therefore, the main problem lies in making sure to release these resources after usage. If they are not released then it will lead to resource leakage and may cause the system to either slow down or crash.  
 Python’s ****context managers**** provide a neat way to automatically set up and clean up resources, ensuring they’re properly managed even if errors occur
 
-## Using the with Statement for File Handling
+Using the with Statement for File Handling
 
 The simplest way to manage a file resource is using the ****with**** keyword:
 
@@ -1603,7 +1603,7 @@ with open("test.txt") as f:
 
 This ensures the file is automatically closed once the block is exited, even if an error occurs.
 
-## What Happens Without Proper Closing?
+What Happens Without Proper Closing?
 
 If files aren’t closed, you can run out of ****available file descriptors****. For example:
 
@@ -1622,11 +1622,11 @@ for x in range(100000):
 
 Because too many files remain open, exhausting system resource
 
-## Why Use Context Managers?
+Why Use Context Managers?
 
 In complex programs, especially those with multiple exit points or exceptions, manually closing files or connections everywhere is ****error-prone****. Context managers automate this cleanup using the ****with keyword****.
 
-## Creating a Custom Context Manager Class
+Creating a Custom Context Manager Class
 
 A class-based context manager needs two methods:
 
@@ -1658,7 +1658,7 @@ Output:
 
 The above sequence shows how Python initializes the object, enters the context, runs the block, and then exits while cleaning up.
 
-## File Management Using Context Manager
+File Management Using Context Manager
 
 Let's apply the above concept to create a class that helps in file resource management. The ****FileManager**** class helps in ****opening**** a file, ****writing/reading**** contents, and then ****closing**** it. 
 
@@ -1693,7 +1693,7 @@ print(f.closed)
 - ****__exit__()**** ensures the file is closed automatically.
 - ****print(f.closed)**** confirms the file is closed.
 
-## Database Connection Management with Context Manager
+Database Connection Management with Context Manager
 
 Let's create a simple database connection management system. The number of database connections that can be opened at a time is also limited(just like file descriptors). Therefore context managers are helpful in managing connections to the database as there could be chances that the programmer may forget to close the connection. 
 
@@ -1727,10 +1727,10 @@ with MongoDBConnectionManager('localhost', 27017) as mongo:
 - ****__exit__()**** closes the connection automatically.
 
 
-### Python Exception to string
+Python Exception to string
 
 
-#### What kind of information can you get from Exceptions?
+What kind of information can you get from Exceptions?
 
 You can get the following 3 pieces of data from exceptions
 
@@ -1762,11 +1762,11 @@ Hence, the rest of the article is all about answering the following questions
 - how to extract each of these 3 pieces individually and
 - how to use these pieces in our programs.
 
-## Piece#1: Printing Exception Type
+Piece#1: Printing Exception Type
 
 **The Exception Type refers to _the class_ to which the Exception that you have just caught belongs to**.
 
-### Extracting Piece#1 (Exception Type)
+Extracting Piece#1 (Exception Type)
 
 Let us improve our Example 1 above by putting the problematic code into _try_ and _except_ clauses.
 
@@ -1809,7 +1809,7 @@ access_list_element()
 ```
 
 
-### Explanation
+Explanation
 
 - **Function Definition**: The code is encapsulated in a function access_list_element() for better modularity and reusability.
 - **Docstring**: Added a docstring explaining the function's purpose and possible exceptions.
@@ -1844,7 +1844,7 @@ what we have done is, we have assigned the caught exception to an object named �
 print(type(e))
 ```
 
-### Where to get more details about Exception Types
+Where to get more details about Exception Types
 
 Now that we have the “Exception Type”, next we will probably need to get some information about that particular type so that we can get a better understanding of why our code has failed. In order to do that, the best place to start is the official documentation.
 
@@ -1852,7 +1852,7 @@ For built in exceptions you can have a look at the [Python Documentation](https
 
 For Exception types that come with the libraries that you use with your code, refer to the documentation of your library.
 
-## Piece#2: Printing Exception Value a.k.a Error message
+Piece#2: Printing Exception Value a.k.a Error message
 
 The Exception type is definitely useful for debugging, but, a message like _IndexError_ might sound cryptic and a good understandable error-message will make our job of debugging easier without having to look at the documentation.
 
@@ -1861,7 +1861,7 @@ In other words, if your program is to be run on the command line and you wish to
 The example below shows how to print such an Error message.
 
 ```pythpn
-# Example 3: Print Default Error message
+Example 3: Print Default Error message
 try:
   my_list = [1,2]
   print (my_list[3])
@@ -1881,7 +1881,7 @@ Each Exception type comes with its own error message. This can be retrieved usin
 Say your program is going to be run by a not-so-tech-savvy user, in that case, you might want to print something friendlier. You can do so by passing in the string to be printed along with the constructor as follows.
 
 ```python
-# Example 4: Print Custom Error message
+Example 4: Print Custom Error message
 
 try:
 
@@ -1903,7 +1903,7 @@ To understand how the built-in function _print()_ does this magic, and see som
 If you wish to print both the Error message and the Exception type, which I recommend, you can do so like below.
 
 ```python
-# Example 5: Print Error message and Exception type
+Example 5: Print Error message and Exception type
 
 try:
 
@@ -1924,7 +1924,7 @@ IndexError('list index out of range')
 
 Now that we have understood how to get control over the usage of Pieces 1 and 2, let us go ahead and look at the last and most important piece for debugging, **the stack-trace** which tells us where exactly in our program have the Exception occurred.
 
-## Piece#3: Printing/Logging the stack-trace using the traceback object
+Piece#3: Printing/Logging the stack-trace using the traceback object
 
 Stack-trace in Python is packed into an object named _traceback_ object.
 
@@ -1933,7 +1933,7 @@ This is an interesting one as the _traceback_ class in Python comes with sever
 Let us see how to use these options using some examples!
 
 ```python
-# Example 6: Print or Log the entire traceback Message
+Example 6: Print or Log the entire traceback Message
 
 import traceback
 
@@ -1966,7 +1966,7 @@ The above Example-6 is too simple, as, in the real-world, we will normally have 
 
 
 ```python
-# Example 7: A Deeper Stack with several function calls
+Example 7: A Deeper Stack with several function calls
 
 def func3():
 
@@ -2017,10 +2017,10 @@ IndexError: list index out of range
 
 Say we are not interested in some of the above information. Say we just want to print out the Traceback and skip the error message and Exception type (the last line above), then we can modify the code like shown below.
 
-# Example 8: Skipping the last line of Traceback
+Example 8: Skipping the last line of Traceback
 
 ```python
-# Example 8: Skipping the last line of Traceback
+Example 8: Skipping the last line of Traceback
 
 def func3():
 
@@ -2078,16 +2078,16 @@ traceback.print_exc(limit=2, file=sys.stdout)
 This will limit the number of levels to 2. Let us use this line of code in our Example and see how that behaves
 
 
-## Best Practices while Printing Exception messages
+Best Practices while Printing Exception messages
 
-### When to Use Which Piece
+When to Use Which Piece
 
 - **Use Piece#1 only on very short programs and only during the development/testing phase** to get some clues on the Exceptions without letting the interpreter crash your program. Once finding out, implement specific handlers to do something about these exceptions. If you are not sure how to handle the exceptions have a look at my other article below where I have explained 3 ways to handle Exceptions  
     [Exceptions in Python: Everything You Need To Know!](https://embeddedinventor.com/exceptions-in-python-everything-you-need-to-know/)
 - **Use Piece#2 to print out some friendly information either for yourself or for your user** to inform them what exactly is happening.
 - **Use all 3 pieces on your finished product**, so that if an exception ever occurs while your program is running on your client’s computer, you can log the errors and have use that information to fix your bugs.
 
-### Where to print
+Where to print
 
 One point worth noting here is that the default file that _print()_ uses is the _stdout_ file stream and not the _stderr_ stream. To use _stderr_ instead, you can modify the code like this
 
@@ -2117,7 +2117,7 @@ Knowing how to raise, catch, and handle exceptions effectively helps to ensure y
 - Combining `try`, `except`, and `pass` allows your program to **continue silently** without handling the exception.
 
 
-### sys Module
+sys Module
 
 The ****sys module**** in [Python](https://www.geeksforgeeks.org/python-programming-language-tutorial/) provides access to variables and functions that interact closely with the Python interpreter and runtime environment. It allows developers to manipulate various aspects of program execution and the interpreter itself. It's Key capabilities include:
 
@@ -2139,7 +2139,7 @@ print(sys.version)
 
 ****Explanation:**** This code prints the version of the Python interpreter currently in use, which helps in identifying compatibility and environment details.
 
-## Input and Output using Python sys
+Input and Output using Python sys
 
 The ****sys module**** controls program input, output, and error streams, enabling precise data handling beyond standard input and print functions.
 
@@ -2176,7 +2176,7 @@ def fun(*args):
 fun("Hello World")
 ```
 
-## Command-Line Arguments
+Command-Line Arguments
 
 Command-line arguments are those which are passed during the calling of the program along with the calling statement. To achieve this using the sys module, the sys module provides a variable called sys.argv. It's main purpose are:
 
@@ -2204,7 +2204,7 @@ print(Sum)
 ![[Pasted image 20250711170502.png]]
 ****Explanation:**** This code sums the command-line arguments passed to the script by converting each to an integer and adding them up using the sys module.
 
-### Exiting the Program
+Exiting the Program
 
 ****sys.exit([arg])**** can be used to exit the program. The optional argument arg can be an integer giving the exit or another type of object. If it is an integer, zero is considered "successful termination".
 
@@ -2226,7 +2226,7 @@ SystemExit: Age less than 18
 
 ****Explanation:**** This code uses sys****.exit()**** to terminate the program if age is less than 18, displaying a message otherwise, it prints that the age is not less than 18.
 
-## Working with Modules
+Working with Modules
 
 [sys.path](https://www.geeksforgeeks.org/sys-path-in-python/) is a list in the sys module that defines directories Python searches for modules after checking built-ins. As a regular list, it can be modified at runtime to add, remove or reorder paths.
 > ****Note:**** sys.path is an ordinary list and can be manipulated.
@@ -2254,7 +2254,7 @@ ModuleNotFoundError: No module named 'pandas'
 
 ****Explanation:**** This code will raise an error because the pandas module cannot be found if sys.path is emptied. By setting ****sys.path**** to an empty list, Python is prevented from locating any modules outside built-ins.
 
-## sys.modules()
+sys.modules()
 
 ****sys.modules**** is a dictionary that contains all the modules currently imported in the Python interpreter. The keys are module names, and the values are the corresponding module objects. Example:
 
@@ -2270,7 +2270,7 @@ output:
 
 ****Explanation:**** This code will print a dictionary of all the modules that have been imported by the current Python interpreter. The dictionary keys are the module names, and the dictionary values are the module objects.
 
-## Reference Count
+Reference Count
 
 ****sys.getrefcount()**** method is used to get the reference count for any given object. This value is used by Python as when this value becomes 0, the memory for that particular value is deleted. Example:
 
@@ -2286,7 +2286,7 @@ print(sys.getrefcount(a))
 
 ****Explanation:****This code prints the reference count of the object a, which indicates how many times it is referenced. When the count reaches 0, the object is no longer used and is garbage collected.
 
-## More Functions in Python sys
+More Functions in Python sys
 
 |Function|Description|
 |---|---|
@@ -2299,26 +2299,26 @@ print(sys.getrefcount(a))
 |[sys.getdefaultencoding() method](https://www.geeksforgeeks.org/python-sys-getdefaultencoding-method/)|sys.getdefaultencoding() method is used to get the current default string encoding used by the Unicode implementation.|
 
 
-# Python Modules and File Operations
+Python Modules and File Operations
 
 This guide covers Python modules, namespaces, file operations, and related concepts, with practical examples and exercise solutions. It is designed to help you understand how to create and use modules, manage namespaces, work with files, and apply these concepts to solve problems.
 
-## 1. Understanding Modules
+1. Understanding Modules
 
 A **module** is a Python file (`.py`) containing definitions and statements that can be imported into other programs. Python's standard library includes many modules, such as `doctest` and `string`, which provide reusable functionality.
 
-### Example: Using the `keyword` Module
+Example: Using the `keyword` Module
 
 ```python
 from keyword import iskeyword, kwlist
 
-# Check if a string is a Python keyword
+Check if a string is a Python keyword
 print(iskeyword('for'))  # True
 print(iskeyword('all'))  # False
 
-# List all Python keywords
+List all Python keywords
 print(kwlist)
-# Output: ['and', 'as', 'assert', 'break', 'class', 'continue', 'def', ...]
+Output: ['and', 'as', 'assert', 'break', 'class', 'continue', 'def', ...]
 ```
 
 **Explanation**:
@@ -2327,14 +2327,14 @@ print(kwlist)
 - `kwlist` is a data attribute containing a list of all Python keywords.
 - Use `pydoc` to explore other standard library modules (e.g., `pydoc -g` or `pydoc -p 7464`).
 
-## 2. Creating Modules
+2. Creating Modules
 
 You can create a module by saving a `.py` file with functions, variables, or other definitions.
 
-### Example: Creating and Using a `seqtools` Module
+Example: Creating and Using a `seqtools` Module
 
 ```python
-# seqtools.py
+seqtools.py
 def remove_at(pos, seq):
     """
     Remove character at position pos from sequence seq.
@@ -2347,12 +2347,12 @@ def remove_at(pos, seq):
 **Usage in Python Shell**:
 
 ```python
-# Option 1: Import specific function
+Option 1: Import specific function
 from seqtools import remove_at
 s = "A string!"
 print(remove_at(4, s))  # Output: A sting!
 
-# Option 2: Import module
+Option 2: Import module
 import seqtools
 print(seqtools.remove_at(4, s))  # Output: A sting!
 ```
@@ -2363,22 +2363,22 @@ print(seqtools.remove_at(4, s))  # Output: A sting!
 - Import the module or specific functions without the `.py` extension.
 - Use the dot operator (`.`) to access module attributes or functions.
 
-## 3. Namespaces
+3. Namespaces
 
 A **namespace** is a container that allows the same name to be used in different contexts without ambiguity. Modules and functions each have their own namespaces.
 
-### Example: Namespaces in Modules
+Example: Namespaces in Modules
 
 ```python
-# module1.py
+module1.py
 question = "What is the meaning of life, the Universe, and everything?"
 answer = 42
 
-# module2.py
+module2.py
 question = "What is your quest?"
 answer = "To seek the holy grail."
 
-# namespace_test.py
+namespace_test.py
 import module1
 import module2
 
@@ -2393,7 +2393,7 @@ print(module2.answer)    # To seek the holy grail.
 - Each module (`module1`, `module2`) has its own namespace, preventing naming collisions.
 - Use `import module` to preserve namespaces, avoiding conflicts compared to `from module import *`.
 
-### Example: Namespaces in Functions
+Example: Namespaces in Functions
 
 ```python
 def f():
@@ -2427,11 +2427,11 @@ printing n after calling g: 11
 - Each function (`f`, `g`) has its own namespace, so `n` inside `f` and `g` doesn't affect the global `n`.
 - Namespaces isolate variables, allowing multiple programmers to work without collisions.
 
-## 4. Attributes and the Dot Operator
+4. Attributes and the Dot Operator
 
 Module attributes (variables, functions) are accessed using the dot operator (`.`).
 
-### Example: String Module Functions
+Example: String Module Functions
 
 ```python
 import string
@@ -2447,15 +2447,15 @@ print(string.upper('angola'))  # Output: ANGOLA
 - The `string` module provides functions like `capitalize`, `capwords`, `center`, and `upper`.
 - Access them using `string.function_name()`.
 
-### Example: String and List Methods
+Example: String and List Methods
 
 ```python
-# String methods
+String methods
 s = 'maryland'
 print(s.capitalize())  # Output: Maryland
 print(s.upper())  # Output: MARYLAND
 
-# List methods
+List methods
 mylist = []
 mylist.append(5)
 mylist.append(27)
@@ -2477,14 +2477,14 @@ print(mylist)  # Output: [3, 5, 5, 5, 9, 11, 12, 27]
 - String methods (e.g., `capitalize`, `upper`) are invoked on string objects.
 - List methods (e.g., `append`, `insert`, `count`, `extend`, `index`, `reverse`, `sort`, `remove`) modify or query lists.
 
-## 5. Reading and Writing Text Files
+5. Reading and Writing Text Files
 
 Files store data in non-volatile memory. Python uses the `open()` function to read or write files.
 
-### Example: Writing to a File
+Example: Writing to a File
 
 ```python
-# Write to a file
+Write to a file
 with open('test.dat', 'w') as myfile:
     myfile.write("Now is the time")
     myfile.write("to close the file")
@@ -2495,10 +2495,10 @@ with open('test.dat', 'w') as myfile:
 - `'w'` mode creates or overwrites the file.
 - The `with` statement ensures the file is closed after writing.
 
-### Example: Reading from a File
+Example: Reading from a File
 
 ```python
-# Read from a file
+Read from a file
 with open('test.dat', 'r') as myfile:
     text = myfile.read()
     print(text)  # Output: Now is the timeto close the file
@@ -2509,7 +2509,7 @@ with open('test.dat', 'r') as myfile:
 - `'r'` mode opens the file for reading.
 - `read()` retrieves the entire file content as a string.
 
-### Example: Copying a File
+Example: Copying a File
 
 ```python
 def copy_file(oldfile, newfile):
@@ -2529,18 +2529,18 @@ def copy_file(oldfile, newfile):
 - Reads 50 characters at a time until the file ends (`text == ""`).
 - Uses `with` to handle file closing automatically.
 
-## 6. Processing Text Files
+6. Processing Text Files
 
 Text files are processed line by line using methods like `readline()` and `readlines()`.
 
-### Example: Writing and Reading Lines
+Example: Writing and Reading Lines
 
 ```python
-# Write lines to a file
+Write lines to a file
 with open("test.dat", "w") as outfile:
     outfile.write("line one\nline two\nline three\n")
 
-# Read lines
+Read lines
 with open("test.dat", "r") as infile:
     print(infile.readline())  # Output: line one
     print(infile.readlines())  # Output: ['line two\n', 'line three\n']
@@ -2552,7 +2552,7 @@ with open("test.dat", "r") as infile:
 - `readline()` reads one line, including the newline.
 - `readlines()` returns remaining lines as a list.
 
-### Example: Filtering Lines
+Example: Filtering Lines
 
 ```python
 def filter(oldfile, newfile):
@@ -2575,11 +2575,11 @@ def filter(oldfile, newfile):
 - `continue` skips lines starting with `#`.
 - The loop ends when an empty string is read.
 
-## 7. Directories and File Paths
+7. Directories and File Paths
 
 Files are organized in directories, and paths specify their location.
 
-### Example: Reading a File with a Path
+Example: Reading a File with a Path
 
 ```python
 with open('/usr/share/dict/words', 'r') as wordsfile:
@@ -2592,11 +2592,11 @@ with open('/usr/share/dict/words', 'r') as wordsfile:
 - The path `/usr/share/dict/words` points to a file in a Unix system.
 - `readlines()` reads all lines into a list.
 
-## 8. Counting Letters with `ord` and `chr`
+8. Counting Letters with `ord` and `chr`
 
 The `ord()` function returns a character's ASCII code, and `chr()` converts an integer to a character.
 
-### Example: Using `ord` and `chr`
+Example: Using `ord` and `chr`
 
 ```python
 print(ord('a'))  # Output: 97
@@ -2608,14 +2608,14 @@ print(chr(65))   # Output: A
 - `ord('a')` returns 97, the ASCII code for lowercase 'a'.
 - `chr(65)` returns 'A', the character for ASCII code 65.
 
-## 9. The `sys` Module and Command Line Arguments
+9. The `sys` Module and Command Line Arguments
 
 The `sys` module provides access to system-specific variables and functions, including `argv` for command-line arguments.
 
-### Example: Using `sys.argv`
+Example: Using `sys.argv`
 
 ```python
-# demo_argv.py
+demo_argv.py
 import sys
 
 print(sys.argv)  # Output: ['demo_argv.py', 'this', 'and', 'that', '1', '2', '3']
@@ -2632,22 +2632,22 @@ $ python demo_argv.py this and that 1 2 3
 - `sys.argv` is a list where the first element is the script name, followed by command-line arguments.
 - Arguments with spaces must be quoted (e.g., `"this and"`).
 
-## 10. Exercise Solutions
+10. Exercise Solutions
 
 Below are solutions to the exercises, structured as Python scripts with explanations.
 
-### Exercise 1: Exploring the `calendar` Module
+Exercise 1: Exploring the `calendar` Module
 
 **Task**: Use `pydoc` to explore the `calendar` module and test `calendar` and `isleap`.
 
 ```python
 import calendar
 
-# Print a yearly calendar
+Print a yearly calendar
 year = calendar.calendar(2008)
 print(year)  # Outputs a formatted calendar for 2008
 
-# Test isleap
+Test isleap
 print(calendar.isleap(2008))  # Output: True (2008 is a leap year)
 print(calendar.isleap(2007))  # Output: False
 ```
@@ -2658,23 +2658,23 @@ print(calendar.isleap(2007))  # Output: False
 - `calendar.isleap(year)` takes an integer year and returns `True` if it's a leap year, `False` otherwise.
 - **Notes**: A leap year is divisible by 4, except for century years not divisible by 400.
 
-### Exercise 2: Exploring the `math` Module
+Exercise 2: Exploring the `math` Module
 
 **Task**: Use `pydoc` to explore the `math` module.
 
 ```python
 import math
 
-# Test ceil and floor
+Test ceil and floor
 print(math.ceil(4.2))   # Output: 5.0
 print(math.floor(4.2))  # Output: 4.0
 
-# Square root equivalent
+Square root equivalent
 x = 16
 sqrt = x ** 0.5  # Same as math.sqrt(16)
 print(sqrt)  # Output: 4.0
 
-# Data constants
+Data constants
 print(math.pi)  # Output: 3.141592653589793
 print(math.e)   # Output: 2.718281828459045
 ```
@@ -2686,7 +2686,7 @@ print(math.e)   # Output: 2.718281828459045
 - **Constants**: `math.pi` and `math.e` are predefined constants.
 - **Total Functions**: The `math` module has around 50 functions (check `pydoc math`).
 
-### Exercise 3: Exploring the `copy` Module
+Exercise 3: Exploring the `copy` Module
 
 **Task**: Investigate `deepcopy` and identify where it would be useful.
 
@@ -2708,12 +2708,12 @@ print(deep_copy)    # Output: [[1, 2], [3, 4]]
 - Useful in exercises involving complex data structures (e.g., matrix multiplication from the previous chapter) to avoid modifying the original data.
 - **Note**: Shallow copies only copy the top-level structure, leaving nested objects shared.
 
-### Exercise 4: Creating Modules and Testing Namespaces
+Exercise 4: Creating Modules and Testing Namespaces
 
 **Task**: Create `mymodule1.py`, `mymodule2.py`, and `namespace_test.py`.
 
 ```python
-# mymodule1.py
+mymodule1.py
 myage = 30  # Your current age
 year = 2025  # Current year
 print("My name is %s" % __name__)
@@ -2723,7 +2723,7 @@ if __name__ == '__main__':
 ```
 
 ```python
-# mymodule2.py
+mymodule2.py
 myage = 0    # Age at birth
 year = 1995  # Year of birth
 print("My name is %s" % __name__)
@@ -2733,7 +2733,7 @@ if __name__ == '__main__':
 ```
 
 ```python
-# namespace_test.py
+namespace_test.py
 import mymodule1
 import mymodule2
 
@@ -2747,7 +2747,7 @@ print("My name is %s" % __name__)
 - `__name__` is `__main__` when a script is run directly, otherwise it’s the module name when imported.
 - The `if __name__ == '__main__':` block in `mymodule1.py` only runs when executed directly, not when imported.
 
-### Exercise 5: Exploring `this` Module
+Exercise 5: Exploring `this` Module
 
 **Task**: Import `this` and note Tim Peters' comments on namespaces.
 
@@ -2761,7 +2761,7 @@ import this
 - On namespaces, it says: "Namespaces are one honking great idea -- let's do more of those!"
 - This emphasizes the importance of namespaces for organizing code and avoiding naming conflicts.
 
-### Exercise 6: Exploring `string` Module Functions
+Exercise 6: Exploring `string` Module Functions
 
 **Task**: Test three functions from the `string` module.
 
@@ -2779,7 +2779,7 @@ print(string.replace('hello world', 'world', 'Python'))  # Output: hello Python
 - `string.strip(s)` removes leading/trailing whitespace.
 - `string.replace(s, old, new)` replaces all occurrences of `old` with `new`.
 
-### Exercise 7: Rewriting `matrix_mult` with List Methods
+Exercise 7: Rewriting `matrix_mult` with List Methods
 
 **Task**: Rewrite `matrix_mult` using list methods (assuming a matrix multiplication function from a previous chapter).
 
@@ -2806,18 +2806,18 @@ def matrix_mult(A, B):
 - `sum()` with a generator expression computes the dot product for each element.
 - List methods simplify matrix construction compared to manual indexing.
 
-### Exercise 8: Exploring `str` and `list` Methods with `dir`
+Exercise 8: Exploring `str` and `list` Methods with `dir`
 
 **Task**: Use `dir(str)` and `dir(list)` to find new methods.
 
 ```python
-# String methods
+String methods
 s = "hello world"
 print(s.join(['a', 'b']))  # Output: ahello worldb
 print(s.find('o'))  # Output: 4
 print(s.rjust(15))  # Output:     hello world
 
-# List methods
+List methods
 lst = [1, 2, 3]
 lst.pop(1)
 print(lst)  # Output: [1, 3]
@@ -2838,7 +2838,7 @@ print(lst)  # Output: [4, 5]
     - `clear()`: Removes all items from the list.
     - `extend(iterable)`: Adds all items from `iterable` to the list.
 
-### Exercise 9: Implementing `myreplace`
+Exercise 9: Implementing `myreplace`
 
 **Task**: Implement `myreplace` using `split` and `join`.
 
@@ -2860,12 +2860,12 @@ def myreplace(old, new, s):
 - `new.join(...)` joins the list elements with `new` as the separator.
 - Passes all doctests by correctly replacing all instances of `old` with `new`.
 
-### Exercise 10: Creating `wordtools.py` Module
+Exercise 10: Creating `wordtools.py` Module
 
 **Task**: Implement functions in `wordtools.py` with doctests.
 
 ```python
-# wordtools.py
+wordtools.py
 def cleanword(word):
     """
     Remove non-alphabetic characters from a word.
@@ -2946,12 +2946,12 @@ if __name__ == '__main__':
     - `wordset`: Uses `set` to get unique words and `sorted` to order them.
     - `longestword`: Uses `max` with a generator to find the longest word length.
 
-### Exercise 11: Sorting Fruits
+Exercise 11: Sorting Fruits
 
 **Task**: Write `sort_fruits.py` to sort fruits from `unsorted_fruits.txt` into `sorted_fruits.txt`.
 
 ```python
-# sort_fruits.py
+sort_fruits.py
 with open('unsorted_fruits.txt', 'r') as infile:
     fruits = infile.readlines()
     fruits = [fruit.strip() for fruit in fruits]  # Remove newlines
@@ -2967,12 +2967,12 @@ with open('unsorted_fruits.txt', 'r') as infile:
 - Strips newlines, sorts the list, and writes to `sorted_fruits.txt` with newlines.
 - Assumes `unsorted_fruits.txt` contains one fruit per line.
 
-### Exercise 12: Analyzing `countletters.py`
+Exercise 12: Analyzing `countletters.py`
 
 **Task**: Answer questions about `countletters.py`.
 
 ```python
-# countletters.py
+countletters.py
 def display(i):
     if i == 10: return 'LF'
     if i == 13: return 'CR'
@@ -3027,12 +3027,12 @@ with open('alice_counts.dat', 'w') as outfile:
     - `outfile.write("%-12s%d\n" % (display(i), counts[i]))`: Writes the character (via `display(i)`) and its count.
     - Purpose of `if counts[i]`: Skips characters that don’t appear in the text to keep the output concise.
 
-### Exercise 13: Calculating Mean
+Exercise 13: Calculating Mean
 
 **Task**: Write `mean.py` to compute the mean of numbers from the command line.
 
 ```python
-# mean.py
+mean.py
 from sys import argv
 
 nums = [float(x) for x in argv[1:]]
@@ -3045,12 +3045,12 @@ print(sum(nums) / len(nums))
 - Computes the mean as `sum(nums) / len(nums)`.
 - Matches sample outputs (e.g., `python mean.py 3 4` outputs `3.5`).
 
-### Exercise 14: Calculating Median
+Exercise 14: Calculating Median
 
 **Task**: Write `median.py` to compute the median of numbers from the command line.
 
 ```python
-# median.py
+median.py
 from sys import argv
 
 nums = sorted([float(x) for x in argv[1:]])
@@ -3068,12 +3068,12 @@ print(median)
 - For odd `n`, the median is the middle number; for even `n`, it’s the average of the two middle numbers.
 - Matches sample outputs (e.g., `python median.py 3 7 11` outputs `7`).
 
-### Exercise 15: Modifying `countletters.py`
+Exercise 15: Modifying `countletters.py`
 
 **Task**: Modify `countletters.py` to take the input file as a command-line argument.
 
 ```python
-# countletters.py
+countletters.py
 import sys
 
 def display(i):
@@ -3113,7 +3113,7 @@ if __name__ == '__main__':
 - Checks for correct argument count and prints usage instructions if invalid.
 - Encapsulates logic in `count_letters` for reusability.
 
-## 11. Glossary
+11. Glossary
 
 - **argv**: A list in the `sys` module containing command-line arguments.
 - **attribute**: A variable or function defined in a module, accessed via the dot operator.
@@ -3133,7 +3133,7 @@ if __name__ == '__main__':
 - **text file**: A file with printable characters and newlines.
 - **volatile memory**: Memory (e.g., RAM) that loses data when power is off.
 
-## Module Attributes
+Module Attributes
 
 These are **special variables** defined by default in every module.
 
@@ -3146,10 +3146,646 @@ These are **special variables** defined by default in every module.
 |`__cached__`|Location of the cached bytecode file (usually `.pyc`).|
 
 ```python
-# Example
+Example
 import math
 print(math.__name__)     # 'math'
 print(math.__doc__)      # Description of the module
 print(math.__file__)     # Path to the math module binary
 ```
+
+Module Built-in Functions
+
+| Function                    | Description                                               |
+| --------------------------- | --------------------------------------------------------- |
+| `importlib.import_module()` | Dynamically import a module.                              |
+| `dir(module)`               | Returns list of names (attributes/functions) in a module. |
+| `help(module)`              | Opens documentation for the module.                       |
+| `reload(module)`            | Reloads a previously imported module (from `importlib`).  |
+| `__import__()`              | Advanced manual way of importing modules dynamically.     |
+
+Python Packages
+
+Python Packages
+
+_Last Updated: January 17, 2025_
+
+Python packages organize related modules into directories, enabling modular, reusable, and maintainable code for large projects. A package is a folder containing Python modules and a special `__init__.py` file, acting like a toolbox for storing and accessing functions and classes efficiently.
+
+1. Key Components of a Python Package
+
+- **Module**: A single `.py` file containing reusable code (e.g., functions, classes).
+- **Package**: A directory with modules and an `__init__.py` file, marking it as a package.
+- **Sub-Packages**: Nested directories within a package, each with its own `__init__.py` file for deeper organization.
+
+2. Creating and Using a Python Package
+
+To create a package:
+
+1. **Create a Directory**: Make a folder to serve as the package root (e.g., `math_operations/`).
+2. **Add Modules**: Include `.py` files with specific functionality.
+3. **Include `__init__.py`**: Add an `__init__.py` file (can be empty) to mark the directory as a package.
+4. **Add Sub-Packages (Optional)**: Create subdirectories with their own `__init__.py` files.
+5. **Import Modules**: Use dot notation (e.g., `from mypackage.module import function`).
+
+Example: Math Operations Package
+
+Below is an example of a `math_operations` package with two sub-packages (`basic` and `advanced`) for arithmetic operations.
+
+```plaintext
+math_operations/
+├── __init__.py
+├── calculator.py
+├── basic/
+│   ├── __init__.py
+│   ├── add.py
+│   ├── sub.py
+├── advanced/
+│   ├── __init__.py
+│   ├── multiply.py
+│   ├── divide.py
+```
+
+`math_operations/__init__.py`
+
+```python
+Initialize the main package
+from .calculator import calculate
+from .basic import add, subtract
+from .advanced import multiply, divide
+```
+
+**Explanation**: Imports and exposes `calculate` from `calculator.py`, and `add`, `subtract`, `multiply`, and `divide` from sub-packages for easy access.
+
+`math_operations/calculator.py`
+
+```python
+def calculate():
+    print("Performing calculation...")
+```
+
+**Explanation**: A placeholder function that prints a message, demonstrating a utility within the package.
+
+`math_operations/basic/__init__.py`
+
+```python
+Export functions from the basic sub-package
+from .add import add
+from .sub import subtract
+```
+
+**Explanation**: Exposes `add` and `subtract` functions from their respective modules.
+
+`math_operations/basic/add.py`
+
+```python
+def add(a, b):
+    return a + b
+```
+
+**Explanation**: Implements addition of two numbers.
+
+`math_operations/basic/sub.py`
+
+```python
+def subtract(a, b):
+    return a - b
+```
+
+**Explanation**: Implements subtraction of two numbers.
+
+`math_operations/advanced/__init__.py`
+
+```python
+Export functions from the advanced sub-package
+from .multiply import multiply
+from .divide import divide
+```
+
+**Explanation**: Exposes `multiply` and `divide` functions.
+
+`math_operations/advanced/multiply.py`
+
+```python
+def multiply(a, b):
+    return a * b
+```
+
+**Explanation**: Implements multiplication of two numbers.
+
+`math_operations/advanced/divide.py`
+
+```python
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Division by zero is not allowed")
+    return a / b
+```
+
+**Explanation**: Implements division with error handling for division by zero.
+
+Using the Package
+
+```python
+from math_operations import calculate, add, subtract, multiply, divide
+
+Using the placeholder calculate function
+calculate()  # Output: Performing calculation...
+
+Perform basic operations
+print("Addition:", add(5, 3))          # Output: Addition: 8
+print("Subtraction:", subtract(10, 4)) # Output: Subtraction: 6
+print("Multiplication:", multiply(5, 3))  # Output: Multiplication: 15
+print("Division:", divide(10, 2))        # Output: Division: 5.0
+```
+
+**Explanation**: Imports functions from the package and demonstrates their usage with sample inputs.
+
+3. Python Packages for Web Frameworks
+
+Python offers a variety of web frameworks for building web applications and APIs, ranging from lightweight to comprehensive solutions.
+
+- **Flask**: Lightweight framework for building web applications and APIs with a simple interface.
+- **Django**: Comprehensive framework with features like URL routing, database management, and authentication.
+- **FastAPI**: High-performance framework for modern APIs, using type hints and automatic documentation.
+- **Pyramid**: Flexible framework with robust HTTP handling, routing, and templating.
+- **Tornado**: Asynchronous framework for real-time applications and APIs.
+- **Falcon**: Minimalist framework for fast RESTful APIs.
+- **CherryPy**: Simplifies HTTP request handling, focusing on application logic.
+- **Bottle**: Lightweight framework for small applications and prototyping.
+- **Web2py**: Open-source framework for secure, database-driven web applications with an integrated IDE.
+
+Example: Simple Flask Application
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Welcome to my Flask app!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+**Explanation**: Creates a basic Flask app with a single route (`/`) that returns a welcome message. Run with `python app.py` to start the server.
+
+4. Python Packages for AI & Machine Learning
+
+Python provides powerful libraries for AI and machine learning, covering statistical analysis, visualization, deep learning, NLP, generative AI, and computer vision.
+
+4.1 Statistical Analysis
+
+- **NumPy**: Array manipulation and mathematical operations.
+- **Pandas**: Data analysis and manipulation with DataFrames.
+- **SciPy**: Scientific computing with optimization and statistical functions.
+- **XGBoost**: Gradient boosting for machine learning.
+- **StatsModels**: Statistical modeling and econometrics.
+- **Yellowbrick**: Visualization for machine learning models.
+- **Arch**: Time-series analysis and ARCH models.
+- **Dask-ML**: Scalable machine learning for large datasets.
+
+4.2 Data Visualization
+
+- **Matplotlib**: General-purpose plotting library.
+- **Seaborn**: Statistical data visualization built on Matplotlib.
+- **Plotly**: Interactive, web-based visualizations.
+- **Bokeh**: Interactive visualizations for web browsers.
+- **Altair**: Declarative visualization for concise plotting.
+- **Pygal**: SVG-based charts for web applications.
+- **Plotnine**: Grammar of graphics inspired by ggplot2.
+- **Dash**: Framework for building analytical web applications.
+
+Example: Plotting with Matplotlib
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+plt.plot(x, y)
+plt.title("Sine Wave")
+plt.xlabel("x")
+plt.ylabel("sin(x)")
+plt.show()
+```
+
+**Explanation**: Plots a sine wave using NumPy for data generation and Matplotlib for visualization.
+
+4.3 Deep Learning
+
+- **Scikit-learn**: Machine learning for supervised and unsupervised tasks.
+- **TensorFlow**: Deep learning framework for neural networks.
+- **PyTorch**: Flexible deep learning framework with dynamic computation graphs.
+- **Keras**: High-level API for building neural networks.
+- **Keras-RL**: Reinforcement learning with Keras.
+- **Lasagne**: Lightweight deep learning library.
+- **Fastai**: High-level deep learning for rapid prototyping.
+
+4.4 Natural Language Processing (NLP)
+
+- **NLTK**: Toolkit for text processing and computational linguistics.
+- **spaCy**: Industrial-strength NLP for tokenization and entity recognition.
+- **FastText**: Word embeddings and text classification.
+- **Transformers**: State-of-the-art models for NLP tasks (e.g., BERT).
+- **AllenNLP**: Framework for deep learning in NLP.
+- **TextBlob**: Simplified text processing and sentiment analysis.
+
+4.5 Generative AI
+
+- **Keras**: Neural network API for generative models.
+- **spaCy**: NLP for text generation tasks.
+- **generative**: Tools for generative AI (context-dependent).
+- **GPy**: Gaussian processes for generative tasks.
+- **Pillow**: Image processing for generative art.
+- **ImageIO**: Image reading/writing for generative tasks.
+- **Fastai**: High-level API for generative models.
+
+4.6 Computer Vision
+
+- **OpenCV**: Comprehensive library for image processing and computer vision.
+- **TensorFlow**: Deep learning for computer vision tasks.
+- **PyTorch**: Neural networks for vision applications.
+- **scikit-image**: Image processing algorithms.
+- **SimpleCV**: Simplified computer vision for beginners.
+- **ImageAI**: High-level API for vision tasks.
+- **imageio**: Image input/output.
+- **Dlib**: Face detection and recognition.
+- **Theano**: Numerical computation for vision tasks.
+- **Mahotas**: Computer vision and image processing.
+
+Example: Image Processing with OpenCV
+
+```python
+import cv2
+
+Load and display an image
+image = cv2.imread('image.jpg')
+cv2.imshow('Image', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+**Explanation**: Loads an image using OpenCV and displays it in a window until a key is pressed.
+
+5. Python Packages for GUI Applications
+
+Python offers libraries for building graphical user interfaces (GUIs) for desktop and cross-platform applications.
+
+- **Tkinter**: Standard GUI toolkit with widgets like buttons and labels. Additional packages:
+    - `tk-tools`: Enhanced Tkinter widgets.
+    - `tkcalendar`: Calendar widget.
+    - `tkvideoplayer`: Video playback support.
+    - `tkfilebrowser`: File browsing dialogs.
+- **PyQt5**: Qt-based library for customizable GUI applications.
+- **Kivy**: Cross-platform library for multi-touch applications.
+- **PySide**: Qt bindings for cross-platform GUI development.
+- **PySimpleGUI**: Simplified GUI development for cross-platform apps.
+- **NiceGUI**: Minimalist GUI for web-based interfaces, dashboards, and robotics.
+- **PyGTK**: GTK-based library for cross-platform GUIs.
+
+Example: Tkinter GUI
+
+```python
+import tkinter as tk
+
+root = tk.Tk()
+root.title("Simple GUI")
+label = tk.Label(root, text="Hello, Tkinter!")
+label.pack()
+button = tk.Button(root, text="Click Me", command=lambda: print("Button clicked!"))
+button.pack()
+root.mainloop()
+```
+
+**Explanation**: Creates a simple Tkinter window with a label and a button that prints a message when clicked.
+
+6. Python Packages for Web Scraping & Automation
+
+Python provides tools for web scraping and automation, simplifying data extraction and task automation.
+
+- **Requests**: HTTP library for sending requests (GET, POST, etc.).
+- **BeautifulSoup**: Parses HTML/XML for web scraping.
+- **Selenium**: Automates browser interactions for scraping and testing.
+- **MechanicalSoup**: Combines Requests and BeautifulSoup for web automation.
+- **urllib3**: HTTP client with connection pooling and SSL support.
+- **Scrapy**: Framework for web crawling and data extraction.
+- **Requests-HTML**: Combines Requests with HTML parsing using CSS selectors.
+- **Lxml**: Efficient XML/HTML parsing and querying.
+- **PyAutoGUI**: Automates mouse and keyboard interactions.
+- **schedule**: Schedules tasks for execution at specified times.
+- **Watchdog**: Monitors filesystem events for automation.
+
+Example: Web Scraping with BeautifulSoup
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://example.com'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+print(soup.title.text)  # Output: Example Domain
+```
+
+**Explanation**: Fetches a webpage using Requests and extracts the title using BeautifulSoup.
+
+7. Python Packages for Game Development
+
+Python offers libraries for creating games and multimedia applications.
+
+- **Pygame**: Tools for 2D game development with graphics and sound.
+- **Panda3D**: Framework for 3D games and simulations.
+- **Pyglet**: Library for games and multimedia with graphics and sound support.
+- **Arcade**: Beginner-friendly library for 2D games.
+- **PyOpenGL**: OpenGL bindings for 2D/3D graphics.
+- **Cocos2d**: Framework for 2D game development.
+
+Example: Simple Pygame Application
+
+```python
+import pygame
+import platform
+import asyncio
+
+FPS = 60
+
+def setup():
+    pygame.init()
+    screen = pygame.display.set_mode((400, 300))
+    pygame.display.set_caption("Simple Pygame")
+    return screen
+
+async def main():
+    screen = setup()
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        screen.fill((255, 255, 255))  # White background
+        pygame.draw.circle(screen, (255, 0, 0), (200, 150), 50)  # Red circle
+        pygame.display.flip()
+        await asyncio.sleep(1.0 / FPS)
+    pygame.quit()
+
+if platform.system() == "Emscripten":
+    asyncio.ensure_future(main())
+else:
+    if __name__ == "__main__":
+        asyncio.run(main())
+```
+
+**Explanation**: Creates a Pygame window with a red circle, using Pyodide-compatible structure for browser execution. Closes when the window is closed.
+
+8. Summary
+
+Python packages enhance code organization and reusability by grouping modules into directories with `__init__.py` files. They support a wide range of applications, from web development (Flask, Django) to AI/ML (TensorFlow, scikit-learn), GUI applications (Tkinter, PyQt5), web scraping (BeautifulSoup, Scrapy), and game development (Pygame, Panda3D). By leveraging these packages, developers can build efficient, modular, and scalable solutions for diverse projects.
+
+
+Other Features of Modules in Python
+
+
+In Python, modules are reusable files containing Python definitions, functions, variables, and classes. Beyond importing and using built-in or custom modules, Python offers additional **advanced features** that enhance modularity, maintainability, and performance of your code.
+
+
+Python Module Imports and Techniques
+
+This guide explores various techniques for importing and managing Python modules, including aliasing, selective importing, wildcard importing, and more. Each section includes code examples and explanations to illustrate practical usage, along with a summary table for quick reference.
+
+1. Module Aliasing (`as`)
+
+Module aliasing allows you to assign a shorter or custom name to a module for convenience or to avoid naming conflicts.
+
+Example: Using Aliases
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+Using aliased names
+array = np.array([1, 2, 3])
+plt.plot(array)
+plt.show()
+```
+
+**Explanation**:
+
+- `import numpy as np`: Renames `numpy` to `np` for brevity.
+- `import matplotlib.pyplot as plt`: Renames the `pyplot` submodule to `plt`.
+- **Benefits**: Shortens long module names, improves readability, and prevents naming conflicts.
+
+2. Selective Importing (`from ... import`)
+
+Selective importing allows you to import only specific functions, classes, or variables from a module, reducing memory usage and improving clarity.
+
+Example: Selective Import
+
+```python
+from math import sqrt, pi
+
+print(sqrt(16))  # Output: 4.0
+print(pi)        # Output: 3.141592653589793
+```
+
+**Explanation**:
+
+- Imports only `sqrt` and `pi` from the `math` module.
+- **Benefits**: Reduces memory footprint and makes code more explicit by importing only what’s needed.
+
+3. Wildcard Importing (`from ... import *`)
+
+Wildcard importing brings all public attributes of a module into the current namespace.
+
+Example: Wildcard Import
+
+```python
+from math import *
+
+print(sin(pi / 2))  # Output: 1.0
+```
+
+**Explanation**:
+
+- Imports all public attributes (e.g., `sin`, `pi`) from `math`.
+- **Warning**: Can pollute the namespace, leading to naming conflicts in large projects. Use sparingly.
+
+4. Using `__name__ == "__main__"`
+
+The `__name__ == "__main__"` construct ensures code runs only when a module is executed directly, not when imported.
+
+Example: Conditional Execution
+
+```python
+def greet():
+    print("Hello!")
+
+if __name__ == "__main__":
+    greet()  # Output: Hello! (only when run directly)
+```
+
+**Explanation**:
+
+- `__name__` is `__main__` when the script is run directly, otherwise it’s the module name when imported.
+- **Use Case**: Prevents code (e.g., tests or scripts) from running during import, commonly used for testing or script execution.
+
+5. Reloading Modules (`importlib.reload`)
+
+The `importlib.reload` function reloads a module without restarting the Python interpreter, useful during development.
+
+Example: Reloading a Module
+
+```python
+import mymodule
+import importlib
+
+Modify mymodule.py, then reload
+importlib.reload(mymodule)
+```
+
+**Explanation**:
+
+- Reloads `mymodule` to reflect changes made to its source file.
+- **Use Case**: Ideal for interactive development or when testing module updates.
+
+6. Module Search Path (`sys.path`)
+
+The `sys.path` list defines directories where Python searches for modules.
+
+Example: Viewing and Modifying `sys.path`
+
+```python
+import sys
+
+Print module search paths
+print(sys.path)
+
+Add a custom path
+sys.path.append('/path/to/custom/modules')
+```
+
+**Explanation**:
+
+- `sys.path` is a list of directories Python searches for modules during import.
+- **Use Case**: Append custom directories to access modules located outside default paths.
+
+7. Docstrings in Modules
+
+Modules can include a docstring at the top to describe their purpose, accessible via `help(module_name)`.
+
+Example: Module with Docstring
+
+```python
+"""
+This module provides utility functions for number operations.
+"""
+def square(x):
+    return x * x
+
+Access docstring
+help(__name__)
+```
+
+**Explanation**:
+
+- The docstring provides documentation for the module’s purpose and contents.
+- **Access**: Use `help(module_name)` to view the docstring and module details.
+
+8. Private Variables in Modules
+
+Variables prefixed with an underscore (`_var`) are considered private and are not imported with `from module import *`.
+
+Example: Private Variables
+
+```python
+mymodule.py
+_public_var = 42
+_private_var = "hidden"
+```
+
+```python
+main.py
+from mymodule import *
+
+print(_public_var)   # Output: 42
+print(_private_var)  # Error: NameError (not imported)
+```
+
+**Explanation**:
+
+- `_private_var` is not imported with wildcard imports, signaling it’s intended for internal use.
+- **Use Case**: Encourages encapsulation by hiding implementation details.
+
+9. Caching Modules (`sys.modules`)
+
+Python caches imported modules in `sys.modules` to optimize repeated imports.
+
+Example: Checking Cached Modules
+
+```python
+import sys
+import math
+
+print(sys.modules['math'])  # Output: <module 'math' (built-in)>
+```
+
+**Explanation**:
+
+- `sys.modules` is a dictionary mapping module names to module objects.
+- **Benefit**: Speeds up subsequent imports by reusing cached modules.
+
+10. Controlling Exports with `__all__`
+
+The `__all__` list defines which attributes are imported when using `from module import *`.
+
+Example: Using `__all__`
+
+```python
+mymodule.py
+__all__ = ['func1', 'func2']
+
+def func1():
+    print("Function 1")
+
+def func2():
+    print("Function 2")
+
+def func3():
+    print("Function 3")  # Not exported
+```
+
+```python
+main.py
+from mymodule import *
+
+func1()  # Output: Function 1
+func2()  # Output: Function 2
+func3()  # Error: NameError (not imported)
+```
+
+**Explanation**:
+
+- `__all__` restricts wildcard imports to only listed attributes.
+- **Benefit**: Controls the module’s public interface, promoting encapsulation.
+
+11. Summary Table
+
+| **Feature**                | **Description**                            | **Example**                  |
+| -------------------------- | ------------------------------------------ | ---------------------------- |
+| `as` alias                 | Rename module during import                | `import numpy as np`         |
+| Selective Import           | Import specific functions or variables     | `from math import sqrt`      |
+| Wildcard Import            | Import all public attributes               | `from math import *`         |
+| `__name__ == "__main__"`   | Run code only if file is executed directly | `if __name__ == "__main__":` |
+| `importlib.reload()`       | Reload a module at runtime                 | `importlib.reload(module)`   |
+| `sys.path`                 | Search path for modules                    | `print(sys.path)`            |
+| Module Docstring           | Describes module purpose                   | `"""This module does..."""`  |
+| Private Variables (`_var`) | Variables meant to be hidden               | `_secret = "hidden"`         |
+| Module Caching             | Speeds up subsequent imports               | `sys.modules['math']`        |
+| `__all__`                  | Restricts what is exported with `*`        | `__all__ = ['a', 'b']`       |
+
+
+
 
