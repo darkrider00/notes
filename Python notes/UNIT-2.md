@@ -916,3 +916,915 @@ print(os.listdir())
 print(os.listdir(“D:\\”))
 ```
 
+# Working with Files and Directories in Python
+
+This guide provides a comprehensive overview of Python's file and directory operations, covering reading/writing files, directory listings, file attributes, archiving, and more. Each section includes practical code examples and explanations to help you understand and apply these concepts effectively.
+
+## Reading and Writing Files with `with open()`
+
+Python's `with open(...) as ...` pattern is a clean and efficient way to handle file operations, ensuring files are properly closed after use. The `open()` function takes a filename and mode (`'r'` for reading, `'w'` for writing) as arguments.
+
+### Example: Reading a File
+
+```python
+# Reading the entire content of a text file
+with open('data.txt', 'r') as f:
+    data = f.read()
+    print(data)
+```
+
+**Explanation**:
+
+- The `with` statement ensures the file is automatically closed after reading.
+- `'r'` mode opens the file for reading.
+- `f.read()` retrieves the entire file content as a string.
+
+### Example: Writing to a File
+
+```python
+# Writing data to a text file
+with open('data.txt', 'w') as f:
+    data = 'some data to be written to the file'
+    f.write(data)
+```
+
+**Explanation**:
+
+- `'w'` mode opens the file for writing, overwriting it if it exists.
+- `f.write()` writes the string `data` to the file.
+- The `with` statement ensures the file is closed after writing.
+
+For more details, refer to [Reading and Writing Files in Python](https://realpython.com/read-write-files-python/).
+
+## Getting Directory Listings
+
+Python provides multiple ways to list directory contents using the `os` and `pathlib` modules. Modern Python prefers `os.scandir()` or `pathlib.Path()` for efficiency and additional file attribute access.
+
+### Example: Using `os.listdir()`
+
+```python
+import os
+
+# List all entries in a directory
+entries = os.listdir('my_directory/')
+for entry in entries:
+    print(entry)
+```
+
+**Explanation**:
+
+- `os.listdir()` returns a list of all files and directories in the specified path.
+- The example loops through the entries and prints their names.
+
+### Example: Using `os.scandir()`
+
+```python
+import os
+
+# List directory contents with scandir()
+with os.scandir('my_directory/') as entries:
+    for entry in entries:
+        print(entry.name)
+```
+
+**Explanation**:
+
+- `os.scandir()` returns an iterator of directory entries, which is more memory-efficient than a list.
+- The `with` statement ensures the iterator is closed, freeing resources.
+- `entry.name` accesses the name of each file or directory.
+
+### Example: Using `pathlib.Path()`
+
+```python
+from pathlib import Path
+
+# List directory contents with pathlib
+basepath = Path('my_directory/')
+for entry in basepath.iterdir():
+    print(entry.name)
+```
+
+**Explanation**:
+
+- `Path.iterdir()` yields `Path` objects for each entry in the directory.
+- `pathlib` provides an object-oriented approach, making it intuitive for file system operations.
+
+## Filtering Files and Directories
+
+To list only files or directories, you can filter the results using `os.path`, `os.scandir()`, or `pathlib.Path()`.
+
+### Example: Listing Files with `os.listdir()`
+
+```python
+import os
+
+# List only files using os.listdir()
+basepath = 'my_directory/'
+for entry in os.listdir(basepath):
+    if os.path.isfile(os.path.join(basepath, entry)):
+        print(entry)
+```
+
+**Explanation**:
+
+- `os.path.isfile()` checks if the entry is a file (not a directory).
+- `os.path.join()` constructs the full path to the entry for accurate checking.
+
+### Example: Listing Files with `os.scandir()`
+
+```python
+import os
+
+# List only files using scandir()
+basepath = 'my_directory/'
+with os.scandir(basepath) as entries:
+    for entry in entries:
+        if entry.is_file():
+            print(entry.name)
+```
+
+**Explanation**:
+
+- `entry.is_file()` directly checks if the entry is a file.
+- This approach is cleaner and more efficient than using `os.listdir()` with `os.path`.
+
+### Example: Listing Files with `pathlib.Path()`
+
+```python
+from pathlib import Path
+
+# List only files using pathlib
+basepath = Path('my_directory/')
+files = [entry.name for entry in basepath.iterdir() if entry.is_file()]
+for file in files:
+    print(file)
+```
+
+**Explanation**:
+
+- Uses a generator expression to filter files with `entry.is_file()`.
+- Combines filtering and iteration in a concise, readable way.
+
+## Getting File Attributes
+
+File attributes like size and modification time can be retrieved using `os.scandir()` or `pathlib.Path()`.
+
+### Example: Retrieving File Modification Times
+
+```python
+from datetime import datetime
+import os
+
+def convert_date(timestamp):
+    """Convert timestamp to human-readable date."""
+    d = datetime.utcfromtimestamp(timestamp)
+    return d.strftime('%d %b %Y')
+
+# Get file attributes with scandir()
+with os.scandir('my_directory/') as entries:
+    for entry in entries:
+        if entry.is_file():
+            info = entry.stat()
+            print(f'{entry.name}\tLast Modified: {convert_date(info.st_mtime)}')
+```
+
+**Explanation**:
+
+- `entry.stat()` retrieves file attributes like `st_mtime` (last modification time).
+- `convert_date()` formats the timestamp into a readable date (e.g., "04 Oct 2018").
+- Only files are processed, checked with `entry.is_file()`.
+
+## Creating Directories
+
+Python supports creating single or multiple directories using `os` and `pathlib`.
+
+### Example: Creating a Single Directory
+
+```python
+from pathlib import Path
+
+# Create a single directory with pathlib
+directory = Path('example_directory/')
+directory.mkdir(exist_ok=True)
+```
+
+**Explanation**:
+
+- `Path.mkdir()` creates a directory at the specified path.
+- `exist_ok=True` prevents an error if the directory already exists.
+
+### Example: Creating Multiple Directories
+
+```python
+import os
+
+# Create nested directories
+os.makedirs('2023/10/05', mode=0o770, exist_ok=True)
+```
+
+**Explanation**:
+
+- `os.makedirs()` creates a directory tree, including intermediate directories.
+- `mode=0o770` sets permissions (owner and group read/write/execute).
+- `exist_ok=True` avoids errors if the directories exist.
+
+## Filename Pattern Matching
+
+Python provides tools like `fnmatch`, `glob`, and `pathlib` for matching filenames against patterns.
+
+### Example: Using `fnmatch` for Pattern Matching
+
+```python
+import os
+import fnmatch
+
+# Find all .txt files
+for file_name in os.listdir('some_directory/'):
+    if fnmatch.fnmatch(file_name, '*.txt'):
+        print(file_name)
+```
+
+**Explanation**:
+
+- `fnmatch.fnmatch()` matches filenames against a wildcard pattern (e.g., `*.txt`).
+- Iterates over directory contents to find matching files.
+
+### Example: Using `glob` for Recursive Search
+
+```python
+import glob
+
+# Find all .py files recursively
+for file in glob.iglob('**/*.py', recursive=True):
+    print(file)
+```
+
+**Explanation**:
+
+- `glob.iglob()` searches for files matching the pattern recursively.
+- `recursive=True` includes subdirectories in the search.
+
+## Creating and Extracting Archives
+
+Python supports ZIP and TAR archives using `zipfile` and `tarfile` modules, with high-level utilities in `shutil`.
+
+### Example: Creating a ZIP Archive
+
+```python
+import zipfile
+
+# Create a new ZIP archive
+file_list = ['file1.py', 'file2.py']
+with zipfile.ZipFile('archive.zip', 'w') as zipobj:
+    for name in file_list:
+        zipobj.write(name)
+```
+
+**Explanation**:
+
+- Opens a ZIP file in write mode (`'w'`), which creates a new archive.
+- Adds each file in `file_list` to the archive using `zipobj.write()`.
+
+### Example: Extracting a TAR Archive
+
+```python
+import tarfile
+
+# Extract all files from a TAR archive
+with tarfile.open('example.tar', 'r') as tar_file:
+    tar_file.extractall(path='extracted/')
+```
+
+**Explanation**:
+
+- Opens a TAR file in read mode (`'r'`).
+- `extractall()` extracts all files to the specified `path`.
+
+## Deleting Files and Directories
+
+Python provides methods to delete files and directories using `os`, `pathlib`, and `shutil`.
+
+### Example: Deleting a File
+
+```python
+from pathlib import Path
+
+# Delete a file with pathlib
+data_file = Path('data.txt')
+try:
+    data_file.unlink()
+except FileNotFoundError as e:
+    print(f'Error: {data_file} : {e.strerror}')
+```
+
+**Explanation**:
+
+- `Path.unlink()` deletes the specified file.
+- Handles `FileNotFoundError` to avoid crashes if the file doesn't exist.
+
+### Example: Deleting a Directory Tree
+
+```python
+import shutil
+
+# Delete a directory and its contents
+trash_dir = 'bad_dir'
+try:
+    shutil.rmtree(trash_dir)
+except OSError as e:
+    print(f'Error: {trash_dir} : {e.strerror}')
+```
+
+**Explanation**:
+
+- `shutil.rmtree()` deletes a directory and all its contents recursively.
+- Handles errors like non-empty directories or permissions issues.
+
+## Copying and Moving Files
+
+The `shutil` module provides functions for copying and moving files and directories.
+
+### Example: Copying a File
+
+```python
+import shutil
+
+# Copy a file
+shutil.copy2('source.txt', 'destination.txt')
+```
+
+**Explanation**:
+
+- `shutil.copy2()` copies the file and preserves metadata (e.g., timestamps, permissions).
+
+### Example: Moving a Directory
+
+```python
+import shutil
+
+# Move a directory
+shutil.move('dir_1/', 'backup/')
+```
+
+**Explanation**:
+
+- `shutil.move()` moves the directory to the specified destination.
+- If the destination exists, the directory is moved inside it; otherwise, it is renamed.
+
+## Reading Multiple Files with `fileinput`
+
+The `fileinput` module allows reading multiple files sequentially, useful for processing multiple inputs.
+
+### Example: Reading Multiple Files
+
+```python
+import fileinput
+
+# Read multiple files and print their contents
+for line in fileinput.input(['file1.txt', 'file2.txt']):
+    if fileinput.isfirstline():
+        print(f'\n--- Reading {fileinput.filename()} ---')
+    print(f' -> {line}', end='')
+```
+
+**Explanation**:
+
+- `fileinput.input()` accepts a list of files to read.
+- `fileinput.isfirstline()` detects the start of a new file.
+- `fileinput.filename()` retrieves the current file's name.
+
+## Temporary Files and Directories
+
+The `tempfile` module creates temporary files and directories that are automatically deleted when closed.
+
+### Example: Creating a Temporary File
+
+```python
+from tempfile import TemporaryFile
+
+# Create and use a temporary file
+with TemporaryFile('w+t') as fp:
+    fp.write('Hello universe!')
+    fp.seek(0)
+    print(fp.read())
+```
+
+**Explanation**:
+
+- `TemporaryFile` creates a temporary file in write+text mode (`'w+t'`).
+- The file is automatically deleted when the `with` block ends.
+
+### Example: Creating a Temporary Directory
+
+```python
+import tempfile
+import os
+
+# Create and use a temporary directory
+with tempfile.TemporaryDirectory() as tmpdir:
+    print(f'Created temporary directory: {tmpdir}')
+    print(f'Exists: {os.path.exists(tmpdir)}')
+print(f'Exists after context: {os.path.exists(tmpdir)}')
+```
+
+**Explanation**:
+
+- `TemporaryDirectory` creates a temporary directory.
+- The directory is deleted when the `with` block ends, confirmed by `os.path.exists()`.
+
+
+## File Exception in Python
+
+Python Exception Handling handles errors that occur during the execution of a program. Exception handling allows to respond to the error, instead of crashing the running program. It enables you to catch and manage errors, making your code more robust and user-friendly. Let's look at an example:
+
+### Handling a Simple Exception in Python
+
+Exception handling helps in preventing crashes due to errors. Here’s a basic example demonstrating how to catch an exception and handle it gracefully:
+
+```python
+# Simple Exception Handling Example
+n = 10
+try:
+    res = n / 0  # This will raise a ZeroDivisionError
+    
+except ZeroDivisionError:
+    print("Can't be divided by zero!")
+```
+
+**Output**
+Can't be divided by zero!
+
+****Explanation:**** In this example, dividing number by 0 raises a [****ZeroDivisionError****](https://www.geeksforgeeks.org/zerodivisionerror-float-division-by-zero-in-python/). The try block contains the code that might cause an exception and the except block handles the exception, printing an error message instead of stopping the program.
+
+
+## Difference Between Exception and Error
+
+- Error: Errors are serious issues that a program should not try to handle. They are usually problems in the code's logic or configuration and need to be fixed by the programmer. Examples include syntax errors and memory errors.
+
+- Exception: Exceptions are less severe than errors and can be handled by the program. They occur due to situations like invalid input, missing files or network issues.
+
+
+```python
+# Syntax Error (Error)
+print("Hello world"  # Missing closing parenthesis
+
+# ZeroDivisionError (Exception)
+n = 10
+res = n / 0
+```
+
+****Explanation:**** A syntax error is a coding mistake that prevents the code from running. In contrast, an exception like ZeroDivisionError can be managed during the program's execution using exception handling.
+
+
+### Syntax and Usage
+
+Exception handling in Python is done using the try, except, else and finally blocks.
+
+```python
+try:  
+# Code that might raise an exception  
+except SomeException:  
+# Code to handle the exception  
+else:  
+# Code to run if no exception occurs  
+finally:  
+# Code to run regardless of whether an exception occurs
+
+```
+
+## try, except, else and finally Blocks
+
+- ****try Block****: [try block](https://www.geeksforgeeks.org/python-try-except/) lets us test a block of code for errors. Python will "try" to execute the code in this block. If an exception occurs, execution will immediately jump to the except block.
+- ****except Block:**** [except block](https://www.geeksforgeeks.org/python-try-except/) enables us to handle the error or exception. If the code inside the try block throws an error, Python jumps to the except block and executes it. We can handle specific exceptions or use a general except to catch all exceptions.
+- ****else Block:**** [else block](https://www.geeksforgeeks.org/try-except-else-and-finally-in-python/) is optional and if included, must follow all except blocks. The else block runs only if no exceptions are raised in the try block. This is useful for code that should execute if the try block succeeds.
+- ****finally Block:**** [finally block](https://www.geeksforgeeks.org/finally-keyword-in-python/) always runs, regardless of whether an exception occurred or not. It is typically used for cleanup operations (closing files, releasing resources).
+
+****Example:****
+
+```python
+try:
+    n = 0
+    res = 100 / n
+    
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+    
+except ValueError:
+    print("Enter a valid number!")
+    
+else:
+    print("Result is", res)
+    
+finally:
+    print("Execution complete.")
+```
+
+**Output**
+
+You can't divide by zero!
+Execution complete.
+
+****Explanation:****
+
+- ****try block**** asks for user input and tries to divide 100 by the input number.
+- ****except blocks**** handle ZeroDivisionError and ValueError.
+- ****else block**** runs if no exception occurs, displaying the result.
+- ****finally block**** runs regardless of the outcome, indicating the completion of execution.
+
+## Common Exceptions in Python
+
+Python has many [built-in exceptions](https://www.geeksforgeeks.org/built-exceptions-python/), each representing a specific error condition. Some common ones include:
+
+|Exception Name|Description|
+|---|---|
+|`BaseException`|The base class for all built-in exceptions.|
+|[`Exception`](https://www.geeksforgeeks.org/python-exception-handling/)|The base class for all non-exit exceptions.|
+|`ArithmeticError`|Base class for all errors related to arithmetic operations.|
+|[`ZeroDivisionError`](https://www.geeksforgeeks.org/zerodivisionerror-float-division-by-zero-in-python/)|Raised when a division or modulo operation is performed with zero as the divisor.|
+|[`OverflowError`](https://www.geeksforgeeks.org/python-overflowerror-math-range-error/)|Raised when a numerical operation exceeds the maximum limit of a data type.|
+|[`FloatingPointError`](https://www.geeksforgeeks.org/floating-point-error-in-python/)|Raised when a floating-point operation fails.|
+|[`AssertionError`](https://www.geeksforgeeks.org/python-assertion-error/)|Raised when an assert statement fails.|
+|[`AttributeError`](https://www.geeksforgeeks.org/python-attributeerror/)|Raised when an attribute reference or assignment fails.|
+|[`IndexError`](https://www.geeksforgeeks.org/python-list-index-out-of-range-indexerror/)|Raised when a sequence subscript is out of range.|
+|[`KeyError`](https://www.geeksforgeeks.org/how-to-handle-keyerror-exception-in-python/)|Raised when a dictionary key is not found.|
+|[`MemoryError`](https://www.geeksforgeeks.org/how-to-handle-the-memoryerror-in-python/)|Raised when an operation runs out of memory.|
+|[`NameError`](https://www.geeksforgeeks.org/handling-nameerror-exception-in-python/)|Raised when a local or global name is not found.|
+|[`OSError`](https://www.geeksforgeeks.org/handling-oserror-exception-in-python/)|Raised when a system-related operation (like file I/O) fails.|
+|[`TypeError`](https://www.geeksforgeeks.org/handling-typeerror-exception-in-python/)|Raised when an operation or function is applied to an object of inappropriate type.|
+|[`ValueError`](https://www.geeksforgeeks.org/how-to-fix-valueerror-exceptions-in-python/)|Raised when a function receives an argument of the right type but inappropriate value.|
+|[`ImportError`](https://www.geeksforgeeks.org/importerror-unknown-location-in-python/)|Raised when an import statement has issues.|
+|[`ModuleNotFoundError`](https://www.geeksforgeeks.org/how-to-fix-the-module-not-found-error/)|Raised when a module cannot be found.|
+
+## Python Catching Exceptions
+
+When working with exceptions in Python, we can handle errors more efficiently by specifying the types of exceptions we expect. This can make code both safer and easier to debug.
+
+### Catching Specific Exceptions
+
+Catching specific exceptions makes code to respond to different exception types differently.
+
+****Example:****
+
+```python
+try:
+    x = int("str")  # This will cause ValueError
+    
+    #inverse
+    inv = 1 / x
+    
+except ValueError:
+    print("Not Valid!")
+    
+except ZeroDivisionError:
+    print("Zero has no inverse!")
+```
+
+**Output**
+
+Not Valid!
+
+****Explanation:****
+
+- The ValueError is caught because the string "str" cannot be converted to an integer.
+- If x were 0 and conversion successful, the ZeroDivisionError would be caught when attempting to calculate its inverse.
+
+### Catching Multiple Exceptions
+
+We can catch multiple exceptions in a single block if we need to handle them in the same way or we can separate them if different types of exceptions require different handling.
+
+****Example:****
+```python
+a = ["10", "twenty", 30]  # Mixed list of integers and strings
+try:
+    total = int(a[0]) + int(a[1])  # 'twenty' cannot be converted to int
+    
+except (ValueError, TypeError) as e:
+    print("Error", e)
+    
+except IndexError:
+    print("Index out of range.")
+```
+
+**Output**
+
+Error invalid literal for int() with base 10: 'twenty'
+
+****Explanation:****
+
+- The ValueError is caught when trying to convert "twenty" to an integer.
+- TypeError might occur if the operation was incorrectly applied to non-integer types, but it's not triggered in this specific setup.
+- IndexError would be caught if an index outside the range of the list was accessed, but in this scenario, it's under control.
+
+### Catch-All Handlers and Their Risks
+
+Here's a simple calculation that may fail due to various reasons.
+
+****Example:****
+```python
+try:
+    # Simulate risky calculation: incorrect type operation
+    res = "100" / 20
+    
+except ArithmeticError:
+    print("Arithmetic problem.")
+    
+except:
+    print("Something went wrong!")
+```
+
+  
+**Output**
+
+Something went wrong!
+
+****Explanation:****
+
+- An ArithmeticError (more specific like ZeroDivisionError) might be caught if this were a number-to-number division error. However, TypeError is actually triggered here due to attempting to divide a string by a number.
+- ****catch-all except:**** is used to catch the TypeError, demonstrating the risk that the programmer might not realize the actual cause of the error (type mismatch) without more detailed error logging.
+
+## Raise an Exception
+
+We [raise](https://www.geeksforgeeks.org/python-raise-keyword/) an exception in Python using the raise keyword followed by an instance of the exception class that we want to trigger. We can choose from built-in exceptions or define our own custom exceptions by inheriting from Python's built-in Exception class.
+
+****Basic Syntax:****
+
+> raise ExceptionType("Error message")
+
+****Example:****
+```python
+def set(age):
+    if age < 0:
+        raise ValueError("Age cannot be negative.")
+    print(f"Age set to {age}")
+
+try:
+    set(-5)
+except ValueError as e:
+    print(e)
+```
+
+**Output**
+
+Age cannot be negative.
+
+****Explanation:****
+
+- The function set checks if the age is negative. If so, it raises a ValueError with a message explaining the issue.
+- This ensures that the age attribute cannot be set to an invalid state, thus maintaining the integrity of the data.
+
+### Advantages of Exception Handling:
+
+- ****Improved program reliability****: By handling exceptions properly, you can prevent your program from crashing or producing incorrect results due to unexpected errors or input.
+- ****Simplified error handling****: Exception handling allows you to separate error handling code from the main program logic, making it easier to read and maintain your code.
+- ****Cleaner code:**** With exception handling, you can avoid using complex conditional statements to check for errors, leading to cleaner and more readable code.
+- ****Easier debugging****: When an exception is raised, the Python interpreter prints a traceback that shows the exact location where the exception occurred, making it easier to debug your code.
+
+### Disadvantages of Exception Handling:
+
+- ****Performance overhead:**** Exception handling can be slower than using conditional statements to check for errors, as the interpreter has to perform additional work to catch and handle the exception.
+- ****Increased code complexity****: Exception handling can make your code more complex, especially if you have to handle multiple types of exceptions or implement complex error handling logic.
+- ****Possible security risks:**** Improperly handled exceptions can potentially reveal sensitive information or create security vulnerabilities in your code, so it's important to handle exceptions carefully and avoid exposing too much information about your program.
+
+
+### Context Manager in Python
+
+In any programming language, the usage of resources like file operations or database connections is very common. But these resources are limited in supply. Therefore, the main problem lies in making sure to release these resources after usage. If they are not released then it will lead to resource leakage and may cause the system to either slow down or crash.  
+Python’s ****context managers**** provide a neat way to automatically set up and clean up resources, ensuring they’re properly managed even if errors occur
+
+## Using the with Statement for File Handling
+
+The simplest way to manage a file resource is using the ****with**** keyword:
+
+```python
+with open("test.txt") as f:
+    data = f.read()
+
+```
+
+This ensures the file is automatically closed once the block is exited, even if an error occurs.
+
+## What Happens Without Proper Closing?
+
+If files aren’t closed, you can run out of ****available file descriptors****. For example:
+
+```python
+file_descriptors = []
+for x in range(100000):
+    file_descriptors.append(open('test.txt', 'w'))
+```
+
+****This will raise:****
+
+> Traceback (most recent call last):  
+> File "context.py", line 3, in  
+> OSError: [Errno 24] Too many open files: 'test.txt'
+
+
+Because too many files remain open, exhausting system resource
+
+## Why Use Context Managers?
+
+In complex programs, especially those with multiple exit points or exceptions, manually closing files or connections everywhere is ****error-prone****. Context managers automate this cleanup using the ****with keyword****.
+
+## Creating a Custom Context Manager Class
+
+A class-based context manager needs two methods:
+
+- ****__enter__():**** sets up the resource and returns it.
+- ****__exit__():**** cleans up the resource (e.g., closes a file).
+
+```python
+class ContextManager:
+    def __init__(self):
+        print('init method called')
+        
+    def __enter__(self):
+        print('enter method called')
+        return self
+    
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        print('exit method called')
+
+with ContextManager() as manager:
+    print('with statement block')
+```
+
+Output:
+
+> init method called  
+> enter method called  
+> with statement block  
+> exit method called
+
+The above sequence shows how Python initializes the object, enters the context, runs the block, and then exits while cleaning up.
+
+## File Management Using Context Manager
+
+Let's apply the above concept to create a class that helps in file resource management. The ****FileManager**** class helps in ****opening**** a file, ****writing/reading**** contents, and then ****closing**** it. 
+
+```python
+class FileManager:
+    def __init__(self, filename, mode):
+        self.filename = filename
+        self.mode = mode
+        self.file = None
+        
+    def __enter__(self):
+        self.file = open(self.filename, self.mode)
+        return self.file
+    
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        self.file.close()
+
+with FileManager('test.txt', 'w') as f:
+    f.write('Test')
+
+print(f.closed)
+```
+
+****Output:****
+
+> True
+
+****Explanation:****
+
+- ****__enter__()**** opens the file and returns it.
+- Inside the with block, you can use the file object.
+- ****__exit__()**** ensures the file is closed automatically.
+- ****print(f.closed)**** confirms the file is closed.
+
+## Database Connection Management with Context Manager
+
+Let's create a simple database connection management system. The number of database connections that can be opened at a time is also limited(just like file descriptors). Therefore context managers are helpful in managing connections to the database as there could be chances that the programmer may forget to close the connection. 
+
+```python
+from pymongo import MongoClient
+
+class MongoDBConnectionManager:
+    def __init__(self, hostname, port):
+        self.hostname = hostname
+        self.port = port
+        self.connection = None
+
+    def __enter__(self):
+        self.connection = MongoClient(self.hostname, self.port)
+        return self.connection
+
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        self.connection.close()
+
+with MongoDBConnectionManager('localhost', 27017) as mongo:
+    collection = mongo.SampleDb.test
+    data = collection.find_one({'_id': 1})
+    print(data.get('name'))
+```
+
+****Explanation:****
+
+- ****__enter__()**** opens the MongoDB connection.
+- mongo inside the with block is the client object.
+- You can perform database operations safely.
+- ****__exit__()**** closes the connection automatically.
+
+
+### Python Exception to string
+
+
+#### What kind of information can you get from Exceptions?
+
+You can get the following 3 pieces of data from exceptions
+
+- Exception Type,
+- Exception Value a.k.a Error Message, and
+- Stack-trace or _Traceback_ Object.
+
+All three of the above information is printed out by the Python Interpreter when our program crashes due to an exception as shown in the following example
+
+```python
+#Example 1
+
+`>> my_list = [1,2] 
+>> print (my_list[3]) 
+Traceback (most recent call last):    
+		 File "<ipython-input-35-63c7f9106be5>", line 1, in <module>
+		 print (my_list[3])  
+IndexError: list index out of range`
+```
+
+Lines 3,4,5,6 shows the **Stack-trace**  
+Line 7 shows the **Exception type** and **Error Message**.
+
+Our focus in this article is to learn **how to extract the above 3 pieces** **individually** in our _except_ clauses and print them out as needed.
+
+Hence, the rest of the article is all about answering the following questions
+
+- what does each of the information in the above list mean,
+- how to extract each of these 3 pieces individually and
+- how to use these pieces in our programs.
+
+## Piece#1: Printing Exception Type
+
+**The Exception Type refers to _the class_ to which the Exception that you have just caught belongs to**.
+
+### Extracting Piece#1 (Exception Type)
+
+Let us improve our Example 1 above by putting the problematic code into _try_ and _except_ clauses.
+
+```python
+```python
+
+def access_list_element():
+
+"""
+
+Attempts to access an element from a list and prints the type of exception if it occurs.
+
+  
+
+Raises:
+
+IndexError: If the index accessed is out of range.
+
+Exception: Catches any other unexpected exceptions.
+
+"""
+
+try:
+
+my_list = [1, 2]
+
+print(my_list[3]) # Attempt to access an index that doesn't exist
+
+except Exception as e:
+
+print(f"Exception type: {type(e).__name__}")
+
+  
+  
+
+if __name__ == "__main__":
+
+access_list_element()
+
+```
+
+
+### Explanation
+
+- **Function Definition**: The code is encapsulated in a function access_list_element() for better modularity and reusability.
+- **Docstring**: Added a docstring explaining the function's purpose and possible exceptions.
+- **Exception Handling**: The try block attempts to access an out-of-range index (my_list[3]), which raises an IndexError. The except block catches the exception and prints its type using type(e).__name__ for a cleaner output (e.g., IndexError).
+- **Main Guard**: The if __name__ == "__main__": block ensures the function runs only when the script is executed directly.
+- **Output**: When run, this code will output Exception type: IndexError because the list index is out of range.
+
+
+Here, in the _try_ clause, we have declared a List named _my_list_ and initialized the list with 2 items. Then we have tried to print the 3rd/non-existent item in the list.
+
+The _except_ clause catches the _IndexError_ exception and prints out Exception type.
+
+On running the code, we will get the following output
+
+```python
+<class 'IndexError'>
+```
+
