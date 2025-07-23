@@ -35,23 +35,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e0c7de7577afb216",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "Search"
-            }
-          },
-          {
             "id": "a54ad52c47588473",
             "type": "leaf",
             "state": {
@@ -62,7 +45,7 @@
             }
           },
           {
-            "id": "1eb6c6a2fe1e1f63",
+            "id": "953007153d5e1c39",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -74,7 +57,8 @@
               "title": "Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -108,45 +92,6 @@
             }
           },
           {
-            "id": "b08c3cfa8976d13a",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "things/notes/07-11-24.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from 07-11-24"
-            }
-          },
-          {
-            "id": "6ab82f8883d7bae3",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
-            "id": "9bbf5c9c2d2cca6a",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "things/notes/07-11-24.md"
-              },
-              "icon": "lucide-list",
-              "title": "Outline of 07-11-24"
-            }
-          },
-          {
             "id": "f5c650883dc3a433",
             "type": "leaf",
             "state": {
@@ -157,21 +102,21 @@
             }
           },
           {
-            "id": "94dac779d915e21a",
+            "id": "9d33c2d950976f52",
             "type": "leaf",
             "state": {
-              "type": "all-properties",
+              "type": "outgoing-link",
               "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
+                "file": "Python notes/UNIT-2.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
               },
-              "icon": "lucide-archive",
-              "title": "All properties"
+              "icon": "links-going-out",
+              "title": "Outgoing links from UNIT-2"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -184,25 +129,26 @@
       "graph:Open graph view": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false
+      "markdown-importer:Open format converter": false,
+      "canvas:Create new canvas": false
     }
   },
-  "active": "e0c7de7577afb216",
+  "active": "ae21732285f92867",
   "lastOpenFiles": [
+    "Python notes/UNIT-1.md",
+    "Python notes/UNIT-2.md",
     "attachments/Pasted image 20250711170806.png",
     "attachments/Pasted image 20250711170726.png",
     "attachments/Pasted image 20250711170502.png",
     "attachments/Pasted image 20250711161656.png",
     "attachments/Pasted image 20250711161534.png",
     "Finane/MF.md",
-    "Python notes/UNIT-2.md",
     "attachments/Pasted image 20250711120926.png",
     "attachments/Pasted image 20250711120637.png",
     "attachments/Pasted image 20250711120515.png",
     "attachments/Pasted image 20250711120501.png",
     "attachments/Pasted image 20250705104949.png",
     "Finane/Technical analysis.md",
-    "attachments/Pasted image 20250703174656.png",
     "Finane/Stock market.md",
     "Untitled 1.canvas",
     "Finane",
@@ -210,7 +156,6 @@
     "Untitled.canvas",
     "notes/LINUX/BASH.md",
     "notes/LINUX/Bash Scripting basics.md",
-    "Python notes/UNIT-1.md",
     "notes/Google cloud professional/GCP NOTES.md",
     "notes/Google cloud professional/Contents.md",
     "notes/SOC/BASIC.md",
