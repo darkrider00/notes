@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python notes/UNIT-2.md",
+                "file": "notes/File inclusions/File inclusions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UNIT-2"
+              "title": "File inclusions"
             }
           }
         ]
@@ -133,25 +133,31 @@
   },
   "active": "ae21732285f92867",
   "lastOpenFiles": [
-    "Python notes/UNIT-1.md",
+    "notes/Forensics.md",
+    "notes/File inclusions/File inclusions.md",
+    "notes/File inclusions",
+    "concepts.md",
+    "Untitled 1.md",
+    "Untitled 1.canvas",
+    "Untitled.md",
+    "Untitled.canvas",
     "Python notes/UNIT-2.md",
+    "Python notes/UNIT-1.md",
     "attachments/Pasted image 20250711170806.png",
     "attachments/Pasted image 20250711170726.png",
     "attachments/Pasted image 20250711170502.png",
     "attachments/Pasted image 20250711161656.png",
     "attachments/Pasted image 20250711161534.png",
-    "Finane/MF.md",
+    "Finance/MF.md",
     "attachments/Pasted image 20250711120926.png",
     "attachments/Pasted image 20250711120637.png",
     "attachments/Pasted image 20250711120515.png",
     "attachments/Pasted image 20250711120501.png",
     "attachments/Pasted image 20250705104949.png",
-    "Finane/Technical analysis.md",
-    "Finane/Stock market.md",
-    "Untitled 1.canvas",
-    "Finane",
+    "Finance/Technical analysis.md",
+    "Finance/Stock market.md",
+    "Finance",
     "notes/Portswigger/SQL injection/SQL injection.md",
-    "Untitled.canvas",
     "notes/LINUX/BASH.md",
     "notes/LINUX/Bash Scripting basics.md",
     "notes/Google cloud professional/GCP NOTES.md",
@@ -162,8 +168,6 @@
     "notes/HTB academy/Fundamentals of linux.md",
     "notes/HTB academy/Inode - A data structure used in Linux.md",
     "things/Protocol for studying & learning.md",
-    "concepts.md",
-    "Untitled.md",
     "notes/Google cloud professional/Labs/lab 3 - Getting Started with Cloud Storage and Cloud SQL.md",
     "notes/Google cloud professional/Labs/lab 2 - VPC Networking and Google Compute Engine.md",
     "notes/Google cloud professional/Labs/Lab 1 - use Google Cloud Marketplace to quickly and easily deploy a LAMP stack on a Compute Engine instance..md",
@@ -171,14 +175,11 @@
     "notes/HTB academy",
     "notes/Malware/Detection Mechanisms.md",
     "notes/Malware/Windows Essentials.md",
-    "notes/Malware/required Programming.md",
-    "notes/LINUX/INDEX page.md",
     "notes/Google cloud professional/Labs/security",
     "notes/Google cloud professional/Labs/networking -Implement Private Google Access and Cloud NAT",
     "notes/Google cloud professional/Labs/Routing and addressing",
     "notes/Google cloud professional/Labs/Networking in google cloud - fundamentals",
     "notes/Google cloud professional/Labs",
-    "notes/Google cloud professional",
-    "TCS hackquest/season 1"
+    "notes/Google cloud professional"
   ]
 }
