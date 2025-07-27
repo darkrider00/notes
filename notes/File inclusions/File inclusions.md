@@ -11,3 +11,4 @@ it can also lead to:
 - Denial of Service (DoS)
 - Sensitive Information Disclosure
 
+- including files that are already present on the server ,exploit vulnerble inclusion 
