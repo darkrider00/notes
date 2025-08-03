@@ -214,3 +214,13 @@ This is why attackers often **combine** this trick with:
     
 
 
+template engine : 
+![[Pasted image 20250803104235.png]]
+
+the template engines take input do the changes to the static webpage the gives us the final webpage other wise everytime we interact with a webpage it need to change the index.php file or about file and give is the final output 
+
+The most common place we usually find LFI within is templating engines. In order to have most of the web application looking the same when navigating between pages, a templating engine displays a page that shows the common static parts, such as the `header`, `navigation bar`, and `footer`, and then dynamically loads other content that changes between pages.
+
+Otherwise, every page on the server would need to be modified when changes are made to any of the static parts. This is why we often see a parameter like `/index.php?page=about`, where `index.php` sets static content (e.g. header/footer), and then only pulls the dynamic content specified in the parameter, which in this case may be read from a file called `about.php`.
+
+
