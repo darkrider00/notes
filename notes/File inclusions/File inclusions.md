@@ -327,3 +327,75 @@ if we had access to the source code in a whitebox exercise or in a code audit
 - Even if we were only able to read the web application source code, it may still allow us to compromise the web application, as it may reveal other vulnerabilities as mentioned earlier, and the source code may also contain database keys, admin credentials, or other sensitive information
 
 
+**BASIC LFI**
+- ![[Pasted image 20250803111702.png]]
+
+![[Pasted image 20250803111709.png]]
+
+![[Pasted image 20250803111719.png]]
+
+Two common readable files that are available on most back-end servers are `/etc/passwd` on Linux and `C:\Windows\boot.ini` on Windows. 
+
+```php
+include($_GET['language']);
+```
+
+, if we try to read `/etc/passwd`, then the `include()` function would fetch that file directly. However, in many occasions, web developers may append or prepend a string to the `language` parameter.
+
+ `language` parameter may be used for the filename, and may be added after a directory, as follows
+```php
+include("./languages/" . $_GET['language']);
+```
+
+
+
+![[Pasted image 20250803112000.png]]
+
+ we can add `../` before our file name, which refers to the parent directory.
+
+specify our absolute file path (e.g. `../../../../etc/passwd`), and the file should exist:
+
+![[Pasted image 20250803112039.png]]
+
+if we were at the root path (`/`) and used `../` then we would still remain in the root path. So, if we were not sure of the directory the web application is in, we can add `../` many times, and it should not break the path (even if we do it a hundred times!).
+
+```
+**Tip:** It can always be useful to be efficient and not add unnecessary `../` several times, especially if we were writing a report or writing an exploit. So, always try to find the minimum number of `../` that works and use it. You may also be able to calculate how many directories you are away from the root path and use that many. For example, with `/var/www/html/` we are `3` directories away from the root path, so we can use `../` 3 times (i.e. `../../../`).
+```
+
+
+ On some occasions, our input may be appended after a different string.
+ it may be used with a prefix to get the full filename, like the following example:
+
+```php
+include("lang_" . $_GET['language']);
+```
+
+f we try to traverse the directory with `../../../etc/passwd`, the final string would be `lang_../../../etc/passwd`, which is invalid:
+
+![[Pasted image 20250803112234.png]]
+
+we can prefix a `/` before our payload, and this should consider the prefix as a directory, and then we should bypass the filename and be able to traverse directories:
+
+![[Pasted image 20250803112305.png]]
+
+```
+**Note:** This may not always work, as in this example a directory named `lang_/` may not exist, so our relative path may not be correct. Furthermore, `any prefix appended to our input may break some file inclusion techniques` we will discuss in upcoming sections, like using PHP wrappers and filters or RFI.
+```
+
+if we try to read `/etc/passwd`, then the file included would be `/etc/passwd.php`, which does not exist:
+
+![[Pasted image 20250803112407.png]]
+
+**Exercise:** Try to read any php file (e.g. index.php) through LFI, and see whether you would get its source code or if the file gets rendered as HTML instead.
+
+
+ a web application may allow us to download our avatar through a URL like (`/profile/$username/avatar.png`).
+
+we craft a malicious LFI username (e.g. `../../../etc/passwd`), then it may be possible to change the file being pulled to another local file on the server and grab it instead of our avatar.
+
+
+we would be poisoning a database entry with a malicious LFI payload in our username. Then, another web application functionality would utilize this poisoned entry to perform our attack (i.e. download our avatar based on username value). This is why this attack is called a `Second-Order` attack.
+
+Developers often overlook these vulnerabilities, as they may protect against direct user input (e.g. from a `?page` parameter), but they may trust values pulled from their database, like our username in this case. If we managed to poison our username during our registration, then the attack would be possible.
+
