@@ -413,3 +413,57 @@ Submit the contents of the flag.txt file located in the /usr/share/flags directo
 ![[Pasted image 20250803113900.png]]
 
 
+### Non-Recursive Path Traversal Filters
+
+```php
+$language = str_replace('../', '', $_GET['language']);
+```
+
+We see that all `../` substrings were removed, which resulted in a final path being `./languages/etc/passwd`. However, this filter is very insecure, as it is not `recursively removing` the `../` substring, as it runs a single time on the input string and does not apply the filter on the output string. For example, if we use `....//` as our payload, then the filter would remove `../` and the output string would be `../`, which means we may still perform path traversal. Let's try applying this logic to include `/etc/passwd` again:
+
+![[Pasted image 20250803173504.png]]
+
+
+![[Pasted image 20250803173815.png]]
+
+
+The `....//` substring is not the only bypass we can use, as we may use `..././` or `....\/` and several other recursive LFI payloads. Furthermore, in some cases, escaping the forward slash character may also work to avoid path traversal filters (e.g. `....\/`), or adding extra forward slashes (e.g. `....////`)
+
+If the target web application did not allow `.` and `/` in our input, we can URL encode `../` into `%2e%2e%2f`, which may bypass the filter.
+
+![[Pasted image 20250803173939.png]]
+
+**Note:** For this to work we must URL encode all characters, including the dots. Some URL encoders may not encode dots as they are considered to be part of the URL scheme.
+
+
+![[Pasted image 20250803174022.png]]
+- we may also use Burp Decoder to encode the encoded string once again to have a `double encoded` string, which may also bypass other types of filters.
+
+## Approved Paths
+- Some web applications may also use Regular Expressions to ensure that the file being included is under a specific path
+
+```php
+if(preg_match('/^\.\/languages\/.+$/', $_GET['language'])) {
+    include($_GET['language']);
+} else {
+    echo 'Illegal path specified!';
+}
+```
+
+the web application we have been dealing with may only accept paths that are under the `./languages` directory, as follows:
+
+```php
+if(preg_match('/^\.\/languages\/.+$/', $_GET['language'])) {
+    include($_GET['language']);
+} else {
+    echo 'Illegal path specified!';
+}
+```
+
+**Note:** All techniques mentioned so far should work with any LFI vulnerability, regardless of the back-end development language or framework.
+
+### PATH Truncation
+
+In earlier versions of PHP, defined strings have a maximum length of 4096 characters, likely due to the limitation of 32-bit systems. If a longer string is passed, it will simply be `truncated`, and any characters after the maximum length will be ignored. Furthermore, PHP also used to remove trailing slashes and single dots in path names, so if we call (`/etc/passwd/.`) then the `/.` would also be truncated, and PHP would call (`/etc/passwd`). PHP, and Linux systems in general, also disregard multiple slashes in the path (e.g. `////etc/passwd` is the same as `/etc/passwd`). Similarly, a current directory shortcut (`.`) in the middle of the path would also be disregarded (e.g. `/etc/./passwd`).
+
+
