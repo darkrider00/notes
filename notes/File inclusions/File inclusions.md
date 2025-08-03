@@ -478,3 +478,14 @@ we should calculate the full length of the string to ensure only `.php` gets t
 ### Null Bytes
 - To exploit this vulnerability, we can end our payload with a null byte (e.g. `/etc/passwd%00`), such that the final path passed to `include()` would be (`/etc/passwd%00.php`). This way, even though `.php` is appended to our string, anything after the null byte would be truncated, and so the path used would actually be `/etc/passwd`, leading us to bypass the appended extension.
 
+
+
+ The above web application employs more than one filter to avoid LFI exploitation. Try to bypass these filters to read /flag.txt
+
+
+
+![[Pasted image 20250803183503.png]]
+
+![[Pasted image 20250803183401.png]]
+
+
