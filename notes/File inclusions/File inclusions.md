@@ -399,3 +399,17 @@ we would be poisoning a database entry with a malicious LFI payload in our usern
 
 Developers often overlook these vulnerabilities, as they may protect against direct user input (e.g. from a `?page` parameter), but they may trust values pulled from their database, like our username in this case. If we managed to poison our username during our registration, then the attack would be possible.
 
+LAB:
+Using the file inclusion find the name of a user on the system that starts with "b".
+- first used basic lfi tried to read using /etc/passwd
+- then used it 3 times ../../../etc/passwd it didnt work 
+- then used it 4 times got the list 
+
+![[Pasted image 20250803114017.png]]
+
+
+Submit the contents of the flag.txt file located in the /usr/share/flags directory.
+- edited the path to /usr/share/flags/flag.txt/
+![[Pasted image 20250803113900.png]]
+
+
