@@ -223,4 +223,107 @@ The most common place we usually find LFI within is templating engines. In order
 
 Otherwise, every page on the server would need to be modified when changes are made to any of the static parts. This is why we often see a parameter like `/index.php?page=about`, where `index.php` sets static content (e.g. header/footer), and then only pulls the dynamic content specified in the parameter, which in this case may be read from a file called `about.php`.
 
+As we have control over the `about` portion of the request, it may be possible to have the web application grab other files and display them on the page.
+
+ LFI may also allow attackers to execute code on the remote server, which may compromise the entire back-end server and any other servers connected to it.
+
+
+All vulnerabilities can occur in PHP , NodeJS,Java,.net and others
+- each have different approach to include the files in webserver 
+- they share common thing (loading a file from specific path)
+
+example if the page contains ?language=es we can change it to en or tn something and access a different language page 
+
+- if we have ability to read the files then we can use it to read other files and do remote code execution 
+
+**PHP:**
+- include() - used to load the local or remote file page
+- if it doesnt sanitize the input then it leads to local file inclusion 
+
+
+```php
+if (isset($_GET['language'])) {
+    include($_GET['language']);
+}
+```
+
+- language parameter is directly passed in the include function so whatever parameter we pass in the language parameter it will be loaded on the page 
+
+if we had control over the path passed into them. Such functions include `include_once()`, `require()`, `require_once()`, `file_get_contents()`, and several others as well.
+
+
+**NodeJS**
+
+```javascript
+if(req.query.language) {
+    fs.readFile(path.join(__dirname, req.query.language), function (err, data) {
+        res.write(data);
+    });
+}
+```
+
+- parameter passed in the url gets used by the readfile function and written in http response 
+- the `render()` function in the `Express.js` framework. The following example shows how the `language` parameter is used to determine which directory to pull the `about.html` page from:
+
+```js
+app.get("/about/:language", function(req, res) {
+    res.render(`/${req.params.language}/about.html`);
+});
+```
+
+we can change the URL to show a different file instead.
+
+**JAVA**
+```jsp
+<c:if test="${not empty param.language}">
+    <jsp:include file="<%= request.getParameter('language') %>" />
+</c:if>
+```
+- include function take a file or page url as its argument then renders the object into front end template 
+- import fucntion may be used to render local file or a url
+```jsp
+<c:import url= "<%= request.getParameter('language') %>"/>
+```
+
+.**NET**
+- Response.WriteFile function works very similarly to all of our examples
+```cs
+@if (!string.IsNullOrEmpty(HttpContext.Request.Query['language'])) {
+    <% Response.WriteFile("<% HttpContext.Request.Query['language'] %>"); %> 
+}
+```
+
+ `@Html.Partial()` function may also be used to render the specified file as part of the front-end template, similarly to what we saw earlier:
+
+```cs
+@Html.Partial(HttpContext.Request.Query['language'])
+```
+
+**READ VS EXECUTE**
+-  `some of the above functions only read the content of the specified files, while others also execute the specified files`
+
+|**Function**|**Read Content**|**Execute**|**Remote URL**|
+|---|:-:|:-:|:-:|
+|**PHP**||||
+|`include()`/`include_once()`|✅|✅|✅|
+|`require()`/`require_once()`|✅|✅|❌|
+|`file_get_contents()`|✅|❌|✅|
+|`fopen()`/`file()`|✅|❌|❌|
+|**NodeJS**||||
+|`fs.readFile()`|✅|❌|❌|
+|`fs.sendFile()`|✅|❌|❌|
+|`res.render()`|✅|✅|❌|
+|**Java**||||
+|`include`|✅|❌|❌|
+|`import`|✅|✅|✅|
+|**.NET**||||
+|`@Html.Partial()`|✅|❌|❌|
+|`@Html.RemotePartial()`|✅|❌|✅|
+|`Response.WriteFile()`|✅|❌|❌|
+|`include`|✅|✅|✅|
+
+if we had access to the source code in a whitebox exercise or in a code audit
+- these actions helps us in identifying potential File Inclusion vulnerabilities, especially if they had user-controlled input going into them.
+- Even if we were only able to read the web application source code, it may still allow us to compromise the web application, as it may reveal other vulnerabilities as mentioned earlier, and the source code may also contain database keys, admin credentials, or other sensitive information
+
 
